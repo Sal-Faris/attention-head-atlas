@@ -1,0 +1,12 @@
+[model]
+name = "gpt2-small"
+device = "cpu"
+dtype = "float32"
+
+[extraction]
+operator = "OV"
+
+[run]
+seed = 1729
+output = "artifacts/gpt2-small/ov_operators.npz"
+
