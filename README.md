@@ -54,20 +54,21 @@ python scripts/extract_operators.py `
 
 ## Status
 
-Checkpoint 0006 tests whether the non-random query/key and read/write subspaces
-form stable families. Their local neighborhoods recur strongly across late
-checkpoints and across layers, but absolute cluster silhouettes remain weak.
-The leading description is therefore a continuous structured population with
-small specialist islands, not a clean table of discrete head species. QK sides
-are strongly coupled; OV read and write sides are coupled more weakly and may
-partly recombine.
+Checkpoint 0007 tests static operator and subspace geometry against held-out
+activation behavior. Full QK/OV operators predict attention patterns and
+composed head outputs beyond layer effects; truncating to subspace identity does
+not improve global prediction. Recurrent QK subspace neighbors nevertheless
+have substantially more similar held-out attention patterns than exact
+layer-pair controls. OV transfer is weaker and concentrated at ranks 8 and 16.
 
 Read the methods, results, caveats, and causal gate in
+[`docs/checkpoints/0007-activation-validation.md`](docs/checkpoints/0007-activation-validation.md).
+The preceding subspace-family checkpoint remains in
 [`docs/checkpoints/0006-subspace-families.md`](docs/checkpoints/0006-subspace-families.md).
-The preceding residual/subspace checkpoint remains in
-[`docs/checkpoints/0005-residuals-and-subspaces.md`](docs/checkpoints/0005-residuals-and-subspaces.md).
 The main Pythia figures are:
 
+- `results/pythia-70m-deduped/activation_validation_pilot.png`
+- `results/pythia-70m-deduped/recurrent_pair_behavior.png`
 - `results/pythia-70m-deduped/subspace_family_audit.png`
 - `results/pythia-70m-deduped/dictionary_residual_null.png`
 - `results/pythia-70m-deduped/factor_subspace_atlas.png`
