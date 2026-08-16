@@ -29,6 +29,7 @@ def git_commit() -> str:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", default="gpt2-small")
+    parser.add_argument("--revision")
     parser.add_argument("--kind", choices=("OV", "QK"), default="OV")
     parser.add_argument("--device", default="cpu")
     parser.add_argument("--output", type=Path, required=True)
@@ -43,7 +44,11 @@ def main() -> None:
     except ImportError as error:
         raise SystemExit('Install model dependencies with: pip install -e ".[models]"') from error
 
-    model = HookedTransformer.from_pretrained(args.model, device=args.device)
+    model = HookedTransformer.from_pretrained(
+        args.model,
+        device=args.device,
+        revision=args.revision,
+    )
     operators = extract_from_transformer_lens(model, args.kind)
     extraction_error = verify_extracted_actions(model, operators)
     if extraction_error["maximum_relative_error"] > 1e-5:
@@ -56,6 +61,7 @@ def main() -> None:
         operators,
         {
             "model": args.model,
+            "model_revision": args.revision,
             "kind": args.kind,
             "device": args.device,
             "git_commit": git_commit(),

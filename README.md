@@ -40,7 +40,17 @@ python -m unittest discover -s tests -v
 The model-facing pipeline will be added only after the extraction and null
 generators pass their correctness tests.
 
+Extract the pinned GPT-2 small OV operators with:
+
+```powershell
+python scripts/extract_operators.py `
+  --model gpt2-small `
+  --revision 607a30d783dfa663caf39e06633721c8d4cfcd7e `
+  --kind OV `
+  --device cpu `
+  --output artifacts/gpt2-small/ov_operators.npz
+```
+
 ## Status
 
 Research scaffold. No empirical claim has yet been made.
-

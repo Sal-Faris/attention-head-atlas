@@ -1,5 +1,6 @@
 [model]
 name = "gpt2-small"
+revision = "607a30d783dfa663caf39e06633721c8d4cfcd7e"
 device = "cpu"
 dtype = "float32"
 
@@ -9,4 +10,3 @@ operator = "OV"
 [run]
 seed = 1729
 output = "artifacts/gpt2-small/ov_operators.npz"
-
