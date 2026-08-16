@@ -54,19 +54,21 @@ python scripts/extract_operators.py `
 
 ## Status
 
-Checkpoint 0005 tests what remains after sparse dictionary reconstruction and
-separates exact query/key and read/write subspace geometry. Final-checkpoint
-dictionary residuals are close to isotropic, while all tested factor subspaces
-remain non-random. OV read and write geometries are only weakly coupled,
-suggesting that reusable structure may live in separately recombined subspaces
-rather than complete operator atoms.
+Checkpoint 0006 tests whether the non-random query/key and read/write subspaces
+form stable families. Their local neighborhoods recur strongly across late
+checkpoints and across layers, but absolute cluster silhouettes remain weak.
+The leading description is therefore a continuous structured population with
+small specialist islands, not a clean table of discrete head species. QK sides
+are strongly coupled; OV read and write sides are coupled more weakly and may
+partly recombine.
 
 Read the methods, results, caveats, and causal gate in
+[`docs/checkpoints/0006-subspace-families.md`](docs/checkpoints/0006-subspace-families.md).
+The preceding residual/subspace checkpoint remains in
 [`docs/checkpoints/0005-residuals-and-subspaces.md`](docs/checkpoints/0005-residuals-and-subspaces.md).
-The preceding atom-discovery checkpoint remains in
-[`docs/checkpoints/0004-pythia-factor-atoms.md`](docs/checkpoints/0004-pythia-factor-atoms.md).
 The main Pythia figures are:
 
+- `results/pythia-70m-deduped/subspace_family_audit.png`
 - `results/pythia-70m-deduped/dictionary_residual_null.png`
 - `results/pythia-70m-deduped/factor_subspace_atlas.png`
 - `results/pythia-70m-deduped/trajectory_geometry.png`
