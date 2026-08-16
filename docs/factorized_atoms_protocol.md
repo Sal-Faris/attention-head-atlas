@@ -98,6 +98,12 @@ The checkpoint list is frozen in
 training, middle training, and the final checkpoint. Expansion to denser
 checkpoint sampling happens only after the pilot decision gate.
 
+Primary dictionaries are learned only from checkpoints at step 1,000 or later.
+Earlier checkpoints, including the random initialization at step 0, are encoded
+after model selection and serve as emergence controls rather than contributing
+atoms that explain initialization noise. This cutoff is fixed before fitting a
+Pythia dictionary.
+
 ## Nulls and baselines
 
 - step-0 randomly initialized model;

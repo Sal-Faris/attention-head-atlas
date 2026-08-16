@@ -25,6 +25,9 @@
   "discovery_uses_functional_labels": false,
   "dictionary_atom_counts": [8, 16, 32],
   "active_atom_counts": [2, 4, 8],
+  "dictionary_discovery_minimum_step": 1000,
+  "trajectory_validation_folds": 6,
+  "temporal_validation_blocks": 4,
   "bootstrap_repetitions": 20,
   "random_seed": 0,
   "notes": [
