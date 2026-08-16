@@ -1,0 +1,19 @@
+{
+  "operator_count_per_kind": 144,
+  "pairwise_matrix_entries_per_kind": 20736,
+  "tolerance": 1e-06,
+  "qk": {
+    "maximum_absolute_distance_error": 6.6170580126367895e-09,
+    "mean_absolute_distance_error": 2.0050545694140275e-10,
+    "root_mean_squared_distance_error": 4.295250515979059e-10,
+    "entries_above_tolerance": 0,
+    "upper_triangle_correlation": 0.9999999999999996
+  },
+  "ov": {
+    "maximum_absolute_distance_error": 1.3066516757476165e-09,
+    "mean_absolute_distance_error": 1.0950579432859686e-10,
+    "root_mean_squared_distance_error": 1.4618165272149723e-10,
+    "entries_above_tolerance": 0,
+    "upper_triangle_correlation": 1.0
+  }
+}

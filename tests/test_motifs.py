@@ -2,10 +2,18 @@ import unittest
 
 import numpy as np
 
-from head_atlas.motifs import matched_atom_similarity
+from head_atlas.motifs import matched_atom_similarities, matched_atom_similarity
 
 
 class MotifTests(unittest.TestCase):
+    def test_individual_similarities_follow_first_dictionary_order(self):
+        first = np.asarray([[1.0, 0.0], [0.0, 1.0]])
+        second = np.asarray([[0.0, -2.0], [0.8, 0.6]])
+
+        similarities = matched_atom_similarities(first, second)
+
+        np.testing.assert_allclose(similarities, [0.8, 1.0])
+
     def test_matching_ignores_atom_order_and_sign(self):
         first = np.eye(3)
         second = np.asarray([[0.0, -1.0, 0.0], [0.0, 0.0, 1.0], [-1.0, 0.0, 0.0]])

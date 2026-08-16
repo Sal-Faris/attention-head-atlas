@@ -1,0 +1,300 @@
+{
+  "analysis_status": "preregistered QK positional-robustness audit",
+  "operator_interpretation": "content QK with explicit relative GPT-NeoX RoPE rotation",
+  "views": {
+    "step1000": [
+      {
+        "maximum_absolute_distance_change": 0.0,
+        "mean_absolute_distance_change": 0.0,
+        "nearest_neighbor_preservation": 1.0,
+        "pearson_distance_correlation_with_offset_zero": 1.0,
+        "relative_offset": 0,
+        "spearman_distance_correlation_with_offset_zero": 1.0
+      },
+      {
+        "maximum_absolute_distance_change": 0.01789601572943389,
+        "mean_absolute_distance_change": 0.0006983887417034786,
+        "nearest_neighbor_preservation": 0.9166666666666666,
+        "pearson_distance_correlation_with_offset_zero": 0.9988369644044038,
+        "relative_offset": 1,
+        "spearman_distance_correlation_with_offset_zero": 0.9965636684966448
+      },
+      {
+        "maximum_absolute_distance_change": 0.011324573747642397,
+        "mean_absolute_distance_change": 0.0009212887210056061,
+        "nearest_neighbor_preservation": 0.8958333333333334,
+        "pearson_distance_correlation_with_offset_zero": 0.9987377403292363,
+        "relative_offset": 2,
+        "spearman_distance_correlation_with_offset_zero": 0.9913368952319842
+      },
+      {
+        "maximum_absolute_distance_change": 0.055928115634480635,
+        "mean_absolute_distance_change": 0.0022028444275434995,
+        "nearest_neighbor_preservation": 0.7916666666666666,
+        "pearson_distance_correlation_with_offset_zero": 0.9869675003230719,
+        "relative_offset": 4,
+        "spearman_distance_correlation_with_offset_zero": 0.9083790105953145
+      },
+      {
+        "maximum_absolute_distance_change": 0.03217175768296543,
+        "mean_absolute_distance_change": 0.003066612623954875,
+        "nearest_neighbor_preservation": 0.75,
+        "pearson_distance_correlation_with_offset_zero": 0.98657966655633,
+        "relative_offset": 8,
+        "spearman_distance_correlation_with_offset_zero": 0.957104871791832
+      },
+      {
+        "maximum_absolute_distance_change": 0.05073669560322558,
+        "mean_absolute_distance_change": 0.005357134348678973,
+        "nearest_neighbor_preservation": 0.7083333333333334,
+        "pearson_distance_correlation_with_offset_zero": 0.9608283322983519,
+        "relative_offset": 16,
+        "spearman_distance_correlation_with_offset_zero": 0.8340642313958693
+      },
+      {
+        "maximum_absolute_distance_change": 0.06534436682524025,
+        "mean_absolute_distance_change": 0.007262254408847955,
+        "nearest_neighbor_preservation": 0.6041666666666666,
+        "pearson_distance_correlation_with_offset_zero": 0.9386605397177286,
+        "relative_offset": 32,
+        "spearman_distance_correlation_with_offset_zero": 0.744191511250602
+      },
+      {
+        "maximum_absolute_distance_change": 0.06836769660693975,
+        "mean_absolute_distance_change": 0.007273759308670737,
+        "nearest_neighbor_preservation": 0.6666666666666666,
+        "pearson_distance_correlation_with_offset_zero": 0.9377323138971435,
+        "relative_offset": 64,
+        "spearman_distance_correlation_with_offset_zero": 0.8572422936148911
+      },
+      {
+        "maximum_absolute_distance_change": 0.06458855408500153,
+        "mean_absolute_distance_change": 0.008731811017836296,
+        "nearest_neighbor_preservation": 0.5208333333333334,
+        "pearson_distance_correlation_with_offset_zero": 0.9156891985264304,
+        "relative_offset": 128,
+        "spearman_distance_correlation_with_offset_zero": 0.7363665055288034
+      },
+      {
+        "maximum_absolute_distance_change": 0.11044962847456996,
+        "mean_absolute_distance_change": 0.008432934920311346,
+        "nearest_neighbor_preservation": 0.5416666666666666,
+        "pearson_distance_correlation_with_offset_zero": 0.8985356601045038,
+        "relative_offset": 256,
+        "spearman_distance_correlation_with_offset_zero": 0.7379982987525787
+      },
+      {
+        "maximum_absolute_distance_change": 0.08021877185322746,
+        "mean_absolute_distance_change": 0.008156111208596498,
+        "nearest_neighbor_preservation": 0.3958333333333333,
+        "pearson_distance_correlation_with_offset_zero": 0.9121223192713508,
+        "relative_offset": 512,
+        "spearman_distance_correlation_with_offset_zero": 0.7834013530751255
+      },
+      {
+        "maximum_absolute_distance_change": 0.14328676538065976,
+        "mean_absolute_distance_change": 0.008421058196838046,
+        "nearest_neighbor_preservation": 0.3958333333333333,
+        "pearson_distance_correlation_with_offset_zero": 0.8658883240720945,
+        "relative_offset": 1024,
+        "spearman_distance_correlation_with_offset_zero": 0.7843491976129696
+      }
+    ],
+    "step143000": [
+      {
+        "maximum_absolute_distance_change": 0.0,
+        "mean_absolute_distance_change": 0.0,
+        "nearest_neighbor_preservation": 1.0,
+        "pearson_distance_correlation_with_offset_zero": 0.9999999999999999,
+        "relative_offset": 0,
+        "spearman_distance_correlation_with_offset_zero": 1.0
+      },
+      {
+        "maximum_absolute_distance_change": 0.008501651164199764,
+        "mean_absolute_distance_change": 0.0004801018062278475,
+        "nearest_neighbor_preservation": 0.9791666666666666,
+        "pearson_distance_correlation_with_offset_zero": 0.9998897209747887,
+        "relative_offset": 1,
+        "spearman_distance_correlation_with_offset_zero": 0.9989292331539209
+      },
+      {
+        "maximum_absolute_distance_change": 0.013112206814386962,
+        "mean_absolute_distance_change": 0.0008168508839648991,
+        "nearest_neighbor_preservation": 0.9583333333333334,
+        "pearson_distance_correlation_with_offset_zero": 0.9997320952848433,
+        "relative_offset": 2,
+        "spearman_distance_correlation_with_offset_zero": 0.9963764339591247
+      },
+      {
+        "maximum_absolute_distance_change": 0.017233165518591997,
+        "mean_absolute_distance_change": 0.001148136345449736,
+        "nearest_neighbor_preservation": 0.9166666666666666,
+        "pearson_distance_correlation_with_offset_zero": 0.9995478328196838,
+        "relative_offset": 4,
+        "spearman_distance_correlation_with_offset_zero": 0.9900640950124729
+      },
+      {
+        "maximum_absolute_distance_change": 0.018800830505240063,
+        "mean_absolute_distance_change": 0.0013240043936078312,
+        "nearest_neighbor_preservation": 0.9791666666666666,
+        "pearson_distance_correlation_with_offset_zero": 0.9994604634907224,
+        "relative_offset": 8,
+        "spearman_distance_correlation_with_offset_zero": 0.9910365373894431
+      },
+      {
+        "maximum_absolute_distance_change": 0.021357013158172844,
+        "mean_absolute_distance_change": 0.0017376562615466307,
+        "nearest_neighbor_preservation": 0.9791666666666666,
+        "pearson_distance_correlation_with_offset_zero": 0.9991268796777341,
+        "relative_offset": 16,
+        "spearman_distance_correlation_with_offset_zero": 0.9863180497923474
+      },
+      {
+        "maximum_absolute_distance_change": 0.020925121674565617,
+        "mean_absolute_distance_change": 0.002049398517863085,
+        "nearest_neighbor_preservation": 0.9166666666666666,
+        "pearson_distance_correlation_with_offset_zero": 0.9986779792021111,
+        "relative_offset": 32,
+        "spearman_distance_correlation_with_offset_zero": 0.9820502661775483
+      },
+      {
+        "maximum_absolute_distance_change": 0.028893744647428554,
+        "mean_absolute_distance_change": 0.0017848990060005281,
+        "nearest_neighbor_preservation": 0.9166666666666666,
+        "pearson_distance_correlation_with_offset_zero": 0.9989279728368571,
+        "relative_offset": 64,
+        "spearman_distance_correlation_with_offset_zero": 0.9900572808592142
+      },
+      {
+        "maximum_absolute_distance_change": 0.05779186476721354,
+        "mean_absolute_distance_change": 0.0025541266704627885,
+        "nearest_neighbor_preservation": 0.875,
+        "pearson_distance_correlation_with_offset_zero": 0.9967273321234434,
+        "relative_offset": 128,
+        "spearman_distance_correlation_with_offset_zero": 0.9796418517835217
+      },
+      {
+        "maximum_absolute_distance_change": 0.030596400293640524,
+        "mean_absolute_distance_change": 0.0027873587167199397,
+        "nearest_neighbor_preservation": 0.8125,
+        "pearson_distance_correlation_with_offset_zero": 0.9969794374953458,
+        "relative_offset": 256,
+        "spearman_distance_correlation_with_offset_zero": 0.9695736853353789
+      },
+      {
+        "maximum_absolute_distance_change": 0.06088964480454706,
+        "mean_absolute_distance_change": 0.003558555442543944,
+        "nearest_neighbor_preservation": 0.875,
+        "pearson_distance_correlation_with_offset_zero": 0.993411041217006,
+        "relative_offset": 512,
+        "spearman_distance_correlation_with_offset_zero": 0.9687817553128366
+      },
+      {
+        "maximum_absolute_distance_change": 0.0903212325677305,
+        "mean_absolute_distance_change": 0.0036535460738601005,
+        "nearest_neighbor_preservation": 0.8333333333333334,
+        "pearson_distance_correlation_with_offset_zero": 0.9922445022424745,
+        "relative_offset": 1024,
+        "spearman_distance_correlation_with_offset_zero": 0.9574688897115669
+      }
+    ],
+    "step16000": [
+      {
+        "maximum_absolute_distance_change": 0.0,
+        "mean_absolute_distance_change": 0.0,
+        "nearest_neighbor_preservation": 1.0,
+        "pearson_distance_correlation_with_offset_zero": 0.9999999999999999,
+        "relative_offset": 0,
+        "spearman_distance_correlation_with_offset_zero": 1.0
+      },
+      {
+        "maximum_absolute_distance_change": 0.011611817489424636,
+        "mean_absolute_distance_change": 0.0004866508252695781,
+        "nearest_neighbor_preservation": 0.9583333333333334,
+        "pearson_distance_correlation_with_offset_zero": 0.9998145253225713,
+        "relative_offset": 1,
+        "spearman_distance_correlation_with_offset_zero": 0.9979002625681372
+      },
+      {
+        "maximum_absolute_distance_change": 0.013552715961798079,
+        "mean_absolute_distance_change": 0.000778307494507087,
+        "nearest_neighbor_preservation": 0.9166666666666666,
+        "pearson_distance_correlation_with_offset_zero": 0.9996352821355473,
+        "relative_offset": 2,
+        "spearman_distance_correlation_with_offset_zero": 0.9952430019858368
+      },
+      {
+        "maximum_absolute_distance_change": 0.04029344511843469,
+        "mean_absolute_distance_change": 0.0013569812597361637,
+        "nearest_neighbor_preservation": 0.9166666666666666,
+        "pearson_distance_correlation_with_offset_zero": 0.9983504076818194,
+        "relative_offset": 4,
+        "spearman_distance_correlation_with_offset_zero": 0.9727262303480448
+      },
+      {
+        "maximum_absolute_distance_change": 0.012995385768988177,
+        "mean_absolute_distance_change": 0.0015419229634788202,
+        "nearest_neighbor_preservation": 0.8958333333333334,
+        "pearson_distance_correlation_with_offset_zero": 0.9987221958558737,
+        "relative_offset": 8,
+        "spearman_distance_correlation_with_offset_zero": 0.9808608912601438
+      },
+      {
+        "maximum_absolute_distance_change": 0.05049213397578378,
+        "mean_absolute_distance_change": 0.002278280812091504,
+        "nearest_neighbor_preservation": 0.8541666666666666,
+        "pearson_distance_correlation_with_offset_zero": 0.9963191726636288,
+        "relative_offset": 16,
+        "spearman_distance_correlation_with_offset_zero": 0.9499437234550063
+      },
+      {
+        "maximum_absolute_distance_change": 0.05686799067571724,
+        "mean_absolute_distance_change": 0.0035228881243131787,
+        "nearest_neighbor_preservation": 0.875,
+        "pearson_distance_correlation_with_offset_zero": 0.9919072144408836,
+        "relative_offset": 32,
+        "spearman_distance_correlation_with_offset_zero": 0.9224536566928591
+      },
+      {
+        "maximum_absolute_distance_change": 0.034559505892707065,
+        "mean_absolute_distance_change": 0.0026787804845704866,
+        "nearest_neighbor_preservation": 0.875,
+        "pearson_distance_correlation_with_offset_zero": 0.9956839645060721,
+        "relative_offset": 64,
+        "spearman_distance_correlation_with_offset_zero": 0.9568890345324734
+      },
+      {
+        "maximum_absolute_distance_change": 0.0371565844337598,
+        "mean_absolute_distance_change": 0.0030606941021585742,
+        "nearest_neighbor_preservation": 0.875,
+        "pearson_distance_correlation_with_offset_zero": 0.9949792200105313,
+        "relative_offset": 128,
+        "spearman_distance_correlation_with_offset_zero": 0.933401342205924
+      },
+      {
+        "maximum_absolute_distance_change": 0.07748539835237289,
+        "mean_absolute_distance_change": 0.0060912796993382165,
+        "nearest_neighbor_preservation": 0.7916666666666666,
+        "pearson_distance_correlation_with_offset_zero": 0.9766576571561144,
+        "relative_offset": 256,
+        "spearman_distance_correlation_with_offset_zero": 0.8809159579793996
+      },
+      {
+        "maximum_absolute_distance_change": 0.057961467449707316,
+        "mean_absolute_distance_change": 0.004578541673987529,
+        "nearest_neighbor_preservation": 0.8333333333333334,
+        "pearson_distance_correlation_with_offset_zero": 0.9869640010379598,
+        "relative_offset": 512,
+        "spearman_distance_correlation_with_offset_zero": 0.8962037658238226
+      },
+      {
+        "maximum_absolute_distance_change": 0.07961086683208918,
+        "mean_absolute_distance_change": 0.007628582075777072,
+        "nearest_neighbor_preservation": 0.7916666666666666,
+        "pearson_distance_correlation_with_offset_zero": 0.9688901319859481,
+        "relative_offset": 1024,
+        "spearman_distance_correlation_with_offset_zero": 0.8550424508370549
+      }
+    ]
+  }
+}

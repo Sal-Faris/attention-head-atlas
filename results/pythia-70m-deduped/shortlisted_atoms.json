@@ -1,0 +1,1026 @@
+{
+  "analysis_status": "label-free atom shortlist",
+  "matrix_artifact": "artifacts\\pythia-70m-deduped\\optimal_shortlisted_atom_matrices.npz",
+  "per_view": 3,
+  "profile": "optimal",
+  "selection_rule": "reusable and significant increasing trajectories first, then reusable significant decreasing trajectories, then other reusable atoms; within tier sort by trajectory-bootstrap stability",
+  "views": {
+    "JOINT": [
+      {
+        "atom": 0,
+        "emergence": {
+          "active_head_fraction_by_checkpoint": [
+            0.9583333333333334,
+            0.9583333333333334,
+            0.9583333333333334,
+            1.0,
+            0.7916666666666666,
+            0.625,
+            0.8333333333333334,
+            0.7083333333333334
+          ],
+          "atom": 0,
+          "benjamini_hochberg_q_value": 0.0025597440255974405,
+          "coefficient_share_by_checkpoint": [
+            0.1811632862200722,
+            0.1809514394573665,
+            0.15929147262760157,
+            0.16843710479500412,
+            0.10123952441314168,
+            0.08464852168625639,
+            0.08067837630630176,
+            0.07272670964986505
+          ],
+          "final_strength": 0.06021184105953594,
+          "final_to_initialization_ratio": 1.2977574240165426,
+          "initialization_strength": 0.04639683807254291,
+          "maximum_adjacent_recurrent_checkpoints": 0,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": true,
+          "spearman_training_correlation": -0.9761904761904762,
+          "strength_by_checkpoint": [
+            0.04639683807254291,
+            0.04637821108334834,
+            0.04552084996571201,
+            0.0614474966990643,
+            0.062492334171983605,
+            0.06510573741493667,
+            0.06798476061853741,
+            0.06021184105953594
+          ],
+          "time_permutation_p_value": 0.0007999200079992001
+        },
+        "final_checkpoint_exemplar_heads": [
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.6028430105647293,
+            "head": 1,
+            "layer": 3
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.5769890648230087,
+            "head": 6,
+            "layer": 3
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.5209818652498619,
+            "head": 3,
+            "layer": 3
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.3449970019825001,
+            "head": 0,
+            "layer": 3
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.3309057859469716,
+            "head": 5,
+            "layer": 3
+          }
+        ],
+        "matrix_summary": {
+          "OV": {
+            "effective_rank": 144.55711233066089,
+            "frobenius_norm": 0.7676347710303956,
+            "spectral_norm": 0.15462771968622288,
+            "top_10_singular_values": [
+              0.15462771968622288,
+              0.13029057475293643,
+              0.1167082309534928,
+              0.1081534214936371,
+              0.10247681900044554,
+              0.09590828518003901,
+              0.09561099594150917,
+              0.09216558164434223,
+              0.09123981963927379,
+              0.09005329468293681
+            ],
+            "trace": -0.9754756685955519
+          },
+          "QK": {
+            "antisymmetric_fraction": 0.6859343131635248,
+            "effective_rank": 58.787375766564196,
+            "frobenius_norm": 1.187744441586138,
+            "spectral_norm": 0.24198806473568457,
+            "top_10_singular_values": [
+              0.24198806473568457,
+              0.2404256060034831,
+              0.23523533047024286,
+              0.23363748171216173,
+              0.2316097781580184,
+              0.2283343738861294,
+              0.2271203778717847,
+              0.22467266945023107,
+              0.22212162484575237,
+              0.2196150926803738
+            ],
+            "trace": 2.0176408720526737
+          }
+        },
+        "selection_priority": 1,
+        "stability": {
+          "atom": 0,
+          "bootstrap_advantage_over_random": 0.6553663148452218,
+          "initialization_similarity_mean": 1.0,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.07560981151287409,
+          "trajectory_bootstrap_similarity_mean": 0.7309761263580958,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.13572370776042572
+        }
+      },
+      {
+        "atom": 3,
+        "emergence": {
+          "active_head_fraction_by_checkpoint": [
+            0.9791666666666666,
+            0.9791666666666666,
+            0.9583333333333334,
+            0.8333333333333334,
+            0.8125,
+            0.5625,
+            0.7291666666666666,
+            0.6666666666666666
+          ],
+          "atom": 3,
+          "benjamini_hochberg_q_value": 0.0117321601173216,
+          "coefficient_share_by_checkpoint": [
+            0.1187342042946554,
+            0.11861233936273434,
+            0.11042632785705574,
+            0.08269591278727105,
+            0.06954312874088975,
+            0.059875017505146,
+            0.06377744125523412,
+            0.0655194026976058
+          ],
+          "final_strength": 0.054244773076314895,
+          "final_to_initialization_ratio": 1.7838726870179422,
+          "initialization_strength": 0.030408432995851626,
+          "maximum_adjacent_recurrent_checkpoints": 0,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": true,
+          "spearman_training_correlation": -0.9047619047619048,
+          "strength_by_checkpoint": [
+            0.030408432995851626,
+            0.030400576688149106,
+            0.031556618943420746,
+            0.03016827458656642,
+            0.04292703334822093,
+            0.04605168631122932,
+            0.05374295164466824,
+            0.054244773076314895
+          ],
+          "time_permutation_p_value": 0.005499450054994501
+        },
+        "final_checkpoint_exemplar_heads": [
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.6800682371753408,
+            "head": 3,
+            "layer": 4
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.4459999441508745,
+            "head": 1,
+            "layer": 4
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.4345604063359784,
+            "head": 2,
+            "layer": 4
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.331423315066775,
+            "head": 0,
+            "layer": 3
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.19912467650646454,
+            "head": 5,
+            "layer": 4
+          }
+        ],
+        "matrix_summary": {
+          "OV": {
+            "effective_rank": 104.46512403101691,
+            "frobenius_norm": 0.9267793509523597,
+            "spectral_norm": 0.19586478677993222,
+            "top_10_singular_values": [
+              0.19586478677993222,
+              0.19329208304855833,
+              0.17928568322970104,
+              0.16962378007892215,
+              0.1629686206206777,
+              0.1537924023139764,
+              0.1453686991395692,
+              0.138924666668779,
+              0.1379237698423723,
+              0.13283269789922136
+            ],
+            "trace": -1.649284462126043
+          },
+          "QK": {
+            "antisymmetric_fraction": 0.6638599563290472,
+            "effective_rank": 66.7790679682141,
+            "frobenius_norm": 1.068213477971472,
+            "spectral_norm": 0.2486347695172971,
+            "top_10_singular_values": [
+              0.2486347695172971,
+              0.23873171241840296,
+              0.22680683314987155,
+              0.21710247103745572,
+              0.21172549850939093,
+              0.21037757633855078,
+              0.2011831119330839,
+              0.19112984118494192,
+              0.17998579425596958,
+              0.17875197831153222
+            ],
+            "trace": 2.004157785322235
+          }
+        },
+        "selection_priority": 2,
+        "stability": {
+          "atom": 3,
+          "bootstrap_advantage_over_random": 0.5939814314412025,
+          "initialization_similarity_mean": 1.0000000000000004,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.08117607472538188,
+          "trajectory_bootstrap_similarity_mean": 0.6751575061665844,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.25149227164687
+        }
+      },
+      {
+        "atom": 4,
+        "emergence": {
+          "active_head_fraction_by_checkpoint": [
+            1.0,
+            1.0,
+            0.9791666666666666,
+            0.9375,
+            0.8125,
+            0.6458333333333334,
+            0.75,
+            0.6875
+          ],
+          "atom": 4,
+          "benjamini_hochberg_q_value": 0.024755419194922614,
+          "coefficient_share_by_checkpoint": [
+            0.1364167002435487,
+            0.13636221745131225,
+            0.12974200697902005,
+            0.10090995739260067,
+            0.061034412714842196,
+            0.05344896601830562,
+            0.05796237827399605,
+            0.0771435833537031
+          ],
+          "final_strength": 0.06386865571148319,
+          "final_to_initialization_ratio": 1.8281088054692798,
+          "initialization_strength": 0.03493701005126331,
+          "maximum_adjacent_recurrent_checkpoints": 0,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": true,
+          "spearman_training_correlation": -0.8333333333333334,
+          "strength_by_checkpoint": [
+            0.03493701005126331,
+            0.03494990547583039,
+            0.037076475824600816,
+            0.03681293549500895,
+            0.037674840310407194,
+            0.04110921581815017,
+            0.04884280760532534,
+            0.06386865571148319
+          ],
+          "time_permutation_p_value": 0.014698530146985302
+        },
+        "final_checkpoint_exemplar_heads": [
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.7482700085971918,
+            "head": 6,
+            "layer": 4
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.5443898809196817,
+            "head": 4,
+            "layer": 4
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.4698194603432603,
+            "head": 0,
+            "layer": 4
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.30134097486636097,
+            "head": 3,
+            "layer": 3
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.21108077147257664,
+            "head": 5,
+            "layer": 4
+          }
+        ],
+        "matrix_summary": {
+          "OV": {
+            "effective_rank": 81.91217230342788,
+            "frobenius_norm": 1.0825806501375128,
+            "spectral_norm": 0.1852798170845164,
+            "top_10_singular_values": [
+              0.1852798170845164,
+              0.17588823817816499,
+              0.1748341288150751,
+              0.1727435827329667,
+              0.16993679621130128,
+              0.16862981539158028,
+              0.1680217387801041,
+              0.16673019329839397,
+              0.1635304045533706,
+              0.1615900210154358
+            ],
+            "trace": 2.531898559742177
+          },
+          "QK": {
+            "antisymmetric_fraction": 0.6962367662132968,
+            "effective_rank": 61.41664793836506,
+            "frobenius_norm": 0.9099555681098237,
+            "spectral_norm": 0.257811234286564,
+            "top_10_singular_values": [
+              0.257811234286564,
+              0.23937666834418564,
+              0.21162537684358085,
+              0.19664186518565493,
+              0.18478468033326242,
+              0.17126990230904068,
+              0.1626638503480522,
+              0.15401549596561762,
+              0.15267848266099593,
+              0.1417521879152276
+            ],
+            "trace": 0.16433635118267687
+          }
+        },
+        "selection_priority": 3,
+        "stability": {
+          "atom": 4,
+          "bootstrap_advantage_over_random": 0.5306130290049069,
+          "initialization_similarity_mean": 0.9999999999999998,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.08106837980490336,
+          "trajectory_bootstrap_similarity_mean": 0.6116814088098103,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.3419798355378624
+        }
+      }
+    ],
+    "OV": [
+      {
+        "atom": 4,
+        "emergence": {
+          "active_head_fraction_by_checkpoint": [
+            0.9583333333333334,
+            0.9583333333333334,
+            0.875,
+            0.75,
+            0.3541666666666667,
+            0.4791666666666667,
+            0.4583333333333333,
+            0.3541666666666667
+          ],
+          "atom": 4,
+          "benjamini_hochberg_q_value": 0.011814203195065109,
+          "coefficient_share_by_checkpoint": [
+            0.10700989345612318,
+            0.10706195677521034,
+            0.09305177656414904,
+            0.07826906638612588,
+            0.05999338996730305,
+            0.06988025302054152,
+            0.06378523440238455,
+            0.05859514774374401
+          ],
+          "final_strength": 0.05127126262220669,
+          "final_to_initialization_ratio": 1.8717060386526165,
+          "initialization_strength": 0.027392796498704085,
+          "maximum_adjacent_recurrent_checkpoints": 0,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": true,
+          "spearman_training_correlation": -0.9047619047619048,
+          "strength_by_checkpoint": [
+            0.027392796498704085,
+            0.027386364092637814,
+            0.026046166029984778,
+            0.03004099412390847,
+            0.042798919749009144,
+            0.06119759852732603,
+            0.057759653024709263,
+            0.05127126262220669
+          ],
+          "time_permutation_p_value": 0.0044995500449955
+        },
+        "final_checkpoint_exemplar_heads": [
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.6526919927773254,
+            "head": 7,
+            "layer": 4
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.5641526313759991,
+            "head": 5,
+            "layer": 3
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.39492436545229437,
+            "head": 6,
+            "layer": 3
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": -0.32980844084191124,
+            "head": 2,
+            "layer": 4
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.15457758955834602,
+            "head": 1,
+            "layer": 3
+          }
+        ],
+        "matrix_summary": {
+          "effective_rank": 79.18695828866339,
+          "frobenius_norm": 1.0000000001649123,
+          "spectral_norm": 0.1811330054019985,
+          "top_10_singular_values": [
+            0.1811330054019985,
+            0.17534314199879072,
+            0.17382240592286016,
+            0.1721853201478314,
+            0.16935831133877996,
+            0.16803307392561231,
+            0.16361224826341692,
+            0.1629301392002455,
+            0.1601327432500963,
+            0.15700103349392996
+          ],
+          "trace": -0.31992248548634766
+        },
+        "selection_priority": 1,
+        "stability": {
+          "atom": 4,
+          "bootstrap_advantage_over_random": 0.6585239390251414,
+          "initialization_similarity_mean": 0.9999999999999998,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.1112284560132879,
+          "trajectory_bootstrap_similarity_mean": 0.7697523950384293,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.12866922002897727
+        }
+      },
+      {
+        "atom": 0,
+        "emergence": {
+          "active_head_fraction_by_checkpoint": [
+            1.0,
+            1.0,
+            1.0,
+            0.9791666666666666,
+            0.7708333333333334,
+            0.75,
+            0.75,
+            0.7291666666666666
+          ],
+          "atom": 0,
+          "benjamini_hochberg_q_value": 0.0286193602861936,
+          "coefficient_share_by_checkpoint": [
+            0.14059719426855727,
+            0.14076192005247876,
+            0.12687031947051158,
+            0.10491757103248547,
+            0.07553259031444806,
+            0.06935665858800655,
+            0.06751108763144124,
+            0.09095257106240343
+          ],
+          "final_strength": 0.07958428874519359,
+          "final_to_initialization_ratio": 2.2112520357093417,
+          "initialization_strength": 0.03599060055570009,
+          "maximum_adjacent_recurrent_checkpoints": 1,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": true,
+          "spearman_training_correlation": -0.8333333333333334,
+          "strength_by_checkpoint": [
+            0.03599060055570009,
+            0.03600678811643535,
+            0.035512330094289744,
+            0.04026914182587394,
+            0.05388449082581775,
+            0.060739060950709085,
+            0.06113353714926555,
+            0.07958428874519359
+          ],
+          "time_permutation_p_value": 0.0160983901609839
+        },
+        "final_checkpoint_exemplar_heads": [
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.740276769788581,
+            "head": 6,
+            "layer": 4
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.5918687850805573,
+            "head": 3,
+            "layer": 3
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.5653601613056801,
+            "head": 4,
+            "layer": 4
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.3643482121593198,
+            "head": 0,
+            "layer": 4
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.23355203223731485,
+            "head": 1,
+            "layer": 4
+          }
+        ],
+        "matrix_summary": {
+          "effective_rank": 80.88084944824317,
+          "frobenius_norm": 1.0000000000590368,
+          "spectral_norm": 0.16756007585841767,
+          "top_10_singular_values": [
+            0.16756007585841767,
+            0.1618494597066318,
+            0.15791506525230553,
+            0.15666224737205112,
+            0.15572086836117488,
+            0.15506513619172768,
+            0.15314665711907613,
+            0.15149000912145777,
+            0.15051234904777921,
+            0.14777358271189958
+          ],
+          "trace": 2.107185489330993
+        },
+        "selection_priority": 2,
+        "stability": {
+          "atom": 0,
+          "bootstrap_advantage_over_random": 0.548688467368947,
+          "initialization_similarity_mean": 1.0000000000000004,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.11547003980523807,
+          "trajectory_bootstrap_similarity_mean": 0.6641585071741851,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.3341113384104016
+        }
+      },
+      {
+        "atom": 30,
+        "emergence": {
+          "active_head_fraction_by_checkpoint": [
+            0.9166666666666666,
+            0.8958333333333334,
+            0.75,
+            0.7291666666666666,
+            0.75,
+            0.5625,
+            0.625,
+            0.5208333333333334
+          ],
+          "atom": 30,
+          "benjamini_hochberg_q_value": 0.007853760078537601,
+          "coefficient_share_by_checkpoint": [
+            0.08821128217832135,
+            0.08687580950715693,
+            0.07538233060038706,
+            0.07149930207572278,
+            0.05832159004751202,
+            0.05603651439807651,
+            0.06280166024842264,
+            0.04966601846088783
+          ],
+          "final_strength": 0.04345819703440238,
+          "final_to_initialization_ratio": 1.9245762867275127,
+          "initialization_strength": 0.022580657017393316,
+          "maximum_adjacent_recurrent_checkpoints": 2,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": true,
+          "spearman_training_correlation": -0.9285714285714286,
+          "strength_by_checkpoint": [
+            0.022580657017393316,
+            0.022222763544300733,
+            0.021100303197234705,
+            0.027442643852732696,
+            0.04160626784781583,
+            0.04907395097719749,
+            0.056868993887227305,
+            0.04345819703440238
+          ],
+          "time_permutation_p_value": 0.0026997300269973002
+        },
+        "final_checkpoint_exemplar_heads": [
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.4908519913472944,
+            "head": 0,
+            "layer": 3
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.42384617044634126,
+            "head": 1,
+            "layer": 3
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.239385965127907,
+            "head": 1,
+            "layer": 4
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.17997402966203863,
+            "head": 6,
+            "layer": 3
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": -0.1619598376149463,
+            "head": 2,
+            "layer": 2
+          }
+        ],
+        "matrix_summary": {
+          "effective_rank": 112.52813866689519,
+          "frobenius_norm": 0.9999999999208236,
+          "spectral_norm": 0.2111629159119901,
+          "top_10_singular_values": [
+            0.2111629159119901,
+            0.19608589265325263,
+            0.17898509588555192,
+            0.16365652538161957,
+            0.1567595953987655,
+            0.15265467806511984,
+            0.14601510779147125,
+            0.14197775974136728,
+            0.13595771560563197,
+            0.13216497156230173
+          ],
+          "trace": -1.1290534020283562
+        },
+        "selection_priority": 3,
+        "stability": {
+          "atom": 30,
+          "bootstrap_advantage_over_random": 0.36201514875314145,
+          "initialization_similarity_mean": 1.0,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.11372194680181222,
+          "trajectory_bootstrap_similarity_mean": 0.4757370955549537,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.26664075236383605
+        }
+      }
+    ],
+    "QK": [
+      {
+        "atom": 3,
+        "emergence": {
+          "active_head_fraction_by_checkpoint": [
+            0.875,
+            0.875,
+            0.9791666666666666,
+            0.8541666666666666,
+            0.5,
+            0.3125,
+            0.4375,
+            0.4375
+          ],
+          "atom": 3,
+          "benjamini_hochberg_q_value": 0.031055717957616,
+          "coefficient_share_by_checkpoint": [
+            0.07918592335040549,
+            0.07944459133684109,
+            0.09011492426589768,
+            0.07327788698597805,
+            0.044626073018854816,
+            0.038321058039690076,
+            0.042330095218821626,
+            0.03984172623288764
+          ],
+          "final_strength": 0.033118450348845134,
+          "final_to_initialization_ratio": 1.5832370301829617,
+          "initialization_strength": 0.020918188317650646,
+          "maximum_adjacent_recurrent_checkpoints": 0,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": true,
+          "spearman_training_correlation": -0.8333333333333334,
+          "strength_by_checkpoint": [
+            0.020918188317650646,
+            0.02102583114389006,
+            0.028675966160057517,
+            0.029358652414699926,
+            0.027350081310682926,
+            0.028616858386335764,
+            0.035294144012369376,
+            0.033118450348845134
+          ],
+          "time_permutation_p_value": 0.015998400159984
+        },
+        "final_checkpoint_exemplar_heads": [
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.628370862704994,
+            "head": 2,
+            "layer": 5
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.62773516338259,
+            "head": 0,
+            "layer": 5
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.04733839145531212,
+            "head": 4,
+            "layer": 4
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": -0.03745947809545827,
+            "head": 7,
+            "layer": 2
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": -0.027732186467524764,
+            "head": 5,
+            "layer": 2
+          }
+        ],
+        "matrix_summary": {
+          "antisymmetric_fraction": 0.7105660155979729,
+          "effective_rank": 64.41209784744674,
+          "frobenius_norm": 1.0000000003505203,
+          "spectral_norm": 0.3651465697765611,
+          "top_10_singular_values": [
+            0.3651465697765611,
+            0.2746528747118583,
+            0.20276805053602726,
+            0.1990853025440498,
+            0.19134048557888664,
+            0.1723820700477302,
+            0.1710246238921098,
+            0.16513396983921202,
+            0.1578543255369536,
+            0.1492816707094833
+          ],
+          "trace": 0.11051357521923984
+        },
+        "selection_priority": 1,
+        "stability": {
+          "atom": 3,
+          "bootstrap_advantage_over_random": 0.5427064737365583,
+          "initialization_similarity_mean": 0.9999999999999997,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.10444238959058771,
+          "trajectory_bootstrap_similarity_mean": 0.647148863327146,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.28580887041787206
+        }
+      },
+      {
+        "atom": 6,
+        "emergence": {
+          "active_head_fraction_by_checkpoint": [
+            0.9791666666666666,
+            0.9791666666666666,
+            0.5833333333333334,
+            0.6041666666666666,
+            0.5625,
+            0.4583333333333333,
+            0.6458333333333334,
+            0.5208333333333334
+          ],
+          "atom": 6,
+          "benjamini_hochberg_q_value": 0.04175582441755825,
+          "coefficient_share_by_checkpoint": [
+            0.16969438399374173,
+            0.16945125293458355,
+            0.11472530603772164,
+            0.20441761012222515,
+            0.13331505582208544,
+            0.059994671552256615,
+            0.019609784889569038,
+            0.020886122370193976
+          ],
+          "final_strength": 0.017361597302633713,
+          "final_to_initialization_ratio": 0.3872987771476004,
+          "initialization_strength": 0.04482740025801107,
+          "maximum_adjacent_recurrent_checkpoints": 0,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": true,
+          "spearman_training_correlation": -0.7857142857142857,
+          "strength_by_checkpoint": [
+            0.04482740025801107,
+            0.0448470232066125,
+            0.03650737123112619,
+            0.08189954445834996,
+            0.08170509681933553,
+            0.04480197331627589,
+            0.01635031927913772,
+            0.017361597302633713
+          ],
+          "time_permutation_p_value": 0.026097390260973904
+        },
+        "final_checkpoint_exemplar_heads": [
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.08007644373074556,
+            "head": 7,
+            "layer": 2
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.07682816562444293,
+            "head": 4,
+            "layer": 4
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.06899689121703052,
+            "head": 2,
+            "layer": 4
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.0649688580722899,
+            "head": 1,
+            "layer": 3
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.05802149310482645,
+            "head": 5,
+            "layer": 3
+          }
+        ],
+        "matrix_summary": {
+          "antisymmetric_fraction": 0.6787203724622312,
+          "effective_rank": 64.23193622045723,
+          "frobenius_norm": 1.0000000001874907,
+          "spectral_norm": 0.28531252886386954,
+          "top_10_singular_values": [
+            0.28531252886386954,
+            0.2058435795053931,
+            0.2035732810452491,
+            0.20030298442048214,
+            0.19537221764753962,
+            0.19159431706425673,
+            0.1892810177268848,
+            0.18170917696450511,
+            0.17912410334381373,
+            0.17498766092144838
+          ],
+          "trace": -1.6199780479750876
+        },
+        "selection_priority": 2,
+        "stability": {
+          "atom": 6,
+          "bootstrap_advantage_over_random": 0.5257121552748864,
+          "initialization_similarity_mean": 1.0000000000000002,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.10828646442367276,
+          "trajectory_bootstrap_similarity_mean": 0.6339986196985591,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.30117607120100803
+        }
+      },
+      {
+        "atom": 7,
+        "emergence": {
+          "active_head_fraction_by_checkpoint": [
+            1.0,
+            1.0,
+            0.9791666666666666,
+            0.9375,
+            0.8958333333333334,
+            0.5625,
+            0.8125,
+            0.75
+          ],
+          "atom": 7,
+          "benjamini_hochberg_q_value": 0.013065360130653602,
+          "coefficient_share_by_checkpoint": [
+            0.1416510899752073,
+            0.1415310098448426,
+            0.13489856472756057,
+            0.10036518042171214,
+            0.08481678394683019,
+            0.06382543173913317,
+            0.06947453510466949,
+            0.07375013142814778
+          ],
+          "final_strength": 0.06130482528911471,
+          "final_to_initialization_ratio": 1.6383197063686612,
+          "initialization_strength": 0.03741932972594035,
+          "maximum_adjacent_recurrent_checkpoints": 0,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": true,
+          "spearman_training_correlation": -0.9047619047619048,
+          "strength_by_checkpoint": [
+            0.03741932972594035,
+            0.03745764267330206,
+            0.0429268149385968,
+            0.04021112736375069,
+            0.05198185232378219,
+            0.047662654293985814,
+            0.05792673591923179,
+            0.06130482528911471
+          ],
+          "time_permutation_p_value": 0.0045995400459954
+        },
+        "final_checkpoint_exemplar_heads": [
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.6505566394528194,
+            "head": 3,
+            "layer": 4
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.5340698127380827,
+            "head": 0,
+            "layer": 3
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.5146665961657508,
+            "head": 1,
+            "layer": 4
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.39707216319185795,
+            "head": 2,
+            "layer": 4
+          },
+          {
+            "checkpoint": 143000,
+            "coefficient": 0.17420320571221323,
+            "head": 0,
+            "layer": 4
+          }
+        ],
+        "matrix_summary": {
+          "antisymmetric_fraction": 0.6554367807025482,
+          "effective_rank": 66.84493865512135,
+          "frobenius_norm": 0.999999999971241,
+          "spectral_norm": 0.23900083473649086,
+          "top_10_singular_values": [
+            0.23900083473649086,
+            0.2299932483359363,
+            0.21412191359059235,
+            0.20825901407023928,
+            0.20048926553655697,
+            0.19379984724765584,
+            0.19085338176459535,
+            0.17618621671922213,
+            0.17029776533313726,
+            0.16762559747316236
+          ],
+          "trace": 2.0890847812523825
+        },
+        "selection_priority": 3,
+        "stability": {
+          "atom": 7,
+          "bootstrap_advantage_over_random": 0.5227759688567054,
+          "initialization_similarity_mean": 1.0,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.11017584003427898,
+          "trajectory_bootstrap_similarity_mean": 0.6329518088909843,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.29175195857815195
+        }
+      }
+    ]
+  }
+}
