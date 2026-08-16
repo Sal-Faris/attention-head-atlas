@@ -40,6 +40,50 @@ def extract_from_transformer_lens(model: Any, kind: str) -> list[HeadOperator]:
     return operators
 
 
+def verify_extracted_actions(
+    model: Any,
+    operators: list[HeadOperator],
+    *,
+    seed: int = 1729,
+    n_states: int = 8,
+) -> dict[str, float]:
+    """Measure extraction error against direct factored computation.
+
+    The check covers every extracted head using deterministic synthetic residual
+    states. It catches transpose and tensor-axis mistakes before artifacts are
+    written to disk.
+    """
+
+    if not operators:
+        raise ValueError("cannot verify an empty operator list")
+    rng = np.random.default_rng(seed)
+    d_model = operators[0].matrix.shape[0]
+    states = rng.standard_normal((n_states, d_model)).astype(operators[0].matrix.dtype)
+    maximum_absolute_error = 0.0
+    maximum_relative_error = 0.0
+    for operator in operators:
+        layer, head = operator.layer, operator.head
+        if operator.kind == "OV":
+            direct = (states @ model.W_V[layer, head].detach().cpu().numpy()) @ model.W_O[
+                layer, head
+            ].detach().cpu().numpy()
+            recovered = states @ operator.matrix
+        else:
+            queries = states @ model.W_Q[layer, head].detach().cpu().numpy()
+            keys = states @ model.W_K[layer, head].detach().cpu().numpy()
+            direct = queries @ keys.T
+            recovered = states @ operator.matrix @ states.T
+        difference = direct - recovered
+        absolute_error = float(np.max(np.abs(difference)))
+        relative_error = float(np.linalg.norm(difference) / max(np.linalg.norm(direct), 1e-12))
+        maximum_absolute_error = max(maximum_absolute_error, absolute_error)
+        maximum_relative_error = max(maximum_relative_error, relative_error)
+    return {
+        "maximum_absolute_error": maximum_absolute_error,
+        "maximum_relative_error": maximum_relative_error,
+    }
+
+
 def save_operator_bundle(
     path: str | Path,
     operators: list[HeadOperator],
@@ -78,4 +122,3 @@ def load_operator_bundle(path: str | Path) -> tuple[list[HeadOperator], dict[str
         for layer, head, kind, matrix in zip(layers, heads, kinds, matrices, strict=True)
     ]
     return operators, metadata
-

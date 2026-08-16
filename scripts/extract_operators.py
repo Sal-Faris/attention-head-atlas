@@ -9,9 +9,14 @@ from __future__ import annotations
 
 import argparse
 import subprocess
+from importlib.metadata import version
 from pathlib import Path
 
-from head_atlas.model_io import extract_from_transformer_lens, save_operator_bundle
+from head_atlas.model_io import (
+    extract_from_transformer_lens,
+    save_operator_bundle,
+    verify_extracted_actions,
+)
 
 
 def git_commit() -> str:
@@ -33,14 +38,19 @@ def parse_args() -> argparse.Namespace:
 def main() -> None:
     args = parse_args()
     try:
-        from transformer_lens import HookedTransformer
         import torch
-        import transformer_lens
+        from transformer_lens import HookedTransformer
     except ImportError as error:
         raise SystemExit('Install model dependencies with: pip install -e ".[models]"') from error
 
     model = HookedTransformer.from_pretrained(args.model, device=args.device)
     operators = extract_from_transformer_lens(model, args.kind)
+    extraction_error = verify_extracted_actions(model, operators)
+    if extraction_error["maximum_relative_error"] > 1e-5:
+        raise RuntimeError(
+            "operator extraction check failed: "
+            f"maximum relative error {extraction_error['maximum_relative_error']}"
+        )
     save_operator_bundle(
         args.output,
         operators,
@@ -50,11 +60,12 @@ def main() -> None:
             "device": args.device,
             "git_commit": git_commit(),
             "torch": torch.__version__,
-            "transformer_lens": transformer_lens.__version__,
+            "transformer_lens": version("transformer-lens"),
             "n_layers": int(model.cfg.n_layers),
             "n_heads": int(model.cfg.n_heads),
             "d_model": int(model.cfg.d_model),
             "d_head": int(model.cfg.d_head),
+            **extraction_error,
         },
     )
     print(f"saved {len(operators)} {args.kind} operators to {args.output}")
@@ -62,4 +73,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

@@ -2,7 +2,6 @@
 
 import numpy as np
 
-
 Array = np.ndarray
 
 
@@ -66,9 +65,7 @@ def empirical_action_distance(a: Array, b: Array, activations: Array) -> float:
     return float(np.sqrt(np.mean(np.sum(delta_outputs**2, axis=-1))))
 
 
-def empirical_qk_score_distance(
-    a: Array, b: Array, queries: Array, keys: Array
-) -> float:
+def empirical_qk_score_distance(a: Array, b: Array, queries: Array, keys: Array) -> float:
     """RMS difference in bilinear QK scores on paired query/key states."""
 
     queries = np.asarray(queries)
@@ -78,4 +75,3 @@ def empirical_qk_score_distance(
     delta = np.asarray(a) - np.asarray(b)
     differences = np.einsum("...i,ij,...j->...", queries, delta, keys)
     return float(np.sqrt(np.mean(differences**2)))
-

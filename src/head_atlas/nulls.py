@@ -2,7 +2,6 @@
 
 import numpy as np
 
-
 Array = np.ndarray
 
 
@@ -38,4 +37,3 @@ def rank_norm_matched_gaussian(matrix: Array, rng: np.random.Generator) -> Array
     right = rng.standard_normal((rank, matrix.shape[1]))
     null = left @ right
     return null * (target_norm / np.linalg.norm(null, ord="fro"))
-

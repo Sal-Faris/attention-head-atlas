@@ -21,11 +21,8 @@ class NullTests(unittest.TestCase):
         matrix = rng.standard_normal((7, 2)) @ rng.standard_normal((2, 7))
         null = rank_norm_matched_gaussian(matrix, rng)
         self.assertEqual(np.linalg.matrix_rank(null), np.linalg.matrix_rank(matrix))
-        self.assertAlmostEqual(
-            np.linalg.norm(null, ord="fro"), np.linalg.norm(matrix, ord="fro")
-        )
+        self.assertAlmostEqual(np.linalg.norm(null, ord="fro"), np.linalg.norm(matrix, ord="fro"))
 
 
 if __name__ == "__main__":
     unittest.main()
-

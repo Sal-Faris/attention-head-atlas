@@ -4,7 +4,6 @@ from dataclasses import dataclass
 
 import numpy as np
 
-
 Array = np.ndarray
 
 
@@ -50,4 +49,3 @@ def build_qk(w_q: Array, w_k: Array) -> Array:
     if w_q.ndim != 2 or w_k.ndim != 2 or w_q.shape != w_k.shape:
         raise ValueError(f"incompatible QK shapes: {w_q.shape} and {w_k.shape}")
     return w_q @ w_k.T
-
