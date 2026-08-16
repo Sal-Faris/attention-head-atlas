@@ -2,6 +2,8 @@
 
 from collections.abc import Sequence
 from dataclasses import dataclass
+from pathlib import Path
+from tempfile import TemporaryDirectory
 
 import numpy as np
 
@@ -108,6 +110,80 @@ def normalized_factorized_frobenius_distances(
             distance = float(np.sqrt(max(2.0 - 2.0 * similarity, 0.0)))
             distances[first_index, second_index] = distance
             distances[second_index, first_index] = distance
+    return distances
+
+
+def blockwise_factorized_frobenius_distances(
+    operators: Sequence[FactorizedHeadOperator],
+    *,
+    block_size: int = 8,
+    scratch_directory: str | Path | None = None,
+    eps: float = 1e-12,
+) -> Array:
+    """Compute normalized distances with bounded RAM and transient full matrices.
+
+    Operators are materialized once into a temporary float32 memory map, then
+    multiplied in float64 blocks. The scratch file is deleted on return and is
+    never a research artifact.
+    """
+
+    if not operators:
+        raise ValueError("at least one operator is required")
+    if block_size < 1:
+        raise ValueError("block_size must be positive")
+    if eps < 0:
+        raise ValueError("eps must be nonnegative")
+    expected_kind = operators[0].kind
+    expected_shape = operators[0].left.shape
+    if any(operator.kind != expected_kind for operator in operators):
+        raise ValueError("operators must all have the same kind")
+    if any(operator.left.shape != expected_shape for operator in operators):
+        raise ValueError("operators must all have the same factor shape")
+
+    item_count = len(operators)
+    matrix_width = operators[0].d_model**2
+    temporary_parent = None if scratch_directory is None else str(scratch_directory)
+    with TemporaryDirectory(dir=temporary_parent) as temporary_directory:
+        scratch_path = Path(temporary_directory) / "normalized_matrices.float32"
+        flattened = np.memmap(
+            scratch_path,
+            mode="w+",
+            dtype=np.float32,
+            shape=(item_count, matrix_width),
+        )
+        for index, operator in enumerate(operators):
+            flattened[index] = operator.materialize(dtype=np.float32).reshape(-1)
+        flattened.flush()
+
+        norms = np.empty(item_count, dtype=np.float64)
+        for start in range(0, item_count, block_size):
+            stop = min(start + block_size, item_count)
+            block = np.asarray(flattened[start:stop], dtype=np.float64)
+            norms[start:stop] = np.linalg.norm(block, axis=1)
+        if np.any(norms <= eps):
+            raise ValueError("cannot compare a near-zero operator")
+
+        distances = np.zeros((item_count, item_count), dtype=np.float64)
+        for first_start in range(0, item_count, block_size):
+            first_stop = min(first_start + block_size, item_count)
+            first = np.asarray(flattened[first_start:first_stop], dtype=np.float64)
+            first /= norms[first_start:first_stop, None]
+            for second_start in range(first_start, item_count, block_size):
+                second_stop = min(second_start + block_size, item_count)
+                second = np.asarray(flattened[second_start:second_stop], dtype=np.float64)
+                second /= norms[second_start:second_stop, None]
+                similarities = np.clip(first @ second.T, -1.0, 1.0)
+                block_distances = np.sqrt(
+                    np.maximum(2.0 - 2.0 * similarities, 0.0)
+                )
+                distances[first_start:first_stop, second_start:second_stop] = (
+                    block_distances
+                )
+                distances[second_start:second_stop, first_start:first_stop] = (
+                    block_distances.T
+                )
+        np.fill_diagonal(distances, 0.0)
+        del flattened
     return distances
 
 

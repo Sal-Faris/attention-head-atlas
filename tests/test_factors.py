@@ -5,6 +5,7 @@ import numpy as np
 from head_atlas.distances import normalized_frobenius_distances
 from head_atlas.factors import (
     FactorizedHeadOperator,
+    blockwise_factorized_frobenius_distances,
     factorized_action,
     factorized_frobenius_norm,
     factorized_inner_product,
@@ -76,6 +77,31 @@ class FactorTests(unittest.TestCase):
         actual = normalized_factorized_frobenius_distances(factorized)
 
         np.testing.assert_allclose(actual, expected, atol=1e-12)
+
+    def test_blockwise_distances_match_skinny_factor_formula(self):
+        rng = np.random.default_rng(27)
+        operators = [
+            FactorizedHeadOperator(
+                0,
+                head,
+                "OV",
+                rng.standard_normal((7, 3)).astype(np.float32),
+                rng.standard_normal((7, 3)).astype(np.float32),
+            )
+            for head in range(5)
+        ]
+
+        expected = normalized_factorized_frobenius_distances(operators)
+        actual = blockwise_factorized_frobenius_distances(operators, block_size=2)
+
+        np.testing.assert_allclose(actual, expected, atol=2e-7)
+
+    def test_blockwise_distance_validation(self):
+        with self.assertRaisesRegex(ValueError, "at least one"):
+            blockwise_factorized_frobenius_distances([])
+        operator = FactorizedHeadOperator(0, 0, "QK", np.eye(2), np.eye(2))
+        with self.assertRaisesRegex(ValueError, "positive"):
+            blockwise_factorized_frobenius_distances([operator], block_size=0)
 
     def test_head_space_gauge_rotation_preserves_operator(self):
         rng = np.random.default_rng(22)

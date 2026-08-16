@@ -33,6 +33,12 @@ and
 Full residual-stream matrices are materialized only for verification or a
 specific atom inspection. Model caches and factor bundles remain outside Git.
 
+For GPT-NeoX/Pythia, the static QK operator is explicitly the content bilinear
+form before rotary position transforms (equivalently, the zero-relative-rotation
+view). Any QK claim must also be checked over a preregistered set of relative
+position offsets. A conclusion present only at offset zero is reported as such
+rather than generalized to effective attention scores.
+
 ## Correctness gate
 
 Before external model acquisition:
