@@ -53,4 +53,7 @@ python scripts/extract_operators.py `
 
 ## Status
 
-Research scaffold. No empirical claim has yet been made.
+Checkpoint 0001 establishes tested, reproducible extraction of all 144 GPT-2
+small OV operators. See
+[`docs/checkpoints/0001-operator-extraction.md`](docs/checkpoints/0001-operator-extraction.md).
+No clustering or functional claim has yet been made.

@@ -1,0 +1,24 @@
+{
+  "artifact": "artifacts/gpt2-small/ov_operators.npz",
+  "bytes": 316116814,
+  "dtype": "float32",
+  "sha256": "994d7d8c8396209a0f433f099acbe74c7940fa96c0e585ad19ee7c88086847f1",
+  "shape": [144, 768, 768],
+  "metadata": {
+    "d_head": 64,
+    "d_model": 768,
+    "device": "cpu",
+    "git_commit": "a6fc05f621bd5bd83be51cc7c11b32a107b2d2a6",
+    "kind": "OV",
+    "maximum_absolute_error": 0.00018310546875,
+    "maximum_relative_error": 4.1347860246787604e-07,
+    "model": "gpt2-small",
+    "model_revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+    "n_heads": 12,
+    "n_layers": 12,
+    "numpy": "2.5.2",
+    "python": "3.12.4",
+    "torch": "2.13.0+cpu",
+    "transformer_lens": "3.7.2"
+  }
+}
