@@ -1,0 +1,64 @@
+{
+  "analysis_status": "descriptive compact-dictionary decomposition",
+  "equation": "normalized head = population baseline + scaled atoms + residual",
+  "projection": "each displayed matrix is projected into the actual head's leading left/right singular-vector coordinates; addition remains exact inside the displayed block",
+  "selection_rule": "lowest compact coordinate reconstruction error among final-checkpoint heads",
+  "views": {
+    "OV": {
+      "active_atoms": [
+        1,
+        3
+      ],
+      "centered_energy_captured": 0.7117337497431022,
+      "checkpoint": 143000,
+      "coefficients": [
+        0.02977161843233074,
+        0.838451641342878
+      ],
+      "full_matrix_term_norms": [
+        0.13103604483665343,
+        0.02977161843776562,
+        0.8384516415010239,
+        0.8481282867164834,
+        1.0000000005532323,
+        0.5328238663499973
+      ],
+      "head": 7,
+      "layer": 2,
+      "matrix_relative_error": 0.5369043213244775,
+      "population_final_median_energy_captured": 0.09779459460683415,
+      "population_final_median_relative_error": 0.9498449375520016,
+      "projection_rank": 32,
+      "sample_index": 359,
+      "view": "OV"
+    },
+    "QK": {
+      "active_atoms": [
+        2,
+        4
+      ],
+      "centered_energy_captured": 0.6421807736603569,
+      "checkpoint": 143000,
+      "coefficients": [
+        0.7945740883731818,
+        -0.010968325949454837
+      ],
+      "full_matrix_term_norms": [
+        0.16530830803507124,
+        0.7945740884555123,
+        0.010968325952253137,
+        0.8064955114554693,
+        0.9999999998617654,
+        0.5926432601633187
+      ],
+      "head": 3,
+      "layer": 0,
+      "matrix_relative_error": 0.5981799280648282,
+      "population_final_median_energy_captured": 0.15464721203526344,
+      "population_final_median_relative_error": 0.9194306868735329,
+      "projection_rank": 32,
+      "sample_index": 339,
+      "view": "QK"
+    }
+  }
+}
