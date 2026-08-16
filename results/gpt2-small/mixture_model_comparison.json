@@ -1,0 +1,169 @@
+{
+  "active_atom_counts": [
+    2,
+    4,
+    8
+  ],
+  "analysis_status": "exploratory representation comparison",
+  "component_counts": [
+    8,
+    16,
+    32
+  ],
+  "dictionary_fit_alpha": 0.05,
+  "feature_space": "exact PCoA coordinates of normalized-Frobenius geometry",
+  "seed": 0,
+  "validation": "6-fold shuffled head-level cross-validation",
+  "views": {
+    "JOINT": {
+      "16": {
+        "relative_test_squared_error": {
+          "dictionary_2": 0.9277480675046754,
+          "dictionary_4": 0.9207376963375752,
+          "dictionary_8": 0.9163067501246823,
+          "kmeans": 1.0019462697711796,
+          "pca": 0.9098149908204979
+        },
+        "variance_recovered": {
+          "dictionary_2": 0.07225193249532458,
+          "dictionary_4": 0.07926230366242482,
+          "dictionary_8": 0.08369324987531768,
+          "kmeans": -0.0019462697711796206,
+          "pca": 0.09018500917950212
+        }
+      },
+      "32": {
+        "relative_test_squared_error": {
+          "dictionary_2": 0.9253305239978834,
+          "dictionary_4": 0.9163138408719161,
+          "dictionary_8": 0.9112173153848873,
+          "kmeans": 1.0454488132947326,
+          "pca": 0.9000241146200041
+        },
+        "variance_recovered": {
+          "dictionary_2": 0.0746694760021166,
+          "dictionary_4": 0.08368615912808386,
+          "dictionary_8": 0.08878268461511274,
+          "kmeans": -0.045448813294732604,
+          "pca": 0.09997588537999591
+        }
+      },
+      "8": {
+        "relative_test_squared_error": {
+          "dictionary_2": 0.9363012276996752,
+          "dictionary_4": 0.9312215885500352,
+          "dictionary_8": 0.9290346850470299,
+          "kmeans": 0.9759991053917979,
+          "pca": 0.9246583683634638
+        },
+        "variance_recovered": {
+          "dictionary_2": 0.06369877230032484,
+          "dictionary_4": 0.06877841144996477,
+          "dictionary_8": 0.0709653149529701,
+          "kmeans": 0.024000894608202095,
+          "pca": 0.07534163163653618
+        }
+      }
+    },
+    "OV": {
+      "16": {
+        "relative_test_squared_error": {
+          "dictionary_2": 0.9525342297581029,
+          "dictionary_4": 0.9459392030878764,
+          "dictionary_8": 0.9426634421109907,
+          "kmeans": 1.0334239719290743,
+          "pca": 0.9354921986530433
+        },
+        "variance_recovered": {
+          "dictionary_2": 0.04746577024189713,
+          "dictionary_4": 0.05406079691212362,
+          "dictionary_8": 0.057336557889009265,
+          "kmeans": -0.033423971929074314,
+          "pca": 0.06450780134695666
+        }
+      },
+      "32": {
+        "relative_test_squared_error": {
+          "dictionary_2": 0.9480662853069315,
+          "dictionary_4": 0.9390878188934335,
+          "dictionary_8": 0.9336043162852289,
+          "kmeans": 1.0864495533731764,
+          "pca": 0.9240797365920208
+        },
+        "variance_recovered": {
+          "dictionary_2": 0.05193371469306851,
+          "dictionary_4": 0.06091218110656649,
+          "dictionary_8": 0.06639568371477111,
+          "kmeans": -0.08644955337317639,
+          "pca": 0.0759202634079792
+        }
+      },
+      "8": {
+        "relative_test_squared_error": {
+          "dictionary_2": 0.9584172708460839,
+          "dictionary_4": 0.9542031954931296,
+          "dictionary_8": 0.9530857228537991,
+          "kmeans": 1.0127548408565954,
+          "pca": 0.9470509007298183
+        },
+        "variance_recovered": {
+          "dictionary_2": 0.04158272915391614,
+          "dictionary_4": 0.0457968045068704,
+          "dictionary_8": 0.04691427714620089,
+          "kmeans": -0.012754840856595395,
+          "pca": 0.052949099270181654
+        }
+      }
+    },
+    "QK": {
+      "16": {
+        "relative_test_squared_error": {
+          "dictionary_2": 0.8533963957081925,
+          "dictionary_4": 0.8473044761627874,
+          "dictionary_8": 0.8441816686858362,
+          "kmeans": 0.9259238770303727,
+          "pca": 0.8376481767853661
+        },
+        "variance_recovered": {
+          "dictionary_2": 0.14660360429180752,
+          "dictionary_4": 0.15269552383721263,
+          "dictionary_8": 0.15581833131416378,
+          "kmeans": 0.07407612296962729,
+          "pca": 0.16235182321463393
+        }
+      },
+      "32": {
+        "relative_test_squared_error": {
+          "dictionary_2": 0.8474613399643338,
+          "dictionary_4": 0.8388920454841778,
+          "dictionary_8": 0.834689113802756,
+          "kmeans": 0.9495896096825773,
+          "pca": 0.8247782570416818
+        },
+        "variance_recovered": {
+          "dictionary_2": 0.15253866003566618,
+          "dictionary_4": 0.16110795451582216,
+          "dictionary_8": 0.165310886197244,
+          "kmeans": 0.05041039031742267,
+          "pca": 0.17522174295831816
+        }
+      },
+      "8": {
+        "relative_test_squared_error": {
+          "dictionary_2": 0.8639672345516882,
+          "dictionary_4": 0.8576316054536249,
+          "dictionary_8": 0.8542426604850717,
+          "kmeans": 0.914051645327485,
+          "pca": 0.8524469958668474
+        },
+        "variance_recovered": {
+          "dictionary_2": 0.13603276544831178,
+          "dictionary_4": 0.14236839454637507,
+          "dictionary_8": 0.1457573395149283,
+          "kmeans": 0.08594835467251505,
+          "pca": 0.14755300413315264
+        }
+      }
+    }
+  }
+}

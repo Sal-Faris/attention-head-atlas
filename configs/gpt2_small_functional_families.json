@@ -1,0 +1,107 @@
+{
+  "benchmark_id": "gpt2-small-published-functional-families-v1",
+  "model": "gpt2-small",
+  "model_revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+  "created_date": "2026-08-16",
+  "labels_are_incomplete": true,
+  "unlabelled_heads_are_negatives": false,
+  "notes": [
+    "This is an external validation benchmark, not discovery input.",
+    "The frozen normalized-Frobenius distances predate transcription of the complete benchmark.",
+    "The L10H7-L11H10 relation was inspected before this benchmark was frozen and is retrospective evidence.",
+    "Layer-head notation is zero-indexed throughout."
+  ],
+  "sources": {
+    "ioi": {
+      "title": "Interpretability in the Wild: a Circuit for Indirect Object Identification in GPT-2 small",
+      "url": "https://arxiv.org/abs/2211.00593",
+      "authors": "Wang et al.",
+      "year": 2022
+    },
+    "copy_suppression": {
+      "title": "Copy Suppression: Comprehensively Understanding an Attention Head",
+      "url": "https://arxiv.org/abs/2310.04625",
+      "authors": "McDougall et al.",
+      "year": 2023
+    }
+  },
+  "families": [
+    {
+      "family_id": "copy_suppression",
+      "display_name": "Copy suppression / negative heads",
+      "heads": [[10, 7], [11, 10]],
+      "primary_heads": [[10, 7], [11, 10]],
+      "source_ids": ["copy_suppression", "ioi"],
+      "evidence": "Both heads perform copy suppression; L10H7 is characterized across the training distribution and L11H10 is the second negative head and downstream backup.",
+      "homogeneity": "high",
+      "use_for_primary_retrieval": true,
+      "inspection_status": "pair inspected before benchmark freeze"
+    },
+    {
+      "family_id": "name_mover",
+      "display_name": "Name mover heads",
+      "heads": [[9, 9], [9, 6], [10, 0]],
+      "primary_heads": [[9, 9], [9, 6], [10, 0]],
+      "source_ids": ["ioi"],
+      "evidence": "Heads attend to the indirect-object name and copy it toward the output on the IOI task.",
+      "homogeneity": "high within the IOI task",
+      "use_for_primary_retrieval": true,
+      "inspection_status": "uninspected at benchmark freeze"
+    },
+    {
+      "family_id": "s_inhibition",
+      "display_name": "S-inhibition heads",
+      "heads": [[7, 3], [7, 9], [8, 6], [8, 10]],
+      "primary_heads": [[7, 3], [7, 9], [8, 6], [8, 10]],
+      "source_ids": ["ioi"],
+      "evidence": "Heads route duplicate/positional information to inhibit the repeated subject in the IOI circuit.",
+      "homogeneity": "moderate; shared circuit role does not prove identical full-distribution function",
+      "use_for_primary_retrieval": true,
+      "inspection_status": "uninspected at benchmark freeze"
+    },
+    {
+      "family_id": "previous_token",
+      "display_name": "Previous-token heads",
+      "heads": [[2, 2], [2, 9], [4, 11]],
+      "primary_heads": [[2, 2], [4, 11]],
+      "source_ids": ["ioi"],
+      "evidence": "L2H2 and L4H11 were the two strongest validated previous-token heads on random-token sequences; L2H9 appears in the broader IOI circuit class.",
+      "homogeneity": "high for primary heads; extended member less strongly validated",
+      "use_for_primary_retrieval": true,
+      "inspection_status": "uninspected at benchmark freeze"
+    },
+    {
+      "family_id": "duplicate_token",
+      "display_name": "Duplicate-token heads",
+      "heads": [[0, 1], [0, 10], [3, 0]],
+      "primary_heads": [[0, 1], [3, 0]],
+      "source_ids": ["ioi"],
+      "evidence": "L0H1 and L3H0 were strongly validated on repeated random-token sequences; L0H10 was described as a fuzzy short-range duplicate head.",
+      "homogeneity": "high for primary heads; extended member explicitly fuzzy",
+      "use_for_primary_retrieval": true,
+      "inspection_status": "uninspected at benchmark freeze"
+    },
+    {
+      "family_id": "induction",
+      "display_name": "Induction heads",
+      "heads": [[5, 5], [5, 8], [5, 9], [6, 9]],
+      "primary_heads": [[5, 5], [6, 9]],
+      "source_ids": ["ioi"],
+      "evidence": "L5H5 and L6H9 showed strong induction and copying behavior; L5H8 and L5H9 were described as fuzzy induction heads.",
+      "homogeneity": "high for primary heads; extended members explicitly fuzzy",
+      "use_for_primary_retrieval": true,
+      "inspection_status": "uninspected at benchmark freeze"
+    },
+    {
+      "family_id": "backup_name_mover",
+      "display_name": "Backup name mover heads",
+      "heads": [[9, 0], [9, 7], [10, 1], [10, 2], [10, 6], [10, 10], [11, 2], [11, 9]],
+      "primary_heads": [],
+      "source_ids": ["ioi"],
+      "evidence": "Heads compensate after primary name movers are ablated, but the source divides them into several attention/write subtypes and states that their diversity was not thoroughly investigated.",
+      "homogeneity": "low",
+      "use_for_primary_retrieval": false,
+      "inspection_status": "excluded from primary homogeneous-family evaluation"
+    }
+  ]
+}

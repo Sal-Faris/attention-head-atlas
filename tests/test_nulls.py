@@ -23,6 +23,14 @@ class NullTests(unittest.TestCase):
         self.assertEqual(np.linalg.matrix_rank(null), np.linalg.matrix_rank(matrix))
         self.assertAlmostEqual(np.linalg.norm(null, ord="fro"), np.linalg.norm(matrix, ord="fro"))
 
+    def test_rank_norm_null_respects_float32_low_rank_structure(self):
+        rng = np.random.default_rng(6)
+        matrix = rng.standard_normal((12, 3), dtype=np.float32) @ rng.standard_normal(
+            (3, 12), dtype=np.float32
+        )
+        null = rank_norm_matched_gaussian(matrix, rng)
+        self.assertEqual(np.linalg.matrix_rank(null), 3)
+
 
 if __name__ == "__main__":
     unittest.main()
