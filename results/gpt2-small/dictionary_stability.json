@@ -1,0 +1,154 @@
+{
+  "analysis_status": "exploratory dictionary-stability audit",
+  "dictionary_alpha": 0.05,
+  "matching": "Hungarian mean absolute atom cosine",
+  "repetitions": 5,
+  "sample_fraction": 0.8,
+  "seed": 0,
+  "views": {
+    "JOINT": {
+      "16": {
+        "bootstrap_stability": {
+          "comparison_count": 10,
+          "maximum": 0.4128332767182378,
+          "mean": 0.29950998367888726,
+          "minimum": 0.2244845303329739,
+          "standard_deviation": 0.053547103599263755
+        },
+        "initialization_stability": {
+          "comparison_count": 10,
+          "maximum": 0.9341384281505991,
+          "mean": 0.8430874514534746,
+          "minimum": 0.7733814645012013,
+          "standard_deviation": 0.058759165268702104
+        },
+        "random_dictionary_baseline": {
+          "comparison_count": 20,
+          "maximum": 0.17342845497051151,
+          "mean": 0.15599230215914822,
+          "minimum": 0.13866935137884895,
+          "standard_deviation": 0.011281976375069268
+        }
+      },
+      "32": {
+        "bootstrap_stability": {
+          "comparison_count": 10,
+          "maximum": 0.4551188710677785,
+          "mean": 0.38179545744991283,
+          "minimum": 0.3334639692300245,
+          "standard_deviation": 0.04394650806522678
+        },
+        "initialization_stability": {
+          "comparison_count": 10,
+          "maximum": 0.777459421553579,
+          "mean": 0.7382571321415043,
+          "minimum": 0.7011154853516486,
+          "standard_deviation": 0.02729153347760897
+        },
+        "random_dictionary_baseline": {
+          "comparison_count": 20,
+          "maximum": 0.187128297108225,
+          "mean": 0.1790278888379298,
+          "minimum": 0.17182678511561683,
+          "standard_deviation": 0.004237471449068737
+        }
+      }
+    },
+    "OV": {
+      "16": {
+        "bootstrap_stability": {
+          "comparison_count": 10,
+          "maximum": 0.501088231719375,
+          "mean": 0.29209858622584683,
+          "minimum": 0.20480676043194954,
+          "standard_deviation": 0.08699295483860094
+        },
+        "initialization_stability": {
+          "comparison_count": 10,
+          "maximum": 0.8868048347325447,
+          "mean": 0.7950670145393592,
+          "minimum": 0.7106148986495953,
+          "standard_deviation": 0.06173572182469686
+        },
+        "random_dictionary_baseline": {
+          "comparison_count": 20,
+          "maximum": 0.17006785250760437,
+          "mean": 0.15541678083190555,
+          "minimum": 0.13421131467991898,
+          "standard_deviation": 0.009688335523731247
+        }
+      },
+      "32": {
+        "bootstrap_stability": {
+          "comparison_count": 10,
+          "maximum": 0.4457141710738002,
+          "mean": 0.36163109543587646,
+          "minimum": 0.2910193679379265,
+          "standard_deviation": 0.04736547023734631
+        },
+        "initialization_stability": {
+          "comparison_count": 10,
+          "maximum": 0.8166281284979464,
+          "mean": 0.7639776064899824,
+          "minimum": 0.7110882423510265,
+          "standard_deviation": 0.03146068993290975
+        },
+        "random_dictionary_baseline": {
+          "comparison_count": 20,
+          "maximum": 0.19477904268713248,
+          "mean": 0.1809720778282194,
+          "minimum": 0.17245372144936572,
+          "standard_deviation": 0.005552920259815989
+        }
+      }
+    },
+    "QK": {
+      "16": {
+        "bootstrap_stability": {
+          "comparison_count": 10,
+          "maximum": 0.4805120110929001,
+          "mean": 0.3851649939637345,
+          "minimum": 0.30311353359052867,
+          "standard_deviation": 0.04542705912388545
+        },
+        "initialization_stability": {
+          "comparison_count": 10,
+          "maximum": 0.9999869531196512,
+          "mean": 0.8466023143425726,
+          "minimum": 0.7817899647618085,
+          "standard_deviation": 0.07503260790462607
+        },
+        "random_dictionary_baseline": {
+          "comparison_count": 20,
+          "maximum": 0.17108549356238967,
+          "mean": 0.15923402892222577,
+          "minimum": 0.13130558907996603,
+          "standard_deviation": 0.010379497742117837
+        }
+      },
+      "32": {
+        "bootstrap_stability": {
+          "comparison_count": 10,
+          "maximum": 0.5186832507938328,
+          "mean": 0.4653689346811979,
+          "minimum": 0.40281294085377883,
+          "standard_deviation": 0.03632152409305942
+        },
+        "initialization_stability": {
+          "comparison_count": 10,
+          "maximum": 0.8979499989072534,
+          "mean": 0.8004900130454304,
+          "minimum": 0.7542565599019513,
+          "standard_deviation": 0.03675485613227937
+        },
+        "random_dictionary_baseline": {
+          "comparison_count": 20,
+          "maximum": 0.1888870282657404,
+          "mean": 0.18147337106795797,
+          "minimum": 0.16960792437120434,
+          "standard_deviation": 0.005683890426160854
+        }
+      }
+    }
+  }
+}

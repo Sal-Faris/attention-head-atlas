@@ -67,3 +67,4 @@ The main generated figures are:
 - `results/gpt2-small/functional_operator_atlas.png`
 - `results/gpt2-small/representation_comparison.png`
 - `results/gpt2-small/mixture_model_comparison.png`
+- `results/gpt2-small/dictionary_stability.png`
