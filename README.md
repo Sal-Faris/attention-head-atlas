@@ -54,17 +54,21 @@ python scripts/extract_operators.py `
 
 ## Status
 
-Checkpoint 0004 extends the study to eight frozen Pythia-70M-deduped training
-checkpoints using exact compact QK/OV factors. Sparse mixtures consistently beat
-hard clusters, and stable atom usage reorganizes strongly during training.
-However, explicit reuse and layer-residual controls show that much of the most
-robust structure is developmental layer structure rather than a confirmed
-cross-layer taxonomy of functional head species.
+Checkpoint 0005 tests what remains after sparse dictionary reconstruction and
+separates exact query/key and read/write subspace geometry. Final-checkpoint
+dictionary residuals are close to isotropic, while all tested factor subspaces
+remain non-random. OV read and write geometries are only weakly coupled,
+suggesting that reusable structure may live in separately recombined subspaces
+rather than complete operator atoms.
 
 Read the methods, results, caveats, and causal gate in
+[`docs/checkpoints/0005-residuals-and-subspaces.md`](docs/checkpoints/0005-residuals-and-subspaces.md).
+The preceding atom-discovery checkpoint remains in
 [`docs/checkpoints/0004-pythia-factor-atoms.md`](docs/checkpoints/0004-pythia-factor-atoms.md).
 The main Pythia figures are:
 
+- `results/pythia-70m-deduped/dictionary_residual_null.png`
+- `results/pythia-70m-deduped/factor_subspace_atlas.png`
 - `results/pythia-70m-deduped/trajectory_geometry.png`
 - `results/pythia-70m-deduped/atom_emergence.png`
 - `results/pythia-70m-deduped/atom_reuse.png`

@@ -10,6 +10,7 @@ from head_atlas.factors import (
     factorized_frobenius_norm,
     factorized_inner_product,
     factorized_qk_scores,
+    factorized_singular_components,
     normalized_factorized_frobenius_distances,
     rotary_head_rotation,
     rotate_qk_relative,
@@ -18,6 +19,26 @@ from head_atlas.operators import HeadOperator
 
 
 class FactorTests(unittest.TestCase):
+    def test_skinny_svd_reconstructs_operator(self):
+        rng = np.random.default_rng(23)
+        operator = FactorizedHeadOperator(
+            0,
+            0,
+            "OV",
+            rng.standard_normal((8, 3)),
+            rng.standard_normal((8, 3)),
+        )
+
+        left, values, right = factorized_singular_components(operator)
+
+        np.testing.assert_allclose(
+            (left * values) @ right.T,
+            operator.materialize(dtype=np.float64),
+            atol=1e-12,
+        )
+        np.testing.assert_allclose(left.T @ left, np.eye(3), atol=1e-12)
+        np.testing.assert_allclose(right.T @ right, np.eye(3), atol=1e-12)
+
     def test_materialization_and_actions(self):
         left = np.asarray([[1.0, 2.0], [0.0, 1.0], [2.0, -1.0]])
         right = np.asarray([[0.5, 1.0], [1.0, 0.0], [-1.0, 2.0]])

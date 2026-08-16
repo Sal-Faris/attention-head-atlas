@@ -5,6 +5,24 @@ import numpy as np
 Array = np.ndarray
 
 
+def sample_norm_matched_isotropic(
+    vectors: Array, rng: np.random.Generator
+) -> Array:
+    """Randomize vector directions independently while preserving row norms."""
+
+    vector_array = np.asarray(vectors, dtype=np.float64)
+    if vector_array.ndim != 2 or vector_array.shape[0] < 1 or vector_array.shape[1] < 1:
+        raise ValueError("vectors must be a nonempty two-dimensional array")
+    if not np.isfinite(vector_array).all():
+        raise ValueError("vectors contain non-finite values")
+    target_norms = np.linalg.norm(vector_array, axis=1)
+    if np.any(target_norms == 0):
+        raise ValueError("cannot randomize zero vectors")
+    samples = rng.standard_normal(vector_array.shape)
+    sample_norms = np.linalg.norm(samples, axis=1)
+    return samples * (target_norms / sample_norms)[:, None]
+
+
 def resolved_singular_values(matrix: Array) -> Array:
     """Singular values distinguishable at the supplied matrix precision."""
 
@@ -39,6 +57,14 @@ def _haar_orthonormal_frame(
     signs = np.sign(np.diag(r))
     signs[signs == 0] = 1.0
     return q * signs
+
+
+def haar_orthonormal_frame(
+    size: int, columns: int, rng: np.random.Generator
+) -> Array:
+    """Sample a Haar-uniform orthonormal frame with the requested shape."""
+
+    return _haar_orthonormal_frame(size, columns, rng)
 
 
 def haar_orthogonal(size: int, rng: np.random.Generator) -> Array:

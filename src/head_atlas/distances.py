@@ -9,6 +9,26 @@ from head_atlas.operators import HeadOperator
 Array = np.ndarray
 
 
+def normalized_vector_distances(vectors: Array, eps: float = 1e-12) -> Array:
+    """Return chord distances between nonzero vectors after removing scale."""
+
+    vector_array = np.asarray(vectors, dtype=np.float64)
+    if vector_array.ndim != 2 or vector_array.shape[0] < 1:
+        raise ValueError("vectors must be a nonempty two-dimensional array")
+    if eps < 0:
+        raise ValueError("eps must be nonnegative")
+    if not np.isfinite(vector_array).all():
+        raise ValueError("vectors contain non-finite values")
+    norms = np.linalg.norm(vector_array, axis=1)
+    if np.any(norms <= eps):
+        raise ValueError("cannot compare a near-zero vector")
+    normalized = vector_array / norms[:, None]
+    similarities = np.clip(normalized @ normalized.T, -1.0, 1.0)
+    distances = np.sqrt(np.maximum(2.0 - 2.0 * similarities, 0.0))
+    np.fill_diagonal(distances, 0.0)
+    return distances
+
+
 def chordal_subspace_distances(bases: Array, tolerance: float = 1e-5) -> Array:
     """Pairwise normalized chordal distances between equal-rank subspaces.
 

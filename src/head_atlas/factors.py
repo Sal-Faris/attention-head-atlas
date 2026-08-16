@@ -77,6 +77,30 @@ def factorized_frobenius_norm(operator: FactorizedHeadOperator) -> float:
     return float(np.sqrt(max(squared_norm, 0.0)))
 
 
+def factorized_singular_components(
+    operator: FactorizedHeadOperator,
+) -> tuple[Array, Array, Array]:
+    """Return an exact thin SVD using only the operator's skinny factors.
+
+    The returned arrays satisfy ``M = left @ diag(values) @ right.T``. For
+    row-vector actions, ``left`` spans the input/read side and ``right`` spans
+    the output/write side. For QK, these are query- and key-side subspaces.
+    """
+
+    left_q, left_r = np.linalg.qr(
+        np.asarray(operator.left, dtype=np.float64), mode="reduced"
+    )
+    right_q, right_r = np.linalg.qr(
+        np.asarray(operator.right, dtype=np.float64), mode="reduced"
+    )
+    core_left, singular_values, core_right_transpose = np.linalg.svd(
+        left_r @ right_r.T, full_matrices=False
+    )
+    left = left_q @ core_left
+    right = right_q @ core_right_transpose.T
+    return left, singular_values, right
+
+
 def normalized_factorized_frobenius_distances(
     operators: Sequence[FactorizedHeadOperator],
     eps: float = 1e-12,
