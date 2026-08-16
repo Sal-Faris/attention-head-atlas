@@ -8,6 +8,7 @@ from head_atlas.dictionary import (
     grouped_splits,
     head_trajectory_groups,
     joint_view_coordinates,
+    residualize_group_means,
 )
 
 
@@ -33,6 +34,15 @@ class DictionaryTests(unittest.TestCase):
 
         self.assertEqual(set(values[splits[0][1]]), {0, 10})
         self.assertEqual(set(values[splits[1][1]]), {20, 30})
+
+    def test_group_residuals_have_zero_group_means(self):
+        coordinates = np.asarray([[1.0, 2.0], [3.0, 4.0], [8.0, 1.0], [6.0, 5.0]])
+        groups = np.asarray([0, 0, 1, 1])
+
+        residuals = residualize_group_means(coordinates, groups)
+
+        np.testing.assert_allclose(np.mean(residuals[:2], axis=0), 0.0)
+        np.testing.assert_allclose(np.mean(residuals[2:], axis=0), 0.0)
 
     def test_cross_validated_models_return_each_baseline(self):
         rng = np.random.default_rng(7)

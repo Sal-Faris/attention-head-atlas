@@ -130,6 +130,20 @@ The pilot advances if all of the following hold:
 Failure is a valid result. It triggers representation diagnosis rather than
 automatic acquisition of more checkpoints.
 
+## Post-gate representation diagnosis
+
+Materializing the reconstruction-optimal 32-atom dictionaries revealed that
+some entries were dominated by individual heads. The project therefore reports
+two profiles: the reconstruction-optimal atlas and a compact 8-atom/2-active
+candidate chosen from the original grid as the smallest sparse model that beats
+matched hard clustering. Atom reuse is audited with effective trajectory and
+layer participation.
+
+Checkpoint-by-layer mean residualization was added after this diagnostic and is
+explicitly exploratory, not preregistered confirmation. A cross-layer head-type
+claim requires the residual representation to pass stability, temporal, and
+reuse gates; the current pilot does not pass that combined gate.
+
 ## Storage discipline
 
 - Use `D:/Laptop/AI/model-cache/huggingface` as the dedicated external-model

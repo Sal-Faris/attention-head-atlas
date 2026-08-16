@@ -36,6 +36,10 @@
   "recurrence_minimum_head_fraction": 0.5,
   "recurrence_minimum_initialization_strength_multiplier": 2.0,
   "recurrence_minimum_adjacent_checkpoints": 3,
+  "reuse_minimum_effective_trajectories": 4.0,
+  "reuse_maximum_single_trajectory_share": 0.5,
+  "reuse_minimum_effective_layers": 2.0,
+  "reuse_maximum_single_layer_share": 0.75,
   "random_seed": 0,
   "notes": [
     "The pilot checkpoints are fixed before any Pythia weights are inspected.",

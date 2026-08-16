@@ -1,0 +1,1077 @@
+{
+  "analysis_status": "preregistered post-selection emergence audit",
+  "coefficient_measure": "atom share of checkpoint mean absolute OMP coefficients; normalized within checkpoint before temporal testing",
+  "false_discovery_rate": 0.05,
+  "profile": "compact",
+  "recurrence_rule": {
+    "minimum_active_head_fraction": 0.5,
+    "minimum_adjacent_checkpoints": 3,
+    "minimum_initialization_strength_multiplier": 2.0
+  },
+  "time_null": "checkpoint-order permutation",
+  "time_permutation_repetitions": 10000,
+  "views": {
+    "JOINT": {
+      "atom_count": 8,
+      "atoms": [
+        {
+          "active_head_fraction_by_checkpoint": [
+            0.9166666666666666,
+            0.9166666666666666,
+            0.6458333333333334,
+            0.7083333333333334,
+            0.5,
+            0.5208333333333334,
+            0.4791666666666667,
+            0.4166666666666667
+          ],
+          "atom": 0,
+          "benjamini_hochberg_q_value": 0.0031996800319968005,
+          "coefficient_share_by_checkpoint": [
+            0.46220459722656354,
+            0.46169942301289246,
+            0.3077665438849201,
+            0.36625590151260834,
+            0.24242484451001625,
+            0.21025075285113026,
+            0.2034757926182133,
+            0.1821542612555785
+          ],
+          "final_strength": 0.07557457126359497,
+          "final_to_initialization_ratio": 1.806041020816433,
+          "initialization_strength": 0.04184543451257324,
+          "maximum_adjacent_recurrent_checkpoints": 0,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": true,
+          "spearman_training_correlation": -0.9761904761904762,
+          "strength_by_checkpoint": [
+            0.04184543451257324,
+            0.04181931934306963,
+            0.030244323412759316,
+            0.053142246112328616,
+            0.07066574123802317,
+            0.07942082752691616,
+            0.08358200091595015,
+            0.07557457126359497
+          ],
+          "time_permutation_p_value": 0.0007999200079992001
+        },
+        {
+          "active_head_fraction_by_checkpoint": [
+            0.020833333333333332,
+            0.020833333333333332,
+            0.08333333333333333,
+            0.16666666666666666,
+            0.16666666666666666,
+            0.2708333333333333,
+            0.3125,
+            0.2708333333333333
+          ],
+          "atom": 1,
+          "benjamini_hochberg_q_value": 0.0031996800319968005,
+          "coefficient_share_by_checkpoint": [
+            0.01164099822672422,
+            0.011651346260845076,
+            0.0554502732945916,
+            0.090143273445355,
+            0.13107098200727543,
+            0.14180734677200837,
+            0.16198823585478997,
+            0.15965684210821857
+          ],
+          "final_strength": 0.06624054418742605,
+          "final_to_initialization_ratio": 62.85210792146766,
+          "initialization_strength": 0.0010539112589539902,
+          "maximum_adjacent_recurrent_checkpoints": 0,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": true,
+          "spearman_training_correlation": 0.9761904761904762,
+          "strength_by_checkpoint": [
+            0.0010539112589539902,
+            0.0010553432509820453,
+            0.005449117300659566,
+            0.013079423438693949,
+            0.03820659601560363,
+            0.053566784790557875,
+            0.06654010633585457,
+            0.06624054418742605
+          ],
+          "time_permutation_p_value": 0.0005999400059994001
+        },
+        {
+          "active_head_fraction_by_checkpoint": [
+            0.14583333333333334,
+            0.14583333333333334,
+            0.16666666666666666,
+            0.10416666666666667,
+            0.22916666666666666,
+            0.20833333333333334,
+            0.2708333333333333,
+            0.2708333333333333
+          ],
+          "atom": 2,
+          "benjamini_hochberg_q_value": 0.053061360530613604,
+          "coefficient_share_by_checkpoint": [
+            0.07067864216272628,
+            0.07087596223543342,
+            0.09524389154243883,
+            0.09971192266719786,
+            0.134190870133953,
+            0.1308054947592012,
+            0.12587265166306433,
+            0.11549706559074172
+          ],
+          "final_strength": 0.047918951519759174,
+          "final_to_initialization_ratio": 7.4886802653538735,
+          "initialization_strength": 0.006398851309149169,
+          "maximum_adjacent_recurrent_checkpoints": 0,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": false,
+          "spearman_training_correlation": 0.7619047619047619,
+          "strength_by_checkpoint": [
+            0.006398851309149169,
+            0.006419727534266741,
+            0.009359649760944775,
+            0.014467795639140827,
+            0.03911602923601875,
+            0.04941090815593532,
+            0.05170486351826404,
+            0.047918951519759174
+          ],
+          "time_permutation_p_value": 0.03799620037996201
+        },
+        {
+          "active_head_fraction_by_checkpoint": [
+            0.0625,
+            0.0625,
+            0.0625,
+            0.14583333333333334,
+            0.25,
+            0.25,
+            0.25,
+            0.25
+          ],
+          "atom": 3,
+          "benjamini_hochberg_q_value": 0.0031996800319968005,
+          "coefficient_share_by_checkpoint": [
+            0.02643026403684757,
+            0.026422222717216882,
+            0.026859254405892166,
+            0.0541535287522703,
+            0.12177080548396967,
+            0.1362198487325818,
+            0.14012248838745928,
+            0.13779518950164238
+          ],
+          "final_strength": 0.057170292349960176,
+          "final_to_initialization_ratio": 23.892142166911977,
+          "initialization_strength": 0.002392849161475978,
+          "maximum_adjacent_recurrent_checkpoints": 0,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": true,
+          "spearman_training_correlation": 0.9523809523809523,
+          "strength_by_checkpoint": [
+            0.002392849161475978,
+            0.002393243990547822,
+            0.002639468106647528,
+            0.00785745742503795,
+            0.035495636794438866,
+            0.0514561444619095,
+            0.057558286428306606,
+            0.057170292349960176
+          ],
+          "time_permutation_p_value": 0.0014998500149985001
+        },
+        {
+          "active_head_fraction_by_checkpoint": [
+            0.7708333333333334,
+            0.7708333333333334,
+            0.9583333333333334,
+            0.7291666666666666,
+            0.6458333333333334,
+            0.5208333333333334,
+            0.4791666666666667,
+            0.5625
+          ],
+          "atom": 4,
+          "benjamini_hochberg_q_value": 0.053061360530613604,
+          "coefficient_share_by_checkpoint": [
+            0.32210683365954546,
+            0.3221075024728399,
+            0.38724040874957816,
+            0.2383662756708515,
+            0.17814360254974967,
+            0.1619927694283933,
+            0.15496966833972,
+            0.20472206413364452
+          ],
+          "final_strength": 0.08493780007369744,
+          "final_to_initialization_ratio": 2.9126429452897473,
+          "initialization_strength": 0.029161761901182127,
+          "maximum_adjacent_recurrent_checkpoints": 1,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": false,
+          "spearman_training_correlation": -0.7619047619047619,
+          "strength_by_checkpoint": [
+            0.029161761901182127,
+            0.029175510813523667,
+            0.03805424726441557,
+            0.03458598000541293,
+            0.051928051130377156,
+            0.06119169433124224,
+            0.06365708074875716,
+            0.08493780007369744
+          ],
+          "time_permutation_p_value": 0.0397960203979602
+        },
+        {
+          "active_head_fraction_by_checkpoint": [
+            0.0,
+            0.0,
+            0.0,
+            0.020833333333333332,
+            0.0625,
+            0.0625,
+            0.0625,
+            0.0625
+          ],
+          "atom": 5,
+          "benjamini_hochberg_q_value": 0.0031996800319968005,
+          "coefficient_share_by_checkpoint": [
+            0.0,
+            0.0,
+            0.0,
+            0.008508022320357508,
+            0.05005926581173287,
+            0.08604361261655526,
+            0.09315786602325567,
+            0.08881208959560986
+          ],
+          "final_strength": 0.03684753542380632,
+          "final_to_initialization_ratio": 36847535423.80632,
+          "initialization_strength": 0.0,
+          "maximum_adjacent_recurrent_checkpoints": 0,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": true,
+          "spearman_training_correlation": 0.9515025711248197,
+          "strength_by_checkpoint": [
+            0.0,
+            0.0,
+            0.0,
+            0.0012344795379687805,
+            0.014592048647353787,
+            0.032502404033011224,
+            0.03826657089324323,
+            0.03684753542380632
+          ],
+          "time_permutation_p_value": 0.0015998400159984002
+        },
+        {
+          "active_head_fraction_by_checkpoint": [
+            0.0625,
+            0.0625,
+            0.0625,
+            0.08333333333333333,
+            0.08333333333333333,
+            0.125,
+            0.10416666666666667,
+            0.10416666666666667
+          ],
+          "atom": 6,
+          "benjamini_hochberg_q_value": 0.1715828417158284,
+          "coefficient_share_by_checkpoint": [
+            0.054357013095682305,
+            0.05462152408435014,
+            0.0698413638973932,
+            0.07042860077036575,
+            0.08571426741504243,
+            0.08427083286236717,
+            0.07657397094564594,
+            0.0693102399572674
+          ],
+          "final_strength": 0.02875634988081815,
+          "final_to_initialization_ratio": 5.843383012811121,
+          "initialization_strength": 0.004921181756830297,
+          "maximum_adjacent_recurrent_checkpoints": 0,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": false,
+          "spearman_training_correlation": 0.5476190476190477,
+          "strength_by_checkpoint": [
+            0.004921181756830297,
+            0.004947450321212168,
+            0.0068633346907609446,
+            0.010218904378137017,
+            0.024985319692791844,
+            0.03183274823777004,
+            0.03145438397050889,
+            0.02875634988081815
+          ],
+          "time_permutation_p_value": 0.1715828417158284
+        },
+        {
+          "active_head_fraction_by_checkpoint": [
+            0.020833333333333332,
+            0.020833333333333332,
+            0.020833333333333332,
+            0.041666666666666664,
+            0.0625,
+            0.041666666666666664,
+            0.041666666666666664,
+            0.0625
+          ],
+          "atom": 7,
+          "benjamini_hochberg_q_value": 0.15084205865127773,
+          "coefficient_share_by_checkpoint": [
+            0.05258165159191068,
+            0.05262201921642205,
+            0.057598264225186005,
+            0.07243247486099372,
+            0.05662536208826069,
+            0.04860934197776265,
+            0.04383932616785157,
+            0.04205224785729709
+          ],
+          "final_strength": 0.017447193277716027,
+          "final_to_initialization_ratio": 3.665029949599889,
+          "initialization_strength": 0.004760450396761624,
+          "maximum_adjacent_recurrent_checkpoints": 0,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": false,
+          "spearman_training_correlation": -0.5952380952380952,
+          "strength_by_checkpoint": [
+            0.004760450396761624,
+            0.004766341295659905,
+            0.005660201103247486,
+            0.010509658382816459,
+            0.01650603589300464,
+            0.018361856559659016,
+            0.018007933783018588,
+            0.017447193277716027
+          ],
+          "time_permutation_p_value": 0.131986801319868
+        }
+      ],
+      "checkpoint_values": [
+        0,
+        64,
+        512,
+        1000,
+        4000,
+        16000,
+        64000,
+        143000
+      ],
+      "passes_protocol_emergence_gate": true,
+      "recurrent_atom_count": 0,
+      "significant_monotonic_atom_count": 4
+    },
+    "OV": {
+      "atom_count": 8,
+      "atoms": [
+        {
+          "active_head_fraction_by_checkpoint": [
+            0.9166666666666666,
+            0.9166666666666666,
+            0.8541666666666666,
+            0.75,
+            0.6041666666666666,
+            0.5833333333333334,
+            0.5,
+            0.5625
+          ],
+          "atom": 0,
+          "benjamini_hochberg_q_value": 0.029063760290637602,
+          "coefficient_share_by_checkpoint": [
+            0.4134563416968737,
+            0.4132560722139135,
+            0.3505468927418292,
+            0.24903889963641682,
+            0.19764674799031162,
+            0.18800738542056086,
+            0.17157400381410307,
+            0.22865474941862615
+          ],
+          "final_strength": 0.08913406289141124,
+          "final_to_initialization_ratio": 2.2806193669000754,
+          "initialization_strength": 0.03908327017873501,
+          "maximum_adjacent_recurrent_checkpoints": 1,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": true,
+          "spearman_training_correlation": -0.8571428571428571,
+          "strength_by_checkpoint": [
+            0.03908327017873501,
+            0.039049310289715145,
+            0.03683394968419524,
+            0.040033606401492,
+            0.05942640721607165,
+            0.07149449807816115,
+            0.06692268914288033,
+            0.08913406289141124
+          ],
+          "time_permutation_p_value": 0.0108989101089891
+        },
+        {
+          "active_head_fraction_by_checkpoint": [
+            0.3958333333333333,
+            0.3958333333333333,
+            0.3958333333333333,
+            0.3125,
+            0.22916666666666666,
+            0.1875,
+            0.20833333333333334,
+            0.20833333333333334
+          ],
+          "atom": 1,
+          "benjamini_hochberg_q_value": 0.04559544045595441,
+          "coefficient_share_by_checkpoint": [
+            0.1576610730678778,
+            0.1575649389369501,
+            0.16972911445987177,
+            0.1621779824741464,
+            0.14402586079491772,
+            0.13432021524651852,
+            0.12260801022838781,
+            0.11222503641596411
+          ],
+          "final_strength": 0.043747499141500945,
+          "final_to_initialization_ratio": 2.9354015277181578,
+          "initialization_strength": 0.014903412268613275,
+          "maximum_adjacent_recurrent_checkpoints": 0,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": true,
+          "spearman_training_correlation": -0.8095238095238095,
+          "strength_by_checkpoint": [
+            0.014903412268613275,
+            0.014888594760064681,
+            0.017834400450847106,
+            0.026070503551199595,
+            0.0433042260511343,
+            0.051078612413649305,
+            0.047823432294741564,
+            0.043747499141500945
+          ],
+          "time_permutation_p_value": 0.022997700229977002
+        },
+        {
+          "active_head_fraction_by_checkpoint": [
+            0.16666666666666666,
+            0.16666666666666666,
+            0.25,
+            0.3125,
+            0.375,
+            0.3333333333333333,
+            0.4583333333333333,
+            0.4375
+          ],
+          "atom": 2,
+          "benjamini_hochberg_q_value": 0.0047995200479952005,
+          "coefficient_share_by_checkpoint": [
+            0.09311186758043297,
+            0.09331472068898666,
+            0.13812635932835454,
+            0.18545131332143663,
+            0.20590181159224835,
+            0.1881126360455515,
+            0.21924817081840703,
+            0.20918334916547482
+          ],
+          "final_strength": 0.08154373284508133,
+          "final_to_initialization_ratio": 9.264549659749788,
+          "initialization_strength": 0.008801694182648876,
+          "maximum_adjacent_recurrent_checkpoints": 0,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": true,
+          "spearman_training_correlation": 0.9523809523809523,
+          "strength_by_checkpoint": [
+            0.008801694182648876,
+            0.00881747596172323,
+            0.01451371977588374,
+            0.029811747863443077,
+            0.061908455497621466,
+            0.07153452225375023,
+            0.08551806715848938,
+            0.08154373284508133
+          ],
+          "time_permutation_p_value": 0.0011998800119988001
+        },
+        {
+          "active_head_fraction_by_checkpoint": [
+            0.020833333333333332,
+            0.020833333333333332,
+            0.020833333333333332,
+            0.041666666666666664,
+            0.041666666666666664,
+            0.041666666666666664,
+            0.0625,
+            0.0625
+          ],
+          "atom": 3,
+          "benjamini_hochberg_q_value": 0.20603653920322254,
+          "coefficient_share_by_checkpoint": [
+            0.059313435999108634,
+            0.059399159713120986,
+            0.0636915750990252,
+            0.08528529334283738,
+            0.06664494730353578,
+            0.05437099080955927,
+            0.05358473653705186,
+            0.05107814162153974
+          ],
+          "final_strength": 0.01991125178570143,
+          "final_to_initialization_ratio": 3.55127450671408,
+          "initialization_strength": 0.005606790392592009,
+          "maximum_adjacent_recurrent_checkpoints": 0,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": false,
+          "spearman_training_correlation": -0.5476190476190477,
+          "strength_by_checkpoint": [
+            0.005606790392592009,
+            0.005612733543538519,
+            0.00669243493831916,
+            0.013709817504444473,
+            0.02003812264873536,
+            0.020675925518810163,
+            0.02090080423813889,
+            0.01991125178570143
+          ],
+          "time_permutation_p_value": 0.1802819718028197
+        },
+        {
+          "active_head_fraction_by_checkpoint": [
+            0.375,
+            0.375,
+            0.3125,
+            0.3333333333333333,
+            0.2708333333333333,
+            0.3541666666666667,
+            0.3125,
+            0.25
+          ],
+          "atom": 4,
+          "benjamini_hochberg_q_value": 0.8414158584141586,
+          "coefficient_share_by_checkpoint": [
+            0.1539495667864966,
+            0.1537001163846425,
+            0.13149491421592507,
+            0.14417792110498923,
+            0.1370731297335467,
+            0.16247872497301202,
+            0.15742268439009105,
+            0.14039469804710986
+          ],
+          "final_strength": 0.05472858043478015,
+          "final_to_initialization_ratio": 3.7607500940703154,
+          "initialization_strength": 0.014552570382454368,
+          "maximum_adjacent_recurrent_checkpoints": 0,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": false,
+          "spearman_training_correlation": 0.09523809523809523,
+          "strength_by_checkpoint": [
+            0.014552570382454368,
+            0.014523400718870707,
+            0.013816916236436527,
+            0.023176950081811535,
+            0.04121374982767973,
+            0.06178658814035449,
+            0.061402946467871915,
+            0.05472858043478015
+          ],
+          "time_permutation_p_value": 0.8414158584141586
+        },
+        {
+          "active_head_fraction_by_checkpoint": [
+            0.041666666666666664,
+            0.041666666666666664,
+            0.0625,
+            0.0625,
+            0.10416666666666667,
+            0.10416666666666667,
+            0.08333333333333333,
+            0.10416666666666667
+          ],
+          "atom": 5,
+          "benjamini_hochberg_q_value": 0.046528680465286805,
+          "coefficient_share_by_checkpoint": [
+            0.06287892807579652,
+            0.06300725359162192,
+            0.0704067479218997,
+            0.07723199914098677,
+            0.09132963958473289,
+            0.08895327519089488,
+            0.08632097513938802,
+            0.08282706266120392
+          ],
+          "final_strength": 0.032287597922744986,
+          "final_to_initialization_ratio": 5.432120178564258,
+          "initialization_strength": 0.005943829823602834,
+          "maximum_adjacent_recurrent_checkpoints": 0,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": true,
+          "spearman_training_correlation": 0.7619047619047619,
+          "strength_by_checkpoint": [
+            0.005943829823602834,
+            0.005953668830130204,
+            0.007398036223053981,
+            0.012415230952773249,
+            0.027460064018485327,
+            0.033826701796609675,
+            0.03366962160551225,
+            0.032287597922744986
+          ],
+          "time_permutation_p_value": 0.034896510348965105
+        },
+        {
+          "active_head_fraction_by_checkpoint": [
+            0.041666666666666664,
+            0.041666666666666664,
+            0.041666666666666664,
+            0.041666666666666664,
+            0.041666666666666664,
+            0.041666666666666664,
+            0.041666666666666664,
+            0.041666666666666664
+          ],
+          "atom": 6,
+          "benjamini_hochberg_q_value": 0.003999600039996,
+          "coefficient_share_by_checkpoint": [
+            0.020307187125908507,
+            0.020367888801683633,
+            0.021084084675398202,
+            0.02194364636505559,
+            0.043618548725712705,
+            0.06908383296289357,
+            0.07617761779758114,
+            0.07319719826395657
+          ],
+          "final_strength": 0.028533689722707894,
+          "final_to_initialization_ratio": 14.864384349174838,
+          "initialization_strength": 0.0019196011790620765,
+          "maximum_adjacent_recurrent_checkpoints": 0,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": true,
+          "spearman_training_correlation": 0.9761904761904762,
+          "strength_by_checkpoint": [
+            0.0019196011790620765,
+            0.0019245984832175946,
+            0.0022154243273891667,
+            0.0035274943106265878,
+            0.01311478010695793,
+            0.026270850753810058,
+            0.029713190356251532,
+            0.028533689722707894
+          ],
+          "time_permutation_p_value": 0.0004999500049995
+        },
+        {
+          "active_head_fraction_by_checkpoint": [
+            0.041666666666666664,
+            0.041666666666666664,
+            0.0625,
+            0.14583333333333334,
+            0.3333333333333333,
+            0.3541666666666667,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "atom": 7,
+          "benjamini_hochberg_q_value": 0.04559544045595441,
+          "coefficient_share_by_checkpoint": [
+            0.03932159966750528,
+            0.03938984966908074,
+            0.05492031155769637,
+            0.07469294461413131,
+            0.11375931427499425,
+            0.11467293935100932,
+            0.11306380127499002,
+            0.10243976440612472
+          ],
+          "final_strength": 0.03993301003531691,
+          "final_to_initialization_ratio": 10.743347728307821,
+          "initialization_strength": 0.0037169987461261045,
+          "maximum_adjacent_recurrent_checkpoints": 0,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": true,
+          "spearman_training_correlation": 0.7857142857142857,
+          "strength_by_checkpoint": [
+            0.0037169987461261045,
+            0.0037220178127158345,
+            0.005770788543392862,
+            0.01200707178684191,
+            0.034203989711271456,
+            0.04360724566063362,
+            0.0441006997437487,
+            0.03993301003531691
+          ],
+          "time_permutation_p_value": 0.028497150284971504
+        }
+      ],
+      "checkpoint_values": [
+        0,
+        64,
+        512,
+        1000,
+        4000,
+        16000,
+        64000,
+        143000
+      ],
+      "passes_protocol_emergence_gate": true,
+      "recurrent_atom_count": 0,
+      "significant_monotonic_atom_count": 6
+    },
+    "QK": {
+      "atom_count": 8,
+      "atoms": [
+        {
+          "active_head_fraction_by_checkpoint": [
+            0.9583333333333334,
+            0.9583333333333334,
+            0.8541666666666666,
+            0.7708333333333334,
+            0.5833333333333334,
+            0.5833333333333334,
+            0.6041666666666666,
+            0.5833333333333334
+          ],
+          "atom": 0,
+          "benjamini_hochberg_q_value": 0.0015998400159984002,
+          "coefficient_share_by_checkpoint": [
+            0.5295565639087404,
+            0.529392710960213,
+            0.4469764935137543,
+            0.4514487008987938,
+            0.2694877940161665,
+            0.21771071403686215,
+            0.19945153072679075,
+            0.19627381514338615
+          ],
+          "final_strength": 0.0844823410650203,
+          "final_to_initialization_ratio": 1.546049586013411,
+          "initialization_strength": 0.05464400484260242,
+          "maximum_adjacent_recurrent_checkpoints": 0,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": true,
+          "spearman_training_correlation": -0.9761904761904762,
+          "strength_by_checkpoint": [
+            0.05464400484260242,
+            0.05466906067086613,
+            0.04673049217278835,
+            0.06419825293234753,
+            0.07839262100158123,
+            0.08521669419108228,
+            0.08603246993050007,
+            0.0844823410650203
+          ],
+          "time_permutation_p_value": 0.0005999400059994001
+        },
+        {
+          "active_head_fraction_by_checkpoint": [
+            0.375,
+            0.3958333333333333,
+            0.6041666666666666,
+            0.5,
+            0.375,
+            0.4166666666666667,
+            0.4166666666666667,
+            0.3541666666666667
+          ],
+          "atom": 1,
+          "benjamini_hochberg_q_value": 0.32866713328667135,
+          "coefficient_share_by_checkpoint": [
+            0.1693522023163247,
+            0.17745949270361433,
+            0.2981139800297529,
+            0.22689387216300014,
+            0.15308817307222813,
+            0.15459569119144856,
+            0.15404497428750602,
+            0.1697523342117374
+          ],
+          "final_strength": 0.07306667262254297,
+          "final_to_initialization_ratio": 4.181174722056286,
+          "initialization_strength": 0.017475154108510697,
+          "maximum_adjacent_recurrent_checkpoints": 0,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": false,
+          "spearman_training_correlation": -0.40476190476190477,
+          "strength_by_checkpoint": [
+            0.017475154108510697,
+            0.01832579779128116,
+            0.031167216201606517,
+            0.032265438276641474,
+            0.04453256658724853,
+            0.06051210569862014,
+            0.06644656759485258,
+            0.07306667262254297
+          ],
+          "time_permutation_p_value": 0.32866713328667135
+        },
+        {
+          "active_head_fraction_by_checkpoint": [
+            0.0,
+            0.0,
+            0.0,
+            0.020833333333333332,
+            0.041666666666666664,
+            0.10416666666666667,
+            0.125,
+            0.125
+          ],
+          "atom": 2,
+          "benjamini_hochberg_q_value": 0.0015998400159984002,
+          "coefficient_share_by_checkpoint": [
+            0.0,
+            0.0,
+            0.0,
+            0.01062713908303146,
+            0.05027339131464799,
+            0.08759194727088702,
+            0.09608932211202137,
+            0.09719280837132077
+          ],
+          "final_strength": 0.04183480093814119,
+          "final_to_initialization_ratio": 41834800938.14119,
+          "initialization_strength": 0.0,
+          "maximum_adjacent_recurrent_checkpoints": 0,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": true,
+          "spearman_training_correlation": 0.9759000729485331,
+          "strength_by_checkpoint": [
+            0.0,
+            0.0,
+            0.0,
+            0.0015112320878128643,
+            0.014624272413454695,
+            0.03428538745649767,
+            0.041447672450147806,
+            0.04183480093814119
+          ],
+          "time_permutation_p_value": 0.00039996000399960006
+        },
+        {
+          "active_head_fraction_by_checkpoint": [
+            0.0,
+            0.0,
+            0.041666666666666664,
+            0.10416666666666667,
+            0.20833333333333334,
+            0.22916666666666666,
+            0.22916666666666666,
+            0.2708333333333333
+          ],
+          "atom": 3,
+          "benjamini_hochberg_q_value": 0.0017998200179982,
+          "coefficient_share_by_checkpoint": [
+            0.0,
+            0.0,
+            0.012951334009420237,
+            0.0562047613635041,
+            0.13444771791116034,
+            0.12893167409519318,
+            0.13888637281844088,
+            0.1409336203484582
+          ],
+          "final_strength": 0.060662203835536645,
+          "final_to_initialization_ratio": 60662203835.536644,
+          "initialization_strength": 0.0,
+          "maximum_adjacent_recurrent_checkpoints": 0,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": true,
+          "spearman_training_correlation": 0.9700772721497396,
+          "strength_by_checkpoint": [
+            0.0,
+            0.0,
+            0.0013540358863094355,
+            0.007992596897128675,
+            0.03911015351628438,
+            0.050466652922988686,
+            0.05990797688901245,
+            0.060662203835536645
+          ],
+          "time_permutation_p_value": 0.0008999100089991
+        },
+        {
+          "active_head_fraction_by_checkpoint": [
+            0.041666666666666664,
+            0.041666666666666664,
+            0.041666666666666664,
+            0.0625,
+            0.125,
+            0.14583333333333334,
+            0.125,
+            0.14583333333333334
+          ],
+          "atom": 4,
+          "benjamini_hochberg_q_value": 0.0015998400159984002,
+          "coefficient_share_by_checkpoint": [
+            0.021992358638433,
+            0.02202624090719222,
+            0.024797430300984545,
+            0.02848083887823544,
+            0.059468463179808695,
+            0.0922082079810384,
+            0.09479724409954475,
+            0.09335684104147327
+          ],
+          "final_strength": 0.04018368155658892,
+          "final_to_initialization_ratio": 17.70711259169386,
+          "initialization_strength": 0.002269352575045944,
+          "maximum_adjacent_recurrent_checkpoints": 0,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": true,
+          "spearman_training_correlation": 0.9761904761904762,
+          "strength_by_checkpoint": [
+            0.002269352575045944,
+            0.002274594786774282,
+            0.002592521395198973,
+            0.004050117088365025,
+            0.01729907179143544,
+            0.03609229199485985,
+            0.04089034073977591,
+            0.04018368155658892
+          ],
+          "time_permutation_p_value": 0.00039996000399960006
+        },
+        {
+          "active_head_fraction_by_checkpoint": [
+            0.0,
+            0.0,
+            0.041666666666666664,
+            0.14583333333333334,
+            0.125,
+            0.14583333333333334,
+            0.125,
+            0.125
+          ],
+          "atom": 5,
+          "benjamini_hochberg_q_value": 0.04386228043862281,
+          "coefficient_share_by_checkpoint": [
+            0.0,
+            0.0,
+            0.025505653740896805,
+            0.0727310073959731,
+            0.10177997252572618,
+            0.10510557608854108,
+            0.0986041862378289,
+            0.09040213285801563
+          ],
+          "final_strength": 0.03891188346003632,
+          "final_to_initialization_ratio": 38911883460.03632,
+          "initialization_strength": 0.0,
+          "maximum_adjacent_recurrent_checkpoints": 0,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": true,
+          "spearman_training_correlation": 0.7784570702436182,
+          "strength_by_checkpoint": [
+            0.0,
+            0.0,
+            0.0026665647294585332,
+            0.010342711363517394,
+            0.029607273460711753,
+            0.041140601531434985,
+            0.042532447139489254,
+            0.03891188346003632
+          ],
+          "time_permutation_p_value": 0.032896710328967106
+        },
+        {
+          "active_head_fraction_by_checkpoint": [
+            0.0,
+            0.0,
+            0.020833333333333332,
+            0.125,
+            0.10416666666666667,
+            0.10416666666666667,
+            0.10416666666666667,
+            0.125
+          ],
+          "atom": 6,
+          "benjamini_hochberg_q_value": 0.029757024297570246,
+          "coefficient_share_by_checkpoint": [
+            0.0,
+            0.0,
+            0.009438386306315327,
+            0.04445702970872861,
+            0.08322439836325632,
+            0.0874166884180601,
+            0.08587670290393976,
+            0.07794213499747353
+          ],
+          "final_strength": 0.03354871370580937,
+          "final_to_initialization_ratio": 33548713705.809372,
+          "initialization_strength": 0.0,
+          "maximum_adjacent_recurrent_checkpoints": 0,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": true,
+          "spearman_training_correlation": 0.8263621207201486,
+          "strength_by_checkpoint": [
+            0.0,
+            0.0,
+            0.000986764279131938,
+            0.006322010966427999,
+            0.024209551838121415,
+            0.03421678734128651,
+            0.03704250768791562,
+            0.03354871370580937
+          ],
+          "time_permutation_p_value": 0.018598140185981403
+        },
+        {
+          "active_head_fraction_by_checkpoint": [
+            0.625,
+            0.6041666666666666,
+            0.3958333333333333,
+            0.2708333333333333,
+            0.4375,
+            0.2708333333333333,
+            0.2708333333333333,
+            0.2708333333333333
+          ],
+          "atom": 7,
+          "benjamini_hochberg_q_value": 0.09484765809133373,
+          "coefficient_share_by_checkpoint": [
+            0.2790988751365019,
+            0.2711215554289805,
+            0.1822167220988758,
+            0.10915665050873327,
+            0.14823008961700593,
+            0.12643950091796938,
+            0.1322496668139276,
+            0.1341463130281351
+          ],
+          "final_strength": 0.05774073613221745,
+          "final_to_initialization_ratio": 2.0049062265291764,
+          "initialization_strength": 0.028799719093184822,
+          "maximum_adjacent_recurrent_checkpoints": 0,
+          "passes_recurrence_rule": false,
+          "significant_monotonic_trajectory": false,
+          "spearman_training_correlation": -0.6666666666666666,
+          "strength_by_checkpoint": [
+            0.028799719093184822,
+            0.027998044657703055,
+            0.019050391305489627,
+            0.01552261916947792,
+            0.043119374956474936,
+            0.04949116230253745,
+            0.05704526529341694,
+            0.05774073613221745
+          ],
+          "time_permutation_p_value": 0.08299170082991701
+        }
+      ],
+      "checkpoint_values": [
+        0,
+        64,
+        512,
+        1000,
+        4000,
+        16000,
+        64000,
+        143000
+      ],
+      "passes_protocol_emergence_gate": true,
+      "recurrent_atom_count": 0,
+      "significant_monotonic_atom_count": 6
+    }
+  }
+}

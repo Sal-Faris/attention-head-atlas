@@ -62,6 +62,25 @@ def select_dictionary(result: dict[str, object]) -> tuple[int, int, float]:
     return components, active, error
 
 
+def select_compact_dictionary(result: dict[str, object]) -> tuple[int, int, float]:
+    """Choose the smallest preregistered sparse model that beats hard clusters."""
+
+    for component_label in sorted(result, key=int):
+        record = result[component_label]
+        errors = record["mean_relative_squared_error"]
+        for model in sorted(
+            (name for name in errors if name.startswith("dictionary_")),
+            key=lambda name: int(name.removeprefix("dictionary_")),
+        ):
+            if errors[model] < errors["kmeans"]:
+                return (
+                    int(component_label),
+                    int(model.removeprefix("dictionary_")),
+                    float(errors[model]),
+                )
+    raise RuntimeError("no sparse dictionary beats its matched hard-cluster baseline")
+
+
 def main() -> None:
     args = parse_args()
     config = json.loads(args.config.read_text(encoding="utf-8"))
@@ -111,6 +130,9 @@ def main() -> None:
         selected_components, selected_active, selected_error = select_dictionary(
             trajectory_result
         )
+        compact_components, compact_active, compact_error = select_compact_dictionary(
+            trajectory_result
+        )
         print(
             f"{view_name}: selected {selected_components} atoms, "
             f"{selected_active} active, relative error {selected_error:.4f}",
@@ -156,6 +178,36 @@ def main() -> None:
             selected_active_atoms=np.asarray(selected_active),
             dictionary_alpha=np.asarray(args.dictionary_alpha),
         )
+        compact_model = DictionaryLearning(
+            n_components=compact_components,
+            alpha=args.dictionary_alpha,
+            max_iter=args.max_iter,
+            fit_algorithm="cd",
+            random_state=int(config["random_seed"]),
+        ).fit(discovery_coordinates - mean)
+        compact_codes = sparse_encode(
+            all_coordinates - mean,
+            compact_model.components_,
+            algorithm="omp",
+            n_nonzero_coefs=compact_active,
+        )
+        compact_artifact_path = (
+            args.artifact_root / f"{view_name.lower()}_compact_dictionary.npz"
+        )
+        np.savez_compressed(
+            compact_artifact_path,
+            atoms=compact_model.components_,
+            codes=compact_codes,
+            coordinate_mean=mean,
+            coordinates=all_coordinates,
+            checkpoints=qk["checkpoints"],
+            checkpoint_values=qk["checkpoint_values"],
+            layers=qk["layers"],
+            heads=qk["heads"],
+            discovery_mask=discovery_mask,
+            selected_active_atoms=np.asarray(compact_active),
+            dictionary_alpha=np.asarray(args.dictionary_alpha),
+        )
         results[view_name] = {
             "coordinate_dimensions": all_coordinates.shape[1],
             "selected_components": selected_components,
@@ -164,6 +216,16 @@ def main() -> None:
             "trajectory_group_validation": trajectory_result,
             "blocked_temporal_validation": temporal_result,
             "artifact": str(artifact_path),
+            "compact_selection": {
+                "selection_rule": (
+                    "smallest preregistered atom count, then smallest active count, "
+                    "whose grouped error beats matched k-means"
+                ),
+                "components": compact_components,
+                "active_atoms": compact_active,
+                "trajectory_relative_squared_error": compact_error,
+                "artifact": str(compact_artifact_path),
+            },
         }
 
     report = {

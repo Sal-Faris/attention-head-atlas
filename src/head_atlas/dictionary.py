@@ -72,6 +72,22 @@ def blocked_checkpoint_splits(
     return splits
 
 
+def residualize_group_means(coordinates: Array, groups: Array) -> Array:
+    """Subtract each observed group's centroid without using semantic labels."""
+
+    data = np.asarray(coordinates, dtype=np.float64)
+    group_array = np.asarray(groups)
+    if data.ndim != 2 or group_array.ndim != 1 or len(data) != len(group_array):
+        raise ValueError("coordinates and groups have incompatible shapes")
+    if not np.isfinite(data).all():
+        raise ValueError("coordinates contain non-finite values")
+    residuals = np.empty_like(data)
+    for group in np.unique(group_array):
+        mask = group_array == group
+        residuals[mask] = data[mask] - np.mean(data[mask], axis=0, keepdims=True)
+    return residuals
+
+
 def _squared_error(actual: Array, reconstructed: Array) -> float:
     return float(np.sum((actual - reconstructed) ** 2))
 

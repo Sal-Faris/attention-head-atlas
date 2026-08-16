@@ -1,0 +1,250 @@
+{
+  "candidate_rule": "compact atom passes stability, FDR-controlled temporal change, trajectory reuse, and cross-layer reuse; no functional labels",
+  "candidates": [
+    {
+      "atom": 0,
+      "bootstrap_similarity": 0.7774958540120284,
+      "effective_layer_participation": 2.2718098466718004,
+      "effective_trajectory_participation": 10.755416769282759,
+      "intervention_pairs": [
+        {
+          "same_layer_low_loading_control": {
+            "atom_coefficient": 0.0,
+            "head": 7,
+            "layer": 3
+          },
+          "target": {
+            "atom_coefficient": 0.7088084699034399,
+            "head": 1,
+            "layer": 3
+          }
+        },
+        {
+          "same_layer_low_loading_control": {
+            "atom_coefficient": 0.0,
+            "head": 7,
+            "layer": 3
+          },
+          "target": {
+            "atom_coefficient": 0.6945544062063197,
+            "head": 6,
+            "layer": 3
+          }
+        },
+        {
+          "same_layer_low_loading_control": {
+            "atom_coefficient": 0.0,
+            "head": 7,
+            "layer": 3
+          },
+          "target": {
+            "atom_coefficient": 0.6772635868310943,
+            "head": 3,
+            "layer": 3
+          }
+        }
+      ],
+      "training_correlation": -0.9761904761904762,
+      "view": "QK"
+    },
+    {
+      "atom": 0,
+      "bootstrap_similarity": 0.3909863957985885,
+      "effective_layer_participation": 4.011824194033331,
+      "effective_trajectory_participation": 12.320963221246057,
+      "intervention_pairs": [
+        {
+          "same_layer_low_loading_control": {
+            "atom_coefficient": 0.0,
+            "head": 3,
+            "layer": 4
+          },
+          "target": {
+            "atom_coefficient": 0.7527283607458147,
+            "head": 6,
+            "layer": 4
+          }
+        },
+        {
+          "same_layer_low_loading_control": {
+            "atom_coefficient": 0.0,
+            "head": 0,
+            "layer": 3
+          },
+          "target": {
+            "atom_coefficient": 0.5904578116190615,
+            "head": 3,
+            "layer": 3
+          }
+        },
+        {
+          "same_layer_low_loading_control": {
+            "atom_coefficient": 0.0,
+            "head": 3,
+            "layer": 4
+          },
+          "target": {
+            "atom_coefficient": 0.5665391213916339,
+            "head": 4,
+            "layer": 4
+          }
+        }
+      ],
+      "training_correlation": -0.8571428571428571,
+      "view": "OV"
+    },
+    {
+      "atom": 2,
+      "bootstrap_similarity": 0.4076375818970746,
+      "effective_layer_participation": 2.5116969328183743,
+      "effective_trajectory_participation": 14.491499801198204,
+      "intervention_pairs": [
+        {
+          "same_layer_low_loading_control": {
+            "atom_coefficient": -0.1557406054853725,
+            "head": 6,
+            "layer": 5
+          },
+          "target": {
+            "atom_coefficient": -0.3656080979511944,
+            "head": 5,
+            "layer": 5
+          }
+        },
+        {
+          "same_layer_low_loading_control": {
+            "atom_coefficient": -0.1557406054853725,
+            "head": 6,
+            "layer": 5
+          },
+          "target": {
+            "atom_coefficient": -0.3649208531832685,
+            "head": 0,
+            "layer": 5
+          }
+        },
+        {
+          "same_layer_low_loading_control": {
+            "atom_coefficient": -0.1557406054853725,
+            "head": 6,
+            "layer": 5
+          },
+          "target": {
+            "atom_coefficient": -0.35975305342316305,
+            "head": 7,
+            "layer": 5
+          }
+        }
+      ],
+      "training_correlation": 0.9523809523809523,
+      "view": "OV"
+    },
+    {
+      "atom": 0,
+      "bootstrap_similarity": 0.6794059585079875,
+      "effective_layer_participation": 2.009323301284589,
+      "effective_trajectory_participation": 11.341760097596644,
+      "intervention_pairs": [
+        {
+          "same_layer_low_loading_control": {
+            "atom_coefficient": -0.06806708506780049,
+            "head": 4,
+            "layer": 3
+          },
+          "target": {
+            "atom_coefficient": 0.5955376440503573,
+            "head": 6,
+            "layer": 3
+          }
+        },
+        {
+          "same_layer_low_loading_control": {
+            "atom_coefficient": -0.06806708506780049,
+            "head": 4,
+            "layer": 3
+          },
+          "target": {
+            "atom_coefficient": 0.5935425627935412,
+            "head": 1,
+            "layer": 3
+          }
+        },
+        {
+          "same_layer_low_loading_control": {
+            "atom_coefficient": -0.06806708506780049,
+            "head": 4,
+            "layer": 3
+          },
+          "target": {
+            "atom_coefficient": 0.48698784837094145,
+            "head": 3,
+            "layer": 3
+          }
+        }
+      ],
+      "training_correlation": -0.9761904761904762,
+      "view": "JOINT"
+    },
+    {
+      "atom": 3,
+      "bootstrap_similarity": 0.3704948913257993,
+      "effective_layer_participation": 2.1760929256013277,
+      "effective_trajectory_participation": 7.326594457451351,
+      "intervention_pairs": [
+        {
+          "same_layer_low_loading_control": {
+            "atom_coefficient": 0.0,
+            "head": 6,
+            "layer": 4
+          },
+          "target": {
+            "atom_coefficient": 0.613480444234785,
+            "head": 3,
+            "layer": 4
+          }
+        },
+        {
+          "same_layer_low_loading_control": {
+            "atom_coefficient": 0.0,
+            "head": 6,
+            "layer": 4
+          },
+          "target": {
+            "atom_coefficient": 0.4384396076638319,
+            "head": 2,
+            "layer": 4
+          }
+        },
+        {
+          "same_layer_low_loading_control": {
+            "atom_coefficient": 0.0,
+            "head": 6,
+            "layer": 4
+          },
+          "target": {
+            "atom_coefficient": 0.39546464103858575,
+            "head": 1,
+            "layer": 4
+          }
+        }
+      ],
+      "training_correlation": 0.9523809523809523,
+      "view": "JOINT"
+    }
+  ],
+  "checkpoint": "step143000",
+  "interpretation_gate": "name an atom only if candidate interventions exceed layer-matched controls and the effect recurs across at least two independent heads",
+  "interventions": [
+    "zero head result at every token position",
+    "replace head result with its clean-run mean",
+    "patch clean head result into a corrupted sequence"
+  ],
+  "layer_matched_control": "same-layer head with minimal absolute candidate-atom loading",
+  "multiple_testing": "Benjamini-Hochberg correction across candidate heads and metrics",
+  "primary_metrics": [
+    "change in next-token cross-entropy",
+    "KL divergence from clean next-token distribution",
+    "recovery under clean-to-corrupted activation patching"
+  ],
+  "status": "planned, not executed"
+}

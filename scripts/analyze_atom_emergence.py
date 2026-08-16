@@ -30,6 +30,9 @@ def parse_args() -> argparse.Namespace:
         default=Path("results/pythia-70m-deduped/atom_emergence.png"),
     )
     parser.add_argument("--seed", type=int, default=0)
+    parser.add_argument(
+        "--profile", choices=("optimal", "compact", "residual"), default="optimal"
+    )
     return parser.parse_args()
 
 
@@ -88,7 +91,13 @@ def main() -> None:
     heatmaps = {}
 
     for view_name in ("QK", "OV", "JOINT"):
-        artifact_path = args.artifact_root / f"{view_name.lower()}_dictionary.npz"
+        if args.profile == "compact":
+            artifact_stem = f"{view_name.lower()}_compact_dictionary.npz"
+        elif args.profile == "residual":
+            artifact_stem = f"{view_name.lower()}_residual_compact_dictionary.npz"
+        else:
+            artifact_stem = f"{view_name.lower()}_dictionary.npz"
+        artifact_path = args.artifact_root / artifact_stem
         with np.load(artifact_path, allow_pickle=False) as artifact:
             codes = np.asarray(artifact["codes"], dtype=np.float64)
             checkpoint_values = np.asarray(artifact["checkpoint_values"], dtype=np.int64)
@@ -158,6 +167,7 @@ def main() -> None:
 
     report = {
         "analysis_status": "preregistered post-selection emergence audit",
+        "profile": args.profile,
         "coefficient_measure": (
             "atom share of checkpoint mean absolute OMP coefficients; normalized "
             "within checkpoint before temporal testing"

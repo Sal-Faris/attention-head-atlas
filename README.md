@@ -54,14 +54,23 @@ python scripts/extract_operators.py `
 
 ## Status
 
-Checkpoint 0002 finds strong non-random population directions and statistically
-significant local recovery of published functional families, while global
-cluster quality is weak. Cross-validated sparse mixtures reconstruct held-out
-operators substantially better than hard cluster centroids.
+Checkpoint 0004 extends the study to eight frozen Pythia-70M-deduped training
+checkpoints using exact compact QK/OV factors. Sparse mixtures consistently beat
+hard clusters, and stable atom usage reorganizes strongly during training.
+However, explicit reuse and layer-residual controls show that much of the most
+robust structure is developmental layer structure rather than a confirmed
+cross-layer taxonomy of functional head species.
 
-Read the methods, numbers, caveats, and next confirmation gate in
-[`docs/checkpoints/0002-operator-geometry.md`](docs/checkpoints/0002-operator-geometry.md).
-The main generated figures are:
+Read the methods, results, caveats, and causal gate in
+[`docs/checkpoints/0004-pythia-factor-atoms.md`](docs/checkpoints/0004-pythia-factor-atoms.md).
+The main Pythia figures are:
+
+- `results/pythia-70m-deduped/trajectory_geometry.png`
+- `results/pythia-70m-deduped/atom_emergence.png`
+- `results/pythia-70m-deduped/atom_reuse.png`
+- `results/pythia-70m-deduped/rotary_qk_robustness.png`
+
+The GPT-2 development figures remain:
 
 - `results/gpt2-small/null_structure_comparison.png`
 - `results/gpt2-small/functional_operator_atlas.png`

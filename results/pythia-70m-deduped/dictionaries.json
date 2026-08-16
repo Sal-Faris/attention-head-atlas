@@ -73,6 +73,13 @@
           }
         }
       },
+      "compact_selection": {
+        "active_atoms": 2,
+        "artifact": "artifacts\\pythia-70m-deduped\\joint_compact_dictionary.npz",
+        "components": 8,
+        "selection_rule": "smallest preregistered atom count, then smallest active count, whose grouped error beats matched k-means",
+        "trajectory_relative_squared_error": 0.9727528423782555
+      },
       "coordinate_dimensions": 766,
       "selected_active_atoms": 8,
       "selected_components": 32,
@@ -430,6 +437,13 @@
           }
         }
       },
+      "compact_selection": {
+        "active_atoms": 2,
+        "artifact": "artifacts\\pythia-70m-deduped\\ov_compact_dictionary.npz",
+        "components": 8,
+        "selection_rule": "smallest preregistered atom count, then smallest active count, whose grouped error beats matched k-means",
+        "trajectory_relative_squared_error": 0.9763552308307485
+      },
       "coordinate_dimensions": 383,
       "selected_active_atoms": 8,
       "selected_components": 32,
@@ -786,6 +800,13 @@
             "pca": 0.05857957532466043
           }
         }
+      },
+      "compact_selection": {
+        "active_atoms": 2,
+        "artifact": "artifacts\\pythia-70m-deduped\\qk_compact_dictionary.npz",
+        "components": 8,
+        "selection_rule": "smallest preregistered atom count, then smallest active count, whose grouped error beats matched k-means",
+        "trajectory_relative_squared_error": 0.9498247826086463
       },
       "coordinate_dimensions": 383,
       "selected_active_atoms": 8,

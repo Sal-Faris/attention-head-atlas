@@ -32,6 +32,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--repetitions", type=int, default=20)
     parser.add_argument("--max-iter", type=int, default=500)
     parser.add_argument("--seed", type=int, default=0)
+    parser.add_argument(
+        "--profile", choices=("optimal", "compact", "residual"), default="optimal"
+    )
     return parser.parse_args()
 
 
@@ -78,8 +81,14 @@ def main() -> None:
     evaluation = json.loads(args.evaluation.read_text(encoding="utf-8"))
     rng = np.random.default_rng(args.seed)
     results = {}
-    for view_name, selection in evaluation["views"].items():
-        artifact_path = args.artifact_root / f"{view_name.lower()}_dictionary.npz"
+    for view_name in evaluation["views"]:
+        if args.profile == "compact":
+            artifact_stem = f"{view_name.lower()}_compact_dictionary.npz"
+        elif args.profile == "residual":
+            artifact_stem = f"{view_name.lower()}_residual_compact_dictionary.npz"
+        else:
+            artifact_stem = f"{view_name.lower()}_dictionary.npz"
+        artifact_path = args.artifact_root / artifact_stem
         with np.load(artifact_path, allow_pickle=False) as artifact:
             reference_atoms = np.asarray(artifact["atoms"], dtype=np.float64)
             coordinates = np.asarray(artifact["coordinates"], dtype=np.float64)
@@ -89,7 +98,7 @@ def main() -> None:
         discovery_coordinates = coordinates[discovery_mask]
         groups = head_trajectory_groups(layers, heads)
         unique_groups = np.unique(groups)
-        components = int(selection["selected_components"])
+        components = reference_atoms.shape[0]
         alpha = float(evaluation["dictionary_alpha"])
 
         print(f"auditing {view_name} stability", flush=True)
@@ -184,6 +193,7 @@ def main() -> None:
         "repetitions": args.repetitions,
         "bootstrap_unit": "complete layer/head trajectory",
         "seed": args.seed,
+        "profile": args.profile,
         "views": results,
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)
