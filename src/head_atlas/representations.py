@@ -14,20 +14,39 @@ def frobenius_normalize(matrix: Array, eps: float = 1e-12) -> Array:
 
 
 def normalized_spectrum(matrix: Array, eps: float = 1e-12) -> Array:
-    singular_values = np.linalg.svd(np.asarray(matrix), compute_uv=False)
+    matrix = np.asarray(matrix, dtype=np.float64)
+    singular_values = np.linalg.svd(matrix, compute_uv=False)
     norm = np.linalg.norm(singular_values)
     if norm <= eps:
         raise ValueError("near-zero operator has no normalized spectrum")
     return singular_values / norm
 
 
-def effective_rank(matrix: Array, eps: float = 1e-12) -> float:
-    singular_values = np.linalg.svd(np.asarray(matrix), compute_uv=False)
+def effective_rank(matrix: Array, relative_tolerance: float | None = None) -> float:
+    """Entropy-based effective rank after removing numerical singular values.
+
+    The default tolerance reflects the precision of the input matrix before the
+    SVD is evaluated in float64. A caller can provide a different relative
+    tolerance when the matrix has a known noise floor.
+    """
+
+    input_matrix = np.asarray(matrix)
+    if not np.issubdtype(input_matrix.dtype, np.inexact):
+        input_matrix = input_matrix.astype(np.float64)
+    input_epsilon = np.finfo(input_matrix.dtype).eps
+    matrix_64 = input_matrix.astype(np.float64, copy=False)
+    singular_values = np.linalg.svd(matrix_64, compute_uv=False)
+    if singular_values.size == 0 or singular_values[0] == 0:
+        return 0.0
+    if relative_tolerance is None:
+        relative_tolerance = max(matrix_64.shape) * input_epsilon
+    if relative_tolerance < 0:
+        raise ValueError("relative_tolerance must be nonnegative")
+    singular_values = singular_values[singular_values > relative_tolerance * singular_values[0]]
     total = singular_values.sum()
-    if total <= eps:
+    if total == 0:
         return 0.0
     probabilities = singular_values / total
-    probabilities = probabilities[probabilities > eps]
     entropy = -np.sum(probabilities * np.log(probabilities))
     return float(np.exp(entropy))
 
@@ -35,13 +54,13 @@ def effective_rank(matrix: Array, eps: float = 1e-12) -> float:
 def leading_subspace_projector(matrix: Array, rank: int, side: str) -> Array:
     """Projector onto a leading OV read or write subspace.
 
-    With row-vector actions ``x @ M``, right singular vectors span the read
-    subspace and left singular vectors span the write subspace under the
+    With row-vector actions ``x @ M``, left singular vectors span the read
+    subspace and right singular vectors span the write subspace under the
     chosen matrix convention. The names are declared explicitly here so tests
     and downstream reports do not silently swap them.
     """
 
-    matrix = np.asarray(matrix)
+    matrix = np.asarray(matrix, dtype=np.float64)
     if rank < 1 or rank > min(matrix.shape):
         raise ValueError("rank is outside the matrix dimensions")
     u, _, vt = np.linalg.svd(matrix, full_matrices=False)
