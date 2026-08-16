@@ -13,6 +13,7 @@ from head_atlas.distances import normalized_frobenius_distances
 from head_atlas.model_io import load_operator_bundle
 from head_atlas.nulls import resolved_singular_values, sample_spectrum_matched
 from head_atlas.operators import HeadOperator
+from head_atlas.structure import pcoa_spectrum_summary
 
 
 def parse_args() -> argparse.Namespace:
@@ -51,10 +52,12 @@ def main() -> None:
     operators, source_metadata = load_operator_bundle(args.input)
     real_distances = normalized_frobenius_distances(operators)
     real_summary = summarize_distance_matrix(real_distances)
+    real_structure_summary = pcoa_spectrum_summary(real_distances)
 
     spectra = [resolved_singular_values(operator.matrix) for operator in operators]
     rng = np.random.default_rng(args.seed)
     null_summaries = []
+    null_structure_summaries = []
     for repetition in range(args.repetitions):
         null_operators = [
             HeadOperator(
@@ -69,6 +72,7 @@ def main() -> None:
         ]
         null_distances = normalized_frobenius_distances(null_operators)
         null_summaries.append(summarize_distance_matrix(null_distances))
+        null_structure_summaries.append(pcoa_spectrum_summary(null_distances))
         del null_operators, null_distances
         print(f"completed null repetition {repetition + 1}/{args.repetitions}")
 
@@ -83,6 +87,11 @@ def main() -> None:
         "null_summaries": null_summaries,
         "empirical_tail_probabilities": empirical_tail_probabilities(
             real_summary, null_summaries
+        ),
+        "real_structure_summary": real_structure_summary,
+        "null_structure_summaries": null_structure_summaries,
+        "structure_empirical_tail_probabilities": empirical_tail_probabilities(
+            real_structure_summary, null_structure_summaries
         ),
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)

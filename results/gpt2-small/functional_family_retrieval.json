@@ -1,0 +1,2668 @@
+{
+  "benchmark_id": "gpt2-small-published-functional-families-v1",
+  "benchmark_source": "configs\\gpt2_small_functional_families.json",
+  "joint_metric": "equal-weight-euclidean-product-of-qk-and-ov",
+  "metric": "normalized_frobenius",
+  "permutations": 9999,
+  "seed": 0,
+  "views": {
+    "JOINT": {
+      "all_primary_families_descriptive": {
+        "aggregate": {
+          "family_count": 6,
+          "labelled_head_count": 15,
+          "mean_average_precision": 0.46682521627178825,
+          "mean_global_pair_percentile": 0.1277599715099715,
+          "mean_layer_matched_pair_percentile": 0.10690235690235689,
+          "mean_recall_at_5": 0.47222222222222215,
+          "mean_reciprocal_rank": 0.5295543150806309,
+          "nearest_neighbour_hit_rate": 0.47222222222222215
+        },
+        "families": {
+          "copy_suppression": {
+            "family_size": 2,
+            "mean_average_precision": 1.0,
+            "mean_global_pair_percentile": 0.005584693084693085,
+            "mean_layer_matched_pair_percentile": 0.041666666666666664,
+            "mean_pair_distance": 1.2023267386603897,
+            "mean_recall_at_5": 1.0,
+            "mean_reciprocal_rank": 1.0,
+            "median_global_pair_percentile": 0.005584693084693085,
+            "nearest_neighbour_hit_rate": 1.0,
+            "pair_count": 1,
+            "pair_distances": [
+              1.2023267386603897
+            ],
+            "pair_percentiles": [
+              0.005584693084693085
+            ]
+          },
+          "duplicate_token": {
+            "family_size": 2,
+            "mean_average_precision": 0.0393939393939394,
+            "mean_global_pair_percentile": 0.5030594405594405,
+            "mean_layer_matched_pair_percentile": 0.041666666666666664,
+            "mean_pair_distance": 1.403894845332023,
+            "mean_recall_at_5": 0.0,
+            "mean_reciprocal_rank": 0.0393939393939394,
+            "median_global_pair_percentile": 0.5030594405594405,
+            "nearest_neighbour_hit_rate": 0.0,
+            "pair_count": 1,
+            "pair_distances": [
+              1.403894845332023
+            ],
+            "pair_percentiles": [
+              0.5030594405594405
+            ]
+          },
+          "induction": {
+            "family_size": 2,
+            "mean_average_precision": 1.0,
+            "mean_global_pair_percentile": 4.856254856254856e-05,
+            "mean_layer_matched_pair_percentile": 0.041666666666666664,
+            "mean_pair_distance": 1.0471790020608018,
+            "mean_recall_at_5": 1.0,
+            "mean_reciprocal_rank": 1.0,
+            "median_global_pair_percentile": 4.856254856254856e-05,
+            "nearest_neighbour_hit_rate": 1.0,
+            "pair_count": 1,
+            "pair_distances": [
+              1.0471790020608018
+            ],
+            "pair_percentiles": [
+              4.856254856254856e-05
+            ]
+          },
+          "name_mover": {
+            "family_size": 3,
+            "mean_average_precision": 0.4694444444444444,
+            "mean_global_pair_percentile": 0.007235819735819736,
+            "mean_layer_matched_pair_percentile": 0.11237373737373739,
+            "mean_pair_distance": 1.2071391780524692,
+            "mean_recall_at_5": 0.6666666666666666,
+            "mean_reciprocal_rank": 0.5555555555555556,
+            "median_global_pair_percentile": 0.00878982128982129,
+            "nearest_neighbour_hit_rate": 0.3333333333333333,
+            "pair_count": 3,
+            "pair_distances": [
+              1.2279244443603683,
+              1.2243293092231957,
+              1.1691637805738433
+            ],
+            "pair_percentiles": [
+              0.009761072261072262,
+              0.00878982128982129,
+              0.0031565656565656565
+            ]
+          },
+          "previous_token": {
+            "family_size": 2,
+            "mean_average_precision": 0.04904306220095694,
+            "mean_global_pair_percentile": 0.11290792540792541,
+            "mean_layer_matched_pair_percentile": 0.041666666666666664,
+            "mean_pair_distance": 1.3500372434109094,
+            "mean_recall_at_5": 0.0,
+            "mean_reciprocal_rank": 0.04904306220095694,
+            "median_global_pair_percentile": 0.11290792540792541,
+            "nearest_neighbour_hit_rate": 0.0,
+            "pair_count": 1,
+            "pair_distances": [
+              1.3500372434109094
+            ],
+            "pair_percentiles": [
+              0.11290792540792541
+            ]
+          },
+          "s_inhibition": {
+            "family_size": 4,
+            "mean_average_precision": 0.2430698515913886,
+            "mean_global_pair_percentile": 0.13772338772338774,
+            "mean_layer_matched_pair_percentile": 0.3623737373737374,
+            "mean_pair_distance": 1.3346009250104,
+            "mean_recall_at_5": 0.16666666666666666,
+            "mean_reciprocal_rank": 0.5333333333333333,
+            "median_global_pair_percentile": 0.14296814296814297,
+            "nearest_neighbour_hit_rate": 0.5,
+            "pair_count": 6,
+            "pair_distances": [
+              1.3502611723932356,
+              1.3771317268876078,
+              1.2249097735992391,
+              1.3690319617676252,
+              1.29781067507735,
+              1.3884602403373432
+            ],
+            "pair_percentiles": [
+              0.11349067599067598,
+              0.20896464646464646,
+              0.009081196581196582,
+              0.17244560994560995,
+              0.03715034965034965,
+              0.2852078477078477
+            ]
+          }
+        }
+      },
+      "leave_one_family_out": {
+        "duplicate_token": {
+          "label_permutation": {
+            "null_maximum": 0.40493486671955414,
+            "null_mean": 0.04419756858459391,
+            "null_minimum": 0.012551360153934335,
+            "null_standard_deviation": 0.03658719175462326,
+            "observed_family_balanced_map": 0.44038933955919746,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": false,
+            "upper_tail_p_value": 0.0001
+          },
+          "layer_stratified_permutation": {
+            "null_maximum": 0.4330497444746326,
+            "null_mean": 0.07980538706611918,
+            "null_minimum": 0.017038399709163984,
+            "null_standard_deviation": 0.05676375803941918,
+            "observed_family_balanced_map": 0.44038933955919746,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": true,
+            "upper_tail_p_value": 0.0001
+          },
+          "retrieval": {
+            "aggregate": {
+              "family_count": 4,
+              "labelled_head_count": 11,
+              "mean_average_precision": 0.44038933955919746,
+              "mean_global_pair_percentile": 0.06447892385392387,
+              "mean_layer_matched_pair_percentile": 0.13952020202020202,
+              "mean_recall_at_5": 0.4583333333333333,
+              "mean_reciprocal_rank": 0.5344829877724615,
+              "nearest_neighbour_hit_rate": 0.4583333333333333
+            },
+            "families": {
+              "induction": {
+                "family_size": 2,
+                "mean_average_precision": 1.0,
+                "mean_global_pair_percentile": 4.856254856254856e-05,
+                "mean_layer_matched_pair_percentile": 0.041666666666666664,
+                "mean_pair_distance": 1.0471790020608018,
+                "mean_recall_at_5": 1.0,
+                "mean_reciprocal_rank": 1.0,
+                "median_global_pair_percentile": 4.856254856254856e-05,
+                "nearest_neighbour_hit_rate": 1.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.0471790020608018
+                ],
+                "pair_percentiles": [
+                  4.856254856254856e-05
+                ]
+              },
+              "name_mover": {
+                "family_size": 3,
+                "mean_average_precision": 0.4694444444444444,
+                "mean_global_pair_percentile": 0.007235819735819736,
+                "mean_layer_matched_pair_percentile": 0.11237373737373739,
+                "mean_pair_distance": 1.2071391780524692,
+                "mean_recall_at_5": 0.6666666666666666,
+                "mean_reciprocal_rank": 0.5555555555555556,
+                "median_global_pair_percentile": 0.00878982128982129,
+                "nearest_neighbour_hit_rate": 0.3333333333333333,
+                "pair_count": 3,
+                "pair_distances": [
+                  1.2279244443603683,
+                  1.2243293092231957,
+                  1.1691637805738433
+                ],
+                "pair_percentiles": [
+                  0.009761072261072262,
+                  0.00878982128982129,
+                  0.0031565656565656565
+                ]
+              },
+              "previous_token": {
+                "family_size": 2,
+                "mean_average_precision": 0.04904306220095694,
+                "mean_global_pair_percentile": 0.11290792540792541,
+                "mean_layer_matched_pair_percentile": 0.041666666666666664,
+                "mean_pair_distance": 1.3500372434109094,
+                "mean_recall_at_5": 0.0,
+                "mean_reciprocal_rank": 0.04904306220095694,
+                "median_global_pair_percentile": 0.11290792540792541,
+                "nearest_neighbour_hit_rate": 0.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.3500372434109094
+                ],
+                "pair_percentiles": [
+                  0.11290792540792541
+                ]
+              },
+              "s_inhibition": {
+                "family_size": 4,
+                "mean_average_precision": 0.2430698515913886,
+                "mean_global_pair_percentile": 0.13772338772338774,
+                "mean_layer_matched_pair_percentile": 0.3623737373737374,
+                "mean_pair_distance": 1.3346009250104,
+                "mean_recall_at_5": 0.16666666666666666,
+                "mean_reciprocal_rank": 0.5333333333333333,
+                "median_global_pair_percentile": 0.14296814296814297,
+                "nearest_neighbour_hit_rate": 0.5,
+                "pair_count": 6,
+                "pair_distances": [
+                  1.3502611723932356,
+                  1.3771317268876078,
+                  1.2249097735992391,
+                  1.3690319617676252,
+                  1.29781067507735,
+                  1.3884602403373432
+                ],
+                "pair_percentiles": [
+                  0.11349067599067598,
+                  0.20896464646464646,
+                  0.009081196581196582,
+                  0.17244560994560995,
+                  0.03715034965034965,
+                  0.2852078477078477
+                ]
+              }
+            }
+          }
+        },
+        "induction": {
+          "label_permutation": {
+            "null_maximum": 0.4344056946760584,
+            "null_mean": 0.044056778422678085,
+            "null_minimum": 0.012543876482364453,
+            "null_standard_deviation": 0.03631930903770839,
+            "observed_family_balanced_map": 0.20023782440768234,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": false,
+            "upper_tail_p_value": 0.0118
+          },
+          "layer_stratified_permutation": {
+            "null_maximum": 0.22525417582996685,
+            "null_mean": 0.06016351071445123,
+            "null_minimum": 0.014677489118418754,
+            "null_standard_deviation": 0.030613884550379465,
+            "observed_family_balanced_map": 0.20023782440768234,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": true,
+            "upper_tail_p_value": 0.0011
+          },
+          "retrieval": {
+            "aggregate": {
+              "family_count": 4,
+              "labelled_head_count": 11,
+              "mean_average_precision": 0.20023782440768234,
+              "mean_global_pair_percentile": 0.19023164335664336,
+              "mean_layer_matched_pair_percentile": 0.13952020202020202,
+              "mean_recall_at_5": 0.20833333333333331,
+              "mean_reciprocal_rank": 0.29433147262094633,
+              "nearest_neighbour_hit_rate": 0.20833333333333331
+            },
+            "families": {
+              "duplicate_token": {
+                "family_size": 2,
+                "mean_average_precision": 0.0393939393939394,
+                "mean_global_pair_percentile": 0.5030594405594405,
+                "mean_layer_matched_pair_percentile": 0.041666666666666664,
+                "mean_pair_distance": 1.403894845332023,
+                "mean_recall_at_5": 0.0,
+                "mean_reciprocal_rank": 0.0393939393939394,
+                "median_global_pair_percentile": 0.5030594405594405,
+                "nearest_neighbour_hit_rate": 0.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.403894845332023
+                ],
+                "pair_percentiles": [
+                  0.5030594405594405
+                ]
+              },
+              "name_mover": {
+                "family_size": 3,
+                "mean_average_precision": 0.4694444444444444,
+                "mean_global_pair_percentile": 0.007235819735819736,
+                "mean_layer_matched_pair_percentile": 0.11237373737373739,
+                "mean_pair_distance": 1.2071391780524692,
+                "mean_recall_at_5": 0.6666666666666666,
+                "mean_reciprocal_rank": 0.5555555555555556,
+                "median_global_pair_percentile": 0.00878982128982129,
+                "nearest_neighbour_hit_rate": 0.3333333333333333,
+                "pair_count": 3,
+                "pair_distances": [
+                  1.2279244443603683,
+                  1.2243293092231957,
+                  1.1691637805738433
+                ],
+                "pair_percentiles": [
+                  0.009761072261072262,
+                  0.00878982128982129,
+                  0.0031565656565656565
+                ]
+              },
+              "previous_token": {
+                "family_size": 2,
+                "mean_average_precision": 0.04904306220095694,
+                "mean_global_pair_percentile": 0.11290792540792541,
+                "mean_layer_matched_pair_percentile": 0.041666666666666664,
+                "mean_pair_distance": 1.3500372434109094,
+                "mean_recall_at_5": 0.0,
+                "mean_reciprocal_rank": 0.04904306220095694,
+                "median_global_pair_percentile": 0.11290792540792541,
+                "nearest_neighbour_hit_rate": 0.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.3500372434109094
+                ],
+                "pair_percentiles": [
+                  0.11290792540792541
+                ]
+              },
+              "s_inhibition": {
+                "family_size": 4,
+                "mean_average_precision": 0.2430698515913886,
+                "mean_global_pair_percentile": 0.13772338772338774,
+                "mean_layer_matched_pair_percentile": 0.3623737373737374,
+                "mean_pair_distance": 1.3346009250104,
+                "mean_recall_at_5": 0.16666666666666666,
+                "mean_reciprocal_rank": 0.5333333333333333,
+                "median_global_pair_percentile": 0.14296814296814297,
+                "nearest_neighbour_hit_rate": 0.5,
+                "pair_count": 6,
+                "pair_distances": [
+                  1.3502611723932356,
+                  1.3771317268876078,
+                  1.2249097735992391,
+                  1.3690319617676252,
+                  1.29781067507735,
+                  1.3884602403373432
+                ],
+                "pair_percentiles": [
+                  0.11349067599067598,
+                  0.20896464646464646,
+                  0.009081196581196582,
+                  0.17244560994560995,
+                  0.03715034965034965,
+                  0.2852078477078477
+                ]
+              }
+            }
+          }
+        },
+        "name_mover": {
+          "label_permutation": {
+            "null_maximum": 0.4327833220388401,
+            "null_mean": 0.04272928013473442,
+            "null_minimum": 0.010368970372452803,
+            "null_standard_deviation": 0.04098141041130343,
+            "observed_family_balanced_map": 0.3328767132965712,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": false,
+            "upper_tail_p_value": 0.0008
+          },
+          "layer_stratified_permutation": {
+            "null_maximum": 0.36042774138817496,
+            "null_mean": 0.0555714810569173,
+            "null_minimum": 0.012126279299633221,
+            "null_standard_deviation": 0.05102558762853865,
+            "observed_family_balanced_map": 0.3328767132965712,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": true,
+            "upper_tail_p_value": 0.0003
+          },
+          "retrieval": {
+            "aggregate": {
+              "family_count": 4,
+              "labelled_head_count": 10,
+              "mean_average_precision": 0.3328767132965712,
+              "mean_global_pair_percentile": 0.18843482905982906,
+              "mean_layer_matched_pair_percentile": 0.12184343434343436,
+              "mean_recall_at_5": 0.2916666666666667,
+              "mean_reciprocal_rank": 0.40544258373205744,
+              "nearest_neighbour_hit_rate": 0.375
+            },
+            "families": {
+              "duplicate_token": {
+                "family_size": 2,
+                "mean_average_precision": 0.0393939393939394,
+                "mean_global_pair_percentile": 0.5030594405594405,
+                "mean_layer_matched_pair_percentile": 0.041666666666666664,
+                "mean_pair_distance": 1.403894845332023,
+                "mean_recall_at_5": 0.0,
+                "mean_reciprocal_rank": 0.0393939393939394,
+                "median_global_pair_percentile": 0.5030594405594405,
+                "nearest_neighbour_hit_rate": 0.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.403894845332023
+                ],
+                "pair_percentiles": [
+                  0.5030594405594405
+                ]
+              },
+              "induction": {
+                "family_size": 2,
+                "mean_average_precision": 1.0,
+                "mean_global_pair_percentile": 4.856254856254856e-05,
+                "mean_layer_matched_pair_percentile": 0.041666666666666664,
+                "mean_pair_distance": 1.0471790020608018,
+                "mean_recall_at_5": 1.0,
+                "mean_reciprocal_rank": 1.0,
+                "median_global_pair_percentile": 4.856254856254856e-05,
+                "nearest_neighbour_hit_rate": 1.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.0471790020608018
+                ],
+                "pair_percentiles": [
+                  4.856254856254856e-05
+                ]
+              },
+              "previous_token": {
+                "family_size": 2,
+                "mean_average_precision": 0.04904306220095694,
+                "mean_global_pair_percentile": 0.11290792540792541,
+                "mean_layer_matched_pair_percentile": 0.041666666666666664,
+                "mean_pair_distance": 1.3500372434109094,
+                "mean_recall_at_5": 0.0,
+                "mean_reciprocal_rank": 0.04904306220095694,
+                "median_global_pair_percentile": 0.11290792540792541,
+                "nearest_neighbour_hit_rate": 0.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.3500372434109094
+                ],
+                "pair_percentiles": [
+                  0.11290792540792541
+                ]
+              },
+              "s_inhibition": {
+                "family_size": 4,
+                "mean_average_precision": 0.2430698515913886,
+                "mean_global_pair_percentile": 0.13772338772338774,
+                "mean_layer_matched_pair_percentile": 0.3623737373737374,
+                "mean_pair_distance": 1.3346009250104,
+                "mean_recall_at_5": 0.16666666666666666,
+                "mean_reciprocal_rank": 0.5333333333333333,
+                "median_global_pair_percentile": 0.14296814296814297,
+                "nearest_neighbour_hit_rate": 0.5,
+                "pair_count": 6,
+                "pair_distances": [
+                  1.3502611723932356,
+                  1.3771317268876078,
+                  1.2249097735992391,
+                  1.3690319617676252,
+                  1.29781067507735,
+                  1.3884602403373432
+                ],
+                "pair_percentiles": [
+                  0.11349067599067598,
+                  0.20896464646464646,
+                  0.009081196581196582,
+                  0.17244560994560995,
+                  0.03715034965034965,
+                  0.2852078477078477
+                ]
+              }
+            }
+          }
+        },
+        "previous_token": {
+          "label_permutation": {
+            "null_maximum": 0.42202636888444367,
+            "null_mean": 0.04421403225220595,
+            "null_minimum": 0.012450522991758025,
+            "null_standard_deviation": 0.036474284432096195,
+            "observed_family_balanced_map": 0.4379770588574431,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": false,
+            "upper_tail_p_value": 0.0001
+          },
+          "layer_stratified_permutation": {
+            "null_maximum": 0.4309622046167336,
+            "null_mean": 0.07792002810097898,
+            "null_minimum": 0.013712569152411057,
+            "null_standard_deviation": 0.05664877698351871,
+            "observed_family_balanced_map": 0.4379770588574431,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": true,
+            "upper_tail_p_value": 0.0001
+          },
+          "retrieval": {
+            "aggregate": {
+              "family_count": 4,
+              "labelled_head_count": 11,
+              "mean_average_precision": 0.4379770588574431,
+              "mean_global_pair_percentile": 0.16201680264180265,
+              "mean_layer_matched_pair_percentile": 0.13952020202020202,
+              "mean_recall_at_5": 0.4583333333333333,
+              "mean_reciprocal_rank": 0.5320707070707071,
+              "nearest_neighbour_hit_rate": 0.4583333333333333
+            },
+            "families": {
+              "duplicate_token": {
+                "family_size": 2,
+                "mean_average_precision": 0.0393939393939394,
+                "mean_global_pair_percentile": 0.5030594405594405,
+                "mean_layer_matched_pair_percentile": 0.041666666666666664,
+                "mean_pair_distance": 1.403894845332023,
+                "mean_recall_at_5": 0.0,
+                "mean_reciprocal_rank": 0.0393939393939394,
+                "median_global_pair_percentile": 0.5030594405594405,
+                "nearest_neighbour_hit_rate": 0.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.403894845332023
+                ],
+                "pair_percentiles": [
+                  0.5030594405594405
+                ]
+              },
+              "induction": {
+                "family_size": 2,
+                "mean_average_precision": 1.0,
+                "mean_global_pair_percentile": 4.856254856254856e-05,
+                "mean_layer_matched_pair_percentile": 0.041666666666666664,
+                "mean_pair_distance": 1.0471790020608018,
+                "mean_recall_at_5": 1.0,
+                "mean_reciprocal_rank": 1.0,
+                "median_global_pair_percentile": 4.856254856254856e-05,
+                "nearest_neighbour_hit_rate": 1.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.0471790020608018
+                ],
+                "pair_percentiles": [
+                  4.856254856254856e-05
+                ]
+              },
+              "name_mover": {
+                "family_size": 3,
+                "mean_average_precision": 0.4694444444444444,
+                "mean_global_pair_percentile": 0.007235819735819736,
+                "mean_layer_matched_pair_percentile": 0.11237373737373739,
+                "mean_pair_distance": 1.2071391780524692,
+                "mean_recall_at_5": 0.6666666666666666,
+                "mean_reciprocal_rank": 0.5555555555555556,
+                "median_global_pair_percentile": 0.00878982128982129,
+                "nearest_neighbour_hit_rate": 0.3333333333333333,
+                "pair_count": 3,
+                "pair_distances": [
+                  1.2279244443603683,
+                  1.2243293092231957,
+                  1.1691637805738433
+                ],
+                "pair_percentiles": [
+                  0.009761072261072262,
+                  0.00878982128982129,
+                  0.0031565656565656565
+                ]
+              },
+              "s_inhibition": {
+                "family_size": 4,
+                "mean_average_precision": 0.2430698515913886,
+                "mean_global_pair_percentile": 0.13772338772338774,
+                "mean_layer_matched_pair_percentile": 0.3623737373737374,
+                "mean_pair_distance": 1.3346009250104,
+                "mean_recall_at_5": 0.16666666666666666,
+                "mean_reciprocal_rank": 0.5333333333333333,
+                "median_global_pair_percentile": 0.14296814296814297,
+                "nearest_neighbour_hit_rate": 0.5,
+                "pair_count": 6,
+                "pair_distances": [
+                  1.3502611723932356,
+                  1.3771317268876078,
+                  1.2249097735992391,
+                  1.3690319617676252,
+                  1.29781067507735,
+                  1.3884602403373432
+                ],
+                "pair_percentiles": [
+                  0.11349067599067598,
+                  0.20896464646464646,
+                  0.009081196581196582,
+                  0.17244560994560995,
+                  0.03715034965034965,
+                  0.2852078477078477
+                ]
+              }
+            }
+          }
+        },
+        "s_inhibition": {
+          "label_permutation": {
+            "null_maximum": 0.4118739311740985,
+            "null_mean": 0.04073095744469119,
+            "null_minimum": 0.009307078863407392,
+            "null_standard_deviation": 0.04182947686903339,
+            "observed_family_balanced_map": 0.38947036150983516,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": false,
+            "upper_tail_p_value": 0.0005
+          },
+          "layer_stratified_permutation": {
+            "null_maximum": 0.3836056361948661,
+            "null_mean": 0.06022924186700777,
+            "null_minimum": 0.009794381179927463,
+            "null_standard_deviation": 0.05445222463406836,
+            "observed_family_balanced_map": 0.38947036150983516,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": true,
+            "upper_tail_p_value": 0.0001
+          },
+          "retrieval": {
+            "aggregate": {
+              "family_count": 4,
+              "labelled_head_count": 9,
+              "mean_average_precision": 0.38947036150983516,
+              "mean_global_pair_percentile": 0.15581293706293706,
+              "mean_layer_matched_pair_percentile": 0.059343434343434344,
+              "mean_recall_at_5": 0.41666666666666663,
+              "mean_reciprocal_rank": 0.410998139287613,
+              "nearest_neighbour_hit_rate": 0.3333333333333333
+            },
+            "families": {
+              "duplicate_token": {
+                "family_size": 2,
+                "mean_average_precision": 0.0393939393939394,
+                "mean_global_pair_percentile": 0.5030594405594405,
+                "mean_layer_matched_pair_percentile": 0.041666666666666664,
+                "mean_pair_distance": 1.403894845332023,
+                "mean_recall_at_5": 0.0,
+                "mean_reciprocal_rank": 0.0393939393939394,
+                "median_global_pair_percentile": 0.5030594405594405,
+                "nearest_neighbour_hit_rate": 0.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.403894845332023
+                ],
+                "pair_percentiles": [
+                  0.5030594405594405
+                ]
+              },
+              "induction": {
+                "family_size": 2,
+                "mean_average_precision": 1.0,
+                "mean_global_pair_percentile": 4.856254856254856e-05,
+                "mean_layer_matched_pair_percentile": 0.041666666666666664,
+                "mean_pair_distance": 1.0471790020608018,
+                "mean_recall_at_5": 1.0,
+                "mean_reciprocal_rank": 1.0,
+                "median_global_pair_percentile": 4.856254856254856e-05,
+                "nearest_neighbour_hit_rate": 1.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.0471790020608018
+                ],
+                "pair_percentiles": [
+                  4.856254856254856e-05
+                ]
+              },
+              "name_mover": {
+                "family_size": 3,
+                "mean_average_precision": 0.4694444444444444,
+                "mean_global_pair_percentile": 0.007235819735819736,
+                "mean_layer_matched_pair_percentile": 0.11237373737373739,
+                "mean_pair_distance": 1.2071391780524692,
+                "mean_recall_at_5": 0.6666666666666666,
+                "mean_reciprocal_rank": 0.5555555555555556,
+                "median_global_pair_percentile": 0.00878982128982129,
+                "nearest_neighbour_hit_rate": 0.3333333333333333,
+                "pair_count": 3,
+                "pair_distances": [
+                  1.2279244443603683,
+                  1.2243293092231957,
+                  1.1691637805738433
+                ],
+                "pair_percentiles": [
+                  0.009761072261072262,
+                  0.00878982128982129,
+                  0.0031565656565656565
+                ]
+              },
+              "previous_token": {
+                "family_size": 2,
+                "mean_average_precision": 0.04904306220095694,
+                "mean_global_pair_percentile": 0.11290792540792541,
+                "mean_layer_matched_pair_percentile": 0.041666666666666664,
+                "mean_pair_distance": 1.3500372434109094,
+                "mean_recall_at_5": 0.0,
+                "mean_reciprocal_rank": 0.04904306220095694,
+                "median_global_pair_percentile": 0.11290792540792541,
+                "nearest_neighbour_hit_rate": 0.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.3500372434109094
+                ],
+                "pair_percentiles": [
+                  0.11290792540792541
+                ]
+              }
+            }
+          }
+        }
+      },
+      "uninspected_families": {
+        "aggregate": {
+          "family_count": 5,
+          "labelled_head_count": 13,
+          "mean_average_precision": 0.36019025952614586,
+          "mean_global_pair_percentile": 0.1521950271950272,
+          "mean_layer_matched_pair_percentile": 0.11994949494949494,
+          "mean_recall_at_5": 0.36666666666666664,
+          "mean_reciprocal_rank": 0.435465178096757,
+          "nearest_neighbour_hit_rate": 0.36666666666666664
+        },
+        "families": {
+          "duplicate_token": {
+            "family_size": 2,
+            "mean_average_precision": 0.0393939393939394,
+            "mean_global_pair_percentile": 0.5030594405594405,
+            "mean_layer_matched_pair_percentile": 0.041666666666666664,
+            "mean_pair_distance": 1.403894845332023,
+            "mean_recall_at_5": 0.0,
+            "mean_reciprocal_rank": 0.0393939393939394,
+            "median_global_pair_percentile": 0.5030594405594405,
+            "nearest_neighbour_hit_rate": 0.0,
+            "pair_count": 1,
+            "pair_distances": [
+              1.403894845332023
+            ],
+            "pair_percentiles": [
+              0.5030594405594405
+            ]
+          },
+          "induction": {
+            "family_size": 2,
+            "mean_average_precision": 1.0,
+            "mean_global_pair_percentile": 4.856254856254856e-05,
+            "mean_layer_matched_pair_percentile": 0.041666666666666664,
+            "mean_pair_distance": 1.0471790020608018,
+            "mean_recall_at_5": 1.0,
+            "mean_reciprocal_rank": 1.0,
+            "median_global_pair_percentile": 4.856254856254856e-05,
+            "nearest_neighbour_hit_rate": 1.0,
+            "pair_count": 1,
+            "pair_distances": [
+              1.0471790020608018
+            ],
+            "pair_percentiles": [
+              4.856254856254856e-05
+            ]
+          },
+          "name_mover": {
+            "family_size": 3,
+            "mean_average_precision": 0.4694444444444444,
+            "mean_global_pair_percentile": 0.007235819735819736,
+            "mean_layer_matched_pair_percentile": 0.11237373737373739,
+            "mean_pair_distance": 1.2071391780524692,
+            "mean_recall_at_5": 0.6666666666666666,
+            "mean_reciprocal_rank": 0.5555555555555556,
+            "median_global_pair_percentile": 0.00878982128982129,
+            "nearest_neighbour_hit_rate": 0.3333333333333333,
+            "pair_count": 3,
+            "pair_distances": [
+              1.2279244443603683,
+              1.2243293092231957,
+              1.1691637805738433
+            ],
+            "pair_percentiles": [
+              0.009761072261072262,
+              0.00878982128982129,
+              0.0031565656565656565
+            ]
+          },
+          "previous_token": {
+            "family_size": 2,
+            "mean_average_precision": 0.04904306220095694,
+            "mean_global_pair_percentile": 0.11290792540792541,
+            "mean_layer_matched_pair_percentile": 0.041666666666666664,
+            "mean_pair_distance": 1.3500372434109094,
+            "mean_recall_at_5": 0.0,
+            "mean_reciprocal_rank": 0.04904306220095694,
+            "median_global_pair_percentile": 0.11290792540792541,
+            "nearest_neighbour_hit_rate": 0.0,
+            "pair_count": 1,
+            "pair_distances": [
+              1.3500372434109094
+            ],
+            "pair_percentiles": [
+              0.11290792540792541
+            ]
+          },
+          "s_inhibition": {
+            "family_size": 4,
+            "mean_average_precision": 0.2430698515913886,
+            "mean_global_pair_percentile": 0.13772338772338774,
+            "mean_layer_matched_pair_percentile": 0.3623737373737374,
+            "mean_pair_distance": 1.3346009250104,
+            "mean_recall_at_5": 0.16666666666666666,
+            "mean_reciprocal_rank": 0.5333333333333333,
+            "median_global_pair_percentile": 0.14296814296814297,
+            "nearest_neighbour_hit_rate": 0.5,
+            "pair_count": 6,
+            "pair_distances": [
+              1.3502611723932356,
+              1.3771317268876078,
+              1.2249097735992391,
+              1.3690319617676252,
+              1.29781067507735,
+              1.3884602403373432
+            ],
+            "pair_percentiles": [
+              0.11349067599067598,
+              0.20896464646464646,
+              0.009081196581196582,
+              0.17244560994560995,
+              0.03715034965034965,
+              0.2852078477078477
+            ]
+          }
+        }
+      },
+      "uninspected_label_permutation": {
+        "null_maximum": 0.34906886555315364,
+        "null_mean": 0.04318572336778071,
+        "null_minimum": 0.011620426659007744,
+        "null_standard_deviation": 0.03442823387022429,
+        "observed_family_balanced_map": 0.36019025952614586,
+        "permutations": 9999,
+        "seed": 0,
+        "stratify_by_layer": false,
+        "upper_tail_p_value": 0.0001
+      },
+      "uninspected_layer_stratified_permutation": {
+        "null_maximum": 0.3479914785589374,
+        "null_mean": 0.0667379297610949,
+        "null_minimum": 0.015095940892277514,
+        "null_standard_deviation": 0.04550687768325487,
+        "observed_family_balanced_map": 0.36019025952614586,
+        "permutations": 9999,
+        "seed": 0,
+        "stratify_by_layer": true,
+        "upper_tail_p_value": 0.0001
+      }
+    },
+    "OV": {
+      "all_primary_families_descriptive": {
+        "aggregate": {
+          "family_count": 6,
+          "labelled_head_count": 15,
+          "mean_average_precision": 0.46680034000520837,
+          "mean_global_pair_percentile": 0.14206703790037123,
+          "mean_layer_matched_pair_percentile": 0.15677609427609426,
+          "mean_recall_at_5": 0.5277777777777778,
+          "mean_reciprocal_rank": 0.5318229518335412,
+          "nearest_neighbour_hit_rate": 0.4305555555555555
+        },
+        "families": {
+          "copy_suppression": {
+            "family_size": 2,
+            "mean_average_precision": 1.0,
+            "mean_global_pair_percentile": 0.0013111888111888112,
+            "mean_layer_matched_pair_percentile": 0.041666666666666664,
+            "mean_pair_distance": 1.1977236975629362,
+            "mean_recall_at_5": 1.0,
+            "mean_reciprocal_rank": 1.0,
+            "median_global_pair_percentile": 0.0013111888111888112,
+            "nearest_neighbour_hit_rate": 1.0,
+            "pair_count": 1,
+            "pair_distances": [
+              1.1977236975629362
+            ],
+            "pair_percentiles": [
+              0.0013111888111888112
+            ]
+          },
+          "duplicate_token": {
+            "family_size": 2,
+            "mean_average_precision": 0.09895833333333333,
+            "mean_global_pair_percentile": 0.2319832944832945,
+            "mean_layer_matched_pair_percentile": 0.041666666666666664,
+            "mean_pair_distance": 1.4041921925737544,
+            "mean_recall_at_5": 0.0,
+            "mean_reciprocal_rank": 0.09895833333333333,
+            "median_global_pair_percentile": 0.2319832944832945,
+            "nearest_neighbour_hit_rate": 0.0,
+            "pair_count": 1,
+            "pair_distances": [
+              1.4041921925737544
+            ],
+            "pair_percentiles": [
+              0.2319832944832945
+            ]
+          },
+          "induction": {
+            "family_size": 2,
+            "mean_average_precision": 1.0,
+            "mean_global_pair_percentile": 0.001214063714063714,
+            "mean_layer_matched_pair_percentile": 0.041666666666666664,
+            "mean_pair_distance": 1.1966399902982499,
+            "mean_recall_at_5": 1.0,
+            "mean_reciprocal_rank": 1.0,
+            "median_global_pair_percentile": 0.001214063714063714,
+            "nearest_neighbour_hit_rate": 1.0,
+            "pair_count": 1,
+            "pair_distances": [
+              1.1966399902982499
+            ],
+            "pair_percentiles": [
+              0.001214063714063714
+            ]
+          },
+          "name_mover": {
+            "family_size": 3,
+            "mean_average_precision": 0.3383774250440917,
+            "mean_global_pair_percentile": 0.051524864024864024,
+            "mean_layer_matched_pair_percentile": 0.23232323232323235,
+            "mean_pair_distance": 1.293861294570409,
+            "mean_recall_at_5": 0.5,
+            "mean_reciprocal_rank": 0.49206349206349204,
+            "median_global_pair_percentile": 0.008498445998445998,
+            "nearest_neighbour_hit_rate": 0.3333333333333333,
+            "pair_count": 3,
+            "pair_distances": [
+              1.3948204319361415,
+              1.285257588164889,
+              1.2015058636101967
+            ],
+            "pair_percentiles": [
+              0.14466783216783216,
+              0.008498445998445998,
+              0.0014083139083139083
+            ]
+          },
+          "previous_token": {
+            "family_size": 2,
+            "mean_average_precision": 0.20833333333333331,
+            "mean_global_pair_percentile": 0.012577700077700078,
+            "mean_layer_matched_pair_percentile": 0.041666666666666664,
+            "mean_pair_distance": 1.304701006376229,
+            "mean_recall_at_5": 0.5,
+            "mean_reciprocal_rank": 0.20833333333333331,
+            "median_global_pair_percentile": 0.012577700077700078,
+            "nearest_neighbour_hit_rate": 0.0,
+            "pair_count": 1,
+            "pair_distances": [
+              1.304701006376229
+            ],
+            "pair_percentiles": [
+              0.012577700077700078
+            ]
+          },
+          "s_inhibition": {
+            "family_size": 4,
+            "mean_average_precision": 0.155132948320492,
+            "mean_global_pair_percentile": 0.5537911162911162,
+            "mean_layer_matched_pair_percentile": 0.5416666666666666,
+            "mean_pair_distance": 1.4134766726705659,
+            "mean_recall_at_5": 0.16666666666666666,
+            "mean_reciprocal_rank": 0.3915825522710887,
+            "median_global_pair_percentile": 0.6207264957264957,
+            "nearest_neighbour_hit_rate": 0.25,
+            "pair_count": 6,
+            "pair_distances": [
+              1.4712157647039439,
+              1.4408248848809042,
+              1.266935623390912,
+              1.4077891806847687,
+              1.3870182752326798,
+              1.507076307130187
+            ],
+            "pair_percentiles": [
+              0.9802350427350427,
+              0.9396367521367521,
+              0.005001942501942502,
+              0.3018162393162393,
+              0.10504079254079254,
+              0.9910159285159286
+            ]
+          }
+        }
+      },
+      "leave_one_family_out": {
+        "duplicate_token": {
+          "label_permutation": {
+            "null_maximum": 0.4256006091528879,
+            "null_mean": 0.04417024821173364,
+            "null_minimum": 0.012331220673528773,
+            "null_standard_deviation": 0.03772727162312461,
+            "observed_family_balanced_map": 0.42546092667447927,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": false,
+            "upper_tail_p_value": 0.0002
+          },
+          "layer_stratified_permutation": {
+            "null_maximum": 0.4042942245746023,
+            "null_mean": 0.07993811494600646,
+            "null_minimum": 0.011641408890854438,
+            "null_standard_deviation": 0.060055193323061036,
+            "observed_family_balanced_map": 0.42546092667447927,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": true,
+            "upper_tail_p_value": 0.0001
+          },
+          "retrieval": {
+            "aggregate": {
+              "family_count": 4,
+              "labelled_head_count": 11,
+              "mean_average_precision": 0.42546092667447927,
+              "mean_global_pair_percentile": 0.154776936026936,
+              "mean_layer_matched_pair_percentile": 0.21433080808080807,
+              "mean_recall_at_5": 0.5416666666666666,
+              "mean_reciprocal_rank": 0.5229948444169785,
+              "nearest_neighbour_hit_rate": 0.3958333333333333
+            },
+            "families": {
+              "induction": {
+                "family_size": 2,
+                "mean_average_precision": 1.0,
+                "mean_global_pair_percentile": 0.001214063714063714,
+                "mean_layer_matched_pair_percentile": 0.041666666666666664,
+                "mean_pair_distance": 1.1966399902982499,
+                "mean_recall_at_5": 1.0,
+                "mean_reciprocal_rank": 1.0,
+                "median_global_pair_percentile": 0.001214063714063714,
+                "nearest_neighbour_hit_rate": 1.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.1966399902982499
+                ],
+                "pair_percentiles": [
+                  0.001214063714063714
+                ]
+              },
+              "name_mover": {
+                "family_size": 3,
+                "mean_average_precision": 0.3383774250440917,
+                "mean_global_pair_percentile": 0.051524864024864024,
+                "mean_layer_matched_pair_percentile": 0.23232323232323235,
+                "mean_pair_distance": 1.293861294570409,
+                "mean_recall_at_5": 0.5,
+                "mean_reciprocal_rank": 0.49206349206349204,
+                "median_global_pair_percentile": 0.008498445998445998,
+                "nearest_neighbour_hit_rate": 0.3333333333333333,
+                "pair_count": 3,
+                "pair_distances": [
+                  1.3948204319361415,
+                  1.285257588164889,
+                  1.2015058636101967
+                ],
+                "pair_percentiles": [
+                  0.14466783216783216,
+                  0.008498445998445998,
+                  0.0014083139083139083
+                ]
+              },
+              "previous_token": {
+                "family_size": 2,
+                "mean_average_precision": 0.20833333333333331,
+                "mean_global_pair_percentile": 0.012577700077700078,
+                "mean_layer_matched_pair_percentile": 0.041666666666666664,
+                "mean_pair_distance": 1.304701006376229,
+                "mean_recall_at_5": 0.5,
+                "mean_reciprocal_rank": 0.20833333333333331,
+                "median_global_pair_percentile": 0.012577700077700078,
+                "nearest_neighbour_hit_rate": 0.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.304701006376229
+                ],
+                "pair_percentiles": [
+                  0.012577700077700078
+                ]
+              },
+              "s_inhibition": {
+                "family_size": 4,
+                "mean_average_precision": 0.155132948320492,
+                "mean_global_pair_percentile": 0.5537911162911162,
+                "mean_layer_matched_pair_percentile": 0.5416666666666666,
+                "mean_pair_distance": 1.4134766726705659,
+                "mean_recall_at_5": 0.16666666666666666,
+                "mean_reciprocal_rank": 0.3915825522710887,
+                "median_global_pair_percentile": 0.6207264957264957,
+                "nearest_neighbour_hit_rate": 0.25,
+                "pair_count": 6,
+                "pair_distances": [
+                  1.4712157647039439,
+                  1.4408248848809042,
+                  1.266935623390912,
+                  1.4077891806847687,
+                  1.3870182752326798,
+                  1.507076307130187
+                ],
+                "pair_percentiles": [
+                  0.9802350427350427,
+                  0.9396367521367521,
+                  0.005001942501942502,
+                  0.3018162393162393,
+                  0.10504079254079254,
+                  0.9910159285159286
+                ]
+              }
+            }
+          }
+        },
+        "induction": {
+          "label_permutation": {
+            "null_maximum": 0.40071419417566906,
+            "null_mean": 0.04403453206499019,
+            "null_minimum": 0.012471276266754374,
+            "null_standard_deviation": 0.037908479521125776,
+            "observed_family_balanced_map": 0.2002005100078126,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": false,
+            "upper_tail_p_value": 0.0156
+          },
+          "layer_stratified_permutation": {
+            "null_maximum": 0.24280901131588253,
+            "null_mean": 0.059282682395950206,
+            "null_minimum": 0.01238578620744483,
+            "null_standard_deviation": 0.03286443994942072,
+            "observed_family_balanced_map": 0.2002005100078126,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": true,
+            "upper_tail_p_value": 0.0019
+          },
+          "retrieval": {
+            "aggregate": {
+              "family_count": 4,
+              "labelled_head_count": 11,
+              "mean_average_precision": 0.2002005100078126,
+              "mean_global_pair_percentile": 0.2124692437192437,
+              "mean_layer_matched_pair_percentile": 0.21433080808080807,
+              "mean_recall_at_5": 0.29166666666666663,
+              "mean_reciprocal_rank": 0.29773442775031184,
+              "nearest_neighbour_hit_rate": 0.14583333333333331
+            },
+            "families": {
+              "duplicate_token": {
+                "family_size": 2,
+                "mean_average_precision": 0.09895833333333333,
+                "mean_global_pair_percentile": 0.2319832944832945,
+                "mean_layer_matched_pair_percentile": 0.041666666666666664,
+                "mean_pair_distance": 1.4041921925737544,
+                "mean_recall_at_5": 0.0,
+                "mean_reciprocal_rank": 0.09895833333333333,
+                "median_global_pair_percentile": 0.2319832944832945,
+                "nearest_neighbour_hit_rate": 0.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.4041921925737544
+                ],
+                "pair_percentiles": [
+                  0.2319832944832945
+                ]
+              },
+              "name_mover": {
+                "family_size": 3,
+                "mean_average_precision": 0.3383774250440917,
+                "mean_global_pair_percentile": 0.051524864024864024,
+                "mean_layer_matched_pair_percentile": 0.23232323232323235,
+                "mean_pair_distance": 1.293861294570409,
+                "mean_recall_at_5": 0.5,
+                "mean_reciprocal_rank": 0.49206349206349204,
+                "median_global_pair_percentile": 0.008498445998445998,
+                "nearest_neighbour_hit_rate": 0.3333333333333333,
+                "pair_count": 3,
+                "pair_distances": [
+                  1.3948204319361415,
+                  1.285257588164889,
+                  1.2015058636101967
+                ],
+                "pair_percentiles": [
+                  0.14466783216783216,
+                  0.008498445998445998,
+                  0.0014083139083139083
+                ]
+              },
+              "previous_token": {
+                "family_size": 2,
+                "mean_average_precision": 0.20833333333333331,
+                "mean_global_pair_percentile": 0.012577700077700078,
+                "mean_layer_matched_pair_percentile": 0.041666666666666664,
+                "mean_pair_distance": 1.304701006376229,
+                "mean_recall_at_5": 0.5,
+                "mean_reciprocal_rank": 0.20833333333333331,
+                "median_global_pair_percentile": 0.012577700077700078,
+                "nearest_neighbour_hit_rate": 0.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.304701006376229
+                ],
+                "pair_percentiles": [
+                  0.012577700077700078
+                ]
+              },
+              "s_inhibition": {
+                "family_size": 4,
+                "mean_average_precision": 0.155132948320492,
+                "mean_global_pair_percentile": 0.5537911162911162,
+                "mean_layer_matched_pair_percentile": 0.5416666666666666,
+                "mean_pair_distance": 1.4134766726705659,
+                "mean_recall_at_5": 0.16666666666666666,
+                "mean_reciprocal_rank": 0.3915825522710887,
+                "median_global_pair_percentile": 0.6207264957264957,
+                "nearest_neighbour_hit_rate": 0.25,
+                "pair_count": 6,
+                "pair_distances": [
+                  1.4712157647039439,
+                  1.4408248848809042,
+                  1.266935623390912,
+                  1.4077891806847687,
+                  1.3870182752326798,
+                  1.507076307130187
+                ],
+                "pair_percentiles": [
+                  0.9802350427350427,
+                  0.9396367521367521,
+                  0.005001942501942502,
+                  0.3018162393162393,
+                  0.10504079254079254,
+                  0.9910159285159286
+                ]
+              }
+            }
+          }
+        },
+        "name_mover": {
+          "label_permutation": {
+            "null_maximum": 0.43108451455135954,
+            "null_mean": 0.042535255281979635,
+            "null_minimum": 0.010532178916019647,
+            "null_standard_deviation": 0.04247827787713272,
+            "observed_family_balanced_map": 0.3656061537467897,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": false,
+            "upper_tail_p_value": 0.0007
+          },
+          "layer_stratified_permutation": {
+            "null_maximum": 0.3865608334945305,
+            "null_mean": 0.06349900331358237,
+            "null_minimum": 0.01112760795048645,
+            "null_standard_deviation": 0.05594142138210443,
+            "observed_family_balanced_map": 0.3656061537467897,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": true,
+            "upper_tail_p_value": 0.0003
+          },
+          "retrieval": {
+            "aggregate": {
+              "family_count": 4,
+              "labelled_head_count": 10,
+              "mean_average_precision": 0.3656061537467897,
+              "mean_global_pair_percentile": 0.19989154364154363,
+              "mean_layer_matched_pair_percentile": 0.16666666666666663,
+              "mean_recall_at_5": 0.41666666666666663,
+              "mean_reciprocal_rank": 0.42471855473443887,
+              "nearest_neighbour_hit_rate": 0.3125
+            },
+            "families": {
+              "duplicate_token": {
+                "family_size": 2,
+                "mean_average_precision": 0.09895833333333333,
+                "mean_global_pair_percentile": 0.2319832944832945,
+                "mean_layer_matched_pair_percentile": 0.041666666666666664,
+                "mean_pair_distance": 1.4041921925737544,
+                "mean_recall_at_5": 0.0,
+                "mean_reciprocal_rank": 0.09895833333333333,
+                "median_global_pair_percentile": 0.2319832944832945,
+                "nearest_neighbour_hit_rate": 0.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.4041921925737544
+                ],
+                "pair_percentiles": [
+                  0.2319832944832945
+                ]
+              },
+              "induction": {
+                "family_size": 2,
+                "mean_average_precision": 1.0,
+                "mean_global_pair_percentile": 0.001214063714063714,
+                "mean_layer_matched_pair_percentile": 0.041666666666666664,
+                "mean_pair_distance": 1.1966399902982499,
+                "mean_recall_at_5": 1.0,
+                "mean_reciprocal_rank": 1.0,
+                "median_global_pair_percentile": 0.001214063714063714,
+                "nearest_neighbour_hit_rate": 1.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.1966399902982499
+                ],
+                "pair_percentiles": [
+                  0.001214063714063714
+                ]
+              },
+              "previous_token": {
+                "family_size": 2,
+                "mean_average_precision": 0.20833333333333331,
+                "mean_global_pair_percentile": 0.012577700077700078,
+                "mean_layer_matched_pair_percentile": 0.041666666666666664,
+                "mean_pair_distance": 1.304701006376229,
+                "mean_recall_at_5": 0.5,
+                "mean_reciprocal_rank": 0.20833333333333331,
+                "median_global_pair_percentile": 0.012577700077700078,
+                "nearest_neighbour_hit_rate": 0.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.304701006376229
+                ],
+                "pair_percentiles": [
+                  0.012577700077700078
+                ]
+              },
+              "s_inhibition": {
+                "family_size": 4,
+                "mean_average_precision": 0.155132948320492,
+                "mean_global_pair_percentile": 0.5537911162911162,
+                "mean_layer_matched_pair_percentile": 0.5416666666666666,
+                "mean_pair_distance": 1.4134766726705659,
+                "mean_recall_at_5": 0.16666666666666666,
+                "mean_reciprocal_rank": 0.3915825522710887,
+                "median_global_pair_percentile": 0.6207264957264957,
+                "nearest_neighbour_hit_rate": 0.25,
+                "pair_count": 6,
+                "pair_distances": [
+                  1.4712157647039439,
+                  1.4408248848809042,
+                  1.266935623390912,
+                  1.4077891806847687,
+                  1.3870182752326798,
+                  1.507076307130187
+                ],
+                "pair_percentiles": [
+                  0.9802350427350427,
+                  0.9396367521367521,
+                  0.005001942501942502,
+                  0.3018162393162393,
+                  0.10504079254079254,
+                  0.9910159285159286
+                ]
+              }
+            }
+          }
+        },
+        "previous_token": {
+          "label_permutation": {
+            "null_maximum": 0.3732144545650996,
+            "null_mean": 0.04418138117295705,
+            "null_minimum": 0.0122774210503853,
+            "null_standard_deviation": 0.03757274891297357,
+            "observed_family_balanced_map": 0.39811717667447927,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": false,
+            "upper_tail_p_value": 0.0001
+          },
+          "layer_stratified_permutation": {
+            "null_maximum": 0.3994418617833361,
+            "null_mean": 0.07170899010842412,
+            "null_minimum": 0.012696378222447211,
+            "null_standard_deviation": 0.05766022046830934,
+            "observed_family_balanced_map": 0.39811717667447927,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": true,
+            "upper_tail_p_value": 0.0002
+          },
+          "retrieval": {
+            "aggregate": {
+              "family_count": 4,
+              "labelled_head_count": 11,
+              "mean_average_precision": 0.39811717667447927,
+              "mean_global_pair_percentile": 0.2096283346283346,
+              "mean_layer_matched_pair_percentile": 0.21433080808080807,
+              "mean_recall_at_5": 0.41666666666666663,
+              "mean_reciprocal_rank": 0.4956510944169785,
+              "nearest_neighbour_hit_rate": 0.3958333333333333
+            },
+            "families": {
+              "duplicate_token": {
+                "family_size": 2,
+                "mean_average_precision": 0.09895833333333333,
+                "mean_global_pair_percentile": 0.2319832944832945,
+                "mean_layer_matched_pair_percentile": 0.041666666666666664,
+                "mean_pair_distance": 1.4041921925737544,
+                "mean_recall_at_5": 0.0,
+                "mean_reciprocal_rank": 0.09895833333333333,
+                "median_global_pair_percentile": 0.2319832944832945,
+                "nearest_neighbour_hit_rate": 0.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.4041921925737544
+                ],
+                "pair_percentiles": [
+                  0.2319832944832945
+                ]
+              },
+              "induction": {
+                "family_size": 2,
+                "mean_average_precision": 1.0,
+                "mean_global_pair_percentile": 0.001214063714063714,
+                "mean_layer_matched_pair_percentile": 0.041666666666666664,
+                "mean_pair_distance": 1.1966399902982499,
+                "mean_recall_at_5": 1.0,
+                "mean_reciprocal_rank": 1.0,
+                "median_global_pair_percentile": 0.001214063714063714,
+                "nearest_neighbour_hit_rate": 1.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.1966399902982499
+                ],
+                "pair_percentiles": [
+                  0.001214063714063714
+                ]
+              },
+              "name_mover": {
+                "family_size": 3,
+                "mean_average_precision": 0.3383774250440917,
+                "mean_global_pair_percentile": 0.051524864024864024,
+                "mean_layer_matched_pair_percentile": 0.23232323232323235,
+                "mean_pair_distance": 1.293861294570409,
+                "mean_recall_at_5": 0.5,
+                "mean_reciprocal_rank": 0.49206349206349204,
+                "median_global_pair_percentile": 0.008498445998445998,
+                "nearest_neighbour_hit_rate": 0.3333333333333333,
+                "pair_count": 3,
+                "pair_distances": [
+                  1.3948204319361415,
+                  1.285257588164889,
+                  1.2015058636101967
+                ],
+                "pair_percentiles": [
+                  0.14466783216783216,
+                  0.008498445998445998,
+                  0.0014083139083139083
+                ]
+              },
+              "s_inhibition": {
+                "family_size": 4,
+                "mean_average_precision": 0.155132948320492,
+                "mean_global_pair_percentile": 0.5537911162911162,
+                "mean_layer_matched_pair_percentile": 0.5416666666666666,
+                "mean_pair_distance": 1.4134766726705659,
+                "mean_recall_at_5": 0.16666666666666666,
+                "mean_reciprocal_rank": 0.3915825522710887,
+                "median_global_pair_percentile": 0.6207264957264957,
+                "nearest_neighbour_hit_rate": 0.25,
+                "pair_count": 6,
+                "pair_distances": [
+                  1.4712157647039439,
+                  1.4408248848809042,
+                  1.266935623390912,
+                  1.4077891806847687,
+                  1.3870182752326798,
+                  1.507076307130187
+                ],
+                "pair_percentiles": [
+                  0.9802350427350427,
+                  0.9396367521367521,
+                  0.005001942501942502,
+                  0.3018162393162393,
+                  0.10504079254079254,
+                  0.9910159285159286
+                ]
+              }
+            }
+          }
+        },
+        "s_inhibition": {
+          "label_permutation": {
+            "null_maximum": 0.4346493484329388,
+            "null_mean": 0.04071791674961596,
+            "null_minimum": 0.008769229774008706,
+            "null_standard_deviation": 0.04333265513489499,
+            "observed_family_balanced_map": 0.4114172729276896,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": false,
+            "upper_tail_p_value": 0.0003
+          },
+          "layer_stratified_permutation": {
+            "null_maximum": 0.38770049739818846,
+            "null_mean": 0.06311926474736802,
+            "null_minimum": 0.009210822053710576,
+            "null_standard_deviation": 0.05802957656016966,
+            "observed_family_balanced_map": 0.4114172729276896,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": true,
+            "upper_tail_p_value": 0.0001
+          },
+          "retrieval": {
+            "aggregate": {
+              "family_count": 4,
+              "labelled_head_count": 9,
+              "mean_average_precision": 0.4114172729276896,
+              "mean_global_pair_percentile": 0.07432498057498058,
+              "mean_layer_matched_pair_percentile": 0.0893308080808081,
+              "mean_recall_at_5": 0.5,
+              "mean_reciprocal_rank": 0.44983878968253965,
+              "nearest_neighbour_hit_rate": 0.3333333333333333
+            },
+            "families": {
+              "duplicate_token": {
+                "family_size": 2,
+                "mean_average_precision": 0.09895833333333333,
+                "mean_global_pair_percentile": 0.2319832944832945,
+                "mean_layer_matched_pair_percentile": 0.041666666666666664,
+                "mean_pair_distance": 1.4041921925737544,
+                "mean_recall_at_5": 0.0,
+                "mean_reciprocal_rank": 0.09895833333333333,
+                "median_global_pair_percentile": 0.2319832944832945,
+                "nearest_neighbour_hit_rate": 0.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.4041921925737544
+                ],
+                "pair_percentiles": [
+                  0.2319832944832945
+                ]
+              },
+              "induction": {
+                "family_size": 2,
+                "mean_average_precision": 1.0,
+                "mean_global_pair_percentile": 0.001214063714063714,
+                "mean_layer_matched_pair_percentile": 0.041666666666666664,
+                "mean_pair_distance": 1.1966399902982499,
+                "mean_recall_at_5": 1.0,
+                "mean_reciprocal_rank": 1.0,
+                "median_global_pair_percentile": 0.001214063714063714,
+                "nearest_neighbour_hit_rate": 1.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.1966399902982499
+                ],
+                "pair_percentiles": [
+                  0.001214063714063714
+                ]
+              },
+              "name_mover": {
+                "family_size": 3,
+                "mean_average_precision": 0.3383774250440917,
+                "mean_global_pair_percentile": 0.051524864024864024,
+                "mean_layer_matched_pair_percentile": 0.23232323232323235,
+                "mean_pair_distance": 1.293861294570409,
+                "mean_recall_at_5": 0.5,
+                "mean_reciprocal_rank": 0.49206349206349204,
+                "median_global_pair_percentile": 0.008498445998445998,
+                "nearest_neighbour_hit_rate": 0.3333333333333333,
+                "pair_count": 3,
+                "pair_distances": [
+                  1.3948204319361415,
+                  1.285257588164889,
+                  1.2015058636101967
+                ],
+                "pair_percentiles": [
+                  0.14466783216783216,
+                  0.008498445998445998,
+                  0.0014083139083139083
+                ]
+              },
+              "previous_token": {
+                "family_size": 2,
+                "mean_average_precision": 0.20833333333333331,
+                "mean_global_pair_percentile": 0.012577700077700078,
+                "mean_layer_matched_pair_percentile": 0.041666666666666664,
+                "mean_pair_distance": 1.304701006376229,
+                "mean_recall_at_5": 0.5,
+                "mean_reciprocal_rank": 0.20833333333333331,
+                "median_global_pair_percentile": 0.012577700077700078,
+                "nearest_neighbour_hit_rate": 0.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.304701006376229
+                ],
+                "pair_percentiles": [
+                  0.012577700077700078
+                ]
+              }
+            }
+          }
+        }
+      },
+      "uninspected_families": {
+        "aggregate": {
+          "family_count": 5,
+          "labelled_head_count": 13,
+          "mean_average_precision": 0.36016040800625004,
+          "mean_global_pair_percentile": 0.1702182077182077,
+          "mean_layer_matched_pair_percentile": 0.1797979797979798,
+          "mean_recall_at_5": 0.4333333333333333,
+          "mean_reciprocal_rank": 0.4381875422002494,
+          "nearest_neighbour_hit_rate": 0.31666666666666665
+        },
+        "families": {
+          "duplicate_token": {
+            "family_size": 2,
+            "mean_average_precision": 0.09895833333333333,
+            "mean_global_pair_percentile": 0.2319832944832945,
+            "mean_layer_matched_pair_percentile": 0.041666666666666664,
+            "mean_pair_distance": 1.4041921925737544,
+            "mean_recall_at_5": 0.0,
+            "mean_reciprocal_rank": 0.09895833333333333,
+            "median_global_pair_percentile": 0.2319832944832945,
+            "nearest_neighbour_hit_rate": 0.0,
+            "pair_count": 1,
+            "pair_distances": [
+              1.4041921925737544
+            ],
+            "pair_percentiles": [
+              0.2319832944832945
+            ]
+          },
+          "induction": {
+            "family_size": 2,
+            "mean_average_precision": 1.0,
+            "mean_global_pair_percentile": 0.001214063714063714,
+            "mean_layer_matched_pair_percentile": 0.041666666666666664,
+            "mean_pair_distance": 1.1966399902982499,
+            "mean_recall_at_5": 1.0,
+            "mean_reciprocal_rank": 1.0,
+            "median_global_pair_percentile": 0.001214063714063714,
+            "nearest_neighbour_hit_rate": 1.0,
+            "pair_count": 1,
+            "pair_distances": [
+              1.1966399902982499
+            ],
+            "pair_percentiles": [
+              0.001214063714063714
+            ]
+          },
+          "name_mover": {
+            "family_size": 3,
+            "mean_average_precision": 0.3383774250440917,
+            "mean_global_pair_percentile": 0.051524864024864024,
+            "mean_layer_matched_pair_percentile": 0.23232323232323235,
+            "mean_pair_distance": 1.293861294570409,
+            "mean_recall_at_5": 0.5,
+            "mean_reciprocal_rank": 0.49206349206349204,
+            "median_global_pair_percentile": 0.008498445998445998,
+            "nearest_neighbour_hit_rate": 0.3333333333333333,
+            "pair_count": 3,
+            "pair_distances": [
+              1.3948204319361415,
+              1.285257588164889,
+              1.2015058636101967
+            ],
+            "pair_percentiles": [
+              0.14466783216783216,
+              0.008498445998445998,
+              0.0014083139083139083
+            ]
+          },
+          "previous_token": {
+            "family_size": 2,
+            "mean_average_precision": 0.20833333333333331,
+            "mean_global_pair_percentile": 0.012577700077700078,
+            "mean_layer_matched_pair_percentile": 0.041666666666666664,
+            "mean_pair_distance": 1.304701006376229,
+            "mean_recall_at_5": 0.5,
+            "mean_reciprocal_rank": 0.20833333333333331,
+            "median_global_pair_percentile": 0.012577700077700078,
+            "nearest_neighbour_hit_rate": 0.0,
+            "pair_count": 1,
+            "pair_distances": [
+              1.304701006376229
+            ],
+            "pair_percentiles": [
+              0.012577700077700078
+            ]
+          },
+          "s_inhibition": {
+            "family_size": 4,
+            "mean_average_precision": 0.155132948320492,
+            "mean_global_pair_percentile": 0.5537911162911162,
+            "mean_layer_matched_pair_percentile": 0.5416666666666666,
+            "mean_pair_distance": 1.4134766726705659,
+            "mean_recall_at_5": 0.16666666666666666,
+            "mean_reciprocal_rank": 0.3915825522710887,
+            "median_global_pair_percentile": 0.6207264957264957,
+            "nearest_neighbour_hit_rate": 0.25,
+            "pair_count": 6,
+            "pair_distances": [
+              1.4712157647039439,
+              1.4408248848809042,
+              1.266935623390912,
+              1.4077891806847687,
+              1.3870182752326798,
+              1.507076307130187
+            ],
+            "pair_percentiles": [
+              0.9802350427350427,
+              0.9396367521367521,
+              0.005001942501942502,
+              0.3018162393162393,
+              0.10504079254079254,
+              0.9910159285159286
+            ]
+          }
+        }
+      },
+      "uninspected_label_permutation": {
+        "null_maximum": 0.3567142535560765,
+        "null_mean": 0.04312786669625529,
+        "null_minimum": 0.01181435771799684,
+        "null_standard_deviation": 0.03570628619406384,
+        "observed_family_balanced_map": 0.36016040800625004,
+        "permutations": 9999,
+        "seed": 0,
+        "stratify_by_layer": false,
+        "upper_tail_p_value": 0.0001
+      },
+      "uninspected_layer_stratified_permutation": {
+        "null_maximum": 0.3264831204951465,
+        "null_mean": 0.06750961110226623,
+        "null_minimum": 0.011897999341863289,
+        "null_standard_deviation": 0.04810953668439767,
+        "observed_family_balanced_map": 0.36016040800625004,
+        "permutations": 9999,
+        "seed": 0,
+        "stratify_by_layer": true,
+        "upper_tail_p_value": 0.0001
+      }
+    },
+    "QK": {
+      "all_primary_families_descriptive": {
+        "aggregate": {
+          "family_count": 6,
+          "labelled_head_count": 15,
+          "mean_average_precision": 0.4407277909766621,
+          "mean_global_pair_percentile": 0.21398007856341186,
+          "mean_layer_matched_pair_percentile": 0.1339436026936027,
+          "mean_recall_at_5": 0.4583333333333333,
+          "mean_reciprocal_rank": 0.4786296122118167,
+          "nearest_neighbour_hit_rate": 0.375
+        },
+        "families": {
+          "copy_suppression": {
+            "family_size": 2,
+            "mean_average_precision": 1.0,
+            "mean_global_pair_percentile": 0.034042346542346544,
+            "mean_layer_matched_pair_percentile": 0.041666666666666664,
+            "mean_pair_distance": 1.2069122243525525,
+            "mean_recall_at_5": 1.0,
+            "mean_reciprocal_rank": 1.0,
+            "median_global_pair_percentile": 0.034042346542346544,
+            "nearest_neighbour_hit_rate": 1.0,
+            "pair_count": 1,
+            "pair_distances": [
+              1.2069122243525525
+            ],
+            "pair_percentiles": [
+              0.034042346542346544
+            ]
+          },
+          "duplicate_token": {
+            "family_size": 2,
+            "mean_average_precision": 0.023024594453165882,
+            "mean_global_pair_percentile": 0.6607905982905983,
+            "mean_layer_matched_pair_percentile": 0.08333333333333333,
+            "mean_pair_distance": 1.4035974350983127,
+            "mean_recall_at_5": 0.0,
+            "mean_reciprocal_rank": 0.023024594453165882,
+            "median_global_pair_percentile": 0.6607905982905983,
+            "nearest_neighbour_hit_rate": 0.0,
+            "pair_count": 1,
+            "pair_distances": [
+              1.4035974350983127
+            ],
+            "pair_percentiles": [
+              0.6607905982905983
+            ]
+          },
+          "induction": {
+            "family_size": 2,
+            "mean_average_precision": 1.0,
+            "mean_global_pair_percentile": 0.001214063714063714,
+            "mean_layer_matched_pair_percentile": 0.041666666666666664,
+            "mean_pair_distance": 0.8724794887750186,
+            "mean_recall_at_5": 1.0,
+            "mean_reciprocal_rank": 1.0,
+            "median_global_pair_percentile": 0.001214063714063714,
+            "nearest_neighbour_hit_rate": 1.0,
+            "pair_count": 1,
+            "pair_distances": [
+              0.8724794887750186
+            ],
+            "pair_percentiles": [
+              0.001214063714063714
+            ]
+          },
+          "name_mover": {
+            "family_size": 3,
+            "mean_average_precision": 0.30357142857142855,
+            "mean_global_pair_percentile": 0.014325951825951824,
+            "mean_layer_matched_pair_percentile": 0.15404040404040403,
+            "mean_pair_distance": 1.1101834126770262,
+            "mean_recall_at_5": 0.3333333333333333,
+            "mean_reciprocal_rank": 0.3333333333333333,
+            "median_global_pair_percentile": 0.01587995337995338,
+            "nearest_neighbour_hit_rate": 0.0,
+            "pair_count": 3,
+            "pair_distances": [
+              1.034443253527671,
+              1.160205777830152,
+              1.135901206673256
+            ],
+            "pair_percentiles": [
+              0.006653069153069153,
+              0.020444832944832944,
+              0.01587995337995338
+            ]
+          },
+          "previous_token": {
+            "family_size": 2,
+            "mean_average_precision": 0.02137212643678161,
+            "mean_global_pair_percentile": 0.4983974358974359,
+            "mean_layer_matched_pair_percentile": 0.20833333333333334,
+            "mean_pair_distance": 1.3938997098621941,
+            "mean_recall_at_5": 0.0,
+            "mean_reciprocal_rank": 0.02137212643678161,
+            "median_global_pair_percentile": 0.4983974358974359,
+            "nearest_neighbour_hit_rate": 0.0,
+            "pair_count": 1,
+            "pair_distances": [
+              1.3938997098621941
+            ],
+            "pair_percentiles": [
+              0.4983974358974359
+            ]
+          },
+          "s_inhibition": {
+            "family_size": 4,
+            "mean_average_precision": 0.2963985963985964,
+            "mean_global_pair_percentile": 0.07511007511007511,
+            "mean_layer_matched_pair_percentile": 0.27462121212121215,
+            "mean_pair_distance": 1.2498241056213735,
+            "mean_recall_at_5": 0.41666666666666663,
+            "mean_reciprocal_rank": 0.494047619047619,
+            "median_global_pair_percentile": 0.049825174825174824,
+            "nearest_neighbour_hit_rate": 0.25,
+            "pair_count": 6,
+            "pair_distances": [
+              1.2173473789482192,
+              1.3103462281049305,
+              1.181389873454551,
+              1.3291450814074182,
+              1.202000582720331,
+              1.2587154890927912
+            ],
+            "pair_percentiles": [
+              0.03851010101010101,
+              0.12563131313131312,
+              0.0253010878010878,
+              0.16778360528360528,
+              0.03229409479409479,
+              0.06114024864024864
+            ]
+          }
+        }
+      },
+      "leave_one_family_out": {
+        "duplicate_token": {
+          "label_permutation": {
+            "null_maximum": 0.40563388658526384,
+            "null_mean": 0.04415949322075458,
+            "null_minimum": 0.012314400970656803,
+            "null_standard_deviation": 0.03514608834359829,
+            "observed_family_balanced_map": 0.4053355378517016,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": false,
+            "upper_tail_p_value": 0.0002
+          },
+          "layer_stratified_permutation": {
+            "null_maximum": 0.4343828262746005,
+            "null_mean": 0.07625582761594236,
+            "null_minimum": 0.018668909190446913,
+            "null_standard_deviation": 0.05059962062011266,
+            "observed_family_balanced_map": 0.4053355378517016,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": true,
+            "upper_tail_p_value": 0.0003
+          },
+          "retrieval": {
+            "aggregate": {
+              "family_count": 4,
+              "labelled_head_count": 11,
+              "mean_average_precision": 0.4053355378517016,
+              "mean_global_pair_percentile": 0.14726188163688164,
+              "mean_layer_matched_pair_percentile": 0.16966540404040403,
+              "mean_recall_at_5": 0.4375,
+              "mean_reciprocal_rank": 0.4621882697044335,
+              "nearest_neighbour_hit_rate": 0.3125
+            },
+            "families": {
+              "induction": {
+                "family_size": 2,
+                "mean_average_precision": 1.0,
+                "mean_global_pair_percentile": 0.001214063714063714,
+                "mean_layer_matched_pair_percentile": 0.041666666666666664,
+                "mean_pair_distance": 0.8724794887750186,
+                "mean_recall_at_5": 1.0,
+                "mean_reciprocal_rank": 1.0,
+                "median_global_pair_percentile": 0.001214063714063714,
+                "nearest_neighbour_hit_rate": 1.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  0.8724794887750186
+                ],
+                "pair_percentiles": [
+                  0.001214063714063714
+                ]
+              },
+              "name_mover": {
+                "family_size": 3,
+                "mean_average_precision": 0.30357142857142855,
+                "mean_global_pair_percentile": 0.014325951825951824,
+                "mean_layer_matched_pair_percentile": 0.15404040404040403,
+                "mean_pair_distance": 1.1101834126770262,
+                "mean_recall_at_5": 0.3333333333333333,
+                "mean_reciprocal_rank": 0.3333333333333333,
+                "median_global_pair_percentile": 0.01587995337995338,
+                "nearest_neighbour_hit_rate": 0.0,
+                "pair_count": 3,
+                "pair_distances": [
+                  1.034443253527671,
+                  1.160205777830152,
+                  1.135901206673256
+                ],
+                "pair_percentiles": [
+                  0.006653069153069153,
+                  0.020444832944832944,
+                  0.01587995337995338
+                ]
+              },
+              "previous_token": {
+                "family_size": 2,
+                "mean_average_precision": 0.02137212643678161,
+                "mean_global_pair_percentile": 0.4983974358974359,
+                "mean_layer_matched_pair_percentile": 0.20833333333333334,
+                "mean_pair_distance": 1.3938997098621941,
+                "mean_recall_at_5": 0.0,
+                "mean_reciprocal_rank": 0.02137212643678161,
+                "median_global_pair_percentile": 0.4983974358974359,
+                "nearest_neighbour_hit_rate": 0.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.3938997098621941
+                ],
+                "pair_percentiles": [
+                  0.4983974358974359
+                ]
+              },
+              "s_inhibition": {
+                "family_size": 4,
+                "mean_average_precision": 0.2963985963985964,
+                "mean_global_pair_percentile": 0.07511007511007511,
+                "mean_layer_matched_pair_percentile": 0.27462121212121215,
+                "mean_pair_distance": 1.2498241056213735,
+                "mean_recall_at_5": 0.41666666666666663,
+                "mean_reciprocal_rank": 0.494047619047619,
+                "median_global_pair_percentile": 0.049825174825174824,
+                "nearest_neighbour_hit_rate": 0.25,
+                "pair_count": 6,
+                "pair_distances": [
+                  1.2173473789482192,
+                  1.3103462281049305,
+                  1.181389873454551,
+                  1.3291450814074182,
+                  1.202000582720331,
+                  1.2587154890927912
+                ],
+                "pair_percentiles": [
+                  0.03851010101010101,
+                  0.12563131313131312,
+                  0.0253010878010878,
+                  0.16778360528360528,
+                  0.03229409479409479,
+                  0.06114024864024864
+                ]
+              }
+            }
+          }
+        },
+        "induction": {
+          "label_permutation": {
+            "null_maximum": 0.34919329655339815,
+            "null_mean": 0.04406175113059413,
+            "null_minimum": 0.012430529415554815,
+            "null_standard_deviation": 0.0348108460035383,
+            "observed_family_balanced_map": 0.1610916864649931,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": false,
+            "upper_tail_p_value": 0.0225
+          },
+          "layer_stratified_permutation": {
+            "null_maximum": 0.2642354529206128,
+            "null_mean": 0.06128039794185276,
+            "null_minimum": 0.017772350364937326,
+            "null_standard_deviation": 0.031053057654665102,
+            "observed_family_balanced_map": 0.1610916864649931,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": true,
+            "upper_tail_p_value": 0.0134
+          },
+          "retrieval": {
+            "aggregate": {
+              "family_count": 4,
+              "labelled_head_count": 11,
+              "mean_average_precision": 0.1610916864649931,
+              "mean_global_pair_percentile": 0.3121560152810153,
+              "mean_layer_matched_pair_percentile": 0.18008207070707072,
+              "mean_recall_at_5": 0.1875,
+              "mean_reciprocal_rank": 0.21794441831772496,
+              "nearest_neighbour_hit_rate": 0.0625
+            },
+            "families": {
+              "duplicate_token": {
+                "family_size": 2,
+                "mean_average_precision": 0.023024594453165882,
+                "mean_global_pair_percentile": 0.6607905982905983,
+                "mean_layer_matched_pair_percentile": 0.08333333333333333,
+                "mean_pair_distance": 1.4035974350983127,
+                "mean_recall_at_5": 0.0,
+                "mean_reciprocal_rank": 0.023024594453165882,
+                "median_global_pair_percentile": 0.6607905982905983,
+                "nearest_neighbour_hit_rate": 0.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.4035974350983127
+                ],
+                "pair_percentiles": [
+                  0.6607905982905983
+                ]
+              },
+              "name_mover": {
+                "family_size": 3,
+                "mean_average_precision": 0.30357142857142855,
+                "mean_global_pair_percentile": 0.014325951825951824,
+                "mean_layer_matched_pair_percentile": 0.15404040404040403,
+                "mean_pair_distance": 1.1101834126770262,
+                "mean_recall_at_5": 0.3333333333333333,
+                "mean_reciprocal_rank": 0.3333333333333333,
+                "median_global_pair_percentile": 0.01587995337995338,
+                "nearest_neighbour_hit_rate": 0.0,
+                "pair_count": 3,
+                "pair_distances": [
+                  1.034443253527671,
+                  1.160205777830152,
+                  1.135901206673256
+                ],
+                "pair_percentiles": [
+                  0.006653069153069153,
+                  0.020444832944832944,
+                  0.01587995337995338
+                ]
+              },
+              "previous_token": {
+                "family_size": 2,
+                "mean_average_precision": 0.02137212643678161,
+                "mean_global_pair_percentile": 0.4983974358974359,
+                "mean_layer_matched_pair_percentile": 0.20833333333333334,
+                "mean_pair_distance": 1.3938997098621941,
+                "mean_recall_at_5": 0.0,
+                "mean_reciprocal_rank": 0.02137212643678161,
+                "median_global_pair_percentile": 0.4983974358974359,
+                "nearest_neighbour_hit_rate": 0.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.3938997098621941
+                ],
+                "pair_percentiles": [
+                  0.4983974358974359
+                ]
+              },
+              "s_inhibition": {
+                "family_size": 4,
+                "mean_average_precision": 0.2963985963985964,
+                "mean_global_pair_percentile": 0.07511007511007511,
+                "mean_layer_matched_pair_percentile": 0.27462121212121215,
+                "mean_pair_distance": 1.2498241056213735,
+                "mean_recall_at_5": 0.41666666666666663,
+                "mean_reciprocal_rank": 0.494047619047619,
+                "median_global_pair_percentile": 0.049825174825174824,
+                "nearest_neighbour_hit_rate": 0.25,
+                "pair_count": 6,
+                "pair_distances": [
+                  1.2173473789482192,
+                  1.3103462281049305,
+                  1.181389873454551,
+                  1.3291450814074182,
+                  1.202000582720331,
+                  1.2587154890927912
+                ],
+                "pair_percentiles": [
+                  0.03851010101010101,
+                  0.12563131313131312,
+                  0.0253010878010878,
+                  0.16778360528360528,
+                  0.03229409479409479,
+                  0.06114024864024864
+                ]
+              }
+            }
+          }
+        },
+        "name_mover": {
+          "label_permutation": {
+            "null_maximum": 0.416319356291944,
+            "null_mean": 0.04261089159574449,
+            "null_minimum": 0.01089142407077245,
+            "null_standard_deviation": 0.039429657457773416,
+            "observed_family_balanced_map": 0.33519882932213596,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": false,
+            "upper_tail_p_value": 0.0007
+          },
+          "layer_stratified_permutation": {
+            "null_maximum": 0.35838443697865274,
+            "null_mean": 0.05237938072056631,
+            "null_minimum": 0.01291797983507806,
+            "null_standard_deviation": 0.04428312875739065,
+            "observed_family_balanced_map": 0.33519882932213596,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": true,
+            "upper_tail_p_value": 0.0002
+          },
+          "retrieval": {
+            "aggregate": {
+              "family_count": 4,
+              "labelled_head_count": 10,
+              "mean_average_precision": 0.33519882932213596,
+              "mean_global_pair_percentile": 0.3088780432530432,
+              "mean_layer_matched_pair_percentile": 0.15198863636363638,
+              "mean_recall_at_5": 0.35416666666666663,
+              "mean_reciprocal_rank": 0.3846110849843916,
+              "nearest_neighbour_hit_rate": 0.3125
+            },
+            "families": {
+              "duplicate_token": {
+                "family_size": 2,
+                "mean_average_precision": 0.023024594453165882,
+                "mean_global_pair_percentile": 0.6607905982905983,
+                "mean_layer_matched_pair_percentile": 0.08333333333333333,
+                "mean_pair_distance": 1.4035974350983127,
+                "mean_recall_at_5": 0.0,
+                "mean_reciprocal_rank": 0.023024594453165882,
+                "median_global_pair_percentile": 0.6607905982905983,
+                "nearest_neighbour_hit_rate": 0.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.4035974350983127
+                ],
+                "pair_percentiles": [
+                  0.6607905982905983
+                ]
+              },
+              "induction": {
+                "family_size": 2,
+                "mean_average_precision": 1.0,
+                "mean_global_pair_percentile": 0.001214063714063714,
+                "mean_layer_matched_pair_percentile": 0.041666666666666664,
+                "mean_pair_distance": 0.8724794887750186,
+                "mean_recall_at_5": 1.0,
+                "mean_reciprocal_rank": 1.0,
+                "median_global_pair_percentile": 0.001214063714063714,
+                "nearest_neighbour_hit_rate": 1.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  0.8724794887750186
+                ],
+                "pair_percentiles": [
+                  0.001214063714063714
+                ]
+              },
+              "previous_token": {
+                "family_size": 2,
+                "mean_average_precision": 0.02137212643678161,
+                "mean_global_pair_percentile": 0.4983974358974359,
+                "mean_layer_matched_pair_percentile": 0.20833333333333334,
+                "mean_pair_distance": 1.3938997098621941,
+                "mean_recall_at_5": 0.0,
+                "mean_reciprocal_rank": 0.02137212643678161,
+                "median_global_pair_percentile": 0.4983974358974359,
+                "nearest_neighbour_hit_rate": 0.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.3938997098621941
+                ],
+                "pair_percentiles": [
+                  0.4983974358974359
+                ]
+              },
+              "s_inhibition": {
+                "family_size": 4,
+                "mean_average_precision": 0.2963985963985964,
+                "mean_global_pair_percentile": 0.07511007511007511,
+                "mean_layer_matched_pair_percentile": 0.27462121212121215,
+                "mean_pair_distance": 1.2498241056213735,
+                "mean_recall_at_5": 0.41666666666666663,
+                "mean_reciprocal_rank": 0.494047619047619,
+                "median_global_pair_percentile": 0.049825174825174824,
+                "nearest_neighbour_hit_rate": 0.25,
+                "pair_count": 6,
+                "pair_distances": [
+                  1.2173473789482192,
+                  1.3103462281049305,
+                  1.181389873454551,
+                  1.3291450814074182,
+                  1.202000582720331,
+                  1.2587154890927912
+                ],
+                "pair_percentiles": [
+                  0.03851010101010101,
+                  0.12563131313131312,
+                  0.0253010878010878,
+                  0.16778360528360528,
+                  0.03229409479409479,
+                  0.06114024864024864
+                ]
+              }
+            }
+          }
+        },
+        "previous_token": {
+          "label_permutation": {
+            "null_maximum": 0.4181800214137176,
+            "null_mean": 0.04421380555062689,
+            "null_minimum": 0.012839671324491384,
+            "null_standard_deviation": 0.03549687939336981,
+            "observed_family_balanced_map": 0.4057486548557977,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": false,
+            "upper_tail_p_value": 0.0002
+          },
+          "layer_stratified_permutation": {
+            "null_maximum": 0.4400004335431872,
+            "null_mean": 0.07563002088420895,
+            "null_minimum": 0.018590165539849685,
+            "null_standard_deviation": 0.050779951482383665,
+            "observed_family_balanced_map": 0.4057486548557977,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": true,
+            "upper_tail_p_value": 0.0003
+          },
+          "retrieval": {
+            "aggregate": {
+              "family_count": 4,
+              "labelled_head_count": 11,
+              "mean_average_precision": 0.4057486548557977,
+              "mean_global_pair_percentile": 0.18786017223517223,
+              "mean_layer_matched_pair_percentile": 0.13841540404040403,
+              "mean_recall_at_5": 0.4375,
+              "mean_reciprocal_rank": 0.46260138670852957,
+              "nearest_neighbour_hit_rate": 0.3125
+            },
+            "families": {
+              "duplicate_token": {
+                "family_size": 2,
+                "mean_average_precision": 0.023024594453165882,
+                "mean_global_pair_percentile": 0.6607905982905983,
+                "mean_layer_matched_pair_percentile": 0.08333333333333333,
+                "mean_pair_distance": 1.4035974350983127,
+                "mean_recall_at_5": 0.0,
+                "mean_reciprocal_rank": 0.023024594453165882,
+                "median_global_pair_percentile": 0.6607905982905983,
+                "nearest_neighbour_hit_rate": 0.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.4035974350983127
+                ],
+                "pair_percentiles": [
+                  0.6607905982905983
+                ]
+              },
+              "induction": {
+                "family_size": 2,
+                "mean_average_precision": 1.0,
+                "mean_global_pair_percentile": 0.001214063714063714,
+                "mean_layer_matched_pair_percentile": 0.041666666666666664,
+                "mean_pair_distance": 0.8724794887750186,
+                "mean_recall_at_5": 1.0,
+                "mean_reciprocal_rank": 1.0,
+                "median_global_pair_percentile": 0.001214063714063714,
+                "nearest_neighbour_hit_rate": 1.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  0.8724794887750186
+                ],
+                "pair_percentiles": [
+                  0.001214063714063714
+                ]
+              },
+              "name_mover": {
+                "family_size": 3,
+                "mean_average_precision": 0.30357142857142855,
+                "mean_global_pair_percentile": 0.014325951825951824,
+                "mean_layer_matched_pair_percentile": 0.15404040404040403,
+                "mean_pair_distance": 1.1101834126770262,
+                "mean_recall_at_5": 0.3333333333333333,
+                "mean_reciprocal_rank": 0.3333333333333333,
+                "median_global_pair_percentile": 0.01587995337995338,
+                "nearest_neighbour_hit_rate": 0.0,
+                "pair_count": 3,
+                "pair_distances": [
+                  1.034443253527671,
+                  1.160205777830152,
+                  1.135901206673256
+                ],
+                "pair_percentiles": [
+                  0.006653069153069153,
+                  0.020444832944832944,
+                  0.01587995337995338
+                ]
+              },
+              "s_inhibition": {
+                "family_size": 4,
+                "mean_average_precision": 0.2963985963985964,
+                "mean_global_pair_percentile": 0.07511007511007511,
+                "mean_layer_matched_pair_percentile": 0.27462121212121215,
+                "mean_pair_distance": 1.2498241056213735,
+                "mean_recall_at_5": 0.41666666666666663,
+                "mean_reciprocal_rank": 0.494047619047619,
+                "median_global_pair_percentile": 0.049825174825174824,
+                "nearest_neighbour_hit_rate": 0.25,
+                "pair_count": 6,
+                "pair_distances": [
+                  1.2173473789482192,
+                  1.3103462281049305,
+                  1.181389873454551,
+                  1.3291450814074182,
+                  1.202000582720331,
+                  1.2587154890927912
+                ],
+                "pair_percentiles": [
+                  0.03851010101010101,
+                  0.12563131313131312,
+                  0.0253010878010878,
+                  0.16778360528360528,
+                  0.03229409479409479,
+                  0.06114024864024864
+                ]
+              }
+            }
+          }
+        },
+        "s_inhibition": {
+          "label_permutation": {
+            "null_maximum": 0.3936157316063783,
+            "null_mean": 0.040720869495602205,
+            "null_minimum": 0.009190853063721806,
+            "null_standard_deviation": 0.040287469051161026,
+            "observed_family_balanced_map": 0.336992037365344,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": false,
+            "upper_tail_p_value": 0.0006
+          },
+          "layer_stratified_permutation": {
+            "null_maximum": 0.40081556543224495,
+            "null_mean": 0.055246781804698,
+            "null_minimum": 0.011854748779215756,
+            "null_standard_deviation": 0.04819985280267497,
+            "observed_family_balanced_map": 0.336992037365344,
+            "permutations": 9999,
+            "seed": 0,
+            "stratify_by_layer": true,
+            "upper_tail_p_value": 0.0007
+          },
+          "retrieval": {
+            "aggregate": {
+              "family_count": 4,
+              "labelled_head_count": 9,
+              "mean_average_precision": 0.336992037365344,
+              "mean_global_pair_percentile": 0.2936820124320124,
+              "mean_layer_matched_pair_percentile": 0.12184343434343434,
+              "mean_recall_at_5": 0.3333333333333333,
+              "mean_reciprocal_rank": 0.3444325135558202,
+              "nearest_neighbour_hit_rate": 0.25
+            },
+            "families": {
+              "duplicate_token": {
+                "family_size": 2,
+                "mean_average_precision": 0.023024594453165882,
+                "mean_global_pair_percentile": 0.6607905982905983,
+                "mean_layer_matched_pair_percentile": 0.08333333333333333,
+                "mean_pair_distance": 1.4035974350983127,
+                "mean_recall_at_5": 0.0,
+                "mean_reciprocal_rank": 0.023024594453165882,
+                "median_global_pair_percentile": 0.6607905982905983,
+                "nearest_neighbour_hit_rate": 0.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.4035974350983127
+                ],
+                "pair_percentiles": [
+                  0.6607905982905983
+                ]
+              },
+              "induction": {
+                "family_size": 2,
+                "mean_average_precision": 1.0,
+                "mean_global_pair_percentile": 0.001214063714063714,
+                "mean_layer_matched_pair_percentile": 0.041666666666666664,
+                "mean_pair_distance": 0.8724794887750186,
+                "mean_recall_at_5": 1.0,
+                "mean_reciprocal_rank": 1.0,
+                "median_global_pair_percentile": 0.001214063714063714,
+                "nearest_neighbour_hit_rate": 1.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  0.8724794887750186
+                ],
+                "pair_percentiles": [
+                  0.001214063714063714
+                ]
+              },
+              "name_mover": {
+                "family_size": 3,
+                "mean_average_precision": 0.30357142857142855,
+                "mean_global_pair_percentile": 0.014325951825951824,
+                "mean_layer_matched_pair_percentile": 0.15404040404040403,
+                "mean_pair_distance": 1.1101834126770262,
+                "mean_recall_at_5": 0.3333333333333333,
+                "mean_reciprocal_rank": 0.3333333333333333,
+                "median_global_pair_percentile": 0.01587995337995338,
+                "nearest_neighbour_hit_rate": 0.0,
+                "pair_count": 3,
+                "pair_distances": [
+                  1.034443253527671,
+                  1.160205777830152,
+                  1.135901206673256
+                ],
+                "pair_percentiles": [
+                  0.006653069153069153,
+                  0.020444832944832944,
+                  0.01587995337995338
+                ]
+              },
+              "previous_token": {
+                "family_size": 2,
+                "mean_average_precision": 0.02137212643678161,
+                "mean_global_pair_percentile": 0.4983974358974359,
+                "mean_layer_matched_pair_percentile": 0.20833333333333334,
+                "mean_pair_distance": 1.3938997098621941,
+                "mean_recall_at_5": 0.0,
+                "mean_reciprocal_rank": 0.02137212643678161,
+                "median_global_pair_percentile": 0.4983974358974359,
+                "nearest_neighbour_hit_rate": 0.0,
+                "pair_count": 1,
+                "pair_distances": [
+                  1.3938997098621941
+                ],
+                "pair_percentiles": [
+                  0.4983974358974359
+                ]
+              }
+            }
+          }
+        }
+      },
+      "uninspected_families": {
+        "aggregate": {
+          "family_count": 5,
+          "labelled_head_count": 13,
+          "mean_average_precision": 0.3288733491719945,
+          "mean_global_pair_percentile": 0.24996762496762495,
+          "mean_layer_matched_pair_percentile": 0.1523989898989899,
+          "mean_recall_at_5": 0.35,
+          "mean_reciprocal_rank": 0.3743555346541799,
+          "nearest_neighbour_hit_rate": 0.25
+        },
+        "families": {
+          "duplicate_token": {
+            "family_size": 2,
+            "mean_average_precision": 0.023024594453165882,
+            "mean_global_pair_percentile": 0.6607905982905983,
+            "mean_layer_matched_pair_percentile": 0.08333333333333333,
+            "mean_pair_distance": 1.4035974350983127,
+            "mean_recall_at_5": 0.0,
+            "mean_reciprocal_rank": 0.023024594453165882,
+            "median_global_pair_percentile": 0.6607905982905983,
+            "nearest_neighbour_hit_rate": 0.0,
+            "pair_count": 1,
+            "pair_distances": [
+              1.4035974350983127
+            ],
+            "pair_percentiles": [
+              0.6607905982905983
+            ]
+          },
+          "induction": {
+            "family_size": 2,
+            "mean_average_precision": 1.0,
+            "mean_global_pair_percentile": 0.001214063714063714,
+            "mean_layer_matched_pair_percentile": 0.041666666666666664,
+            "mean_pair_distance": 0.8724794887750186,
+            "mean_recall_at_5": 1.0,
+            "mean_reciprocal_rank": 1.0,
+            "median_global_pair_percentile": 0.001214063714063714,
+            "nearest_neighbour_hit_rate": 1.0,
+            "pair_count": 1,
+            "pair_distances": [
+              0.8724794887750186
+            ],
+            "pair_percentiles": [
+              0.001214063714063714
+            ]
+          },
+          "name_mover": {
+            "family_size": 3,
+            "mean_average_precision": 0.30357142857142855,
+            "mean_global_pair_percentile": 0.014325951825951824,
+            "mean_layer_matched_pair_percentile": 0.15404040404040403,
+            "mean_pair_distance": 1.1101834126770262,
+            "mean_recall_at_5": 0.3333333333333333,
+            "mean_reciprocal_rank": 0.3333333333333333,
+            "median_global_pair_percentile": 0.01587995337995338,
+            "nearest_neighbour_hit_rate": 0.0,
+            "pair_count": 3,
+            "pair_distances": [
+              1.034443253527671,
+              1.160205777830152,
+              1.135901206673256
+            ],
+            "pair_percentiles": [
+              0.006653069153069153,
+              0.020444832944832944,
+              0.01587995337995338
+            ]
+          },
+          "previous_token": {
+            "family_size": 2,
+            "mean_average_precision": 0.02137212643678161,
+            "mean_global_pair_percentile": 0.4983974358974359,
+            "mean_layer_matched_pair_percentile": 0.20833333333333334,
+            "mean_pair_distance": 1.3938997098621941,
+            "mean_recall_at_5": 0.0,
+            "mean_reciprocal_rank": 0.02137212643678161,
+            "median_global_pair_percentile": 0.4983974358974359,
+            "nearest_neighbour_hit_rate": 0.0,
+            "pair_count": 1,
+            "pair_distances": [
+              1.3938997098621941
+            ],
+            "pair_percentiles": [
+              0.4983974358974359
+            ]
+          },
+          "s_inhibition": {
+            "family_size": 4,
+            "mean_average_precision": 0.2963985963985964,
+            "mean_global_pair_percentile": 0.07511007511007511,
+            "mean_layer_matched_pair_percentile": 0.27462121212121215,
+            "mean_pair_distance": 1.2498241056213735,
+            "mean_recall_at_5": 0.41666666666666663,
+            "mean_reciprocal_rank": 0.494047619047619,
+            "median_global_pair_percentile": 0.049825174825174824,
+            "nearest_neighbour_hit_rate": 0.25,
+            "pair_count": 6,
+            "pair_distances": [
+              1.2173473789482192,
+              1.3103462281049305,
+              1.181389873454551,
+              1.3291450814074182,
+              1.202000582720331,
+              1.2587154890927912
+            ],
+            "pair_percentiles": [
+              0.03851010101010101,
+              0.12563131313131312,
+              0.0253010878010878,
+              0.16778360528360528,
+              0.03229409479409479,
+              0.06114024864024864
+            ]
+          }
+        }
+      },
+      "uninspected_label_permutation": {
+        "null_maximum": 0.33724917326750276,
+        "null_mean": 0.043153362198664454,
+        "null_minimum": 0.012388039353560754,
+        "null_standard_deviation": 0.033186165611323586,
+        "observed_family_balanced_map": 0.3288733491719945,
+        "permutations": 9999,
+        "seed": 0,
+        "stratify_by_layer": false,
+        "upper_tail_p_value": 0.0003
+      },
+      "uninspected_layer_stratified_permutation": {
+        "null_maximum": 0.3538468410483006,
+        "null_mean": 0.06415848179345368,
+        "null_minimum": 0.01659270546392819,
+        "null_standard_deviation": 0.04073548319867359,
+        "observed_family_balanced_map": 0.3288733491719945,
+        "permutations": 9999,
+        "seed": 0,
+        "stratify_by_layer": true,
+        "upper_tail_p_value": 0.0003
+      }
+    }
+  }
+}
