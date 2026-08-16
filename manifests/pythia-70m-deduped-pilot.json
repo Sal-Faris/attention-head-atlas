@@ -1,0 +1,161 @@
+{
+  "config": "configs\\pythia70m_deduped_pilot.json",
+  "experiment_id": "pythia70m-deduped-factor-atoms-pilot-v1",
+  "generated_at_utc": "2026-08-16T17:11:40.171241+00:00",
+  "git_commit": "c343ed925f0de6f4a2f5e5a6e6417fd5a1d34e53",
+  "model": "EleutherAI/pythia-70m-deduped",
+  "records": [
+    {
+      "factors": {
+        "OV": {
+          "bytes": 11583190,
+          "operator_count": 48,
+          "path": "artifacts\\pythia-70m-deduped\\step0\\ov_factors.npz",
+          "sha256": "6e5eeb9fb41cf650a6e86138dfd9ea5570f1e7ab7184f27d9d69b10b3b956f21"
+        },
+        "QK": {
+          "bytes": 11604687,
+          "operator_count": 48,
+          "path": "artifacts\\pythia-70m-deduped\\step0\\qk_factors.npz",
+          "sha256": "2ffa06c56c90238642b42b19a24806fca906890f241b8417b24d9f1997c4b820"
+        }
+      },
+      "revision": "step0",
+      "snapshot": "D:\\Laptop\\AI\\model-cache\\huggingface\\models--EleutherAI--pythia-70m-deduped\\snapshots\\c913ae980de9355947d0bf73f9f10d580eb79301",
+      "snapshot_commit": "c913ae980de9355947d0bf73f9f10d580eb79301"
+    },
+    {
+      "factors": {
+        "OV": {
+          "bytes": 11617841,
+          "operator_count": 48,
+          "path": "artifacts\\pythia-70m-deduped\\step64\\ov_factors.npz",
+          "sha256": "2b47357e33280a8232d4e1abc8cc0640b16caf9c0dee6f3e670fbdb1aad1e5c9"
+        },
+        "QK": {
+          "bytes": 11673218,
+          "operator_count": 48,
+          "path": "artifacts\\pythia-70m-deduped\\step64\\qk_factors.npz",
+          "sha256": "a7f0ab5af5222a82ec06a782e3b3e6d4eb2dcd162d0a4b487911763b74376698"
+        }
+      },
+      "revision": "step64",
+      "snapshot": "D:\\Laptop\\AI\\model-cache\\huggingface\\models--EleutherAI--pythia-70m-deduped\\snapshots\\667f52d8964a899fdd6a3ffc849c9baab40b1b04",
+      "snapshot_commit": "667f52d8964a899fdd6a3ffc849c9baab40b1b04"
+    },
+    {
+      "factors": {
+        "OV": {
+          "bytes": 11626572,
+          "operator_count": 48,
+          "path": "artifacts\\pythia-70m-deduped\\step512\\ov_factors.npz",
+          "sha256": "2b198119204b40793b92326ffc8761929ccb54b72bb5132e9c42c4fa7cd79326"
+        },
+        "QK": {
+          "bytes": 11690813,
+          "operator_count": 48,
+          "path": "artifacts\\pythia-70m-deduped\\step512\\qk_factors.npz",
+          "sha256": "1f97e46cdc716386c230acc6c995b32ca6ef1cc8fe6aab21b5de75e9e3ef737c"
+        }
+      },
+      "revision": "step512",
+      "snapshot": "D:\\Laptop\\AI\\model-cache\\huggingface\\models--EleutherAI--pythia-70m-deduped\\snapshots\\2d7e43cf2b420873c7d37e8c4b716980e802beaa",
+      "snapshot_commit": "2d7e43cf2b420873c7d37e8c4b716980e802beaa"
+    },
+    {
+      "factors": {
+        "OV": {
+          "bytes": 11628026,
+          "operator_count": 48,
+          "path": "artifacts\\pythia-70m-deduped\\step1000\\ov_factors.npz",
+          "sha256": "610ab678b75a0a13505eff93bda5a2f0534e168ed516c01eeb847d97765e4ae5"
+        },
+        "QK": {
+          "bytes": 11690788,
+          "operator_count": 48,
+          "path": "artifacts\\pythia-70m-deduped\\step1000\\qk_factors.npz",
+          "sha256": "c5537710bb7d63e4a449c07818a44b6e73353d85050a8245901abfa29d706c9e"
+        }
+      },
+      "revision": "step1000",
+      "snapshot": "D:\\Laptop\\AI\\model-cache\\huggingface\\models--EleutherAI--pythia-70m-deduped\\snapshots\\66bac1f7ae4b7faa77c34ee6a50d41cd09579a88",
+      "snapshot_commit": "66bac1f7ae4b7faa77c34ee6a50d41cd09579a88"
+    },
+    {
+      "factors": {
+        "OV": {
+          "bytes": 11647048,
+          "operator_count": 48,
+          "path": "artifacts\\pythia-70m-deduped\\step4000\\ov_factors.npz",
+          "sha256": "7c92eb884eeb054cc134a654da7883c91b0f31226d3264a7805723a697962a76"
+        },
+        "QK": {
+          "bytes": 11684171,
+          "operator_count": 48,
+          "path": "artifacts\\pythia-70m-deduped\\step4000\\qk_factors.npz",
+          "sha256": "23f5aea21b510af81bbc1ff0a7793b526e67315c6a9bf48dc19c8f7f2059cad9"
+        }
+      },
+      "revision": "step4000",
+      "snapshot": "D:\\Laptop\\AI\\model-cache\\huggingface\\models--EleutherAI--pythia-70m-deduped\\snapshots\\bc237540ffd28d4711cf7e7340109b0b83a86584",
+      "snapshot_commit": "bc237540ffd28d4711cf7e7340109b0b83a86584"
+    },
+    {
+      "factors": {
+        "OV": {
+          "bytes": 11637041,
+          "operator_count": 48,
+          "path": "artifacts\\pythia-70m-deduped\\step16000\\ov_factors.npz",
+          "sha256": "da88e2f67959083dbfee234ca17c0cafc9ee2607d3759477e06083f3b7cf5e11"
+        },
+        "QK": {
+          "bytes": 11677310,
+          "operator_count": 48,
+          "path": "artifacts\\pythia-70m-deduped\\step16000\\qk_factors.npz",
+          "sha256": "b400307afbcb7f5016797940c45c46b97306a0a7f246883a833d6e1fe3cd2e7f"
+        }
+      },
+      "revision": "step16000",
+      "snapshot": "D:\\Laptop\\AI\\model-cache\\huggingface\\models--EleutherAI--pythia-70m-deduped\\snapshots\\eba780c73a4c19dbcc119a21a6ac5b4c7ef9c7e5",
+      "snapshot_commit": "eba780c73a4c19dbcc119a21a6ac5b4c7ef9c7e5"
+    },
+    {
+      "factors": {
+        "OV": {
+          "bytes": 11645048,
+          "operator_count": 48,
+          "path": "artifacts\\pythia-70m-deduped\\step64000\\ov_factors.npz",
+          "sha256": "2654308e40ca081a3e37cf3d7acada0bd0bf5e300297996ce300f4aac9f9b9d0"
+        },
+        "QK": {
+          "bytes": 11712136,
+          "operator_count": 48,
+          "path": "artifacts\\pythia-70m-deduped\\step64000\\qk_factors.npz",
+          "sha256": "93a4cbac85a611a9c67e38dffa4b0f34fe0836ba1c36063cac8463bc1842f635"
+        }
+      },
+      "revision": "step64000",
+      "snapshot": "D:\\Laptop\\AI\\model-cache\\huggingface\\models--EleutherAI--pythia-70m-deduped\\snapshots\\7764b56e8ccf9f01b30eb2e88d7a3cf398260a64",
+      "snapshot_commit": "7764b56e8ccf9f01b30eb2e88d7a3cf398260a64"
+    },
+    {
+      "factors": {
+        "OV": {
+          "bytes": 11640439,
+          "operator_count": 48,
+          "path": "artifacts\\pythia-70m-deduped\\step143000\\ov_factors.npz",
+          "sha256": "37b15845b31db52a2d76cf6dc3f66b2931c6c657c877cc608cbcbe88e150bf5a"
+        },
+        "QK": {
+          "bytes": 11728824,
+          "operator_count": 48,
+          "path": "artifacts\\pythia-70m-deduped\\step143000\\qk_factors.npz",
+          "sha256": "06dfe1f9dac7c5ad599aa8d916a921d8f873ac3d70a2e6c266506d4e3b63163d"
+        }
+      },
+      "revision": "step143000",
+      "snapshot": "D:\\Laptop\\AI\\model-cache\\huggingface\\models--EleutherAI--pythia-70m-deduped\\snapshots\\9a7c847e93250c8f24d4b7e7134dbf369e8fc9cb",
+      "snapshot_commit": "9a7c847e93250c8f24d4b7e7134dbf369e8fc9cb"
+    }
+  ]
+}
