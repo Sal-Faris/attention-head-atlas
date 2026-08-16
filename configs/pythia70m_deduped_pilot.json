@@ -1,0 +1,35 @@
+{
+  "experiment_id": "pythia70m-deduped-factor-atoms-pilot-v1",
+  "model": "EleutherAI/pythia-70m-deduped",
+  "license": "Apache-2.0",
+  "cache_root": "D:/Laptop/AI/model-cache/huggingface",
+  "checkpoints": [
+    "step0",
+    "step64",
+    "step512",
+    "step1000",
+    "step4000",
+    "step16000",
+    "step64000",
+    "step143000"
+  ],
+  "expected_architecture": {
+    "layers": 6,
+    "heads": 8,
+    "model_width": 512,
+    "head_width": 64
+  },
+  "operator_views": ["QK", "OV"],
+  "artifact_dtype": "float32",
+  "store_full_operator_matrices": false,
+  "discovery_uses_functional_labels": false,
+  "dictionary_atom_counts": [8, 16, 32],
+  "active_atom_counts": [2, 4, 8],
+  "bootstrap_repetitions": 20,
+  "random_seed": 0,
+  "notes": [
+    "The pilot checkpoints are fixed before any Pythia weights are inspected.",
+    "Model weights and factor bundles are excluded from Git.",
+    "Expansion beyond the pilot requires passing the protocol decision gates."
+  ]
+}
