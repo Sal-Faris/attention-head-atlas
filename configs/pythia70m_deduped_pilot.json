@@ -20,6 +20,8 @@
     "head_width": 64
   },
   "operator_views": ["QK", "OV"],
+  "qk_rotary_relative_offsets": [0, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024],
+  "qk_rotary_audit_checkpoints": ["step1000", "step16000", "step143000"],
   "artifact_dtype": "float32",
   "store_full_operator_matrices": false,
   "discovery_uses_functional_labels": false,
@@ -29,6 +31,11 @@
   "trajectory_validation_folds": 6,
   "temporal_validation_blocks": 4,
   "bootstrap_repetitions": 20,
+  "time_permutation_repetitions": 10000,
+  "emergence_false_discovery_rate": 0.05,
+  "recurrence_minimum_head_fraction": 0.5,
+  "recurrence_minimum_initialization_strength_multiplier": 2.0,
+  "recurrence_minimum_adjacent_checkpoints": 3,
   "random_seed": 0,
   "notes": [
     "The pilot checkpoints are fixed before any Pythia weights are inspected.",

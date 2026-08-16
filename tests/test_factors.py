@@ -11,6 +11,8 @@ from head_atlas.factors import (
     factorized_inner_product,
     factorized_qk_scores,
     normalized_factorized_frobenius_distances,
+    rotary_head_rotation,
+    rotate_qk_relative,
 )
 from head_atlas.operators import HeadOperator
 
@@ -115,6 +117,28 @@ class FactorTests(unittest.TestCase):
 
         np.testing.assert_allclose(first.materialize(), second.materialize(), atol=1e-12)
         np.testing.assert_allclose(distances, 0.0, atol=1e-12)
+
+    def test_neox_rotary_rotation_is_orthogonal_and_zero_is_identity(self):
+        zero = rotary_head_rotation(8, 0.5, 10_000.0, 0)
+        shifted = rotary_head_rotation(8, 0.5, 10_000.0, 17)
+
+        np.testing.assert_array_equal(zero, np.eye(8))
+        np.testing.assert_allclose(shifted @ shifted.T, np.eye(8), atol=1e-12)
+
+    def test_relative_qk_rotation_matches_explicit_head_space_rotation(self):
+        rng = np.random.default_rng(44)
+        operator = FactorizedHeadOperator(
+            0, 0, "QK", rng.standard_normal((10, 4)), rng.standard_normal((10, 4))
+        )
+        rotation = rotary_head_rotation(4, 1.0, 10_000.0, 3)
+
+        rotated = rotate_qk_relative(
+            operator, 3, rotary_fraction=1.0, base=10_000.0
+        )
+
+        np.testing.assert_allclose(
+            rotated.materialize(), operator.left @ rotation @ operator.right.T
+        )
 
     def test_validation_rejects_malformed_factors(self):
         with self.assertRaisesRegex(ValueError, "same two-dimensional shape"):

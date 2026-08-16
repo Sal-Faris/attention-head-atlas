@@ -210,3 +210,58 @@ def factorized_qk_scores(
     if query_array.shape[-1] != operator.d_model or key_array.shape[-1] != operator.d_model:
         raise ValueError("query and key widths must match the operator")
     return (query_array @ operator.left) @ (key_array @ operator.right).T
+
+
+def rotary_head_rotation(
+    d_head: int,
+    rotary_fraction: float,
+    base: float,
+    relative_offset: int,
+) -> Array:
+    """Return the GPT-NeoX row-vector RoPE rotation for a relative offset."""
+
+    if d_head < 1 or not 0.0 <= rotary_fraction <= 1.0:
+        raise ValueError("invalid head width or rotary fraction")
+    if base <= 0:
+        raise ValueError("rotary base must be positive")
+    rotary_dimensions = int(d_head * rotary_fraction)
+    if rotary_dimensions % 2:
+        raise ValueError("rotary dimensions must be even")
+    rotation = np.eye(d_head, dtype=np.float64)
+    if rotary_dimensions == 0:
+        return rotation
+    half = rotary_dimensions // 2
+    frequencies = 1.0 / (
+        base ** (np.arange(0, rotary_dimensions, 2, dtype=np.float64) / rotary_dimensions)
+    )
+    angles = relative_offset * frequencies
+    cosine = np.diag(np.cos(angles))
+    sine = np.diag(np.sin(angles))
+    rotation[:half, :half] = cosine
+    rotation[:half, half:rotary_dimensions] = sine
+    rotation[half:rotary_dimensions, :half] = -sine
+    rotation[half:rotary_dimensions, half:rotary_dimensions] = cosine
+    return rotation
+
+
+def rotate_qk_relative(
+    operator: FactorizedHeadOperator,
+    relative_offset: int,
+    *,
+    rotary_fraction: float,
+    base: float,
+) -> FactorizedHeadOperator:
+    """Apply a relative GPT-NeoX RoPE rotation to a QK operator's query factor."""
+
+    if operator.kind != "QK":
+        raise ValueError("relative rotary transforms require a QK operator")
+    rotation = rotary_head_rotation(
+        operator.d_head, rotary_fraction, base, relative_offset
+    )
+    return FactorizedHeadOperator(
+        operator.layer,
+        operator.head,
+        operator.kind,
+        operator.left @ rotation,
+        operator.right,
+    )

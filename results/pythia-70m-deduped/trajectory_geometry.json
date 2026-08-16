@@ -1,0 +1,230 @@
+{
+  "analysis_status": "descriptive trajectory geometry",
+  "distance": "normalized Frobenius chord distance",
+  "views": {
+    "OV": {
+      "adjacent_checkpoint_continuity": [
+        {
+          "first_checkpoint": 0,
+          "mean_different_head_distance": 1.4142070176922785,
+          "mean_same_head_distance": 0.04315227742990981,
+          "nearest_neighbor_head_identity_accuracy": 1.0,
+          "same_to_different_distance_ratio": 0.03051340920392706,
+          "second_checkpoint": 64
+        },
+        {
+          "first_checkpoint": 64,
+          "mean_different_head_distance": 1.4146325893366374,
+          "mean_same_head_distance": 0.34285386651296207,
+          "nearest_neighbor_head_identity_accuracy": 1.0,
+          "same_to_different_distance_ratio": 0.24236248273746916,
+          "second_checkpoint": 512
+        },
+        {
+          "first_checkpoint": 512,
+          "mean_different_head_distance": 1.4136981166269023,
+          "mean_same_head_distance": 0.5812421176805422,
+          "nearest_neighbor_head_identity_accuracy": 1.0,
+          "same_to_different_distance_ratio": 0.41115009692974036,
+          "second_checkpoint": 1000
+        },
+        {
+          "first_checkpoint": 1000,
+          "mean_different_head_distance": 1.4102128631298925,
+          "mean_same_head_distance": 1.1106651778928485,
+          "nearest_neighbor_head_identity_accuracy": 1.0,
+          "same_to_different_distance_ratio": 0.7875869004823756,
+          "second_checkpoint": 4000
+        },
+        {
+          "first_checkpoint": 4000,
+          "mean_different_head_distance": 1.408949400437376,
+          "mean_same_head_distance": 0.929529787073878,
+          "nearest_neighbor_head_identity_accuracy": 1.0,
+          "same_to_different_distance_ratio": 0.6597325544730895,
+          "second_checkpoint": 16000
+        },
+        {
+          "first_checkpoint": 16000,
+          "mean_different_head_distance": 1.4094780190040301,
+          "mean_same_head_distance": 0.89820616360162,
+          "nearest_neighbor_head_identity_accuracy": 0.9791666666666666,
+          "same_to_different_distance_ratio": 0.6372615617207803,
+          "second_checkpoint": 64000
+        },
+        {
+          "first_checkpoint": 64000,
+          "mean_different_head_distance": 1.4055606865594066,
+          "mean_same_head_distance": 0.7126870001095917,
+          "nearest_neighbor_head_identity_accuracy": 1.0,
+          "same_to_different_distance_ratio": 0.5070481886158458,
+          "second_checkpoint": 143000
+        }
+      ],
+      "checkpoint_values": [
+        0,
+        64,
+        512,
+        1000,
+        4000,
+        16000,
+        64000,
+        143000
+      ],
+      "within_checkpoint": [
+        {
+          "checkpoint": 0,
+          "mean_pairwise_distance": 1.4142062411646101,
+          "standard_deviation_pairwise_distance": 0.0014269195760101292
+        },
+        {
+          "checkpoint": 64,
+          "mean_pairwise_distance": 1.4141399788979467,
+          "standard_deviation_pairwise_distance": 0.0014311630411149613
+        },
+        {
+          "checkpoint": 512,
+          "mean_pairwise_distance": 1.413665905575443,
+          "standard_deviation_pairwise_distance": 0.0019814497598887705
+        },
+        {
+          "checkpoint": 1000,
+          "mean_pairwise_distance": 1.412154935618871,
+          "standard_deviation_pairwise_distance": 0.008455933786461282
+        },
+        {
+          "checkpoint": 4000,
+          "mean_pairwise_distance": 1.4101743379561689,
+          "standard_deviation_pairwise_distance": 0.022751416182941332
+        },
+        {
+          "checkpoint": 16000,
+          "mean_pairwise_distance": 1.411598198634678,
+          "standard_deviation_pairwise_distance": 0.029291270851494664
+        },
+        {
+          "checkpoint": 64000,
+          "mean_pairwise_distance": 1.4089370045301435,
+          "standard_deviation_pairwise_distance": 0.03071906985471405
+        },
+        {
+          "checkpoint": 143000,
+          "mean_pairwise_distance": 1.399681696277784,
+          "standard_deviation_pairwise_distance": 0.044797818219608716
+        }
+      ]
+    },
+    "QK": {
+      "adjacent_checkpoint_continuity": [
+        {
+          "first_checkpoint": 0,
+          "mean_different_head_distance": 1.4141701600729137,
+          "mean_same_head_distance": 0.03452031882322983,
+          "nearest_neighbor_head_identity_accuracy": 1.0,
+          "same_to_different_distance_ratio": 0.024410300682238966,
+          "second_checkpoint": 64
+        },
+        {
+          "first_checkpoint": 64,
+          "mean_different_head_distance": 1.4140442721969442,
+          "mean_same_head_distance": 0.4611047553285063,
+          "nearest_neighbor_head_identity_accuracy": 1.0,
+          "same_to_different_distance_ratio": 0.32608933425550124,
+          "second_checkpoint": 512
+        },
+        {
+          "first_checkpoint": 512,
+          "mean_different_head_distance": 1.403188983741039,
+          "mean_same_head_distance": 0.5726298401272037,
+          "nearest_neighbor_head_identity_accuracy": 1.0,
+          "same_to_different_distance_ratio": 0.408091744420995,
+          "second_checkpoint": 1000
+        },
+        {
+          "first_checkpoint": 1000,
+          "mean_different_head_distance": 1.4007487872904139,
+          "mean_same_head_distance": 1.1789157062014468,
+          "nearest_neighbor_head_identity_accuracy": 1.0,
+          "same_to_different_distance_ratio": 0.8416325017720862,
+          "second_checkpoint": 4000
+        },
+        {
+          "first_checkpoint": 4000,
+          "mean_different_head_distance": 1.3976285464719718,
+          "mean_same_head_distance": 1.0379918104242274,
+          "nearest_neighbor_head_identity_accuracy": 1.0,
+          "same_to_different_distance_ratio": 0.7426807452126146,
+          "second_checkpoint": 16000
+        },
+        {
+          "first_checkpoint": 16000,
+          "mean_different_head_distance": 1.3988576311102232,
+          "mean_same_head_distance": 0.9710054973029623,
+          "nearest_neighbor_head_identity_accuracy": 1.0,
+          "same_to_different_distance_ratio": 0.6941417594671947,
+          "second_checkpoint": 64000
+        },
+        {
+          "first_checkpoint": 64000,
+          "mean_different_head_distance": 1.3947768628009203,
+          "mean_same_head_distance": 0.7033400689641608,
+          "nearest_neighbor_head_identity_accuracy": 1.0,
+          "same_to_different_distance_ratio": 0.5042670893979048,
+          "second_checkpoint": 143000
+        }
+      ],
+      "checkpoint_values": [
+        0,
+        64,
+        512,
+        1000,
+        4000,
+        16000,
+        64000,
+        143000
+      ],
+      "within_checkpoint": [
+        {
+          "checkpoint": 0,
+          "mean_pairwise_distance": 1.414168603732775,
+          "standard_deviation_pairwise_distance": 0.0014024930102355985
+        },
+        {
+          "checkpoint": 64,
+          "mean_pairwise_distance": 1.4141679722694962,
+          "standard_deviation_pairwise_distance": 0.0013982387446211295
+        },
+        {
+          "checkpoint": 512,
+          "mean_pairwise_distance": 1.4044323588526801,
+          "standard_deviation_pairwise_distance": 0.012141318201292104
+        },
+        {
+          "checkpoint": 1000,
+          "mean_pairwise_distance": 1.397768780738367,
+          "standard_deviation_pairwise_distance": 0.028440365854227195
+        },
+        {
+          "checkpoint": 4000,
+          "mean_pairwise_distance": 1.39383256785965,
+          "standard_deviation_pairwise_distance": 0.042208541755699075
+        },
+        {
+          "checkpoint": 16000,
+          "mean_pairwise_distance": 1.3952453179647524,
+          "standard_deviation_pairwise_distance": 0.04625348571689174
+        },
+        {
+          "checkpoint": 64000,
+          "mean_pairwise_distance": 1.395484182290826,
+          "standard_deviation_pairwise_distance": 0.049513090601594895
+        },
+        {
+          "checkpoint": 143000,
+          "mean_pairwise_distance": 1.3904055977732177,
+          "standard_deviation_pairwise_distance": 0.059465038336903135
+        }
+      ]
+    }
+  }
+}
