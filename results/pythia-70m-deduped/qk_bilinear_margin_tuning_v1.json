@@ -1,0 +1,2035 @@
+{
+  "heads": {
+    "L0H0": {
+      "1": {
+        "bilinear_tuning_r2": -0.8449430939056812,
+        "discovery_events": 1776,
+        "haar_tuning_r2": -3.76926122933655,
+        "query_pca_tuning_r2": -3.49553436777283,
+        "selected_ridge": 0.01,
+        "tuning_events": 1776
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.33665640091634474,
+        "discovery_events": 1776,
+        "haar_tuning_r2": -2.2714375613615814,
+        "query_pca_tuning_r2": -0.8413557196884078,
+        "selected_ridge": 0.01,
+        "tuning_events": 1776
+      },
+      "2": {
+        "bilinear_tuning_r2": -0.5501474626481664,
+        "discovery_events": 1776,
+        "haar_tuning_r2": -3.641173305475327,
+        "query_pca_tuning_r2": -2.6685202204770335,
+        "selected_ridge": 0.01,
+        "tuning_events": 1776
+      },
+      "4": {
+        "bilinear_tuning_r2": -0.14956297303440014,
+        "discovery_events": 1776,
+        "haar_tuning_r2": -3.5401368138372034,
+        "query_pca_tuning_r2": -2.219386352756018,
+        "selected_ridge": 0.01,
+        "tuning_events": 1776
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.11319599533414759,
+        "discovery_events": 1776,
+        "haar_tuning_r2": -2.4659046452794495,
+        "query_pca_tuning_r2": -1.544611562561231,
+        "selected_ridge": 0.01,
+        "tuning_events": 1776
+      }
+    },
+    "L0H1": {
+      "1": {
+        "bilinear_tuning_r2": 0.6086788412458578,
+        "discovery_events": 1770,
+        "haar_tuning_r2": -0.6430629838583422,
+        "query_pca_tuning_r2": -0.5344001924964832,
+        "selected_ridge": 0.01,
+        "tuning_events": 1760
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.9571821781559954,
+        "discovery_events": 1770,
+        "haar_tuning_r2": 0.40908198418285946,
+        "query_pca_tuning_r2": 0.7170289271022615,
+        "selected_ridge": 0.001,
+        "tuning_events": 1760
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.7085173692186993,
+        "discovery_events": 1770,
+        "haar_tuning_r2": -0.6105769818811284,
+        "query_pca_tuning_r2": -0.49759537837261436,
+        "selected_ridge": 0.01,
+        "tuning_events": 1760
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.8256193118773625,
+        "discovery_events": 1770,
+        "haar_tuning_r2": -0.33856064669628405,
+        "query_pca_tuning_r2": -0.4217953688209517,
+        "selected_ridge": 0.01,
+        "tuning_events": 1760
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.9312491066355009,
+        "discovery_events": 1770,
+        "haar_tuning_r2": -0.3740763950597048,
+        "query_pca_tuning_r2": 0.6312866936669632,
+        "selected_ridge": 0.001,
+        "tuning_events": 1760
+      }
+    },
+    "L0H2": {
+      "1": {
+        "bilinear_tuning_r2": -0.5721370438160114,
+        "discovery_events": 1790,
+        "haar_tuning_r2": -3.3805815878236745,
+        "query_pca_tuning_r2": -3.026886034397438,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.4570100697953354,
+        "discovery_events": 1790,
+        "haar_tuning_r2": -1.8968567191674675,
+        "query_pca_tuning_r2": -1.5787157746458726,
+        "selected_ridge": 0.001,
+        "tuning_events": 1790
+      },
+      "2": {
+        "bilinear_tuning_r2": -0.4257401105549423,
+        "discovery_events": 1790,
+        "haar_tuning_r2": -3.425086071204424,
+        "query_pca_tuning_r2": -3.0436606507019963,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      },
+      "4": {
+        "bilinear_tuning_r2": -0.09966754170772218,
+        "discovery_events": 1790,
+        "haar_tuning_r2": -3.0364587558313207,
+        "query_pca_tuning_r2": -2.4114922634945777,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.22967223493318134,
+        "discovery_events": 1790,
+        "haar_tuning_r2": -2.6579477508834164,
+        "query_pca_tuning_r2": -1.7789601048150288,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      }
+    },
+    "L0H3": {
+      "1": {
+        "bilinear_tuning_r2": 0.19985535320680914,
+        "discovery_events": 1792,
+        "haar_tuning_r2": -4.708687180100432,
+        "query_pca_tuning_r2": -4.772873524301692,
+        "selected_ridge": 0.01,
+        "tuning_events": 1789
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.5976833735071314,
+        "discovery_events": 1792,
+        "haar_tuning_r2": -1.8055931836234338,
+        "query_pca_tuning_r2": -0.9846376413317999,
+        "selected_ridge": 0.001,
+        "tuning_events": 1789
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.27574706236049307,
+        "discovery_events": 1792,
+        "haar_tuning_r2": -4.68555920455686,
+        "query_pca_tuning_r2": -3.7130463235722697,
+        "selected_ridge": 0.01,
+        "tuning_events": 1789
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.36867568080985724,
+        "discovery_events": 1792,
+        "haar_tuning_r2": -3.8727717027532673,
+        "query_pca_tuning_r2": -2.084382513390119,
+        "selected_ridge": 0.01,
+        "tuning_events": 1789
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.47505384297765596,
+        "discovery_events": 1792,
+        "haar_tuning_r2": -3.7462608593919207,
+        "query_pca_tuning_r2": -1.334494952291339,
+        "selected_ridge": 0.01,
+        "tuning_events": 1789
+      }
+    },
+    "L0H4": {
+      "1": {
+        "bilinear_tuning_r2": -1.921899011688799,
+        "discovery_events": 1779,
+        "haar_tuning_r2": -4.0743019880239695,
+        "query_pca_tuning_r2": -3.844462507014308,
+        "selected_ridge": 0.01,
+        "tuning_events": 1782
+      },
+      "16": {
+        "bilinear_tuning_r2": -0.05947345070113186,
+        "discovery_events": 1779,
+        "haar_tuning_r2": -2.592682239847396,
+        "query_pca_tuning_r2": -1.5503281070292467,
+        "selected_ridge": 0.01,
+        "tuning_events": 1782
+      },
+      "2": {
+        "bilinear_tuning_r2": -1.3592361659246892,
+        "discovery_events": 1779,
+        "haar_tuning_r2": -4.0103596143791815,
+        "query_pca_tuning_r2": -3.3974053215783133,
+        "selected_ridge": 0.01,
+        "tuning_events": 1782
+      },
+      "4": {
+        "bilinear_tuning_r2": -0.7420665665934572,
+        "discovery_events": 1779,
+        "haar_tuning_r2": -4.031254963408694,
+        "query_pca_tuning_r2": -2.5496094683062203,
+        "selected_ridge": 0.01,
+        "tuning_events": 1782
+      },
+      "8": {
+        "bilinear_tuning_r2": -0.4019364416992133,
+        "discovery_events": 1779,
+        "haar_tuning_r2": -2.8048022583461436,
+        "query_pca_tuning_r2": -2.1389031933165703,
+        "selected_ridge": 0.01,
+        "tuning_events": 1782
+      }
+    },
+    "L0H5": {
+      "1": {
+        "bilinear_tuning_r2": 0.3146901783148133,
+        "discovery_events": 1782,
+        "haar_tuning_r2": -3.7924813294238104,
+        "query_pca_tuning_r2": -3.1187629628992948,
+        "selected_ridge": 0.01,
+        "tuning_events": 1786
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.7646765288144971,
+        "discovery_events": 1782,
+        "haar_tuning_r2": -2.8203824565570934,
+        "query_pca_tuning_r2": 0.21877616262581356,
+        "selected_ridge": 0.001,
+        "tuning_events": 1786
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.38017309646107866,
+        "discovery_events": 1782,
+        "haar_tuning_r2": -3.4944407025418576,
+        "query_pca_tuning_r2": -2.6746433014266686,
+        "selected_ridge": 0.01,
+        "tuning_events": 1786
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.5830046259133492,
+        "discovery_events": 1782,
+        "haar_tuning_r2": -3.1558924447938965,
+        "query_pca_tuning_r2": -1.847336691866324,
+        "selected_ridge": 0.01,
+        "tuning_events": 1786
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.7231208045221378,
+        "discovery_events": 1782,
+        "haar_tuning_r2": -2.4632894751460483,
+        "query_pca_tuning_r2": 0.18232595219374415,
+        "selected_ridge": 0.01,
+        "tuning_events": 1786
+      }
+    },
+    "L0H6": {
+      "1": {
+        "bilinear_tuning_r2": -1.2405306224106236,
+        "discovery_events": 1779,
+        "haar_tuning_r2": -4.382542730532544,
+        "query_pca_tuning_r2": -4.125365002054101,
+        "selected_ridge": 0.01,
+        "tuning_events": 1770
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.40127825658533056,
+        "discovery_events": 1779,
+        "haar_tuning_r2": -2.942907775776068,
+        "query_pca_tuning_r2": -2.8321776079349856,
+        "selected_ridge": 0.01,
+        "tuning_events": 1770
+      },
+      "2": {
+        "bilinear_tuning_r2": -0.5834277469766214,
+        "discovery_events": 1779,
+        "haar_tuning_r2": -4.08559219088163,
+        "query_pca_tuning_r2": -5.0641071286527595,
+        "selected_ridge": 0.01,
+        "tuning_events": 1770
+      },
+      "4": {
+        "bilinear_tuning_r2": -0.12836106168752082,
+        "discovery_events": 1779,
+        "haar_tuning_r2": -4.242065041805495,
+        "query_pca_tuning_r2": -4.304216809466841,
+        "selected_ridge": 0.01,
+        "tuning_events": 1770
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.21058688602332865,
+        "discovery_events": 1779,
+        "haar_tuning_r2": -3.800282474496683,
+        "query_pca_tuning_r2": -3.32545687912008,
+        "selected_ridge": 0.01,
+        "tuning_events": 1770
+      }
+    },
+    "L0H7": {
+      "1": {
+        "bilinear_tuning_r2": -0.002340851779630837,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -3.8799037410497377,
+        "query_pca_tuning_r2": -0.4543657210153651,
+        "selected_ridge": 0.01,
+        "tuning_events": 1780
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.5316634238420617,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -2.4844721743830673,
+        "query_pca_tuning_r2": 0.30007511692821043,
+        "selected_ridge": 0.01,
+        "tuning_events": 1780
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.043770328270309355,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -3.5556836153538214,
+        "query_pca_tuning_r2": -0.36722392874138565,
+        "selected_ridge": 0.01,
+        "tuning_events": 1780
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.18958955613424244,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -2.4569832433086303,
+        "query_pca_tuning_r2": -0.11917736542052015,
+        "selected_ridge": 0.01,
+        "tuning_events": 1780
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.436703475082173,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -3.7649365168845703,
+        "query_pca_tuning_r2": 0.16067411883969074,
+        "selected_ridge": 0.01,
+        "tuning_events": 1780
+      }
+    },
+    "L1H0": {
+      "1": {
+        "bilinear_tuning_r2": -1.0177650784673369,
+        "discovery_events": 1787,
+        "haar_tuning_r2": -4.808745208573262,
+        "query_pca_tuning_r2": -4.2898226225803215,
+        "selected_ridge": 0.01,
+        "tuning_events": 1788
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.2916441663474654,
+        "discovery_events": 1787,
+        "haar_tuning_r2": -3.3910964947086084,
+        "query_pca_tuning_r2": -2.6082692627738155,
+        "selected_ridge": 0.01,
+        "tuning_events": 1788
+      },
+      "2": {
+        "bilinear_tuning_r2": -0.614009963516289,
+        "discovery_events": 1787,
+        "haar_tuning_r2": -4.53869007643974,
+        "query_pca_tuning_r2": -4.292861718433544,
+        "selected_ridge": 0.01,
+        "tuning_events": 1788
+      },
+      "4": {
+        "bilinear_tuning_r2": -0.4256447892409485,
+        "discovery_events": 1787,
+        "haar_tuning_r2": -4.1115213974857125,
+        "query_pca_tuning_r2": -3.7956021566694185,
+        "selected_ridge": 0.01,
+        "tuning_events": 1788
+      },
+      "8": {
+        "bilinear_tuning_r2": -0.024932477689041832,
+        "discovery_events": 1787,
+        "haar_tuning_r2": -3.367257778000263,
+        "query_pca_tuning_r2": -3.6801000926259695,
+        "selected_ridge": 0.01,
+        "tuning_events": 1788
+      }
+    },
+    "L1H1": {
+      "1": {
+        "bilinear_tuning_r2": 0.24170550773939803,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -3.7776196143283354,
+        "query_pca_tuning_r2": -2.619207595668689,
+        "selected_ridge": 0.01,
+        "tuning_events": 1791
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.8535083214810243,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -2.8906911951894587,
+        "query_pca_tuning_r2": -0.31624776478021777,
+        "selected_ridge": 0.001,
+        "tuning_events": 1791
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.3549689541864517,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -3.420707151723163,
+        "query_pca_tuning_r2": -2.328954397923493,
+        "selected_ridge": 0.01,
+        "tuning_events": 1791
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.5860282411050064,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -3.981396410994823,
+        "query_pca_tuning_r2": -1.3709354904540678,
+        "selected_ridge": 0.01,
+        "tuning_events": 1791
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.7984595672278318,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -3.532628202541926,
+        "query_pca_tuning_r2": -0.6689280910466302,
+        "selected_ridge": 0.01,
+        "tuning_events": 1791
+      }
+    },
+    "L1H2": {
+      "1": {
+        "bilinear_tuning_r2": -0.5893699477718111,
+        "discovery_events": 1791,
+        "haar_tuning_r2": -4.852267136385441,
+        "query_pca_tuning_r2": -4.394193166049992,
+        "selected_ridge": 0.01,
+        "tuning_events": 1787
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.30615409174756547,
+        "discovery_events": 1791,
+        "haar_tuning_r2": -3.7627302641093276,
+        "query_pca_tuning_r2": -1.4027242370631243,
+        "selected_ridge": 0.01,
+        "tuning_events": 1787
+      },
+      "2": {
+        "bilinear_tuning_r2": -0.41279083189767984,
+        "discovery_events": 1791,
+        "haar_tuning_r2": -4.761076761187883,
+        "query_pca_tuning_r2": -2.4591474140585863,
+        "selected_ridge": 0.01,
+        "tuning_events": 1787
+      },
+      "4": {
+        "bilinear_tuning_r2": -0.2631760702996926,
+        "discovery_events": 1791,
+        "haar_tuning_r2": -4.130210656150026,
+        "query_pca_tuning_r2": -2.3347562225463516,
+        "selected_ridge": 0.01,
+        "tuning_events": 1787
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.007279823176220224,
+        "discovery_events": 1791,
+        "haar_tuning_r2": -4.452376918187769,
+        "query_pca_tuning_r2": -1.9811810867578328,
+        "selected_ridge": 0.01,
+        "tuning_events": 1787
+      }
+    },
+    "L1H3": {
+      "1": {
+        "bilinear_tuning_r2": 0.30553212522357354,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -0.5122368334049867,
+        "query_pca_tuning_r2": -0.313145192272265,
+        "selected_ridge": 0.01,
+        "tuning_events": 1783
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.9223475913022009,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -0.08721108038507519,
+        "query_pca_tuning_r2": 0.7195916302330183,
+        "selected_ridge": 0.001,
+        "tuning_events": 1783
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.5447498242699151,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -0.48634621018830027,
+        "query_pca_tuning_r2": 0.03519897097839064,
+        "selected_ridge": 0.01,
+        "tuning_events": 1783
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.6912223033966696,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -0.3412633781914636,
+        "query_pca_tuning_r2": 0.383859617684314,
+        "selected_ridge": 0.01,
+        "tuning_events": 1783
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.8613742509484811,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -0.25689125146060343,
+        "query_pca_tuning_r2": 0.6046869124601075,
+        "selected_ridge": 0.01,
+        "tuning_events": 1783
+      }
+    },
+    "L1H4": {
+      "1": {
+        "bilinear_tuning_r2": -0.818800862394881,
+        "discovery_events": 1789,
+        "haar_tuning_r2": -3.433464276072751,
+        "query_pca_tuning_r2": -3.1356231804565198,
+        "selected_ridge": 0.01,
+        "tuning_events": 1782
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.3527821446122694,
+        "discovery_events": 1789,
+        "haar_tuning_r2": -1.9559912492463756,
+        "query_pca_tuning_r2": -0.6139379331178827,
+        "selected_ridge": 0.01,
+        "tuning_events": 1782
+      },
+      "2": {
+        "bilinear_tuning_r2": -0.32502721383993594,
+        "discovery_events": 1789,
+        "haar_tuning_r2": -3.1908283401814552,
+        "query_pca_tuning_r2": -3.2348597135758226,
+        "selected_ridge": 0.01,
+        "tuning_events": 1782
+      },
+      "4": {
+        "bilinear_tuning_r2": -0.08954335950239511,
+        "discovery_events": 1789,
+        "haar_tuning_r2": -3.2086557217344014,
+        "query_pca_tuning_r2": -2.708347799436351,
+        "selected_ridge": 0.01,
+        "tuning_events": 1782
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.18110826927495804,
+        "discovery_events": 1789,
+        "haar_tuning_r2": -2.349181613527232,
+        "query_pca_tuning_r2": -1.275756064283271,
+        "selected_ridge": 0.01,
+        "tuning_events": 1782
+      }
+    },
+    "L1H5": {
+      "1": {
+        "bilinear_tuning_r2": -0.3531810635204944,
+        "discovery_events": 1783,
+        "haar_tuning_r2": -3.5896185132793175,
+        "query_pca_tuning_r2": -3.411214971832843,
+        "selected_ridge": 0.01,
+        "tuning_events": 1778
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.5669555597827609,
+        "discovery_events": 1783,
+        "haar_tuning_r2": -1.9293630422617434,
+        "query_pca_tuning_r2": -1.016640102249882,
+        "selected_ridge": 0.01,
+        "tuning_events": 1778
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.05376167463806425,
+        "discovery_events": 1783,
+        "haar_tuning_r2": -3.9219653237483953,
+        "query_pca_tuning_r2": -2.832255536894198,
+        "selected_ridge": 0.01,
+        "tuning_events": 1778
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.2161381665672294,
+        "discovery_events": 1783,
+        "haar_tuning_r2": -3.4964534462435015,
+        "query_pca_tuning_r2": -1.8213129523271614,
+        "selected_ridge": 0.01,
+        "tuning_events": 1778
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.4514182445430366,
+        "discovery_events": 1783,
+        "haar_tuning_r2": -3.46365675286005,
+        "query_pca_tuning_r2": -1.7523661455699941,
+        "selected_ridge": 0.01,
+        "tuning_events": 1778
+      }
+    },
+    "L1H6": {
+      "1": {
+        "bilinear_tuning_r2": -0.7777515831058894,
+        "discovery_events": 1791,
+        "haar_tuning_r2": -4.2859941711903335,
+        "query_pca_tuning_r2": -4.305874338782865,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.2966927631728069,
+        "discovery_events": 1791,
+        "haar_tuning_r2": -1.9314364918052922,
+        "query_pca_tuning_r2": -0.24639164750179843,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      },
+      "2": {
+        "bilinear_tuning_r2": -0.5270436119382076,
+        "discovery_events": 1791,
+        "haar_tuning_r2": -3.905173173351981,
+        "query_pca_tuning_r2": -3.827152921073563,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      },
+      "4": {
+        "bilinear_tuning_r2": -0.28524041174478576,
+        "discovery_events": 1791,
+        "haar_tuning_r2": -3.5091953872452573,
+        "query_pca_tuning_r2": -2.4255574529284276,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.05974282722891566,
+        "discovery_events": 1791,
+        "haar_tuning_r2": -2.9911283178552903,
+        "query_pca_tuning_r2": -1.3770613180061777,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      }
+    },
+    "L1H7": {
+      "1": {
+        "bilinear_tuning_r2": -0.5358366285832739,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -4.453292076268912,
+        "query_pca_tuning_r2": -3.676119218441073,
+        "selected_ridge": 0.01,
+        "tuning_events": 1789
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.4636684525085528,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -3.926336429601899,
+        "query_pca_tuning_r2": -1.7300877720963377,
+        "selected_ridge": 0.01,
+        "tuning_events": 1789
+      },
+      "2": {
+        "bilinear_tuning_r2": -0.26063295149406196,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -3.934206543997555,
+        "query_pca_tuning_r2": -3.3183925027296164,
+        "selected_ridge": 0.01,
+        "tuning_events": 1789
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.04749810107802488,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -3.9108832178497863,
+        "query_pca_tuning_r2": -2.6229230636215854,
+        "selected_ridge": 0.01,
+        "tuning_events": 1789
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.30914970416349985,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -3.2857228723916077,
+        "query_pca_tuning_r2": -2.292135766158012,
+        "selected_ridge": 0.01,
+        "tuning_events": 1789
+      }
+    },
+    "L2H0": {
+      "1": {
+        "bilinear_tuning_r2": 0.05257472075616754,
+        "discovery_events": 1784,
+        "haar_tuning_r2": -3.040579142863863,
+        "query_pca_tuning_r2": -2.741611811338033,
+        "selected_ridge": 0.01,
+        "tuning_events": 1782
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.7047084373934411,
+        "discovery_events": 1784,
+        "haar_tuning_r2": -1.0593323080893442,
+        "query_pca_tuning_r2": -0.748676499711314,
+        "selected_ridge": 0.001,
+        "tuning_events": 1782
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.34000944854574666,
+        "discovery_events": 1784,
+        "haar_tuning_r2": -2.8302228856942424,
+        "query_pca_tuning_r2": -2.2548544742489502,
+        "selected_ridge": 0.01,
+        "tuning_events": 1782
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.5047927026351203,
+        "discovery_events": 1784,
+        "haar_tuning_r2": -2.787892842118364,
+        "query_pca_tuning_r2": -1.6333490119176242,
+        "selected_ridge": 0.01,
+        "tuning_events": 1782
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.6396098547420721,
+        "discovery_events": 1784,
+        "haar_tuning_r2": -2.4195642065196323,
+        "query_pca_tuning_r2": -1.5838105600575698,
+        "selected_ridge": 0.01,
+        "tuning_events": 1782
+      }
+    },
+    "L2H1": {
+      "1": {
+        "bilinear_tuning_r2": 0.7045439240591083,
+        "discovery_events": 1774,
+        "haar_tuning_r2": -2.834500218193674,
+        "query_pca_tuning_r2": -1.4797358796912063,
+        "selected_ridge": 0.01,
+        "tuning_events": 1780
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.9461605123275868,
+        "discovery_events": 1774,
+        "haar_tuning_r2": -2.673428467426747,
+        "query_pca_tuning_r2": -2.6202788537001602,
+        "selected_ridge": 0.001,
+        "tuning_events": 1780
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.8365035342047563,
+        "discovery_events": 1774,
+        "haar_tuning_r2": -3.620913324297451,
+        "query_pca_tuning_r2": -1.178591296264384,
+        "selected_ridge": 0.01,
+        "tuning_events": 1780
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.8891390636375358,
+        "discovery_events": 1774,
+        "haar_tuning_r2": -2.7417901279343986,
+        "query_pca_tuning_r2": -1.1329565795035346,
+        "selected_ridge": 0.01,
+        "tuning_events": 1780
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.9319664990462765,
+        "discovery_events": 1774,
+        "haar_tuning_r2": -1.8837696629153813,
+        "query_pca_tuning_r2": -1.7408435946047378,
+        "selected_ridge": 0.001,
+        "tuning_events": 1780
+      }
+    },
+    "L2H2": {
+      "1": {
+        "bilinear_tuning_r2": 0.1728460030284703,
+        "discovery_events": 1787,
+        "haar_tuning_r2": -6.069479447256568,
+        "query_pca_tuning_r2": -4.832409006782639,
+        "selected_ridge": 0.01,
+        "tuning_events": 1782
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.6272707057737454,
+        "discovery_events": 1787,
+        "haar_tuning_r2": -3.557621750744641,
+        "query_pca_tuning_r2": -3.8653326768844574,
+        "selected_ridge": 0.001,
+        "tuning_events": 1782
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.2635998174637626,
+        "discovery_events": 1787,
+        "haar_tuning_r2": -5.232127835827085,
+        "query_pca_tuning_r2": -3.88678823179617,
+        "selected_ridge": 0.01,
+        "tuning_events": 1782
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.48371776024478796,
+        "discovery_events": 1787,
+        "haar_tuning_r2": -4.8819517461112,
+        "query_pca_tuning_r2": -4.3287991560237575,
+        "selected_ridge": 0.01,
+        "tuning_events": 1782
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.5649171286815581,
+        "discovery_events": 1787,
+        "haar_tuning_r2": -4.491095201305043,
+        "query_pca_tuning_r2": -4.291959156847908,
+        "selected_ridge": 0.01,
+        "tuning_events": 1782
+      }
+    },
+    "L2H3": {
+      "1": {
+        "bilinear_tuning_r2": -0.6248696067597479,
+        "discovery_events": 1783,
+        "haar_tuning_r2": -2.9331072879634115,
+        "query_pca_tuning_r2": -2.6237616507005064,
+        "selected_ridge": 0.01,
+        "tuning_events": 1787
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.5793530693320013,
+        "discovery_events": 1783,
+        "haar_tuning_r2": -1.6811770287061987,
+        "query_pca_tuning_r2": -0.5117308727963652,
+        "selected_ridge": 0.01,
+        "tuning_events": 1787
+      },
+      "2": {
+        "bilinear_tuning_r2": -0.20473779882308496,
+        "discovery_events": 1783,
+        "haar_tuning_r2": -2.991965442189102,
+        "query_pca_tuning_r2": -2.4051374689944507,
+        "selected_ridge": 0.01,
+        "tuning_events": 1787
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.13924674248770608,
+        "discovery_events": 1783,
+        "haar_tuning_r2": -2.588971553035848,
+        "query_pca_tuning_r2": -1.6170669326482425,
+        "selected_ridge": 0.01,
+        "tuning_events": 1787
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.43034477245812464,
+        "discovery_events": 1783,
+        "haar_tuning_r2": -1.9242647618984425,
+        "query_pca_tuning_r2": -1.2089058007766433,
+        "selected_ridge": 0.01,
+        "tuning_events": 1787
+      }
+    },
+    "L2H4": {
+      "1": {
+        "bilinear_tuning_r2": -0.18862574383154906,
+        "discovery_events": 1784,
+        "haar_tuning_r2": -4.082918410606803,
+        "query_pca_tuning_r2": -2.6505971190368025,
+        "selected_ridge": 0.01,
+        "tuning_events": 1787
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.6613445069226582,
+        "discovery_events": 1784,
+        "haar_tuning_r2": -1.5245725750039583,
+        "query_pca_tuning_r2": -1.9154772211035183,
+        "selected_ridge": 0.01,
+        "tuning_events": 1787
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.16195110845833238,
+        "discovery_events": 1784,
+        "haar_tuning_r2": -3.53535375172365,
+        "query_pca_tuning_r2": -2.529524547956569,
+        "selected_ridge": 0.01,
+        "tuning_events": 1787
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.34658030342630397,
+        "discovery_events": 1784,
+        "haar_tuning_r2": -3.9627608604837485,
+        "query_pca_tuning_r2": -2.6473484803703604,
+        "selected_ridge": 0.01,
+        "tuning_events": 1787
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.5577748954376998,
+        "discovery_events": 1784,
+        "haar_tuning_r2": -2.0170047037522876,
+        "query_pca_tuning_r2": -2.408086422585971,
+        "selected_ridge": 0.01,
+        "tuning_events": 1787
+      }
+    },
+    "L2H5": {
+      "1": {
+        "bilinear_tuning_r2": -0.5057685703054915,
+        "discovery_events": 1784,
+        "haar_tuning_r2": -4.472482604055667,
+        "query_pca_tuning_r2": -4.216903581198116,
+        "selected_ridge": 0.01,
+        "tuning_events": 1782
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.4035304560550901,
+        "discovery_events": 1784,
+        "haar_tuning_r2": -1.4933675000960154,
+        "query_pca_tuning_r2": -3.0388962731929237,
+        "selected_ridge": 0.01,
+        "tuning_events": 1782
+      },
+      "2": {
+        "bilinear_tuning_r2": -0.3317236288752996,
+        "discovery_events": 1784,
+        "haar_tuning_r2": -4.405025556266559,
+        "query_pca_tuning_r2": -4.119676796109506,
+        "selected_ridge": 0.01,
+        "tuning_events": 1782
+      },
+      "4": {
+        "bilinear_tuning_r2": -0.053582727258646434,
+        "discovery_events": 1784,
+        "haar_tuning_r2": -4.210924626548351,
+        "query_pca_tuning_r2": -3.751288340740061,
+        "selected_ridge": 0.01,
+        "tuning_events": 1782
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.230125189377126,
+        "discovery_events": 1784,
+        "haar_tuning_r2": -2.637991136337106,
+        "query_pca_tuning_r2": -3.4577123348496066,
+        "selected_ridge": 0.01,
+        "tuning_events": 1782
+      }
+    },
+    "L2H6": {
+      "1": {
+        "bilinear_tuning_r2": -0.18952389800659186,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -4.391873577695803,
+        "query_pca_tuning_r2": -4.320801696378833,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.40069031943812505,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -1.567092753682421,
+        "query_pca_tuning_r2": -3.8684622844457,
+        "selected_ridge": 0.001,
+        "tuning_events": 1790
+      },
+      "2": {
+        "bilinear_tuning_r2": -0.07206054521783689,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -4.0913748334973,
+        "query_pca_tuning_r2": -4.1370005240159635,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.10229469694945759,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -3.988225483988465,
+        "query_pca_tuning_r2": -4.177089810587505,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.2203492246983384,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -2.0382716480805945,
+        "query_pca_tuning_r2": -4.13579659962297,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      }
+    },
+    "L2H7": {
+      "1": {
+        "bilinear_tuning_r2": 0.41341868623510125,
+        "discovery_events": 1789,
+        "haar_tuning_r2": -0.012508546706534451,
+        "query_pca_tuning_r2": 0.3874518232952131,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.9961504933504981,
+        "discovery_events": 1789,
+        "haar_tuning_r2": 0.3189557035878805,
+        "query_pca_tuning_r2": 0.9511696251187814,
+        "selected_ridge": 0.0001,
+        "tuning_events": 1790
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.8541378668132815,
+        "discovery_events": 1789,
+        "haar_tuning_r2": 0.02983308193562839,
+        "query_pca_tuning_r2": 0.8528589195039626,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.9515989293480251,
+        "discovery_events": 1789,
+        "haar_tuning_r2": 0.08118275334031222,
+        "query_pca_tuning_r2": 0.9160528804222107,
+        "selected_ridge": 0.001,
+        "tuning_events": 1790
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.9945669700483861,
+        "discovery_events": 1789,
+        "haar_tuning_r2": 0.21585225118856088,
+        "query_pca_tuning_r2": 0.9484264227226206,
+        "selected_ridge": 0.0001,
+        "tuning_events": 1790
+      }
+    },
+    "L3H0": {
+      "1": {
+        "bilinear_tuning_r2": 0.4003417041699324,
+        "discovery_events": 1766,
+        "haar_tuning_r2": -0.8751390844439499,
+        "query_pca_tuning_r2": 0.10029792249631553,
+        "selected_ridge": 0.01,
+        "tuning_events": 1771
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.5729816571517867,
+        "discovery_events": 1766,
+        "haar_tuning_r2": -16.240819938153447,
+        "query_pca_tuning_r2": 0.42981375563383517,
+        "selected_ridge": 0.01,
+        "tuning_events": 1771
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.4094225889764269,
+        "discovery_events": 1766,
+        "haar_tuning_r2": -0.42534676227106805,
+        "query_pca_tuning_r2": 0.11451757087025816,
+        "selected_ridge": 0.01,
+        "tuning_events": 1771
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.5383840713762853,
+        "discovery_events": 1766,
+        "haar_tuning_r2": -4.0586644850328195,
+        "query_pca_tuning_r2": 0.2312652625253111,
+        "selected_ridge": 0.01,
+        "tuning_events": 1771
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.607279725688705,
+        "discovery_events": 1766,
+        "haar_tuning_r2": -1.0589002440261943,
+        "query_pca_tuning_r2": 0.32340100999070553,
+        "selected_ridge": 0.01,
+        "tuning_events": 1771
+      }
+    },
+    "L3H1": {
+      "1": {
+        "bilinear_tuning_r2": 0.23568213716494635,
+        "discovery_events": 1765,
+        "haar_tuning_r2": -0.14710702699767886,
+        "query_pca_tuning_r2": 0.018379223628278374,
+        "selected_ridge": 0.01,
+        "tuning_events": 1770
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.40558659251118634,
+        "discovery_events": 1765,
+        "haar_tuning_r2": -21.573976424928926,
+        "query_pca_tuning_r2": 0.3221870756111209,
+        "selected_ridge": 0.01,
+        "tuning_events": 1770
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.31062460469723296,
+        "discovery_events": 1765,
+        "haar_tuning_r2": -14.51033423803526,
+        "query_pca_tuning_r2": 0.05688893327781319,
+        "selected_ridge": 0.01,
+        "tuning_events": 1770
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.35858660257483266,
+        "discovery_events": 1765,
+        "haar_tuning_r2": -18.635091953913676,
+        "query_pca_tuning_r2": 0.10784752953584498,
+        "selected_ridge": 0.01,
+        "tuning_events": 1770
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.37761971004529005,
+        "discovery_events": 1765,
+        "haar_tuning_r2": -15.343363881459862,
+        "query_pca_tuning_r2": 0.20290079912133474,
+        "selected_ridge": 0.01,
+        "tuning_events": 1770
+      }
+    },
+    "L3H2": {
+      "1": {
+        "bilinear_tuning_r2": -0.04485081522052092,
+        "discovery_events": 1787,
+        "haar_tuning_r2": -3.2394403800705076,
+        "query_pca_tuning_r2": -2.873749706256853,
+        "selected_ridge": 0.01,
+        "tuning_events": 1778
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.6293064948499782,
+        "discovery_events": 1787,
+        "haar_tuning_r2": -1.4870335655785576,
+        "query_pca_tuning_r2": -0.4970536452368248,
+        "selected_ridge": 0.001,
+        "tuning_events": 1778
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.15782788372133794,
+        "discovery_events": 1787,
+        "haar_tuning_r2": -2.9404282802223105,
+        "query_pca_tuning_r2": -2.7967528960397336,
+        "selected_ridge": 0.01,
+        "tuning_events": 1778
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.38685446032401005,
+        "discovery_events": 1787,
+        "haar_tuning_r2": -3.2551838704732505,
+        "query_pca_tuning_r2": -1.501030726177507,
+        "selected_ridge": 0.01,
+        "tuning_events": 1778
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.5444068557027022,
+        "discovery_events": 1787,
+        "haar_tuning_r2": -2.8360479499823468,
+        "query_pca_tuning_r2": -0.8939710024259224,
+        "selected_ridge": 0.01,
+        "tuning_events": 1778
+      }
+    },
+    "L3H3": {
+      "1": {
+        "bilinear_tuning_r2": 0.5293875371014588,
+        "discovery_events": 1754,
+        "haar_tuning_r2": -9.819846418440132,
+        "query_pca_tuning_r2": 0.006824881598530008,
+        "selected_ridge": 0.01,
+        "tuning_events": 1758
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.5465639661277992,
+        "discovery_events": 1754,
+        "haar_tuning_r2": -39.51635612456146,
+        "query_pca_tuning_r2": 0.10936152396896737,
+        "selected_ridge": 0.01,
+        "tuning_events": 1758
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.5855658590694395,
+        "discovery_events": 1754,
+        "haar_tuning_r2": -0.7371656518134813,
+        "query_pca_tuning_r2": 0.006808997947533646,
+        "selected_ridge": 0.01,
+        "tuning_events": 1758
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.5760139384402192,
+        "discovery_events": 1754,
+        "haar_tuning_r2": -9.732215252885494,
+        "query_pca_tuning_r2": 0.003054776613145127,
+        "selected_ridge": 0.01,
+        "tuning_events": 1758
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.5687933685450399,
+        "discovery_events": 1754,
+        "haar_tuning_r2": -34.54612439526618,
+        "query_pca_tuning_r2": 0.054621741289743064,
+        "selected_ridge": 0.01,
+        "tuning_events": 1758
+      }
+    },
+    "L3H4": {
+      "1": {
+        "bilinear_tuning_r2": 0.44051377028792293,
+        "discovery_events": 1781,
+        "haar_tuning_r2": -0.5905686542632513,
+        "query_pca_tuning_r2": -0.5121637172234272,
+        "selected_ridge": 0.01,
+        "tuning_events": 1779
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.904776729051216,
+        "discovery_events": 1781,
+        "haar_tuning_r2": -0.0602294742162508,
+        "query_pca_tuning_r2": 0.7116053212996452,
+        "selected_ridge": 0.001,
+        "tuning_events": 1779
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.6033757035508618,
+        "discovery_events": 1781,
+        "haar_tuning_r2": -0.5998694206088111,
+        "query_pca_tuning_r2": -0.24943053585776198,
+        "selected_ridge": 0.01,
+        "tuning_events": 1779
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.7025543386010036,
+        "discovery_events": 1781,
+        "haar_tuning_r2": -0.4519551423142665,
+        "query_pca_tuning_r2": -0.028652846009361355,
+        "selected_ridge": 0.01,
+        "tuning_events": 1779
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.8359041337592753,
+        "discovery_events": 1781,
+        "haar_tuning_r2": -0.22894136680430677,
+        "query_pca_tuning_r2": 0.23233025398690033,
+        "selected_ridge": 0.01,
+        "tuning_events": 1779
+      }
+    },
+    "L3H5": {
+      "1": {
+        "bilinear_tuning_r2": 0.0029368910884204347,
+        "discovery_events": 1753,
+        "haar_tuning_r2": -2.3356790171510515,
+        "query_pca_tuning_r2": 0.034538513109792945,
+        "selected_ridge": 0.01,
+        "tuning_events": 1758
+      },
+      "16": {
+        "bilinear_tuning_r2": -0.008809291141808728,
+        "discovery_events": 1753,
+        "haar_tuning_r2": -42.495430572848385,
+        "query_pca_tuning_r2": 0.4143789044650815,
+        "selected_ridge": 0.01,
+        "tuning_events": 1758
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.3273143015193519,
+        "discovery_events": 1753,
+        "haar_tuning_r2": -12.541402417572426,
+        "query_pca_tuning_r2": 0.0782496806082682,
+        "selected_ridge": 0.01,
+        "tuning_events": 1758
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.2782228790322896,
+        "discovery_events": 1753,
+        "haar_tuning_r2": -13.096439623455629,
+        "query_pca_tuning_r2": 0.10561557447159675,
+        "selected_ridge": 0.01,
+        "tuning_events": 1758
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.249442182707456,
+        "discovery_events": 1753,
+        "haar_tuning_r2": -6.1828665766726685,
+        "query_pca_tuning_r2": 0.22908539778153536,
+        "selected_ridge": 0.001,
+        "tuning_events": 1758
+      }
+    },
+    "L3H6": {
+      "1": {
+        "bilinear_tuning_r2": 0.58779355417599,
+        "discovery_events": 1767,
+        "haar_tuning_r2": -1.246788135024134,
+        "query_pca_tuning_r2": -0.13248533334096702,
+        "selected_ridge": 0.001,
+        "tuning_events": 1766
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.648346500469407,
+        "discovery_events": 1767,
+        "haar_tuning_r2": -13.810795682868235,
+        "query_pca_tuning_r2": 0.02692913824172871,
+        "selected_ridge": 0.01,
+        "tuning_events": 1766
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.6083753520505772,
+        "discovery_events": 1767,
+        "haar_tuning_r2": -2.813838025697939,
+        "query_pca_tuning_r2": -0.1377983349529892,
+        "selected_ridge": 0.0001,
+        "tuning_events": 1766
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.6121835065584911,
+        "discovery_events": 1767,
+        "haar_tuning_r2": -4.624045562888969,
+        "query_pca_tuning_r2": -0.0930438555274562,
+        "selected_ridge": 0.01,
+        "tuning_events": 1766
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.6274934273953177,
+        "discovery_events": 1767,
+        "haar_tuning_r2": -12.63012185422812,
+        "query_pca_tuning_r2": -0.06685318615358282,
+        "selected_ridge": 0.01,
+        "tuning_events": 1766
+      }
+    },
+    "L3H7": {
+      "1": {
+        "bilinear_tuning_r2": 0.7796892934941773,
+        "discovery_events": 1768,
+        "haar_tuning_r2": -3.9591499419362615,
+        "query_pca_tuning_r2": -2.3823973823743065,
+        "selected_ridge": 0.01,
+        "tuning_events": 1765
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.9247451539595285,
+        "discovery_events": 1768,
+        "haar_tuning_r2": -0.15272799079751853,
+        "query_pca_tuning_r2": 0.4431530345319723,
+        "selected_ridge": 0.001,
+        "tuning_events": 1765
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.8670122495723525,
+        "discovery_events": 1768,
+        "haar_tuning_r2": -2.475354754803953,
+        "query_pca_tuning_r2": -0.21618644271965826,
+        "selected_ridge": 0.01,
+        "tuning_events": 1765
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.8964181580168092,
+        "discovery_events": 1768,
+        "haar_tuning_r2": -3.4596602803952496,
+        "query_pca_tuning_r2": 0.4980384884737804,
+        "selected_ridge": 0.01,
+        "tuning_events": 1765
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.9168860433313011,
+        "discovery_events": 1768,
+        "haar_tuning_r2": -3.692055143002288,
+        "query_pca_tuning_r2": 0.38941170389111246,
+        "selected_ridge": 0.001,
+        "tuning_events": 1765
+      }
+    },
+    "L4H0": {
+      "1": {
+        "bilinear_tuning_r2": 0.25892175985548316,
+        "discovery_events": 1780,
+        "haar_tuning_r2": -1.3488938676518156,
+        "query_pca_tuning_r2": 0.17328703729490436,
+        "selected_ridge": 0.01,
+        "tuning_events": 1781
+      },
+      "16": {
+        "bilinear_tuning_r2": -0.21384738967202743,
+        "discovery_events": 1780,
+        "haar_tuning_r2": -140.36497691033716,
+        "query_pca_tuning_r2": 0.4679692741552779,
+        "selected_ridge": 0.01,
+        "tuning_events": 1781
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.299178081404875,
+        "discovery_events": 1780,
+        "haar_tuning_r2": -7.237906923674087,
+        "query_pca_tuning_r2": 0.21067860858224707,
+        "selected_ridge": 0.01,
+        "tuning_events": 1781
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.1756251834583643,
+        "discovery_events": 1780,
+        "haar_tuning_r2": -93.16340217981552,
+        "query_pca_tuning_r2": 0.24617931213563582,
+        "selected_ridge": 0.01,
+        "tuning_events": 1781
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.018948442823324863,
+        "discovery_events": 1780,
+        "haar_tuning_r2": -39.8389284320528,
+        "query_pca_tuning_r2": 0.36499496833338074,
+        "selected_ridge": 0.01,
+        "tuning_events": 1781
+      }
+    },
+    "L4H1": {
+      "1": {
+        "bilinear_tuning_r2": 0.09860133009620609,
+        "discovery_events": 1778,
+        "haar_tuning_r2": -5.553410983664649,
+        "query_pca_tuning_r2": 0.18753683703331336,
+        "selected_ridge": 0.01,
+        "tuning_events": 1776
+      },
+      "16": {
+        "bilinear_tuning_r2": -0.1867768511975949,
+        "discovery_events": 1778,
+        "haar_tuning_r2": -57.19521198617235,
+        "query_pca_tuning_r2": 0.5526636114861951,
+        "selected_ridge": 0.01,
+        "tuning_events": 1776
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.12132464247552954,
+        "discovery_events": 1778,
+        "haar_tuning_r2": -36.202590389898866,
+        "query_pca_tuning_r2": 0.29862276508445085,
+        "selected_ridge": 0.0001,
+        "tuning_events": 1776
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.10742316480872593,
+        "discovery_events": 1778,
+        "haar_tuning_r2": -18.665768088856833,
+        "query_pca_tuning_r2": 0.34364574921004876,
+        "selected_ridge": 0.01,
+        "tuning_events": 1776
+      },
+      "8": {
+        "bilinear_tuning_r2": -0.012005884607191541,
+        "discovery_events": 1778,
+        "haar_tuning_r2": -93.42926613868961,
+        "query_pca_tuning_r2": 0.4645139076679865,
+        "selected_ridge": 0.01,
+        "tuning_events": 1776
+      }
+    },
+    "L4H2": {
+      "1": {
+        "bilinear_tuning_r2": 0.26790230229379774,
+        "discovery_events": 1791,
+        "haar_tuning_r2": -0.30314423238993204,
+        "query_pca_tuning_r2": 0.06048733291139552,
+        "selected_ridge": 1e-05,
+        "tuning_events": 1790
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.035228021440256496,
+        "discovery_events": 1791,
+        "haar_tuning_r2": -13.365001396032907,
+        "query_pca_tuning_r2": 0.33965827167900786,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.2080299502060442,
+        "discovery_events": 1791,
+        "haar_tuning_r2": -1.6927318312629662,
+        "query_pca_tuning_r2": 0.09240296129266568,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.31557446133513223,
+        "discovery_events": 1791,
+        "haar_tuning_r2": -10.26774877040485,
+        "query_pca_tuning_r2": 0.16343637852015858,
+        "selected_ridge": 0.001,
+        "tuning_events": 1790
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.3146555723571014,
+        "discovery_events": 1791,
+        "haar_tuning_r2": -14.210885333285601,
+        "query_pca_tuning_r2": 0.23884414177803504,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      }
+    },
+    "L4H3": {
+      "1": {
+        "bilinear_tuning_r2": 0.3677818650290433,
+        "discovery_events": 1785,
+        "haar_tuning_r2": -1.407833792655106,
+        "query_pca_tuning_r2": 0.14416038517999907,
+        "selected_ridge": 0.01,
+        "tuning_events": 1788
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.2922731160513399,
+        "discovery_events": 1785,
+        "haar_tuning_r2": -34.467585974653325,
+        "query_pca_tuning_r2": 0.49484913072629744,
+        "selected_ridge": 0.01,
+        "tuning_events": 1788
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.3238833232956101,
+        "discovery_events": 1785,
+        "haar_tuning_r2": -10.210356768589795,
+        "query_pca_tuning_r2": 0.13280278078807095,
+        "selected_ridge": 0.01,
+        "tuning_events": 1788
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.46209601715133075,
+        "discovery_events": 1785,
+        "haar_tuning_r2": -17.78069919801362,
+        "query_pca_tuning_r2": 0.2497289272336508,
+        "selected_ridge": 0.001,
+        "tuning_events": 1788
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.29729704997149387,
+        "discovery_events": 1785,
+        "haar_tuning_r2": -9.614097274010009,
+        "query_pca_tuning_r2": 0.32995696874184777,
+        "selected_ridge": 0.01,
+        "tuning_events": 1788
+      }
+    },
+    "L4H4": {
+      "1": {
+        "bilinear_tuning_r2": 0.3633844655552666,
+        "discovery_events": 1790,
+        "haar_tuning_r2": -1.4385661780232004,
+        "query_pca_tuning_r2": 0.469366971246416,
+        "selected_ridge": 0.01,
+        "tuning_events": 1787
+      },
+      "16": {
+        "bilinear_tuning_r2": -0.0870083420535277,
+        "discovery_events": 1790,
+        "haar_tuning_r2": -187.28008547955326,
+        "query_pca_tuning_r2": 0.6473627250231467,
+        "selected_ridge": 0.01,
+        "tuning_events": 1787
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.5068037168004886,
+        "discovery_events": 1790,
+        "haar_tuning_r2": -40.94268125730226,
+        "query_pca_tuning_r2": 0.5448516625514719,
+        "selected_ridge": 0.0001,
+        "tuning_events": 1787
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.22441503970183707,
+        "discovery_events": 1790,
+        "haar_tuning_r2": -43.583661281393894,
+        "query_pca_tuning_r2": 0.6165261980639851,
+        "selected_ridge": 0.01,
+        "tuning_events": 1787
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.1619659890208096,
+        "discovery_events": 1790,
+        "haar_tuning_r2": -11.86272902610858,
+        "query_pca_tuning_r2": 0.6348682508462319,
+        "selected_ridge": 0.01,
+        "tuning_events": 1787
+      }
+    },
+    "L4H5": {
+      "1": {
+        "bilinear_tuning_r2": 0.3301366621321433,
+        "discovery_events": 1792,
+        "haar_tuning_r2": -5.68626376644988,
+        "query_pca_tuning_r2": 0.27396749381807617,
+        "selected_ridge": 0.01,
+        "tuning_events": 1791
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.3802162657329583,
+        "discovery_events": 1792,
+        "haar_tuning_r2": -35.38897452127549,
+        "query_pca_tuning_r2": 0.6089520075665709,
+        "selected_ridge": 0.01,
+        "tuning_events": 1791
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.514739149195115,
+        "discovery_events": 1792,
+        "haar_tuning_r2": -5.469009967472712,
+        "query_pca_tuning_r2": 0.3754566113272202,
+        "selected_ridge": 0.01,
+        "tuning_events": 1791
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.555440220213295,
+        "discovery_events": 1792,
+        "haar_tuning_r2": -37.717890945946465,
+        "query_pca_tuning_r2": 0.4609796453491426,
+        "selected_ridge": 0.01,
+        "tuning_events": 1791
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.48936705006089254,
+        "discovery_events": 1792,
+        "haar_tuning_r2": -14.009232517876615,
+        "query_pca_tuning_r2": 0.5311481080846656,
+        "selected_ridge": 0.0001,
+        "tuning_events": 1791
+      }
+    },
+    "L4H6": {
+      "1": {
+        "bilinear_tuning_r2": -0.0047180190337745564,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -0.6656156931050967,
+        "query_pca_tuning_r2": 0.3685500263052156,
+        "selected_ridge": 0.001,
+        "tuning_events": 1787
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.18349678601457775,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -167.24011122962472,
+        "query_pca_tuning_r2": 0.6168879909660067,
+        "selected_ridge": 0.01,
+        "tuning_events": 1787
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.542913230741034,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -10.017258306151481,
+        "query_pca_tuning_r2": 0.46411787873704047,
+        "selected_ridge": 0.01,
+        "tuning_events": 1787
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.4977853740813839,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -22.775590627305036,
+        "query_pca_tuning_r2": 0.5016422243992942,
+        "selected_ridge": 0.01,
+        "tuning_events": 1787
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.3809261931657577,
+        "discovery_events": 1788,
+        "haar_tuning_r2": -47.37919794930518,
+        "query_pca_tuning_r2": 0.5478599527467269,
+        "selected_ridge": 0.01,
+        "tuning_events": 1787
+      }
+    },
+    "L4H7": {
+      "1": {
+        "bilinear_tuning_r2": -0.009053915647031063,
+        "discovery_events": 1749,
+        "haar_tuning_r2": -42.372443089960534,
+        "query_pca_tuning_r2": 0.1814860593434312,
+        "selected_ridge": 0.01,
+        "tuning_events": 1765
+      },
+      "16": {
+        "bilinear_tuning_r2": -0.16579013045389446,
+        "discovery_events": 1749,
+        "haar_tuning_r2": -48.61697846610641,
+        "query_pca_tuning_r2": 0.433445467818677,
+        "selected_ridge": 0.01,
+        "tuning_events": 1765
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.22820298172607867,
+        "discovery_events": 1749,
+        "haar_tuning_r2": -8.315006080327018,
+        "query_pca_tuning_r2": 0.20098748990852378,
+        "selected_ridge": 0.01,
+        "tuning_events": 1765
+      },
+      "4": {
+        "bilinear_tuning_r2": -0.1180864861151536,
+        "discovery_events": 1749,
+        "haar_tuning_r2": -38.25728501982387,
+        "query_pca_tuning_r2": 0.27726039542289704,
+        "selected_ridge": 0.01,
+        "tuning_events": 1765
+      },
+      "8": {
+        "bilinear_tuning_r2": -0.20650805331061073,
+        "discovery_events": 1749,
+        "haar_tuning_r2": -38.44848426759061,
+        "query_pca_tuning_r2": 0.33711610598705744,
+        "selected_ridge": 0.001,
+        "tuning_events": 1765
+      }
+    },
+    "L5H0": {
+      "1": {
+        "bilinear_tuning_r2": 0.16753231998636675,
+        "discovery_events": 1792,
+        "haar_tuning_r2": -0.01903818564044868,
+        "query_pca_tuning_r2": -0.021564027785653472,
+        "selected_ridge": 0.001,
+        "tuning_events": 1789
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.11970994907453625,
+        "discovery_events": 1792,
+        "haar_tuning_r2": -99.64226632970615,
+        "query_pca_tuning_r2": 0.30103584177581044,
+        "selected_ridge": 0.01,
+        "tuning_events": 1789
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.10348955420711625,
+        "discovery_events": 1792,
+        "haar_tuning_r2": -22.16435812197355,
+        "query_pca_tuning_r2": 0.02691939859966641,
+        "selected_ridge": 1e-05,
+        "tuning_events": 1789
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.27725937476710316,
+        "discovery_events": 1792,
+        "haar_tuning_r2": -23.783625441022192,
+        "query_pca_tuning_r2": 0.11660086507703171,
+        "selected_ridge": 0.01,
+        "tuning_events": 1789
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.16413654727410398,
+        "discovery_events": 1792,
+        "haar_tuning_r2": -39.83012881777347,
+        "query_pca_tuning_r2": 0.19009333819507113,
+        "selected_ridge": 0.001,
+        "tuning_events": 1789
+      }
+    },
+    "L5H1": {
+      "1": {
+        "bilinear_tuning_r2": 0.24015595137725876,
+        "discovery_events": 1781,
+        "haar_tuning_r2": -11.07359833324128,
+        "query_pca_tuning_r2": 0.11006044409699678,
+        "selected_ridge": 1e-05,
+        "tuning_events": 1783
+      },
+      "16": {
+        "bilinear_tuning_r2": -0.07987576136166785,
+        "discovery_events": 1781,
+        "haar_tuning_r2": -49.392859520870815,
+        "query_pca_tuning_r2": 0.2560605771662675,
+        "selected_ridge": 0.01,
+        "tuning_events": 1783
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.2110148225210955,
+        "discovery_events": 1781,
+        "haar_tuning_r2": -2.904747848834632,
+        "query_pca_tuning_r2": 0.11644843608134559,
+        "selected_ridge": 1e-05,
+        "tuning_events": 1783
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.35763553448927077,
+        "discovery_events": 1781,
+        "haar_tuning_r2": -12.413961717245941,
+        "query_pca_tuning_r2": -0.003536666320139714,
+        "selected_ridge": 0.01,
+        "tuning_events": 1783
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.17143546825155775,
+        "discovery_events": 1781,
+        "haar_tuning_r2": -46.777838271391985,
+        "query_pca_tuning_r2": 0.03414270664685737,
+        "selected_ridge": 0.01,
+        "tuning_events": 1783
+      }
+    },
+    "L5H2": {
+      "1": {
+        "bilinear_tuning_r2": 0.1278547766732523,
+        "discovery_events": 1786,
+        "haar_tuning_r2": -4.753814872712374,
+        "query_pca_tuning_r2": 0.0852337689109357,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      },
+      "16": {
+        "bilinear_tuning_r2": -0.047460362922491894,
+        "discovery_events": 1786,
+        "haar_tuning_r2": -154.0223507470952,
+        "query_pca_tuning_r2": 0.4283283103185893,
+        "selected_ridge": 0.001,
+        "tuning_events": 1790
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.24282876131507525,
+        "discovery_events": 1786,
+        "haar_tuning_r2": -6.791524164714418,
+        "query_pca_tuning_r2": 0.11736179349996478,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.24555756915678795,
+        "discovery_events": 1786,
+        "haar_tuning_r2": -35.3785208816658,
+        "query_pca_tuning_r2": 0.19229038052869285,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.14997818430410859,
+        "discovery_events": 1786,
+        "haar_tuning_r2": -57.55234521900445,
+        "query_pca_tuning_r2": 0.3070727332488352,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      }
+    },
+    "L5H3": {
+      "1": {
+        "bilinear_tuning_r2": 0.050324821274714604,
+        "discovery_events": 1787,
+        "haar_tuning_r2": -5.588557997235273,
+        "query_pca_tuning_r2": 0.03524508812758653,
+        "selected_ridge": 1e-05,
+        "tuning_events": 1787
+      },
+      "16": {
+        "bilinear_tuning_r2": -0.20666749974709564,
+        "discovery_events": 1787,
+        "haar_tuning_r2": -44.668242155517895,
+        "query_pca_tuning_r2": 0.24251446332852944,
+        "selected_ridge": 0.0001,
+        "tuning_events": 1787
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.1713979785845614,
+        "discovery_events": 1787,
+        "haar_tuning_r2": -2.1405972716170276,
+        "query_pca_tuning_r2": 0.11366930053981983,
+        "selected_ridge": 0.01,
+        "tuning_events": 1787
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.18445325396896173,
+        "discovery_events": 1787,
+        "haar_tuning_r2": -3.2036707926423045,
+        "query_pca_tuning_r2": 0.11002721972217022,
+        "selected_ridge": 0.01,
+        "tuning_events": 1787
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.1566644184872925,
+        "discovery_events": 1787,
+        "haar_tuning_r2": -18.06841181402097,
+        "query_pca_tuning_r2": 0.14733941621920177,
+        "selected_ridge": 0.01,
+        "tuning_events": 1787
+      }
+    },
+    "L5H4": {
+      "1": {
+        "bilinear_tuning_r2": 0.27087040632796466,
+        "discovery_events": 1787,
+        "haar_tuning_r2": -6.519318310073595,
+        "query_pca_tuning_r2": 0.16324276853156194,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      },
+      "16": {
+        "bilinear_tuning_r2": -0.16080560158773083,
+        "discovery_events": 1787,
+        "haar_tuning_r2": -62.6590939602912,
+        "query_pca_tuning_r2": 0.2872202301590435,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.34367143289769686,
+        "discovery_events": 1787,
+        "haar_tuning_r2": -16.579908085443908,
+        "query_pca_tuning_r2": 0.09238700233833252,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.23441038561721272,
+        "discovery_events": 1787,
+        "haar_tuning_r2": -91.3712264941047,
+        "query_pca_tuning_r2": 0.11562920825815348,
+        "selected_ridge": 0.001,
+        "tuning_events": 1790
+      },
+      "8": {
+        "bilinear_tuning_r2": -0.2965696175447081,
+        "discovery_events": 1787,
+        "haar_tuning_r2": -17.216791409065365,
+        "query_pca_tuning_r2": 0.23523416447347778,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      }
+    },
+    "L5H5": {
+      "1": {
+        "bilinear_tuning_r2": 0.18690791604583967,
+        "discovery_events": 1792,
+        "haar_tuning_r2": -3.0826082073087964,
+        "query_pca_tuning_r2": 0.03428431824168876,
+        "selected_ridge": 1e-05,
+        "tuning_events": 1788
+      },
+      "16": {
+        "bilinear_tuning_r2": -0.06909813231037298,
+        "discovery_events": 1792,
+        "haar_tuning_r2": -148.3779546111998,
+        "query_pca_tuning_r2": 0.32072513231197475,
+        "selected_ridge": 0.01,
+        "tuning_events": 1788
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.17634950441655983,
+        "discovery_events": 1792,
+        "haar_tuning_r2": -4.909348788681614,
+        "query_pca_tuning_r2": 0.0655316613876692,
+        "selected_ridge": 0.01,
+        "tuning_events": 1788
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.34766094994686736,
+        "discovery_events": 1792,
+        "haar_tuning_r2": -47.65326181299725,
+        "query_pca_tuning_r2": 0.10648710385967852,
+        "selected_ridge": 0.01,
+        "tuning_events": 1788
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.009047453955417728,
+        "discovery_events": 1792,
+        "haar_tuning_r2": -236.92736413816763,
+        "query_pca_tuning_r2": 0.17887358740040293,
+        "selected_ridge": 0.01,
+        "tuning_events": 1788
+      }
+    },
+    "L5H6": {
+      "1": {
+        "bilinear_tuning_r2": 0.3264448291555807,
+        "discovery_events": 1789,
+        "haar_tuning_r2": -1.6159927526143827,
+        "query_pca_tuning_r2": 0.20385209673663318,
+        "selected_ridge": 0.001,
+        "tuning_events": 1790
+      },
+      "16": {
+        "bilinear_tuning_r2": 0.20163803416911985,
+        "discovery_events": 1789,
+        "haar_tuning_r2": -72.78690164253453,
+        "query_pca_tuning_r2": 0.36687918184605783,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.451335856588435,
+        "discovery_events": 1789,
+        "haar_tuning_r2": -6.472683535113798,
+        "query_pca_tuning_r2": 0.22951097230235973,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.36508295776408695,
+        "discovery_events": 1789,
+        "haar_tuning_r2": -86.66054717928996,
+        "query_pca_tuning_r2": 0.2435974438696692,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      },
+      "8": {
+        "bilinear_tuning_r2": 0.2751255313815387,
+        "discovery_events": 1789,
+        "haar_tuning_r2": -58.541008359535155,
+        "query_pca_tuning_r2": 0.2383467585674507,
+        "selected_ridge": 0.01,
+        "tuning_events": 1790
+      }
+    },
+    "L5H7": {
+      "1": {
+        "bilinear_tuning_r2": -0.08466668101980424,
+        "discovery_events": 1783,
+        "haar_tuning_r2": -0.9498519200902302,
+        "query_pca_tuning_r2": -0.13219380249786883,
+        "selected_ridge": 1e-05,
+        "tuning_events": 1788
+      },
+      "16": {
+        "bilinear_tuning_r2": -0.47005504239332896,
+        "discovery_events": 1783,
+        "haar_tuning_r2": -103.19874433149286,
+        "query_pca_tuning_r2": 0.1990558188390542,
+        "selected_ridge": 0.01,
+        "tuning_events": 1788
+      },
+      "2": {
+        "bilinear_tuning_r2": 0.17046041668192657,
+        "discovery_events": 1783,
+        "haar_tuning_r2": -3.218868779432155,
+        "query_pca_tuning_r2": -0.10642495420236986,
+        "selected_ridge": 0.001,
+        "tuning_events": 1788
+      },
+      "4": {
+        "bilinear_tuning_r2": 0.08930341280872756,
+        "discovery_events": 1783,
+        "haar_tuning_r2": -14.31585880726683,
+        "query_pca_tuning_r2": -0.07026148405493138,
+        "selected_ridge": 0.001,
+        "tuning_events": 1788
+      },
+      "8": {
+        "bilinear_tuning_r2": -0.2116593364718815,
+        "discovery_events": 1783,
+        "haar_tuning_r2": -285.79949262683505,
+        "query_pca_tuning_r2": 0.06883413522290416,
+        "selected_ridge": 0.01,
+        "tuning_events": 1788
+      }
+    }
+  },
+  "iterations": 400,
+  "ranks": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "ridges": [
+    1e-05,
+    0.0001,
+    0.001,
+    0.01
+  ],
+  "status": "discovery/tuning only; no new confirmation data used"
+}
