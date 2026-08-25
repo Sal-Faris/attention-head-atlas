@@ -44,12 +44,22 @@ structure is involved.
 | --- | ---: | ---: | ---: | ---: |
 | rank-4 query side | 0.9957 | 0.0125 | 0.9955 | 0.0180 |
 | rank-4 key side | 0.9885 | 0.0005 | 0.9880 | 0.0005 |
+| query side, offset-stratified | 0.9967 | 0.0190 | 0.9964 | 0.0170 |
+| key side, offset-stratified | 0.9896 | 0.0005 | 0.9890 | 0.0005 |
 
 The key-side families remain closer as **joint routing kernels** than matched
 ordered-layer-pair controls, with a 1.2% reduction in mean normalized
 distance.  The query-side correspondence is weaker: about a 0.45% reduction,
 but still below its exact-layer null.  Excluding every previously known family
 edge barely changes either result.
+
+The offset-stratified version averages a pair's kernel distance equally across
+every one of the six relative-offset bins represented for both heads (between
+two and six bins per observed pair), and matches that coverage in each null
+draw.  It produces effectively the same result: 1.10% closer for key-side
+families and 0.36% closer for query-side families.  Thus the key-side result
+is not explained merely by the two heads selecting similar proportions of
+short- and long-distance events.
 
 ## Interpretation
 
@@ -62,10 +72,11 @@ universal QK atoms, semantic input classes, or causal circuits.  The evidence
 is better described as a weak, continuous, reusable channel geometry, with
 the key side more conserved than the query side in these families.
 
-The most informative next test is to retain position as part of the object
-instead of averaging RoPE-conditioned kernels across events.  That can tell
-us whether the residual recurrence comes from a genuinely reusable routing
-channel or merely from a similar mixture of position-specific channels.
+The next test should attach interpretable examples to the canonical singular
+components of these recurrent channels, while keeping the discovery and
+confirmation document splits separate.  That is the most direct route from a
+validated geometric regularity to the user's proposed question about
+conditional input classes and operations.
 
 ## Reproduction
 

@@ -11,7 +11,7 @@ from analyze_qk_conditional_subspaces import events_for_head, rope
 
 from head_atlas.bilinear import fit_bilinear_margin_model
 from head_atlas.factor_io import load_factor_bundle
-from head_atlas.qk_events import qk_logits, relative_offset_statistics
+from head_atlas.qk_events import DEFAULT_OFFSET_BINS, qk_logits, relative_offset_statistics
 
 
 def parse_args() -> argparse.Namespace:
@@ -38,6 +38,25 @@ def normalized_distances(matrices: list[np.ndarray]) -> np.ndarray:
     return np.sqrt(np.maximum(2.0 - 2.0 * similarity, 0.0))
 
 
+def offset_stratified_distances(
+    matrices_by_bin: list[list[np.ndarray | None]],
+) -> tuple[np.ndarray, np.ndarray]:
+    """Average distances over bins observed for each pair, retaining coverage."""
+
+    count = len(matrices_by_bin[0])
+    distance_sum = np.zeros((count, count))
+    coverage = np.zeros((count, count), dtype=np.int64)
+    for matrices in matrices_by_bin:
+        valid = [index for index, matrix in enumerate(matrices) if matrix is not None]
+        if not valid:
+            continue
+        distances = normalized_distances([matrices[index] for index in valid])
+        grid = np.ix_(valid, valid)
+        distance_sum[grid] += distances
+        coverage[grid] += 1
+    return distance_sum / np.maximum(coverage, 1), coverage
+
+
 def exact_layer_test(
     distances: np.ndarray,
     layers: np.ndarray,
@@ -45,6 +64,7 @@ def exact_layer_test(
     repetitions: int,
     rng: np.random.Generator,
     excluded: set[tuple[int, int]],
+    coverage: np.ndarray | None = None,
 ) -> dict[str, float]:
     observed = float(np.mean(distances[edges[:, 0], edges[:, 1]]))
     null = []
@@ -57,8 +77,12 @@ def exact_layer_test(
                     for source in np.flatnonzero(layers == layers[first])
                     for target in np.flatnonzero(layers == layers[second])
                     if (int(source), int(target)) not in excluded
+                    and np.isfinite(distances[source, target])
+                    and (coverage is None or coverage[source, target] == coverage[first, second])
                 ]
             )
+            if len(candidates) == 0:
+                raise RuntimeError("no matched exact-layer-pair control candidates")
             source, target = candidates[rng.integers(len(candidates))]
             values.append(distances[source, target])
         null.append(np.mean(values))
@@ -79,6 +103,7 @@ def main() -> None:
     # Restrict this confirmatory comparison to the common rank rather than
     # pretending that its rank-4 families provide a rank-2 reference set.
     kernels = {4: []}
+    offset_kernels = {4: [[] for _ in DEFAULT_OFFSET_BINS]}
     for index, operator in enumerate(operators):
         layer, head = operator.layer, operator.head
         qpre, kpre = data["discovery_query_pre_rope"][:, layer, head], data["discovery_key_pre_rope"][:, layer, head]
@@ -92,6 +117,23 @@ def main() -> None:
             channel = model.left @ model.right.T
             effective = np.mean([rotation[i] @ channel @ rotation[j].T for i, j in zip(event.destinations, event.positive_sources, strict=True)], axis=0)
             rank_kernels.append(operator.left @ effective @ operator.right.T)
+            for bin_index in range(len(DEFAULT_OFFSET_BINS)):
+                selected = np.flatnonzero(event.bins == bin_index)
+                if len(selected):
+                    by_offset = np.mean(
+                        [
+                            rotation[event.destinations[item]]
+                            @ channel
+                            @ rotation[event.positive_sources[item]].T
+                            for item in selected
+                        ],
+                        axis=0,
+                    )
+                    offset_kernels[rank][bin_index].append(
+                        operator.left @ by_offset @ operator.right.T
+                    )
+                else:
+                    offset_kernels[rank][bin_index].append(None)
         print(f"mapped L{layer}H{head}", flush=True)
     source = json.loads(args.family_audit.read_text(encoding="utf-8"))["views"]["QK"]["rank_results"]
     layers = np.asarray([operator.layer for operator in operators])
@@ -104,6 +146,7 @@ def main() -> None:
     report = {"n_excluded_family_edges": len(all_family_edges)}
     for rank, matrices in kernels.items():
         distances = normalized_distances(matrices)
+        offset_distances, offset_coverage = offset_stratified_distances(offset_kernels[rank])
         for side in ("left", "right"):
             records = source[str(rank)]["sides"][side]["recurrent_cross_layer_edges"]
             edges = np.asarray([[8 * record["first_layer"] + record["first_head"], 8 * record["second_layer"] + record["second_head"]] for record in records])
@@ -126,6 +169,28 @@ def main() -> None:
                     excluded=all_family_edges,
                 ),
                 "n_recurrent_edges": len(edges),
+            }
+            report[f"rank_{rank}_{side}_offset_stratified"] = {
+                "all_exact_layer_pairs": exact_layer_test(
+                    offset_distances,
+                    layers,
+                    edges,
+                    args.permutations,
+                    np.random.default_rng(seed + 2000),
+                    excluded=set(),
+                    coverage=offset_coverage,
+                ),
+                "excluding_all_known_family_edges": exact_layer_test(
+                    offset_distances,
+                    layers,
+                    edges,
+                    args.permutations,
+                    np.random.default_rng(seed + 3000),
+                    excluded=all_family_edges,
+                    coverage=offset_coverage,
+                ),
+                "n_offset_bins": len(DEFAULT_OFFSET_BINS),
+                "observed_edge_offset_coverage": offset_coverage[edges[:, 0], edges[:, 1]].tolist(),
             }
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(report, indent=2, sort_keys=True), encoding="utf-8")
