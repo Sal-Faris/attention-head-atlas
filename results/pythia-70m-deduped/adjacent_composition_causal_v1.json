@@ -1,0 +1,29 @@
+{
+  "status": "adjacent-layer causal head-ablation test of typed composition edges",
+  "intervention": "zero one source head's attention output immediately before its output projection",
+  "outcome": "RMS change in the next layer's raw Q/K/V preactivations",
+  "selection": "all adjacent cross-layer head pairs; static edges selected without activations",
+  "types": {
+    "Q": {
+      "mean_adjacent_layer_pair_spearman": 0.7273626373626373,
+      "head_identity_shuffle_mean": 0.006578391578391577,
+      "head_identity_shuffle_standard_deviation": 0.11145568479336825,
+      "upper_tail_p_value": 0.001
+    },
+    "K": {
+      "mean_adjacent_layer_pair_spearman": 0.571062271062271,
+      "head_identity_shuffle_mean": 0.001685641685641684,
+      "head_identity_shuffle_standard_deviation": 0.10490684540163688,
+      "upper_tail_p_value": 0.001
+    },
+    "V": {
+      "mean_adjacent_layer_pair_spearman": 0.6553021978021978,
+      "head_identity_shuffle_mean": 0.0003168736502069825,
+      "head_identity_shuffle_standard_deviation": 0.0923758903549986,
+      "upper_tail_p_value": 0.001
+    }
+  },
+  "sequences": 8,
+  "seed": 0,
+  "resamples": 999
+}
