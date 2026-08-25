@@ -37,6 +37,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--batch-size", type=int, default=4)
     parser.add_argument("--confirmation-seed", type=int, default=1729)
     parser.add_argument(
+        "--reuse-confirmation-from",
+        type=Path,
+        help="reuse frozen confirmation tokens and dataset rows from an existing QK artifact",
+    )
+    parser.add_argument(
         "--artifact",
         type=Path,
         default=Path("artifacts/pythia-70m-deduped/qk_conditional_events_v1.npz"),
@@ -263,25 +268,34 @@ def main() -> None:
         raise ValueError("model revision is absent or duplicated in the manifest")
     record = matching_records[0]
     model_snapshot = Path(record["snapshot"])
-    dataset_snapshot = Path(
-        snapshot_download(
-            args.dataset,
-            repo_type="dataset",
-            revision=args.dataset_revision,
-            cache_dir=args.cache_root,
-            local_files_only=True,
-            allow_patterns=["README.md", "data/*.parquet"],
-        )
-    )
     tokenizer = AutoTokenizer.from_pretrained(model_snapshot, local_files_only=True)
-    confirmation_tokens, confirmation_rows = load_confirmation_tokens(
-        dataset_snapshot,
-        tokenizer,
-        used_rows=set(train_rows).union(tuning_rows),
-        sequence_length=args.sequence_length,
-        count=args.confirmation_sequences,
-        seed=args.confirmation_seed,
-    )
+    if args.reuse_confirmation_from is None:
+        dataset_snapshot = Path(
+            snapshot_download(
+                args.dataset,
+                repo_type="dataset",
+                revision=args.dataset_revision,
+                cache_dir=args.cache_root,
+                local_files_only=True,
+                allow_patterns=["README.md", "data/*.parquet"],
+            )
+        )
+        confirmation_tokens, confirmation_rows = load_confirmation_tokens(
+            dataset_snapshot,
+            tokenizer,
+            used_rows=set(train_rows).union(tuning_rows),
+            sequence_length=args.sequence_length,
+            count=args.confirmation_sequences,
+            seed=args.confirmation_seed,
+        )
+    else:
+        with np.load(args.reuse_confirmation_from, allow_pickle=False) as source:
+            confirmation_tokens = np.asarray(source["confirmation_tokens"], dtype=np.int64)
+            confirmation_rows = np.asarray(source["confirmation_dataset_rows"], dtype=np.int64)
+        if confirmation_tokens.shape != (args.confirmation_sequences, args.sequence_length):
+            raise ValueError("reused confirmation tokens have an incompatible shape")
+        if confirmation_rows.shape != (args.confirmation_sequences,):
+            raise ValueError("reused confirmation rows have an incompatible shape")
     if set(confirmation_rows).intersection(set(train_rows).union(tuning_rows)):
         raise RuntimeError("confirmation rows overlap pilot rows")
 
