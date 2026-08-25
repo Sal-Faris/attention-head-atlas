@@ -1,0 +1,350 @@
+{
+  "class_discovery": "per-head PCA-whitened diagonal-GMM BIC selection on discovery residual inputs",
+  "heads": {
+    "L1H3": {
+      "confirmation_events": 3576,
+      "discovery_events": 1788,
+      "key_input_classes": 8,
+      "key_test": {
+        "bh_q": 0.010199999999999999,
+        "excess_mutual_information": 0.0043357634622122635,
+        "mutual_information": 0.010793410434181968,
+        "null_mean": 0.006457646971969704,
+        "upper_tail_p": 0.009
+      },
+      "query_input_classes": 7,
+      "query_test": {
+        "bh_q": 0.14396875,
+        "excess_mutual_information": 0.001274741234649276,
+        "mutual_information": 0.005196815262604189,
+        "null_mean": 0.003922074027954913,
+        "upper_tail_p": 0.1355
+      }
+    },
+    "L2H0": {
+      "confirmation_events": 3564,
+      "discovery_events": 1784,
+      "key_input_classes": 8,
+      "key_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.025582029368704982,
+        "mutual_information": 0.04567164275926772,
+        "null_mean": 0.020089613390562734,
+        "upper_tail_p": 0.0005
+      },
+      "query_input_classes": 8,
+      "query_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.051826193155143904,
+        "mutual_information": 0.055825484350763226,
+        "null_mean": 0.00399929119561932,
+        "upper_tail_p": 0.0005
+      }
+    },
+    "L2H7": {
+      "confirmation_events": 3579,
+      "discovery_events": 1789,
+      "key_input_classes": 8,
+      "key_test": {
+        "bh_q": 0.0012592592592592594,
+        "excess_mutual_information": 0.005294604204429931,
+        "mutual_information": 0.010250557516826644,
+        "null_mean": 0.0049559533123967135,
+        "upper_tail_p": 0.001
+      },
+      "query_input_classes": 7,
+      "query_test": {
+        "bh_q": 0.027967741935483872,
+        "excess_mutual_information": 0.0025597480460268942,
+        "mutual_information": 0.006289799268949676,
+        "null_mean": 0.003730051222922782,
+        "upper_tail_p": 0.0255
+      }
+    },
+    "L3H0": {
+      "confirmation_events": 3537,
+      "discovery_events": 1766,
+      "key_input_classes": 8,
+      "key_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.03748494748415797,
+        "mutual_information": 0.0435732199185323,
+        "null_mean": 0.006088272434374332,
+        "upper_tail_p": 0.0005
+      },
+      "query_input_classes": 8,
+      "query_test": {
+        "bh_q": 0.0012592592592592594,
+        "excess_mutual_information": 0.004628144529262805,
+        "mutual_information": 0.010003811980758961,
+        "null_mean": 0.005375667451496156,
+        "upper_tail_p": 0.001
+      }
+    },
+    "L3H2": {
+      "confirmation_events": 3568,
+      "discovery_events": 1787,
+      "key_input_classes": 6,
+      "key_test": {
+        "bh_q": 0.0023448275862068967,
+        "excess_mutual_information": 0.0027870078930426027,
+        "mutual_information": 0.003762198631344032,
+        "null_mean": 0.0009751907383014297,
+        "upper_tail_p": 0.002
+      },
+      "query_input_classes": 8,
+      "query_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.019549335133432856,
+        "mutual_information": 0.021822054437225354,
+        "null_mean": 0.0022727193037924993,
+        "upper_tail_p": 0.0005
+      }
+    },
+    "L3H4": {
+      "confirmation_events": 3560,
+      "discovery_events": 1781,
+      "key_input_classes": 8,
+      "key_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.012279771958310072,
+        "mutual_information": 0.01545321366575906,
+        "null_mean": 0.0031734417074489878,
+        "upper_tail_p": 0.0005
+      },
+      "query_input_classes": 8,
+      "query_test": {
+        "bh_q": 0.0012592592592592594,
+        "excess_mutual_information": 0.0033934470873643596,
+        "mutual_information": 0.006061353228322793,
+        "null_mean": 0.0026679061409584336,
+        "upper_tail_p": 0.001
+      }
+    },
+    "L3H5": {
+      "confirmation_events": 3498,
+      "discovery_events": 1753,
+      "key_input_classes": 8,
+      "key_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.07376470360288906,
+        "mutual_information": 0.07605124018678694,
+        "null_mean": 0.0022865365838978815,
+        "upper_tail_p": 0.0005
+      },
+      "query_input_classes": 8,
+      "query_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.01726908655804928,
+        "mutual_information": 0.0226799512999662,
+        "null_mean": 0.005410864741916921,
+        "upper_tail_p": 0.0005
+      }
+    },
+    "L3H7": {
+      "confirmation_events": 3545,
+      "discovery_events": 1768,
+      "key_input_classes": 8,
+      "key_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.1018466351478797,
+        "mutual_information": 0.1081796298550622,
+        "null_mean": 0.006332994707182506,
+        "upper_tail_p": 0.0005
+      },
+      "query_input_classes": 8,
+      "query_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.004914039642090499,
+        "mutual_information": 0.007525753108684722,
+        "null_mean": 0.0026117134665942236,
+        "upper_tail_p": 0.0005
+      }
+    },
+    "L4H1": {
+      "confirmation_events": 3539,
+      "discovery_events": 1778,
+      "key_input_classes": 7,
+      "key_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.00848665907898524,
+        "mutual_information": 0.012107147035289107,
+        "null_mean": 0.003620487956303866,
+        "upper_tail_p": 0.0005
+      },
+      "query_input_classes": 8,
+      "query_test": {
+        "bh_q": 0.1622727272727273,
+        "excess_mutual_information": 0.0009855028419609268,
+        "mutual_information": 0.004324840471360261,
+        "null_mean": 0.003339337629399334,
+        "upper_tail_p": 0.1575
+      }
+    },
+    "L4H4": {
+      "confirmation_events": 3571,
+      "discovery_events": 1790,
+      "key_input_classes": 8,
+      "key_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.01480458971132174,
+        "mutual_information": 0.02391318237288646,
+        "null_mean": 0.00910859266156472,
+        "upper_tail_p": 0.0005
+      },
+      "query_input_classes": 8,
+      "query_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.006338906172689226,
+        "mutual_information": 0.009437011366396544,
+        "null_mean": 0.003098105193707318,
+        "upper_tail_p": 0.0005
+      }
+    },
+    "L4H5": {
+      "confirmation_events": 3581,
+      "discovery_events": 1792,
+      "key_input_classes": 7,
+      "key_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.024662307843805166,
+        "mutual_information": 0.03251708859265683,
+        "null_mean": 0.007854780748851665,
+        "upper_tail_p": 0.0005
+      },
+      "query_input_classes": 7,
+      "query_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.009296180161963392,
+        "mutual_information": 0.011766119670804705,
+        "null_mean": 0.002469939508841314,
+        "upper_tail_p": 0.0005
+      }
+    },
+    "L4H7": {
+      "confirmation_events": 3497,
+      "discovery_events": 1749,
+      "key_input_classes": 8,
+      "key_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.012015681506101761,
+        "mutual_information": 0.02397663651131926,
+        "null_mean": 0.011960955005217499,
+        "upper_tail_p": 0.0005
+      },
+      "query_input_classes": 8,
+      "query_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.011687168826771835,
+        "mutual_information": 0.016720972082618493,
+        "null_mean": 0.005033803255846658,
+        "upper_tail_p": 0.0005
+      }
+    },
+    "L5H0": {
+      "confirmation_events": 3583,
+      "discovery_events": 1792,
+      "key_input_classes": 8,
+      "key_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.022519833352732947,
+        "mutual_information": 0.025835610534264364,
+        "null_mean": 0.0033157771815314177,
+        "upper_tail_p": 0.0005
+      },
+      "query_input_classes": 8,
+      "query_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.014040091721894521,
+        "mutual_information": 0.017508575142727297,
+        "null_mean": 0.003468483420832777,
+        "upper_tail_p": 0.0005
+      }
+    },
+    "L5H1": {
+      "confirmation_events": 3547,
+      "discovery_events": 1781,
+      "key_input_classes": 7,
+      "key_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.06667604485985955,
+        "mutual_information": 0.06954654860883698,
+        "null_mean": 0.002870503748977426,
+        "upper_tail_p": 0.0005
+      },
+      "query_input_classes": 8,
+      "query_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.006534042631234285,
+        "mutual_information": 0.013457271939602522,
+        "null_mean": 0.0069232293083682376,
+        "upper_tail_p": 0.0005
+      }
+    },
+    "L5H2": {
+      "confirmation_events": 3570,
+      "discovery_events": 1786,
+      "key_input_classes": 8,
+      "key_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.018158781123251776,
+        "mutual_information": 0.023412615814302075,
+        "null_mean": 0.005253834691050298,
+        "upper_tail_p": 0.0005
+      },
+      "query_input_classes": 7,
+      "query_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.013457509214734067,
+        "mutual_information": 0.02292460909868887,
+        "null_mean": 0.009467099883954805,
+        "upper_tail_p": 0.0005
+      }
+    },
+    "L5H3": {
+      "confirmation_events": 3569,
+      "discovery_events": 1787,
+      "key_input_classes": 8,
+      "key_test": {
+        "bh_q": 0.0018214285714285715,
+        "excess_mutual_information": 0.005727819157187626,
+        "mutual_information": 0.01648604977268776,
+        "null_mean": 0.010758230615500134,
+        "upper_tail_p": 0.0015
+      },
+      "query_input_classes": 8,
+      "query_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.011282823691808263,
+        "mutual_information": 0.0144806685850924,
+        "null_mean": 0.0031978448932841372,
+        "upper_tail_p": 0.0005
+      }
+    },
+    "L5H4": {
+      "confirmation_events": 3574,
+      "discovery_events": 1787,
+      "key_input_classes": 8,
+      "key_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.008848950245341136,
+        "mutual_information": 0.012249749536337111,
+        "null_mean": 0.0034007992909959755,
+        "upper_tail_p": 0.0005
+      },
+      "query_input_classes": 8,
+      "query_test": {
+        "bh_q": 0.3415,
+        "excess_mutual_information": 0.00028956067994239873,
+        "mutual_information": 0.0032394616295255674,
+        "null_mean": 0.0029499009495831687,
+        "upper_tail_p": 0.3415
+      }
+    }
+  },
+  "max_classes": 8,
+  "null": "permute component labels within exact relative-offset bins on confirmation events",
+  "pca_dimensions": 32,
+  "permutations": 1999,
+  "status": "held-out input-class gating test for rank-4 recurrent key-side QK channels"
+}
