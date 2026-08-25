@@ -1,0 +1,341 @@
+{
+  "status": "shared rank-one QK motif compression of unseen heads and layers",
+  "model": "EleutherAI/pythia-70m-deduped",
+  "model_revision": "step143000",
+  "operator_metadata": {
+    "architectures": [
+      "GPTNeoXForCausalLM"
+    ],
+    "d_head": 64,
+    "d_model": 512,
+    "format": "factorized-head-operator-v1",
+    "git_commit": "c343ed925f0de6f4a2f5e5a6e6417fd5a1d34e53",
+    "kind": "QK",
+    "model": "EleutherAI/pythia-70m-deduped",
+    "model_type": "gpt_neox",
+    "n_heads": 8,
+    "n_layers": 6,
+    "numpy": "2.5.2",
+    "operator_count": 48,
+    "python": "3.12.4",
+    "revision": "step143000",
+    "rope_theta": 10000,
+    "rotary_pct": 0.25,
+    "snapshot_commit": "9a7c847e93250c8f24d4b7e7134dbf369e8fc9cb",
+    "source_format": "huggingface-safetensors",
+    "weight_processing": "fold_layer_norm_and_center_readers_and_writers"
+  },
+  "normalization": "unit Frobenius norm per complete QK operator",
+  "support_dimension": 64,
+  "algorithm": {
+    "motif_counts": [
+      4,
+      8,
+      16,
+      32
+    ],
+    "primary_motif_count": 32,
+    "als_iterations": 50,
+    "observed_restarts": 2,
+    "null_restarts": 1,
+    "stability_seeds": [
+      23,
+      71,
+      131
+    ]
+  },
+  "reports": {
+    "head_parity": {
+      "shared_support_variance_recovered": 0.0990843839064057,
+      "by_motif_count": {
+        "4": {
+          "rank_one_motif_full_variance_recovered": 0.004045093229126209,
+          "fraction_of_shared_support_recovered": 0.04077134930575634,
+          "dense_pca_same_component_count_full_variance_recovered": 0.034193935551162236,
+          "parameter_matched_dense_pca_components": 1,
+          "parameter_matched_dense_pca_full_variance_recovered": 0.0224560997709454,
+          "motif_dictionary_parameters": 512,
+          "dense_pca_dictionary_parameters": 16384,
+          "training_relative_squared_error": 0.8556701857682563,
+          "iterations_completed": 31
+        },
+        "8": {
+          "rank_one_motif_full_variance_recovered": 0.008857921095498116,
+          "fraction_of_shared_support_recovered": 0.08935320098965421,
+          "dense_pca_same_component_count_full_variance_recovered": 0.037797848068405374,
+          "parameter_matched_dense_pca_components": 1,
+          "parameter_matched_dense_pca_full_variance_recovered": 0.0224560997709454,
+          "motif_dictionary_parameters": 1024,
+          "dense_pca_dictionary_parameters": 32768,
+          "training_relative_squared_error": 0.7712941515917611,
+          "iterations_completed": 50
+        },
+        "16": {
+          "rank_one_motif_full_variance_recovered": 0.015450390267438654,
+          "fraction_of_shared_support_recovered": 0.15591323410148106,
+          "dense_pca_same_component_count_full_variance_recovered": 0.04152900418085498,
+          "parameter_matched_dense_pca_components": 1,
+          "parameter_matched_dense_pca_full_variance_recovered": 0.0224560997709454,
+          "motif_dictionary_parameters": 2048,
+          "dense_pca_dictionary_parameters": 65536,
+          "training_relative_squared_error": 0.644927947338569,
+          "iterations_completed": 50
+        },
+        "32": {
+          "rank_one_motif_full_variance_recovered": 0.02724975422723442,
+          "fraction_of_shared_support_recovered": 0.27486898942203397,
+          "dense_pca_same_component_count_full_variance_recovered": 0.043308813912413174,
+          "parameter_matched_dense_pca_components": 1,
+          "parameter_matched_dense_pca_full_variance_recovered": 0.0224560997709454,
+          "motif_dictionary_parameters": 4096,
+          "dense_pca_dictionary_parameters": 131072,
+          "training_relative_squared_error": 0.4837626059491041,
+          "iterations_completed": 50
+        }
+      },
+      "primary": {
+        "motif_count": 32,
+        "observed_full_variance_recovered": 0.02724975422723442,
+        "null_comparisons": {
+          "spectrum_matched_haar": {
+            "null_mean": 0.00011986645027264447,
+            "null_standard_deviation": 3.3423694765931062e-06,
+            "observed_minus_null_mean": 0.027129887776961775,
+            "upper_tail_p_value": 0.1
+          },
+          "within_layer_side_pairing_shuffle": {
+            "null_mean": 0.004124464088751393,
+            "null_standard_deviation": 0.0008443679499432982,
+            "observed_minus_null_mean": 0.023125290138483027,
+            "upper_tail_p_value": 0.1
+          }
+        }
+      }
+    },
+    "layer_parity": {
+      "shared_support_variance_recovered": 0.06137940400892801,
+      "by_motif_count": {
+        "4": {
+          "rank_one_motif_full_variance_recovered": 0.001326929698712515,
+          "fraction_of_shared_support_recovered": 0.02141544112424691,
+          "dense_pca_same_component_count_full_variance_recovered": 0.010529381218294397,
+          "parameter_matched_dense_pca_components": 1,
+          "parameter_matched_dense_pca_full_variance_recovered": 0.007587453717610575,
+          "motif_dictionary_parameters": 512,
+          "dense_pca_dictionary_parameters": 16384,
+          "training_relative_squared_error": 0.8593180387357904,
+          "iterations_completed": 50
+        },
+        "8": {
+          "rank_one_motif_full_variance_recovered": 0.0024959345192786665,
+          "fraction_of_shared_support_recovered": 0.04011854486024527,
+          "dense_pca_same_component_count_full_variance_recovered": 0.012164943482374416,
+          "parameter_matched_dense_pca_components": 1,
+          "parameter_matched_dense_pca_full_variance_recovered": 0.007587453717610575,
+          "motif_dictionary_parameters": 1024,
+          "dense_pca_dictionary_parameters": 32768,
+          "training_relative_squared_error": 0.7679447232338605,
+          "iterations_completed": 50
+        },
+        "16": {
+          "rank_one_motif_full_variance_recovered": 0.005003818239922816,
+          "fraction_of_shared_support_recovered": 0.08089932928215252,
+          "dense_pca_same_component_count_full_variance_recovered": 0.01382285198435038,
+          "parameter_matched_dense_pca_components": 1,
+          "parameter_matched_dense_pca_full_variance_recovered": 0.007587453717610575,
+          "motif_dictionary_parameters": 2048,
+          "dense_pca_dictionary_parameters": 65536,
+          "training_relative_squared_error": 0.6375029928498832,
+          "iterations_completed": 50
+        },
+        "32": {
+          "rank_one_motif_full_variance_recovered": 0.008804280391745337,
+          "fraction_of_shared_support_recovered": 0.14273735309325458,
+          "dense_pca_same_component_count_full_variance_recovered": 0.014062400324455191,
+          "parameter_matched_dense_pca_components": 1,
+          "parameter_matched_dense_pca_full_variance_recovered": 0.007587453717610575,
+          "motif_dictionary_parameters": 4096,
+          "dense_pca_dictionary_parameters": 131072,
+          "training_relative_squared_error": 0.4612902208512537,
+          "iterations_completed": 50
+        }
+      },
+      "primary": {
+        "motif_count": 32,
+        "observed_full_variance_recovered": 0.008804280391745337,
+        "null_comparisons": {
+          "spectrum_matched_haar": {
+            "null_mean": 0.00012159489702766093,
+            "null_standard_deviation": 3.653739690305844e-06,
+            "observed_minus_null_mean": 0.008682685494717676,
+            "upper_tail_p_value": 0.1
+          },
+          "within_layer_side_pairing_shuffle": {
+            "null_mean": 0.001578865886851673,
+            "null_standard_deviation": 0.0004144041938842649,
+            "observed_minus_null_mean": 0.007225414504893664,
+            "upper_tail_p_value": 0.1
+          }
+        }
+      }
+    }
+  },
+  "heldout_initialization_robustness": {
+    "head_parity": [
+      {
+        "seed": 23,
+        "full_variance_recovered": 0.02724975422723442
+      },
+      {
+        "seed": 71,
+        "full_variance_recovered": 0.027829462022607422
+      },
+      {
+        "seed": 131,
+        "full_variance_recovered": 0.02778254348284695
+      }
+    ],
+    "layer_parity": [
+      {
+        "seed": 23,
+        "full_variance_recovered": 0.008804280391745337
+      },
+      {
+        "seed": 71,
+        "full_variance_recovered": 0.008556463788174566
+      },
+      {
+        "seed": 131,
+        "full_variance_recovered": 0.008674264095005659
+      }
+    ]
+  },
+  "full_population_motif_analysis": {
+    "stability_against_reference_seed": 23,
+    "stability": [
+      {
+        "seed": 71,
+        "mean_matched_atom_cosine": 0.6425431229951077,
+        "median_matched_atom_cosine": 0.6770455086216784,
+        "atoms_above_0.8": 12,
+        "atoms_above_0.5": 23
+      },
+      {
+        "seed": 131,
+        "mean_matched_atom_cosine": 0.5992480568024703,
+        "median_matched_atom_cosine": 0.625737945695966,
+        "atoms_above_0.8": 12,
+        "atoms_above_0.5": 19
+      }
+    ],
+    "activity_threshold": "absolute coefficient >= 25% of that motif's population maximum",
+    "active_head_count_per_motif": [
+      5,
+      13,
+      10,
+      3,
+      4,
+      14,
+      10,
+      14,
+      13,
+      13,
+      1,
+      2,
+      11,
+      12,
+      5,
+      5,
+      12,
+      11,
+      12,
+      11,
+      11,
+      2,
+      4,
+      4,
+      1,
+      2,
+      3,
+      9,
+      14,
+      2,
+      5,
+      6
+    ],
+    "active_layer_count_per_motif": [
+      1,
+      2,
+      2,
+      1,
+      1,
+      3,
+      3,
+      3,
+      3,
+      3,
+      1,
+      1,
+      3,
+      3,
+      1,
+      1,
+      3,
+      3,
+      3,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      3,
+      1,
+      2,
+      2
+    ],
+    "effective_head_count_per_motif": [
+      6.831923574902482,
+      15.980920168918317,
+      11.660931559220995,
+      5.741912831489819,
+      7.089467378077173,
+      15.148699118562494,
+      15.826421077931684,
+      21.600656894695597,
+      20.539080730901244,
+      15.336733620152787,
+      4.439281739537047,
+      3.89590200064762,
+      13.269157382658124,
+      13.630870865977181,
+      6.70943669431572,
+      9.836780949728782,
+      14.19792926031956,
+      17.938433381365435,
+      14.168383439355798,
+      12.524797028366995,
+      13.491213993901027,
+      4.904864458449803,
+      6.580283290831245,
+      8.078912507038781,
+      3.775333487376263,
+      5.112606501310945,
+      10.170325185717056,
+      13.055900982558068,
+      16.590615841395884,
+      4.661963077003226,
+      12.517894507954415,
+      8.230007998235658
+    ],
+    "median_active_heads": 7.5,
+    "median_active_layers": 2.0,
+    "median_effective_heads": 12.089413033587704,
+    "artifact": "artifacts\\pythia-70m-deduped\\shared_rank_one_qk_motifs_v1.npz"
+  },
+  "null_repetitions": 9,
+  "seed": 23
+}
