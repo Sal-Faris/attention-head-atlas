@@ -221,11 +221,42 @@ def fit_reducing_subspaces_with_support(
     """
 
     values = _trajectory(training_matrices, name="training_matrices")
+    output_basis, input_basis, _ = _validate_support_bases(
+        output_support_basis,
+        input_support_basis,
+        output_ambient_dimension=values.shape[1],
+        input_ambient_dimension=values.shape[2],
+    )
+    blocks = np.einsum("oi,tij,jk->tok", output_basis.T, values, input_basis, optimize=True)
+    return fit_reducing_subspaces_from_blocks(
+        blocks,
+        output_basis,
+        input_basis,
+        output_rank,
+        input_rank,
+        random_starts=random_starts,
+        seed=seed,
+        max_iterations=max_iterations,
+        tolerance=tolerance,
+    )
+
+
+def _validate_support_bases(
+    output_support_basis: Array,
+    input_support_basis: Array,
+    *,
+    output_ambient_dimension: int | None = None,
+    input_ambient_dimension: int | None = None,
+) -> tuple[Array, Array, int]:
+    """Validate a pair of equally wide ambient orthonormal bases."""
+
     output_basis = np.asarray(output_support_basis, dtype=np.float64)
     input_basis = np.asarray(input_support_basis, dtype=np.float64)
     if output_basis.ndim != 2 or input_basis.ndim != 2:
         raise ValueError("support bases must be two-dimensional")
-    if output_basis.shape[0] != values.shape[1] or input_basis.shape[0] != values.shape[2]:
+    if output_ambient_dimension is not None and output_basis.shape[0] != output_ambient_dimension:
+        raise ValueError("support bases have incompatible ambient dimensions")
+    if input_ambient_dimension is not None and input_basis.shape[0] != input_ambient_dimension:
         raise ValueError("support bases have incompatible ambient dimensions")
     if output_basis.shape[1] != input_basis.shape[1] or output_basis.shape[1] == 0:
         raise ValueError("support bases must have the same positive width")
@@ -237,6 +268,38 @@ def fit_reducing_subspaces_with_support(
         raise ValueError("output_support_basis must have orthonormal columns")
     if not np.allclose(input_basis.T @ input_basis, identity, atol=1e-9, rtol=0):
         raise ValueError("input_support_basis must have orthonormal columns")
+    return output_basis, input_basis, d
+
+
+def fit_reducing_subspaces_from_blocks(
+    training_blocks: Array,
+    output_support_basis: Array,
+    input_support_basis: Array,
+    output_rank: int,
+    input_rank: int,
+    *,
+    random_starts: int = 8,
+    seed: int = 0,
+    max_iterations: int = 200,
+    tolerance: float = 1e-10,
+) -> ReducingSubspaceFit:
+    """Fit from operators already projected into supplied active supports.
+
+    ``training_blocks[t]`` must equal ``U.T @ A_t @ V``, where ``U`` and
+    ``V`` are the supplied output and input support bases.  This avoids
+    rematerializing ambient operators when exact support-coordinate blocks are
+    available from a compact factorization.
+    """
+
+    blocks = _trajectory(training_blocks, name="training_blocks")
+    output_basis, input_basis, d = _validate_support_bases(
+        output_support_basis, input_support_basis
+    )
+    if blocks.shape[1:] != (d, d):
+        raise ValueError("training_blocks must be square with the support dimension")
+    block_energy = np.einsum("tij,tij->t", blocks, blocks, optimize=True)
+    if np.any(block_energy <= 0.0):
+        raise ValueError("training_blocks must have positive Frobenius energy")
     p = _positive_int(output_rank, "output_rank")
     q = _positive_int(input_rank, "input_rank")
     if p >= d or q >= d:
@@ -257,7 +320,6 @@ def fit_reducing_subspaces_with_support(
     if not np.isfinite(tolerance) or tolerance < 0:
         raise ValueError("tolerance must be a finite nonnegative number")
 
-    blocks = np.einsum("oi,tij,jk->tok", output_basis.T, values, input_basis, optimize=True)
     total_output = np.einsum("tij,tkj->ik", blocks, blocks, optimize=True)
     total_input = np.einsum("tji,tjk->ik", blocks, blocks, optimize=True)
     energy_start = (_top_eigenspace(total_output, p), _top_eigenspace(total_input, q))
@@ -324,21 +386,61 @@ def held_out_block_metrics(
     _check_fit(fit)
     if values.shape[1] != fit.output_support_basis.shape[0] or values.shape[2] != fit.input_support_basis.shape[0]:
         raise ValueError("matrices have incompatible ambient dimensions for fit")
+    blocks = np.einsum(
+        "oi,tij,jk->tok",
+        fit.output_support_basis.T,
+        values,
+        fit.input_support_basis,
+        optimize=True,
+    )
+    full_energy = np.einsum("tij,tij->t", values, values, optimize=True)
+    return held_out_block_metrics_from_blocks(
+        blocks,
+        full_energy,
+        fit,
+        random_repetitions=random_repetitions,
+        seed=seed,
+    )
+
+
+def held_out_block_metrics_from_blocks(
+    blocks: Array,
+    full_operator_energies: Array,
+    fit: ReducingSubspaceFit,
+    *,
+    random_repetitions: int = 128,
+    seed: int = 0,
+) -> dict[str, Array | float]:
+    """Evaluate a fit from held-out support blocks and ambient energies.
+
+    The energy at index ``t`` must be ``||A_t||_F^2`` for the ambient operator
+    whose projected block is supplied at the same index.
+    """
+
+    projected = _trajectory(blocks, name="blocks")
+    _check_fit(fit)
+    d = fit.support_dimension
+    if projected.shape[1:] != (d, d):
+        raise ValueError("blocks must be square with the fit support dimension")
     repetitions = _positive_int(random_repetitions, "random_repetitions")
     if isinstance(seed, (bool, np.bool_)) or not isinstance(seed, (int, np.integer)):
         raise TypeError("seed must be an integer")
-    full_energy = np.einsum("tij,tij->t", values, values, optimize=True)
-    if np.any(full_energy <= 0.0):
-        raise ValueError("held-out matrices must have positive Frobenius energy")
-    blocks = np.einsum(
-        "oi,tij,jk->tok", fit.output_support_basis.T, values, fit.input_support_basis, optimize=True
-    )
-    active_energy = np.einsum("tij,tij->t", blocks, blocks, optimize=True)
-    diagonal_energy = np.empty(len(values))
-    cross_energy = np.empty(len(values))
-    p, q, d = fit.output_core_projector, fit.input_core_projector, fit.support_dimension
+    try:
+        full_energy = np.asarray(full_operator_energies, dtype=np.float64)
+    except (TypeError, ValueError) as error:
+        raise ValueError("full_operator_energies must be a numeric array") from error
+    if full_energy.shape != (len(projected),):
+        raise ValueError("full_operator_energies must have one value per held-out block")
+    if not np.all(np.isfinite(full_energy)) or np.any(full_energy <= 0.0):
+        raise ValueError("full_operator_energies must be finite and positive")
+    active_energy = np.einsum("tij,tij->t", projected, projected, optimize=True)
+    if np.any(active_energy > full_energy * (1.0 + 1e-9)):
+        raise ValueError("projected block energy cannot exceed full operator energy")
+    diagonal_energy = np.empty(len(projected))
+    cross_energy = np.empty(len(projected))
+    p, q = fit.output_core_projector, fit.input_core_projector
     output_complement, input_complement = np.eye(d) - p, np.eye(d) - q
-    for index, block in enumerate(blocks):
+    for index, block in enumerate(projected):
         diagonal_energy[index] = _objective(block[None], p, q)
         first_cross = p @ block @ input_complement
         second_cross = output_complement @ block @ q
@@ -346,16 +448,30 @@ def held_out_block_metrics(
     coordinate_fraction = (
         fit.output_rank * fit.input_rank + (d - fit.output_rank) * (d - fit.input_rank)
     ) / d**2
-    concentration = np.divide(diagonal_energy, active_energy, out=np.zeros_like(active_energy), where=active_energy > 0)
-    leakage = np.divide(cross_energy, active_energy, out=np.zeros_like(active_energy), where=active_energy > 0)
+    concentration = np.divide(
+        diagonal_energy,
+        active_energy,
+        out=np.zeros_like(active_energy),
+        where=active_energy > 0,
+    )
+    leakage = np.divide(
+        cross_energy,
+        active_energy,
+        out=np.zeros_like(active_energy),
+        where=active_energy > 0,
+    )
 
     rng = np.random.default_rng(int(seed))
-    random_concentrations = np.empty((repetitions, len(values)))
+    random_concentrations = np.empty((repetitions, len(projected)))
     for repetition in range(repetitions):
         random_output = _random_projector(d, fit.output_rank, rng)
         random_input = _random_projector(d, fit.input_rank, rng)
-        for index, block in enumerate(blocks):
-            random_concentrations[repetition, index] = _objective(block[None], random_output, random_input) / active_energy[index] if active_energy[index] > 0 else 0.0
+        for index, block in enumerate(projected):
+            random_concentrations[repetition, index] = (
+                _objective(block[None], random_output, random_input) / active_energy[index]
+                if active_energy[index] > 0
+                else 0.0
+            )
     random_mean = np.mean(random_concentrations, axis=0)
     return {
         "active_support_energy_fraction": active_energy / full_energy,

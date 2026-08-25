@@ -5,8 +5,10 @@ from head_atlas.reducing_subspaces import (
     active_support_bases,
     ambient_projectors,
     fit_reducing_subspaces,
+    fit_reducing_subspaces_from_blocks,
     fit_reducing_subspaces_with_support,
     held_out_block_metrics,
+    held_out_block_metrics_from_blocks,
     normalized_trace_overlap,
     reducing_pair_overlap,
 )
@@ -139,6 +141,132 @@ def test_cached_active_support_gives_the_same_fit() -> None:
     assert np.allclose(direct.output_projector, cached.output_projector)
     assert np.allclose(direct.input_projector, cached.input_projector)
     assert direct.objective == cached.objective
+
+
+def test_projected_fit_and_metrics_are_exactly_equivalent_to_dense_paths() -> None:
+    rng = np.random.default_rng(107)
+    training, _, _ = _fixed_block_trajectory(rng, 18)
+    held_out, _, _ = _fixed_block_trajectory(rng, 7)
+    output_basis, input_basis = active_support_bases(training, 6)
+    training_blocks = np.einsum(
+        "oi,tij,jk->tok", output_basis.T, training, input_basis, optimize=True
+    )
+
+    dense_fit = fit_reducing_subspaces_with_support(
+        training,
+        output_basis,
+        input_basis,
+        3,
+        2,
+        random_starts=4,
+        seed=13,
+        max_iterations=80,
+        tolerance=1e-11,
+    )
+    projected_fit = fit_reducing_subspaces_from_blocks(
+        training_blocks,
+        output_basis,
+        input_basis,
+        3,
+        2,
+        random_starts=4,
+        seed=13,
+        max_iterations=80,
+        tolerance=1e-11,
+    )
+
+    assert dense_fit.objective == projected_fit.objective
+    assert dense_fit.iterations == projected_fit.iterations
+    assert np.array_equal(dense_fit.output_core_projector, projected_fit.output_core_projector)
+    assert np.array_equal(dense_fit.input_core_projector, projected_fit.input_core_projector)
+    assert np.array_equal(dense_fit.output_projector, projected_fit.output_projector)
+    assert np.array_equal(dense_fit.input_projector, projected_fit.input_projector)
+    assert np.array_equal(
+        dense_fit.output_support_projector, projected_fit.output_support_projector
+    )
+    assert np.array_equal(
+        dense_fit.input_support_projector, projected_fit.input_support_projector
+    )
+
+    held_blocks = np.einsum(
+        "oi,tij,jk->tok", output_basis.T, held_out, input_basis, optimize=True
+    )
+    full_energy = np.einsum("tij,tij->t", held_out, held_out, optimize=True)
+    dense_metrics = held_out_block_metrics(
+        held_out, dense_fit, random_repetitions=31, seed=17
+    )
+    projected_metrics = held_out_block_metrics_from_blocks(
+        held_blocks,
+        full_energy,
+        projected_fit,
+        random_repetitions=31,
+        seed=17,
+    )
+    assert dense_metrics.keys() == projected_metrics.keys()
+    for name in dense_metrics:
+        assert np.array_equal(dense_metrics[name], projected_metrics[name]), name
+
+
+@pytest.mark.parametrize(
+    ("blocks", "output_basis", "input_basis", "output_rank", "input_rank", "kwargs"),
+    [
+        (np.ones((2, 3, 2)), np.eye(3), np.eye(3), 1, 1, {}),
+        (np.ones((2, 3, 3)), np.eye(4, 3), np.eye(5, 2), 1, 1, {}),
+        (np.zeros((2, 3, 3)), np.eye(3), np.eye(3), 1, 1, {}),
+        (np.ones((2, 3, 3)), np.eye(3), np.eye(3), 3, 1, {}),
+        (np.ones((2, 3, 3)), np.eye(3), np.eye(3), 1, 1, {"random_starts": -1}),
+        (np.ones((2, 3, 3)), np.eye(3), np.eye(3), 1, 1, {"max_iterations": 0}),
+        (np.ones((2, 3, 3)), np.eye(3), np.eye(3), 1, 1, {"tolerance": np.nan}),
+    ],
+)
+def test_projected_fit_validation(
+    blocks: np.ndarray,
+    output_basis: np.ndarray,
+    input_basis: np.ndarray,
+    output_rank: int,
+    input_rank: int,
+    kwargs: dict[str, object],
+) -> None:
+    with pytest.raises(ValueError):
+        fit_reducing_subspaces_from_blocks(
+            blocks, output_basis, input_basis, output_rank, input_rank, **kwargs
+        )
+
+
+@pytest.mark.parametrize(
+    "kwargs",
+    [{"random_starts": True}, {"random_starts": 1.5}, {"seed": True}, {"seed": 1.5}],
+)
+def test_projected_fit_rejects_ambiguous_integer_controls(
+    kwargs: dict[str, object],
+) -> None:
+    with pytest.raises(TypeError):
+        fit_reducing_subspaces_from_blocks(
+            np.ones((2, 3, 3)), np.eye(3), np.eye(3), 1, 1, **kwargs
+        )
+
+
+@pytest.mark.parametrize(
+    ("energies", "kwargs"),
+    [
+        (np.ones(2), {}),
+        (np.array([1.0, 0.0, 1.0]), {}),
+        (np.array([1.0, np.nan, 1.0]), {}),
+        (np.ones(3), {"random_repetitions": 0}),
+    ],
+)
+def test_projected_metric_validation(
+    energies: np.ndarray, kwargs: dict[str, object]
+) -> None:
+    rng = np.random.default_rng(108)
+    training = rng.standard_normal((4, 3, 3))
+    fit = fit_reducing_subspaces_from_blocks(
+        training, np.eye(3), np.eye(3), 1, 1, random_starts=0
+    )
+    with pytest.raises(ValueError):
+        held_out_block_metrics_from_blocks(
+            rng.standard_normal((3, 3, 3)), energies, fit, **kwargs
+        )
 
 
 @pytest.mark.parametrize(

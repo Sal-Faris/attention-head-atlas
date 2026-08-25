@@ -104,11 +104,15 @@ selection.
 
 ## Stability
 
-Fit the selected configuration on two disjoint subsets of the training
-checkpoints and compare ambient projectors with normalized trace overlap.
-Because equal-size blocks can exchange labels, use the best legal direct or
-complement alignment. Report population distributions rather than requiring
-every head to be stable.
+Fit the frozen primary configuration (support 64, ranks 32 and 32) on two
+disjoint subsets of the development-to-mature training checkpoints and compare
+ambient projectors with normalized trace overlap. Stability is deliberately
+restricted to this fixed configuration: a 96-dimensional support cannot be
+identified from a one-checkpoint partition because each QK operator has rank at
+most 64. Because equal-size blocks can exchange labels, use the best legal
+direct or complement alignment. Report population distributions rather than
+requiring every head to be stable. The three-checkpoint late split is too short
+for a strong disjoint stability test and is therefore not used for that claim.
 
 ## Null hierarchy
 
@@ -186,4 +190,3 @@ Only if the gate is positive:
    length;
 4. attach architectural producer/consumer context before assigning a functional
    name.
-
