@@ -21,14 +21,14 @@ null then selects one such alternative per edge.
 
 Results:
 
-- selected recurrent-donor mean transfer R-squared: **0.0171**;
-- alternative same-layer donor mean R-squared: **0.0225**;
-- resampled control mean: **0.0225**, standard deviation **0.00884**;
-- upper-tail p-value for selected-donor mean: **0.7201**.
+- selected recurrent-donor mean transfer R-squared: **0.0334**;
+- alternative same-layer donor mean R-squared: **0.0284**;
+- resampled control mean: **0.0284**, standard deviation **0.01079**;
+- upper-tail p-value for selected-donor mean: **0.3115**.
 
-Three edges rank first among their seven exact source-layer alternatives, but
+Two edges rank first among their seven exact source-layer alternatives, but
 the population average does not beat the control.  The best individual
-examples are L2H0 -> L3H4 (R-squared 0.0886) and L3H4 -> L5H0 (0.0711); they
+examples are L2H0 -> L3H4 (R-squared 0.1475) and L3H2 -> L4H5 (0.0747); they
 are candidates for later targeted study, not evidence of a general mechanism.
 
 **Conclusion.** The observed local cross-layer QK subspace recurrence does
@@ -42,3 +42,13 @@ single globally fitted channel discards.
 The result is deliberately a negative control result, not a claim that the
 heads have no related role.  A relationship may instead be mediated by a
 shared subspace, a conditional input regime, or downstream composition.
+
+## Coordinate correction
+
+An initial version accidentally applied factors that were folded into the
+pre-layernorm residual coordinates to the stored *post*-layernorm residual
+states.  The final calculation instead estimates each Q/K affine factor in
+the artifact's normalized-residual coordinates and verifies it on the held-out
+split.  The maximum relative Q/K reconstruction error is **2.31e-7**.  The
+numbers above are exclusively from this corrected calculation; the initial
+numbers are superseded.
