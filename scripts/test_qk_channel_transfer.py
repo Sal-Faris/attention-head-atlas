@@ -30,7 +30,13 @@ def parse_args() -> argparse.Namespace:
         type=Path,
         default=Path("results/pythia-70m-deduped/subspace_family_audit.json"),
     )
+    parser.add_argument(
+        "--manifest",
+        type=Path,
+        default=Path("manifests/pythia-70m-deduped-pilot.json"),
+    )
     parser.add_argument("--iterations", type=int, default=200)
+    parser.add_argument("--rank", type=int, default=4)
     parser.add_argument("--resamples", type=int, default=9999)
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument(
@@ -65,16 +71,29 @@ def calibrated_prediction(discovery_score: np.ndarray, discovery_target: np.ndar
     return slope * confirmation_score + intercept
 
 
-def affine_factor(values: np.ndarray, targets: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
-    """Fit an exact Q/K affine map in the artifact's normalized-residual coordinates."""
+def raw_qk_affine_factors(snapshot: Path) -> dict[tuple[int, int], tuple[tuple[np.ndarray, np.ndarray], tuple[np.ndarray, np.ndarray]]]:
+    """Load native Q/K affine factors for states after the input layer norm."""
 
-    design = np.column_stack(
-        (values.reshape(-1, values.shape[-1]), np.ones(values.size // values.shape[-1]))
-    )
-    coefficients = np.linalg.lstsq(
-        design, targets.reshape(-1, targets.shape[-1]), rcond=None
-    )[0]
-    return coefficients[:-1], coefficients[-1]
+    from safetensors import safe_open
+
+    config = json.loads((snapshot / "config.json").read_text(encoding="utf-8"))
+    layers = int(config["num_hidden_layers"])
+    heads = int(config["num_attention_heads"])
+    width = int(config["hidden_size"]) // heads
+    with safe_open(snapshot / "model.safetensors", framework="np") as weights:
+        result = {}
+        for layer in range(layers):
+            prefix = f"gpt_neox.layers.{layer}.attention.query_key_value"
+            packed = weights.get_tensor(f"{prefix}.weight")
+            bias = weights.get_tensor(f"{prefix}.bias")
+            packed = packed.reshape(heads, 3, width, -1).transpose(1, 0, 3, 2)
+            bias = bias.reshape(heads, 3, width).transpose(1, 0, 2)
+            for head in range(heads):
+                result[(layer, head)] = (
+                    (packed[0, head], bias[0, head]),
+                    (packed[1, head], bias[1, head]),
+                )
+    return result
 
 
 def transferred_scores(
@@ -104,10 +123,12 @@ def main() -> None:
     layer_count = data["discovery_query_pre_rope"].shape[1]
     head_count = data["discovery_query_pre_rope"].shape[2]
     locations = [(layer, head) for layer in range(layer_count) for head in range(head_count)]
+    manifest = json.loads(args.manifest.read_text(encoding="utf-8"))
+    record = next(item for item in manifest["records"] if item["revision"] == "step143000")
+    factor_by_head = raw_qk_affine_factors(Path(record["snapshot"]))
     heads_by_layer = {layer: list(range(head_count)) for layer in range(layer_count)}
     channel_by_head = {}
     event_by_head = {}
-    factor_by_head = {}
     reconstruction_errors = []
     for layer, head in locations:
         q = data["discovery_query_post_rope"][:, layer, head]
@@ -118,20 +139,13 @@ def main() -> None:
         model = fit_bilinear_margin_model(
             discovery.q_rotated,
             discovery.k_positive_rotated - discovery.k_negative_rotated,
-            rank=4,
-            ridge=float(tuning[f"L{layer}H{head}"]["4"]["selected_ridge"]),
+            rank=args.rank,
+            ridge=float(tuning[f"L{layer}H{head}"][str(args.rank)]["selected_ridge"]),
             iterations=args.iterations,
         )
         channel_by_head[(layer, head)] = model.left @ model.right.T
         event_by_head[(layer, head)] = (discovery, confirmation)
-        normalized_discovery = data["discovery_normalized_residual"][:, layer]
-        query_factor = affine_factor(
-            normalized_discovery, data["discovery_query_pre_rope"][:, layer, head]
-        )
-        key_factor = affine_factor(
-            normalized_discovery, data["discovery_key_pre_rope"][:, layer, head]
-        )
-        factor_by_head[(layer, head)] = (query_factor, key_factor)
+        query_factor, key_factor = factor_by_head[(layer, head)]
         normalized_confirmation = data["confirmation_normalized_residual"][:, layer]
         predicted_query = normalized_confirmation @ query_factor[0] + query_factor[1]
         predicted_key = normalized_confirmation @ key_factor[0] + key_factor[1]
@@ -241,6 +255,7 @@ def main() -> None:
         json.dumps(
             {
                 "status": "calibrated normalized-residual QK channel transfer with source-layer controls",
+                "channel_rank": args.rank,
                 "control": (
                     "Alternative donor heads from the same donor layer; recipient and "
                     "calibration procedure fixed."
