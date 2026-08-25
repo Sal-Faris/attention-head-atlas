@@ -1,0 +1,314 @@
+{
+  "heads": {
+    "L1H3": {
+      "key_classes": 4,
+      "key_given_query": {
+        "bh_q": 0.002,
+        "conditional_mutual_information": 0.012712533782198113,
+        "excess_conditional_mutual_information": 0.004895561445545206,
+        "null_mean": 0.007816972336652907,
+        "upper_tail_p": 0.001
+      },
+      "query_classes": 4,
+      "query_given_key": {
+        "bh_q": 0.9767272727272727,
+        "conditional_mutual_information": 0.0064252281065235485,
+        "excess_conditional_mutual_information": -0.0022876108212743027,
+        "null_mean": 0.008712838927797851,
+        "upper_tail_p": 0.948
+      }
+    },
+    "L2H0": {
+      "key_classes": 4,
+      "key_given_query": {
+        "bh_q": 1.0,
+        "conditional_mutual_information": 0.0,
+        "excess_conditional_mutual_information": 0.0,
+        "null_mean": 0.0,
+        "upper_tail_p": 1.0
+      },
+      "query_classes": 4,
+      "query_given_key": {
+        "bh_q": 0.002,
+        "conditional_mutual_information": 0.017024784634611254,
+        "excess_conditional_mutual_information": 0.010245036799053323,
+        "null_mean": 0.006779747835557931,
+        "upper_tail_p": 0.001
+      }
+    },
+    "L2H7": {
+      "key_classes": 4,
+      "key_given_query": {
+        "bh_q": 0.034,
+        "conditional_mutual_information": 0.008064730487324924,
+        "excess_conditional_mutual_information": 0.002957705217549747,
+        "null_mean": 0.005107025269775177,
+        "upper_tail_p": 0.022
+      },
+      "query_classes": 4,
+      "query_given_key": {
+        "bh_q": 0.22984000000000002,
+        "conditional_mutual_information": 0.0038943170933419193,
+        "excess_conditional_mutual_information": 0.0008718396162226147,
+        "null_mean": 0.0030224774771193045,
+        "upper_tail_p": 0.169
+      }
+    },
+    "L3H0": {
+      "key_classes": 4,
+      "key_given_query": {
+        "bh_q": 0.002,
+        "conditional_mutual_information": 0.042471960625094646,
+        "excess_conditional_mutual_information": 0.03148959513681988,
+        "null_mean": 0.01098236548827477,
+        "upper_tail_p": 0.001
+      },
+      "query_classes": 4,
+      "query_given_key": {
+        "bh_q": 0.021047619047619048,
+        "conditional_mutual_information": 0.005330503906480842,
+        "excess_conditional_mutual_information": 0.0022017348088877254,
+        "null_mean": 0.0031287690975931167,
+        "upper_tail_p": 0.013
+      }
+    },
+    "L3H2": {
+      "key_classes": 4,
+      "key_given_query": {
+        "bh_q": 0.41650000000000004,
+        "conditional_mutual_information": 0.0017945805360375046,
+        "excess_conditional_mutual_information": 7.969955620238138e-05,
+        "null_mean": 0.0017148809798351232,
+        "upper_tail_p": 0.333
+      },
+      "query_classes": 4,
+      "query_given_key": {
+        "bh_q": 0.002,
+        "conditional_mutual_information": 0.015491458675759328,
+        "excess_conditional_mutual_information": 0.011569446495567386,
+        "null_mean": 0.003922012180191943,
+        "upper_tail_p": 0.001
+      }
+    },
+    "L3H4": {
+      "key_classes": 4,
+      "key_given_query": {
+        "bh_q": 0.002,
+        "conditional_mutual_information": 0.012690782441384036,
+        "excess_conditional_mutual_information": 0.006479750253788616,
+        "null_mean": 0.00621103218759542,
+        "upper_tail_p": 0.001
+      },
+      "query_classes": 4,
+      "query_given_key": {
+        "bh_q": 0.4806896551724138,
+        "conditional_mutual_information": 0.0027967255025506147,
+        "excess_conditional_mutual_information": 0.0001335602944687827,
+        "null_mean": 0.002663165208081832,
+        "upper_tail_p": 0.41
+      }
+    },
+    "L3H5": {
+      "key_classes": 4,
+      "key_given_query": {
+        "bh_q": 0.2837692307692308,
+        "conditional_mutual_information": 0.002187596970343697,
+        "excess_conditional_mutual_information": 0.00047095642718414897,
+        "null_mean": 0.001716640543159548,
+        "upper_tail_p": 0.217
+      },
+      "query_classes": 4,
+      "query_given_key": {
+        "bh_q": 0.002,
+        "conditional_mutual_information": 0.014324677967545585,
+        "excess_conditional_mutual_information": 0.011518362855530321,
+        "null_mean": 0.0028063151120152627,
+        "upper_tail_p": 0.001
+      }
+    },
+    "L3H7": {
+      "key_classes": 4,
+      "key_given_query": {
+        "bh_q": 0.002,
+        "conditional_mutual_information": 0.10813837521553311,
+        "excess_conditional_mutual_information": 0.06704147171992911,
+        "null_mean": 0.041096903495604,
+        "upper_tail_p": 0.001
+      },
+      "query_classes": 3,
+      "query_given_key": {
+        "bh_q": 0.4964,
+        "conditional_mutual_information": 0.0017245957370839453,
+        "excess_conditional_mutual_information": 6.653640730809704e-05,
+        "null_mean": 0.0016580593297758483,
+        "upper_tail_p": 0.438
+      }
+    },
+    "L4H1": {
+      "key_classes": 3,
+      "key_given_query": {
+        "bh_q": 0.03695652173913044,
+        "conditional_mutual_information": 0.009056981529504514,
+        "excess_conditional_mutual_information": 0.0026707711723646327,
+        "null_mean": 0.006386210357139881,
+        "upper_tail_p": 0.025
+      },
+      "query_classes": 4,
+      "query_given_key": {
+        "bh_q": 0.5604516129032258,
+        "conditional_mutual_information": 0.004538202696668412,
+        "excess_conditional_mutual_information": -0.00010352090505903744,
+        "null_mean": 0.0046417236017274495,
+        "upper_tail_p": 0.511
+      }
+    },
+    "L4H4": {
+      "key_classes": 4,
+      "key_given_query": {
+        "bh_q": 0.002,
+        "conditional_mutual_information": 0.02293558309102365,
+        "excess_conditional_mutual_information": 0.009758721436509573,
+        "null_mean": 0.013176861654514076,
+        "upper_tail_p": 0.001
+      },
+      "query_classes": 4,
+      "query_given_key": {
+        "bh_q": 0.002,
+        "conditional_mutual_information": 0.023135827938472107,
+        "excess_conditional_mutual_information": 0.017583451906390254,
+        "null_mean": 0.005552376032081852,
+        "upper_tail_p": 0.001
+      }
+    },
+    "L4H5": {
+      "key_classes": 4,
+      "key_given_query": {
+        "bh_q": 0.002,
+        "conditional_mutual_information": 0.03325511241446146,
+        "excess_conditional_mutual_information": 0.008829919438746503,
+        "null_mean": 0.02442519297571496,
+        "upper_tail_p": 0.001
+      },
+      "query_classes": 4,
+      "query_given_key": {
+        "bh_q": 0.003777777777777778,
+        "conditional_mutual_information": 0.01104430309501052,
+        "excess_conditional_mutual_information": 0.00506002792007719,
+        "null_mean": 0.005984275174933331,
+        "upper_tail_p": 0.002
+      }
+    },
+    "L4H7": {
+      "key_classes": 4,
+      "key_given_query": {
+        "bh_q": 0.41650000000000004,
+        "conditional_mutual_information": 0.01390398479721117,
+        "excess_conditional_mutual_information": 0.0005649458367041286,
+        "null_mean": 0.013339038960507041,
+        "upper_tail_p": 0.343
+      },
+      "query_classes": 4,
+      "query_given_key": {
+        "bh_q": 0.002,
+        "conditional_mutual_information": 0.009391092795070815,
+        "excess_conditional_mutual_information": 0.0043181618187676865,
+        "null_mean": 0.005072930976303128,
+        "upper_tail_p": 0.001
+      }
+    },
+    "L5H0": {
+      "key_classes": 4,
+      "key_given_query": {
+        "bh_q": 0.002,
+        "conditional_mutual_information": 0.027394470249527295,
+        "excess_conditional_mutual_information": 0.020580641656390338,
+        "null_mean": 0.006813828593136958,
+        "upper_tail_p": 0.001
+      },
+      "query_classes": 4,
+      "query_given_key": {
+        "bh_q": 0.002,
+        "conditional_mutual_information": 0.016634731988422788,
+        "excess_conditional_mutual_information": 0.012177421962520491,
+        "null_mean": 0.004457310025902297,
+        "upper_tail_p": 0.001
+      }
+    },
+    "L5H1": {
+      "key_classes": 4,
+      "key_given_query": {
+        "bh_q": 0.002,
+        "conditional_mutual_information": 0.05908569639151481,
+        "excess_conditional_mutual_information": 0.040810308248643554,
+        "null_mean": 0.018275388142871257,
+        "upper_tail_p": 0.001
+      },
+      "query_classes": 4,
+      "query_given_key": {
+        "bh_q": 0.017,
+        "conditional_mutual_information": 0.009215572867150745,
+        "excess_conditional_mutual_information": 0.00361134489952998,
+        "null_mean": 0.0056042279676207655,
+        "upper_tail_p": 0.01
+      }
+    },
+    "L5H2": {
+      "key_classes": 3,
+      "key_given_query": {
+        "bh_q": 0.002,
+        "conditional_mutual_information": 0.016440187602439555,
+        "excess_conditional_mutual_information": 0.009378906862380153,
+        "null_mean": 0.007061280740059402,
+        "upper_tail_p": 0.001
+      },
+      "query_classes": 4,
+      "query_given_key": {
+        "bh_q": 0.09916666666666668,
+        "conditional_mutual_information": 0.006055673686880793,
+        "excess_conditional_mutual_information": 0.0016420449100572323,
+        "null_mean": 0.0044136287768235605,
+        "upper_tail_p": 0.07
+      }
+    },
+    "L5H3": {
+      "key_classes": 4,
+      "key_given_query": {
+        "bh_q": 0.008947368421052633,
+        "conditional_mutual_information": 0.015767101841376276,
+        "excess_conditional_mutual_information": 0.004655127867064823,
+        "null_mean": 0.011111973974311453,
+        "upper_tail_p": 0.005
+      },
+      "query_classes": 4,
+      "query_given_key": {
+        "bh_q": 0.002,
+        "conditional_mutual_information": 0.01046951292553798,
+        "excess_conditional_mutual_information": 0.0044970672830935525,
+        "null_mean": 0.005972445642444427,
+        "upper_tail_p": 0.001
+      }
+    },
+    "L5H4": {
+      "key_classes": 4,
+      "key_given_query": {
+        "bh_q": 0.002,
+        "conditional_mutual_information": 0.014036045765391079,
+        "excess_conditional_mutual_information": 0.007245892638220374,
+        "null_mean": 0.006790153127170705,
+        "upper_tail_p": 0.001
+      },
+      "query_classes": 4,
+      "query_given_key": {
+        "bh_q": 0.5833125,
+        "conditional_mutual_information": 0.006421018053831255,
+        "excess_conditional_mutual_information": -0.0002062608679561,
+        "null_mean": 0.006627278921787355,
+        "upper_tail_p": 0.549
+      }
+    }
+  },
+  "input_classes": "discovery-only PCA-whitened diagonal-GMM, BIC over 1..4 classes",
+  "null": "permute dominant component within document, offset, and conditioned-side class",
+  "permutations": 999,
+  "status": "held-out joint QK input-rule test"
+}
