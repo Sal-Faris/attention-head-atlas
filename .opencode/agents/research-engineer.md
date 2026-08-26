@@ -3,31 +3,20 @@ description: Substantial numerical and multi-file research implementation under 
 mode: subagent
 model: openai/gpt-5.6-terra
 steps: 80
-permissions:
-  - action: edit
-    resource: "*"
-    effect: allow
-  - action: shell
-    resource: "python -m pytest *"
-    effect: allow
-  - action: shell
-    resource: "python -m ruff check *"
-    effect: allow
-  - action: shell
-    resource: "python -m unittest *"
-    effect: allow
-  - action: shell
-    resource: "git status *"
-    effect: allow
-  - action: shell
-    resource: "git diff *"
-    effect: allow
-  - action: shell
-    resource: "git push *"
-    effect: deny
-  - action: subagent
-    resource: "*"
-    effect: deny
+permission:
+  edit: allow
+  task: deny
+  doom_loop: ask
+  bash:
+    "*": ask
+    "python -m pytest *": allow
+    "python -m ruff check *": allow
+    "python -m unittest *": allow
+    "git status *": allow
+    "git diff *": allow
+    "git push *": deny
+    "git reset --hard *": deny
+    "git clean *": deny
 ---
 
 Implement bounded research-engineering tasks from an explicit contract. Inspect existing architecture and tests first. Preserve the specified estimand, splits, nulls, selection rules, seeds, and interpretation boundaries.

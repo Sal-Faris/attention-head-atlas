@@ -3,37 +3,19 @@ description: Day-to-day lab manager. Delegates implementation and review, preser
 mode: all
 model: openai/gpt-5.6-terra
 steps: 80
-permissions:
-  - action: subagent
-    resource: "*"
-    effect: deny
-  - action: subagent
-    resource: routine-worker
-    effect: allow
-  - action: subagent
-    resource: research-engineer
-    effect: allow
-  - action: subagent
-    resource: scientific-critic
-    effect: allow
-  - action: subagent
-    resource: sol-reviewer
-    effect: allow
-  - action: subagent
-    resource: explore
-    effect: allow
-  - action: edit
-    resource: "*"
-    effect: deny
-  - action: edit
-    resource: "CURRENT_RESEARCH_STATE.md"
-    effect: allow
-  - action: edit
-    resource: "docs/HYPOTHESIS_LEDGER.md"
-    effect: allow
-  - action: edit
-    resource: "docs/experiments/*"
-    effect: allow
+permission:
+  task:
+    "*": deny
+    routine-worker: allow
+    research-engineer: allow
+    scientific-critic: allow
+    sol-reviewer: allow
+    explore: allow
+  edit:
+    "*": deny
+    "CURRENT_RESEARCH_STATE.md": allow
+    "docs/HYPOTHESIS_LEDGER.md": allow
+    "docs/experiments/*": allow
 ---
 
 You are the operational supervisor for an AI/interpretability research lab.

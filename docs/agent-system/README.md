@@ -11,7 +11,7 @@ This project is configured so expensive frontier reasoning is concentrated on sc
 - `scientific-critic` — read-only Terra methodological adversary.
 - `sol-reviewer` — read-only Sol escalation for genuinely consequential unresolved issues.
 
-OpenCode V2 discovers these agents from `.opencode/agents/`. Use `/agents` or the TUI agent selector to switch primary agents. The `research` agent can delegate a frozen experiment to `lab`; `lab` can delegate to the workers and escalate to `sol-reviewer`.
+OpenCode discovers these agents from `.opencode/agents/`. Primary agents can be selected in the UI/agent selector; subagents can be invoked automatically according to their descriptions or directly with `@agent-name` where supported.
 
 ## Recommended conversation pattern
 
@@ -20,6 +20,23 @@ For research ideation, switch to `research` and talk normally. The point is to p
 Once the idea is sufficiently precise, ask the research agent to freeze an implementation-ready research contract and delegate it to `lab`.
 
 For routine operation, use `lab`. It should delegate mechanical work rather than perform it itself. If a worker encounters a scientific ambiguity, the task returns upward rather than being guessed away.
+
+## Anti-repeat
+
+Before proposing or implementing a scientific experiment, agents must check the current state, hypothesis ledger, experiment index, and relevant checkpoint history. If the proposed experiment is equivalent to an old one under different language, it should be stopped or explicitly distinguished before compute is spent.
+
+Negative experiments are deliberately retained with `repeat only if` conditions so an old dead end becomes reusable knowledge rather than forgotten history.
+
+## Anti-meandering
+
+This does not mean forcing research to be short. It means bounded execution loops for workers:
+
+- `steps` caps prevent an implementation agent from iterating indefinitely;
+- OpenCode's built-in `doom_loop` guard can interrupt identical repeated tool calls;
+- routine workers are instructed to stop after two materially different failed debugging attempts and return a blocker report;
+- conceptual uncertainty escalates upward instead of being attacked forever by a cheap worker.
+
+The Sol research conversation itself is not constrained by the same two-attempt rule; exploratory scientific discussion can remain open-ended when it is genuinely productive.
 
 ## Verification philosophy
 
@@ -46,7 +63,8 @@ The project config:
 - permits repository reading, searching, web search/fetch, and skills;
 - asks before arbitrary shell commands;
 - permits common read-only Git commands;
-- denies automatic `git push`, destructive reset/clean, and common direct deletion commands.
+- denies automatic `git push`, destructive reset/clean, and common direct deletion commands;
+- leaves OpenCode's doom-loop recovery enabled as an approval boundary.
 
 Worker agents explicitly allow the normal pytest/Ruff verification commands. Widen permissions only after observing real tasks and deciding which commands are safe for unattended execution.
 
@@ -63,6 +81,10 @@ Scientific state is not stored only in chat history:
 - `.opencode/skills/` — reusable procedural/epistemic knowledge.
 
 The experiment index currently seeds checkpoint 0026; the older checkpoint history should be backfilled automatically as a bookkeeping task. Until then, agents are required to search the checkpoint directory before calling an experiment new.
+
+## OpenCode version
+
+The normal installer/download from the OpenCode website is the stable OpenCode line (`opencode` / Desktop). OpenCode 2 is a separate beta installed as `opencode2`; it is not required for this setup. This repository intentionally uses stable OpenCode permission syntax.
 
 ## Next layers
 

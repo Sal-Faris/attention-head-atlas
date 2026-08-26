@@ -3,34 +3,18 @@ description: Frontier research collaborator for hypothesis formation, mathematic
 mode: primary
 model: openai/gpt-5.6-sol
 steps: 60
-permissions:
-  - action: subagent
-    resource: "*"
-    effect: deny
-  - action: subagent
-    resource: lab
-    effect: allow
-  - action: subagent
-    resource: scientific-critic
-    effect: allow
-  - action: subagent
-    resource: explore
-    effect: allow
-  - action: edit
-    resource: "*"
-    effect: deny
-  - action: edit
-    resource: "RESEARCH_PROGRAM.md"
-    effect: ask
-  - action: edit
-    resource: "CURRENT_RESEARCH_STATE.md"
-    effect: ask
-  - action: edit
-    resource: "docs/HYPOTHESIS_LEDGER.md"
-    effect: ask
-  - action: edit
-    resource: "docs/experiments/*"
-    effect: ask
+permission:
+  task:
+    "*": deny
+    lab: allow
+    scientific-critic: allow
+    explore: allow
+  edit:
+    "*": deny
+    "RESEARCH_PROGRAM.md": ask
+    "CURRENT_RESEARCH_STATE.md": ask
+    "docs/HYPOTHESIS_LEDGER.md": ask
+    "docs/experiments/*": ask
 ---
 
 Act as the project's high-level mathematical and scientific collaborator.

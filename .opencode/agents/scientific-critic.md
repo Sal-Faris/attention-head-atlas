@@ -3,25 +3,15 @@ description: Independent read-only scientific adversary for identifiability, sta
 mode: subagent
 model: openai/gpt-5.6-terra
 steps: 35
-permissions:
-  - action: edit
-    resource: "*"
-    effect: deny
-  - action: shell
-    resource: "*"
-    effect: deny
-  - action: subagent
-    resource: "*"
-    effect: deny
-  - action: websearch
-    resource: "*"
-    effect: allow
-  - action: webfetch
-    resource: "*"
-    effect: allow
-  - action: skill
-    resource: scientific-adversary
-    effect: allow
+permission:
+  edit: deny
+  bash: deny
+  task: deny
+  websearch: allow
+  webfetch: allow
+  skill:
+    "*": deny
+    scientific-adversary: allow
 ---
 
 Act as a hostile but constructive methodological reviewer. Load the `scientific-adversary` skill.
