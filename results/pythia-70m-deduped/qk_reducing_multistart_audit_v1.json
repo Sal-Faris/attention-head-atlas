@@ -1,0 +1,664 @@
+{
+  "budgets": {
+    "120": {
+      "max_iterations": 120,
+      "splits": {
+        "late_sensitivity": {
+          "comparison": {
+            "confirmation_active_support_energy_fraction": {
+              "null_population_mean": 0.2056962907717406,
+              "null_population_means": [
+                0.20525420349633228,
+                0.20576166685678668,
+                0.20607300196210288
+              ],
+              "real_minus_null_by_repetition": [
+                -0.007677490527569081,
+                -0.008184953888023483,
+                -0.008496288993339679
+              ],
+              "real_minus_null_mean": -0.008119577802977396,
+              "real_population_mean": 0.1975767129687632
+            },
+            "confirmation_block_diagonal_concentration": {
+              "null_population_mean": 0.7985934629473025,
+              "null_population_means": [
+                0.7991814967435363,
+                0.7980165567583565,
+                0.7985823353400147
+              ],
+              "real_minus_null_by_repetition": [
+                -0.007188715150980851,
+                -0.006023775165800993,
+                -0.006589553747459176
+              ],
+              "real_minus_null_mean": -0.006600681354747007,
+              "real_population_mean": 0.7919927815925555
+            },
+            "confirmation_gain_over_random": {
+              "null_population_mean": 0.2986537965422826,
+              "null_population_means": [
+                0.2986748973687829,
+                0.29812695337471534,
+                0.2991595388833495
+              ],
+              "real_minus_null_by_repetition": [
+                -0.006749039169596294,
+                -0.006201095175528748,
+                -0.007233680684162913
+              ],
+              "real_minus_null_mean": -0.006727938343095985,
+              "real_population_mean": 0.2919258581991866
+            }
+          },
+          "real": {
+            "head_count": 48,
+            "population": {
+              "confirmation_active_support_energy_fraction": {
+                "count": 48,
+                "maximum": 0.42843767734881577,
+                "mean": 0.1975767129687632,
+                "median": 0.17445495806187017,
+                "minimum": 0.07693608900556989,
+                "q25": 0.1432742452301765,
+                "q75": 0.23439182232120798,
+                "standard_deviation": 0.08078217785544518
+              },
+              "confirmation_block_diagonal_concentration": {
+                "count": 48,
+                "maximum": 0.9123610546073442,
+                "mean": 0.7919927815925555,
+                "median": 0.7977172281809832,
+                "minimum": 0.6048610801291047,
+                "q25": 0.7653362462399252,
+                "q75": 0.8309529299496221,
+                "standard_deviation": 0.06351086127652945
+              },
+              "confirmation_gain_over_random": {
+                "count": 48,
+                "maximum": 0.41384008829393804,
+                "mean": 0.2919258581991866,
+                "median": 0.29482822429186734,
+                "minimum": 0.09747654356482982,
+                "q25": 0.26366051870634266,
+                "q75": 0.3319674417700681,
+                "standard_deviation": 0.06440283799497658
+              }
+            }
+          },
+          "real_seed": 2934197695,
+          "smooth_null_repetitions": [
+            {
+              "fit_seed": 522222034,
+              "population_means": {
+                "confirmation_active_support_energy_fraction": 0.20525420349633228,
+                "confirmation_block_diagonal_concentration": 0.7991814967435363,
+                "confirmation_gain_over_random": 0.2986748973687829
+              },
+              "repetition": 0,
+              "trajectory_seed": 3014232688
+            },
+            {
+              "fit_seed": 2863162201,
+              "population_means": {
+                "confirmation_active_support_energy_fraction": 0.20576166685678668,
+                "confirmation_block_diagonal_concentration": 0.7980165567583565,
+                "confirmation_gain_over_random": 0.29812695337471534
+              },
+              "repetition": 1,
+              "trajectory_seed": 665761825
+            },
+            {
+              "fit_seed": 4268710076,
+              "population_means": {
+                "confirmation_active_support_energy_fraction": 0.20607300196210288,
+                "confirmation_block_diagonal_concentration": 0.7985823353400147,
+                "confirmation_gain_over_random": 0.2991595388833495
+              },
+              "repetition": 2,
+              "trajectory_seed": 3330841153
+            }
+          ]
+        },
+        "primary": {
+          "comparison": {
+            "confirmation_active_support_energy_fraction": {
+              "null_population_mean": 0.07248025419174274,
+              "null_population_means": [
+                0.07231686862409914,
+                0.07269513629876946,
+                0.07242875765235962
+              ],
+              "real_minus_null_by_repetition": [
+                -0.01479188864134856,
+                -0.015170156316018882,
+                -0.014903777669609042
+              ],
+              "real_minus_null_mean": -0.014955274208992161,
+              "real_population_mean": 0.05752497998275058
+            },
+            "confirmation_block_diagonal_concentration": {
+              "null_population_mean": 0.6707901662056872,
+              "null_population_means": [
+                0.671046201662775,
+                0.6737306127244852,
+                0.6675936842298013
+              ],
+              "real_minus_null_by_repetition": [
+                -0.023665146972872253,
+                -0.0263495580345825,
+                -0.020212629539898552
+              ],
+              "real_minus_null_mean": -0.02340911151578451,
+              "real_population_mean": 0.6473810546899027
+            },
+            "confirmation_gain_over_random": {
+              "null_population_mean": 0.17067644854501055,
+              "null_population_means": [
+                0.1711361175109265,
+                0.1736144148489496,
+                0.1672788132751556
+              ],
+              "real_minus_null_by_repetition": [
+                -0.02417397316532588,
+                -0.02665227050334898,
+                -0.02031666892955497
+              ],
+              "real_minus_null_mean": -0.023714304199409925,
+              "real_population_mean": 0.14696214434560062
+            }
+          },
+          "real": {
+            "head_count": 48,
+            "population": {
+              "confirmation_active_support_energy_fraction": {
+                "count": 48,
+                "maximum": 0.17801590902198422,
+                "mean": 0.05752497998275058,
+                "median": 0.04715697999532181,
+                "minimum": 0.022563615352148292,
+                "q25": 0.03648173497210379,
+                "q75": 0.06860384298760214,
+                "standard_deviation": 0.032689634278494
+              },
+              "confirmation_block_diagonal_concentration": {
+                "count": 48,
+                "maximum": 0.8142734903677895,
+                "mean": 0.6473810546899027,
+                "median": 0.6395715035432501,
+                "minimum": 0.5150226043547054,
+                "q25": 0.6072739040273006,
+                "q75": 0.6797379290621193,
+                "standard_deviation": 0.06892577708502742
+              },
+              "confirmation_gain_over_random": {
+                "count": 48,
+                "maximum": 0.3116236285905988,
+                "mean": 0.14696214434560062,
+                "median": 0.1406890506677647,
+                "minimum": 0.013718713652393938,
+                "q25": 0.10627564452179186,
+                "q75": 0.1843386406890367,
+                "standard_deviation": 0.06910239510716532
+              }
+            }
+          },
+          "real_seed": 1739877788,
+          "smooth_null_repetitions": [
+            {
+              "fit_seed": 574685238,
+              "population_means": {
+                "confirmation_active_support_energy_fraction": 0.07231686862409914,
+                "confirmation_block_diagonal_concentration": 0.671046201662775,
+                "confirmation_gain_over_random": 0.1711361175109265
+              },
+              "repetition": 0,
+              "trajectory_seed": 3014232688
+            },
+            {
+              "fit_seed": 1178634494,
+              "population_means": {
+                "confirmation_active_support_energy_fraction": 0.07269513629876946,
+                "confirmation_block_diagonal_concentration": 0.6737306127244852,
+                "confirmation_gain_over_random": 0.1736144148489496
+              },
+              "repetition": 1,
+              "trajectory_seed": 665761825
+            },
+            {
+              "fit_seed": 33096907,
+              "population_means": {
+                "confirmation_active_support_energy_fraction": 0.07242875765235962,
+                "confirmation_block_diagonal_concentration": 0.6675936842298013,
+                "confirmation_gain_over_random": 0.1672788132751556
+              },
+              "repetition": 2,
+              "trajectory_seed": 3330841153
+            }
+          ]
+        }
+      }
+    }
+  },
+  "changes_across_budgets": {
+    "late_sensitivity": {
+      "confirmation_active_support_energy_fraction": {
+        "null_population_mean": {
+          "largest_budget_reference": 0.2056962907717406,
+          "maximum_absolute_pairwise_change": 0.0,
+          "maximum_relative_pairwise_change": 0.0,
+          "relative_change_denominator": "absolute value at largest iteration budget",
+          "values_by_iteration_budget": {
+            "120": 0.2056962907717406
+          }
+        },
+        "real_minus_null_mean": {
+          "largest_budget_reference": -0.008119577802977396,
+          "maximum_absolute_pairwise_change": 0.0,
+          "maximum_relative_pairwise_change": 0.0,
+          "relative_change_denominator": "absolute value at largest iteration budget",
+          "values_by_iteration_budget": {
+            "120": -0.008119577802977396
+          }
+        },
+        "real_population_mean": {
+          "largest_budget_reference": 0.1975767129687632,
+          "maximum_absolute_pairwise_change": 0.0,
+          "maximum_relative_pairwise_change": 0.0,
+          "relative_change_denominator": "absolute value at largest iteration budget",
+          "values_by_iteration_budget": {
+            "120": 0.1975767129687632
+          }
+        }
+      },
+      "confirmation_block_diagonal_concentration": {
+        "null_population_mean": {
+          "largest_budget_reference": 0.7985934629473025,
+          "maximum_absolute_pairwise_change": 0.0,
+          "maximum_relative_pairwise_change": 0.0,
+          "relative_change_denominator": "absolute value at largest iteration budget",
+          "values_by_iteration_budget": {
+            "120": 0.7985934629473025
+          }
+        },
+        "real_minus_null_mean": {
+          "largest_budget_reference": -0.006600681354747007,
+          "maximum_absolute_pairwise_change": 0.0,
+          "maximum_relative_pairwise_change": 0.0,
+          "relative_change_denominator": "absolute value at largest iteration budget",
+          "values_by_iteration_budget": {
+            "120": -0.006600681354747007
+          }
+        },
+        "real_population_mean": {
+          "largest_budget_reference": 0.7919927815925555,
+          "maximum_absolute_pairwise_change": 0.0,
+          "maximum_relative_pairwise_change": 0.0,
+          "relative_change_denominator": "absolute value at largest iteration budget",
+          "values_by_iteration_budget": {
+            "120": 0.7919927815925555
+          }
+        }
+      },
+      "confirmation_gain_over_random": {
+        "null_population_mean": {
+          "largest_budget_reference": 0.2986537965422826,
+          "maximum_absolute_pairwise_change": 0.0,
+          "maximum_relative_pairwise_change": 0.0,
+          "relative_change_denominator": "absolute value at largest iteration budget",
+          "values_by_iteration_budget": {
+            "120": 0.2986537965422826
+          }
+        },
+        "real_minus_null_mean": {
+          "largest_budget_reference": -0.006727938343095985,
+          "maximum_absolute_pairwise_change": 0.0,
+          "maximum_relative_pairwise_change": 0.0,
+          "relative_change_denominator": "absolute value at largest iteration budget",
+          "values_by_iteration_budget": {
+            "120": -0.006727938343095985
+          }
+        },
+        "real_population_mean": {
+          "largest_budget_reference": 0.2919258581991866,
+          "maximum_absolute_pairwise_change": 0.0,
+          "maximum_relative_pairwise_change": 0.0,
+          "relative_change_denominator": "absolute value at largest iteration budget",
+          "values_by_iteration_budget": {
+            "120": 0.2919258581991866
+          }
+        }
+      }
+    },
+    "primary": {
+      "confirmation_active_support_energy_fraction": {
+        "null_population_mean": {
+          "largest_budget_reference": 0.07248025419174274,
+          "maximum_absolute_pairwise_change": 0.0,
+          "maximum_relative_pairwise_change": 0.0,
+          "relative_change_denominator": "absolute value at largest iteration budget",
+          "values_by_iteration_budget": {
+            "120": 0.07248025419174274
+          }
+        },
+        "real_minus_null_mean": {
+          "largest_budget_reference": -0.014955274208992161,
+          "maximum_absolute_pairwise_change": 0.0,
+          "maximum_relative_pairwise_change": 0.0,
+          "relative_change_denominator": "absolute value at largest iteration budget",
+          "values_by_iteration_budget": {
+            "120": -0.014955274208992161
+          }
+        },
+        "real_population_mean": {
+          "largest_budget_reference": 0.05752497998275058,
+          "maximum_absolute_pairwise_change": 0.0,
+          "maximum_relative_pairwise_change": 0.0,
+          "relative_change_denominator": "absolute value at largest iteration budget",
+          "values_by_iteration_budget": {
+            "120": 0.05752497998275058
+          }
+        }
+      },
+      "confirmation_block_diagonal_concentration": {
+        "null_population_mean": {
+          "largest_budget_reference": 0.6707901662056872,
+          "maximum_absolute_pairwise_change": 0.0,
+          "maximum_relative_pairwise_change": 0.0,
+          "relative_change_denominator": "absolute value at largest iteration budget",
+          "values_by_iteration_budget": {
+            "120": 0.6707901662056872
+          }
+        },
+        "real_minus_null_mean": {
+          "largest_budget_reference": -0.02340911151578451,
+          "maximum_absolute_pairwise_change": 0.0,
+          "maximum_relative_pairwise_change": 0.0,
+          "relative_change_denominator": "absolute value at largest iteration budget",
+          "values_by_iteration_budget": {
+            "120": -0.02340911151578451
+          }
+        },
+        "real_population_mean": {
+          "largest_budget_reference": 0.6473810546899027,
+          "maximum_absolute_pairwise_change": 0.0,
+          "maximum_relative_pairwise_change": 0.0,
+          "relative_change_denominator": "absolute value at largest iteration budget",
+          "values_by_iteration_budget": {
+            "120": 0.6473810546899027
+          }
+        }
+      },
+      "confirmation_gain_over_random": {
+        "null_population_mean": {
+          "largest_budget_reference": 0.17067644854501055,
+          "maximum_absolute_pairwise_change": 0.0,
+          "maximum_relative_pairwise_change": 0.0,
+          "relative_change_denominator": "absolute value at largest iteration budget",
+          "values_by_iteration_budget": {
+            "120": 0.17067644854501055
+          }
+        },
+        "real_minus_null_mean": {
+          "largest_budget_reference": -0.023714304199409925,
+          "maximum_absolute_pairwise_change": 0.0,
+          "maximum_relative_pairwise_change": 0.0,
+          "relative_change_denominator": "absolute value at largest iteration budget",
+          "values_by_iteration_budget": {
+            "120": -0.023714304199409925
+          }
+        },
+        "real_population_mean": {
+          "largest_budget_reference": 0.14696214434560062,
+          "maximum_absolute_pairwise_change": 0.0,
+          "maximum_relative_pairwise_change": 0.0,
+          "relative_change_denominator": "absolute value at largest iteration budget",
+          "values_by_iteration_budget": {
+            "120": 0.14696214434560062
+          }
+        }
+      }
+    }
+  },
+  "load": {
+    "checkpoint_metadata": {
+      "step0": {
+        "architectures": [
+          "GPTNeoXForCausalLM"
+        ],
+        "d_head": 64,
+        "d_model": 512,
+        "format": "factorized-head-operator-v1",
+        "git_commit": "c343ed925f0de6f4a2f5e5a6e6417fd5a1d34e53",
+        "kind": "QK",
+        "model": "EleutherAI/pythia-70m-deduped",
+        "model_type": "gpt_neox",
+        "n_heads": 8,
+        "n_layers": 6,
+        "numpy": "2.5.2",
+        "operator_count": 48,
+        "python": "3.12.4",
+        "revision": "step0",
+        "rope_theta": 10000,
+        "rotary_pct": 0.25,
+        "snapshot_commit": "c913ae980de9355947d0bf73f9f10d580eb79301",
+        "source_format": "huggingface-safetensors",
+        "weight_processing": "fold_layer_norm_and_center_readers_and_writers"
+      },
+      "step1000": {
+        "architectures": [
+          "GPTNeoXForCausalLM"
+        ],
+        "d_head": 64,
+        "d_model": 512,
+        "format": "factorized-head-operator-v1",
+        "git_commit": "c343ed925f0de6f4a2f5e5a6e6417fd5a1d34e53",
+        "kind": "QK",
+        "model": "EleutherAI/pythia-70m-deduped",
+        "model_type": "gpt_neox",
+        "n_heads": 8,
+        "n_layers": 6,
+        "numpy": "2.5.2",
+        "operator_count": 48,
+        "python": "3.12.4",
+        "revision": "step1000",
+        "rope_theta": 10000,
+        "rotary_pct": 0.25,
+        "snapshot_commit": "66bac1f7ae4b7faa77c34ee6a50d41cd09579a88",
+        "source_format": "huggingface-safetensors",
+        "weight_processing": "fold_layer_norm_and_center_readers_and_writers"
+      },
+      "step143000": {
+        "architectures": [
+          "GPTNeoXForCausalLM"
+        ],
+        "d_head": 64,
+        "d_model": 512,
+        "format": "factorized-head-operator-v1",
+        "git_commit": "c343ed925f0de6f4a2f5e5a6e6417fd5a1d34e53",
+        "kind": "QK",
+        "model": "EleutherAI/pythia-70m-deduped",
+        "model_type": "gpt_neox",
+        "n_heads": 8,
+        "n_layers": 6,
+        "numpy": "2.5.2",
+        "operator_count": 48,
+        "python": "3.12.4",
+        "revision": "step143000",
+        "rope_theta": 10000,
+        "rotary_pct": 0.25,
+        "snapshot_commit": "9a7c847e93250c8f24d4b7e7134dbf369e8fc9cb",
+        "source_format": "huggingface-safetensors",
+        "weight_processing": "fold_layer_norm_and_center_readers_and_writers"
+      },
+      "step16000": {
+        "architectures": [
+          "GPTNeoXForCausalLM"
+        ],
+        "d_head": 64,
+        "d_model": 512,
+        "format": "factorized-head-operator-v1",
+        "git_commit": "c343ed925f0de6f4a2f5e5a6e6417fd5a1d34e53",
+        "kind": "QK",
+        "model": "EleutherAI/pythia-70m-deduped",
+        "model_type": "gpt_neox",
+        "n_heads": 8,
+        "n_layers": 6,
+        "numpy": "2.5.2",
+        "operator_count": 48,
+        "python": "3.12.4",
+        "revision": "step16000",
+        "rope_theta": 10000,
+        "rotary_pct": 0.25,
+        "snapshot_commit": "eba780c73a4c19dbcc119a21a6ac5b4c7ef9c7e5",
+        "source_format": "huggingface-safetensors",
+        "weight_processing": "fold_layer_norm_and_center_readers_and_writers"
+      },
+      "step4000": {
+        "architectures": [
+          "GPTNeoXForCausalLM"
+        ],
+        "d_head": 64,
+        "d_model": 512,
+        "format": "factorized-head-operator-v1",
+        "git_commit": "c343ed925f0de6f4a2f5e5a6e6417fd5a1d34e53",
+        "kind": "QK",
+        "model": "EleutherAI/pythia-70m-deduped",
+        "model_type": "gpt_neox",
+        "n_heads": 8,
+        "n_layers": 6,
+        "numpy": "2.5.2",
+        "operator_count": 48,
+        "python": "3.12.4",
+        "revision": "step4000",
+        "rope_theta": 10000,
+        "rotary_pct": 0.25,
+        "snapshot_commit": "bc237540ffd28d4711cf7e7340109b0b83a86584",
+        "source_format": "huggingface-safetensors",
+        "weight_processing": "fold_layer_norm_and_center_readers_and_writers"
+      },
+      "step512": {
+        "architectures": [
+          "GPTNeoXForCausalLM"
+        ],
+        "d_head": 64,
+        "d_model": 512,
+        "format": "factorized-head-operator-v1",
+        "git_commit": "c343ed925f0de6f4a2f5e5a6e6417fd5a1d34e53",
+        "kind": "QK",
+        "model": "EleutherAI/pythia-70m-deduped",
+        "model_type": "gpt_neox",
+        "n_heads": 8,
+        "n_layers": 6,
+        "numpy": "2.5.2",
+        "operator_count": 48,
+        "python": "3.12.4",
+        "revision": "step512",
+        "rope_theta": 10000,
+        "rotary_pct": 0.25,
+        "snapshot_commit": "2d7e43cf2b420873c7d37e8c4b716980e802beaa",
+        "source_format": "huggingface-safetensors",
+        "weight_processing": "fold_layer_norm_and_center_readers_and_writers"
+      },
+      "step64": {
+        "architectures": [
+          "GPTNeoXForCausalLM"
+        ],
+        "d_head": 64,
+        "d_model": 512,
+        "format": "factorized-head-operator-v1",
+        "git_commit": "c343ed925f0de6f4a2f5e5a6e6417fd5a1d34e53",
+        "kind": "QK",
+        "model": "EleutherAI/pythia-70m-deduped",
+        "model_type": "gpt_neox",
+        "n_heads": 8,
+        "n_layers": 6,
+        "numpy": "2.5.2",
+        "operator_count": 48,
+        "python": "3.12.4",
+        "revision": "step64",
+        "rope_theta": 10000,
+        "rotary_pct": 0.25,
+        "snapshot_commit": "667f52d8964a899fdd6a3ffc849c9baab40b1b04",
+        "source_format": "huggingface-safetensors",
+        "weight_processing": "fold_layer_norm_and_center_readers_and_writers"
+      },
+      "step64000": {
+        "architectures": [
+          "GPTNeoXForCausalLM"
+        ],
+        "d_head": 64,
+        "d_model": 512,
+        "format": "factorized-head-operator-v1",
+        "git_commit": "c343ed925f0de6f4a2f5e5a6e6417fd5a1d34e53",
+        "kind": "QK",
+        "model": "EleutherAI/pythia-70m-deduped",
+        "model_type": "gpt_neox",
+        "n_heads": 8,
+        "n_layers": 6,
+        "numpy": "2.5.2",
+        "operator_count": 48,
+        "python": "3.12.4",
+        "revision": "step64000",
+        "rope_theta": 10000,
+        "rotary_pct": 0.25,
+        "snapshot_commit": "7764b56e8ccf9f01b30eb2e88d7a3cf398260a64",
+        "source_format": "huggingface-safetensors",
+        "weight_processing": "fold_layer_norm_and_center_readers_and_writers"
+      }
+    },
+    "checkpoints": [
+      "step0",
+      "step64",
+      "step512",
+      "step1000",
+      "step4000",
+      "step16000",
+      "step64000",
+      "step143000"
+    ],
+    "experiment_id": "pythia70m-deduped-factor-atoms-pilot-v1",
+    "head_count": 48,
+    "manifest": "manifests\\pythia-70m-deduped-pilot.json",
+    "model": "EleutherAI/pythia-70m-deduped",
+    "normalization": "each complete QK operator divided by its Frobenius norm",
+    "structural_metadata": {
+      "architectures": [
+        "GPTNeoXForCausalLM"
+      ],
+      "d_head": 64,
+      "d_model": 512,
+      "format": "factorized-head-operator-v1",
+      "git_commit": "c343ed925f0de6f4a2f5e5a6e6417fd5a1d34e53",
+      "kind": "QK",
+      "model": "EleutherAI/pythia-70m-deduped",
+      "model_type": "gpt_neox",
+      "n_heads": 8,
+      "n_layers": 6,
+      "numpy": "2.5.2",
+      "operator_count": 48,
+      "python": "3.12.4",
+      "rope_theta": 10000,
+      "rotary_pct": 0.25,
+      "source_format": "huggingface-safetensors",
+      "weight_processing": "fold_layer_norm_and_center_readers_and_writers"
+    },
+    "svd": "exact compact SVD from skinny factors; no ambient matrix SVD"
+  },
+  "protocol": {
+    "configuration": "d064_p032_q032",
+    "each_null_population_is_shared_across_splits": true,
+    "iteration_budgets": [
+      120
+    ],
+    "null_family": "smooth_singular_frame_trajectory",
+    "null_populations_are_fresh_across_budgets": true,
+    "null_repetitions_per_budget": 3,
+    "random_projector_repetitions": 16,
+    "random_starts": 4,
+    "seed": 20260826,
+    "stability_omitted": true,
+    "workers": 1
+  },
+  "schema": "qk-reducing-convergence-audit-v1"
+}
