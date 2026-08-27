@@ -54,15 +54,16 @@ python scripts/extract_operators.py `
 
 ## Status
 
-Checkpoint 0027 audits the MDL feasibility of calling transformations reusable
-when every head is allowed unrelated read/write frames. Trained QK and OV
-singular profiles develop strongly low-dimensional population variation, but a
-perfectly reused intrinsic profile can save only about 0.1% of a complete
-rank-64 operator description: locating the subspaces dominates the cost. This
-motivates the next architecturally anchored compartment experiment.
+Checkpoint 0028 finds real but spectrally confounded organization among OV
+singular channels. Groups learned from half of the upstream/downstream anchors
+predict about 9.1% of held-out architectural variation, compared with about
+1.1% after label shuffling and 4.7% after read/write re-pairing. However,
+singular gain alone predicts 8.0--8.5%. The result supports non-random
+architecture-connected spectral strata, not yet distinct transformation
+compartments; the next gate requires explicit residual and full MDL codes.
 
 Read the methods, results, and revised gate in
-[`docs/checkpoints/0027-intrinsic-core-mdl-feasibility.md`](docs/checkpoints/0027-intrinsic-core-mdl-feasibility.md).
+[`docs/checkpoints/0028-architectural-ov-compartments.md`](docs/checkpoints/0028-architectural-ov-compartments.md).
 The main Pythia figures are:
 
 - `results/pythia-70m-deduped/activation_validation_pilot.png`
@@ -73,6 +74,8 @@ The main Pythia figures are:
 - `results/pythia-70m-deduped/trajectory_geometry.png`
 - `results/pythia-70m-deduped/intrinsic_core_mdl_audit_v1.png`
 - `results/pythia-70m-deduped/intrinsic_core_profiles_v1.png`
+- `results/pythia-70m-deduped/architectural_ov_compartments_v1.png`
+- `results/pythia-70m-deduped/architectural_ov_compartment_confounders_v1.png`
 - `results/pythia-70m-deduped/atom_emergence.png`
 - `results/pythia-70m-deduped/atom_reuse.png`
 - `results/pythia-70m-deduped/rotary_qk_robustness.png`
