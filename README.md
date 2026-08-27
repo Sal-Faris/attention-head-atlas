@@ -54,16 +54,16 @@ python scripts/extract_operators.py `
 
 ## Status
 
-Checkpoint 0028 finds real but spectrally confounded organization among OV
-singular channels. Groups learned from half of the upstream/downstream anchors
-predict about 9.1% of held-out architectural variation, compared with about
-1.1% after label shuffling and 4.7% after read/write re-pairing. However,
-singular gain alone predicts 8.0--8.5%. The result supports non-random
-architecture-connected spectral strata, not yet distinct transformation
-compartments; the next gate requires explicit residual and full MDL codes.
+Checkpoint 0029 tests whether the OV singular-channel organization survives a
+flexible within-head singular-gain correction. Held-out architectural R2 falls
+from about 9.2% to 0.7--0.8%, below the 1.9--2.1% produced after random
+read/write re-pairing. No individual head survives both reciprocal screens.
+This rejects SVD-channel fingerprint clustering as a route to compartments and
+redirects the next experiment toward direct variable-rank restricted maps with
+an explicit residual and full MDL cost.
 
 Read the methods, results, and revised gate in
-[`docs/checkpoints/0028-architectural-ov-compartments.md`](docs/checkpoints/0028-architectural-ov-compartments.md).
+[`docs/checkpoints/0029-gain-residualized-ov-compartments.md`](docs/checkpoints/0029-gain-residualized-ov-compartments.md).
 The main Pythia figures are:
 
 - `results/pythia-70m-deduped/activation_validation_pilot.png`
@@ -76,6 +76,7 @@ The main Pythia figures are:
 - `results/pythia-70m-deduped/intrinsic_core_profiles_v1.png`
 - `results/pythia-70m-deduped/architectural_ov_compartments_v1.png`
 - `results/pythia-70m-deduped/architectural_ov_compartment_confounders_v1.png`
+- `results/pythia-70m-deduped/gain_residualized_ov_compartments_v1.png`
 - `results/pythia-70m-deduped/atom_emergence.png`
 - `results/pythia-70m-deduped/atom_reuse.png`
 - `results/pythia-70m-deduped/rotary_qk_robustness.png`

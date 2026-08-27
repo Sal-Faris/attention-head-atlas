@@ -6,6 +6,7 @@ from head_atlas.architectural_compartments import (
     confirmation_r2,
     factor_overlap,
     fit_compartments,
+    residualize_against_gain,
     weighted_subspace_overlap,
 )
 
@@ -30,6 +31,17 @@ class ArchitecturalCompartmentTests(unittest.TestCase):
         np.testing.assert_allclose(weighted, [0.8, 0.2, 0.0])
         factor = np.asarray([[2.0], [0.0], [0.0]])
         np.testing.assert_allclose(factor_overlap(modes, factor), [1.0, 0.0, 0.0])
+
+    def test_gain_residualization_removes_smooth_spectral_trend(self):
+        gains = np.geomspace(1.0, 1e-3, 64)
+        log_gain = np.log(gains)
+        features = np.stack([2.0 + log_gain, log_gain**2 - 0.5 * log_gain], axis=1)
+        residual = residualize_against_gain(features, gains)
+        self.assertLess(np.linalg.norm(residual) / np.linalg.norm(features), 0.02)
+
+    def test_gain_residualization_rejects_negative_gain(self):
+        with self.assertRaises(ValueError):
+            residualize_against_gain(np.ones((8, 2)), np.arange(8) - 1.0)
 
 
 if __name__ == "__main__":

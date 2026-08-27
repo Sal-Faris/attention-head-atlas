@@ -7,7 +7,7 @@ from dataclasses import dataclass
 import numpy as np
 from sklearn.decomposition import PCA
 from sklearn.mixture import GaussianMixture
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import SplineTransformer, StandardScaler
 
 Array = np.ndarray
 
@@ -52,6 +52,39 @@ def confirmation_r2(features: Array, labels: Array) -> float:
         selected = values[assignments == label]
         between += len(selected) * float(np.sum(np.mean(selected, axis=0) ** 2))
     return float(np.clip(between / total, 0.0, 1.0))
+
+
+def residualize_against_gain(
+    features: Array,
+    gains: Array,
+    *,
+    n_knots: int = 6,
+) -> Array:
+    """Remove a flexible smooth dependence on singular gain from every feature."""
+
+    values = np.asarray(features, dtype=np.float64)
+    gain_values = np.asarray(gains, dtype=np.float64)
+    if values.ndim != 2 or gain_values.shape != (len(values),):
+        raise ValueError("gains must align with feature observations")
+    if len(values) < 4 or n_knots < 2 or n_knots > len(values):
+        raise ValueError("gain residualization requires valid observations and knots")
+    if not np.isfinite(values).all() or not np.isfinite(gain_values).all():
+        raise ValueError("features and gains must be finite")
+    if np.any(gain_values < 0):
+        raise ValueError("singular gains must be nonnegative")
+
+    scale = max(float(np.max(gain_values)), 1e-12)
+    log_gain = np.log(np.maximum(gain_values / scale, 1e-12))[:, None]
+    if float(np.std(log_gain)) <= 1e-12:
+        return values - np.mean(values, axis=0, keepdims=True)
+    design = SplineTransformer(
+        n_knots=n_knots,
+        degree=3,
+        knots="quantile",
+        include_bias=True,
+    ).fit_transform(log_gain)
+    coefficients, *_ = np.linalg.lstsq(design, values, rcond=None)
+    return values - design @ coefficients
 
 
 def fit_compartments(
