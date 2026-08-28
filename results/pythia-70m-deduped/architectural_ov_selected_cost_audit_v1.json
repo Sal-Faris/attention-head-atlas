@@ -1,0 +1,325 @@
+{
+  "status": "selected-cost audit of architectural OV restricted maps",
+  "source_pilot": "results\\pythia-70m-deduped\\architectural_ov_restricted_map_pilot_v1.json",
+  "reason": "The block frontier can use less than its budget cap. This diagnostic gives every alternative each head's actual selected block cost; the main rate-distortion gate still uses the common budget cap.",
+  "splits": [
+    {
+      "anchor_head_parity": 0,
+      "budget_cap": 4000.0,
+      "mean_actual_selected_block_cost": 1305.5797717831724,
+      "mean_energy_fraction_at_per_head_selected_cost": {
+        "restricted_blocks": 0.05175688829933717,
+        "cost_matched_unstructured_sparse": 0.04581216911570572,
+        "cost_matched_projected_dense_low_rank": 0.0539956526593339,
+        "cost_matched_full_svd": 0.050363525935081394
+      },
+      "fraction_of_heads_where_blocks_beat_sparse": 1.0,
+      "fraction_of_heads_where_blocks_beat_dense_low_rank": 0.4375,
+      "heads": [
+        {
+          "layer": 2,
+          "head": 0,
+          "selected_block_cost": 2809.1159260498084,
+          "restricted_blocks": 0.06513969226458223,
+          "cost_matched_unstructured_sparse": 0.05365430380132732,
+          "cost_matched_projected_dense_low_rank": 0.07766763095735561,
+          "cost_matched_full_svd": 0.11360916006131437
+        },
+        {
+          "layer": 2,
+          "head": 1,
+          "selected_block_cost": 1718.098183709383,
+          "restricted_blocks": 0.029162989716234516,
+          "cost_matched_unstructured_sparse": 0.025460013687078772,
+          "cost_matched_projected_dense_low_rank": 0.03152454660671601,
+          "cost_matched_full_svd": 0.05685230045796606
+        },
+        {
+          "layer": 2,
+          "head": 2,
+          "selected_block_cost": 2566.512845074063,
+          "restricted_blocks": 0.06708800712514777,
+          "cost_matched_unstructured_sparse": 0.062253073528126576,
+          "cost_matched_projected_dense_low_rank": 0.07742945470070148,
+          "cost_matched_full_svd": 0.16740161206909093
+        },
+        {
+          "layer": 2,
+          "head": 3,
+          "selected_block_cost": 857.7429442643424,
+          "restricted_blocks": 0.014890490123025632,
+          "cost_matched_unstructured_sparse": 0.012926351624894458,
+          "cost_matched_projected_dense_low_rank": 0.015346836452837912,
+          "cost_matched_full_svd": 0.0
+        },
+        {
+          "layer": 2,
+          "head": 4,
+          "selected_block_cost": 813.6482311975648,
+          "restricted_blocks": 0.012641017014553958,
+          "cost_matched_unstructured_sparse": 0.010539053658274431,
+          "cost_matched_projected_dense_low_rank": 0.013057007136486788,
+          "cost_matched_full_svd": 0.0
+        },
+        {
+          "layer": 2,
+          "head": 5,
+          "selected_block_cost": 1001.5379967492913,
+          "restricted_blocks": 0.05459920429456231,
+          "cost_matched_unstructured_sparse": 0.04771680011814579,
+          "cost_matched_projected_dense_low_rank": 0.052197158026450814,
+          "cost_matched_full_svd": 0.0
+        },
+        {
+          "layer": 2,
+          "head": 6,
+          "selected_block_cost": 2034.5471402413978,
+          "restricted_blocks": 0.11412756599204264,
+          "cost_matched_unstructured_sparse": 0.09675307092894672,
+          "cost_matched_projected_dense_low_rank": 0.12177755969456087,
+          "cost_matched_full_svd": 0.2514553066236531
+        },
+        {
+          "layer": 2,
+          "head": 7,
+          "selected_block_cost": 2557.0708611881955,
+          "restricted_blocks": 0.052291010691473544,
+          "cost_matched_unstructured_sparse": 0.04184585376287065,
+          "cost_matched_projected_dense_low_rank": 0.06571817597304405,
+          "cost_matched_full_svd": 0.10536937723231336
+        },
+        {
+          "layer": 3,
+          "head": 0,
+          "selected_block_cost": 837.4283424104156,
+          "restricted_blocks": 0.14759512816537476,
+          "cost_matched_unstructured_sparse": 0.13864435967360558,
+          "cost_matched_projected_dense_low_rank": 0.14601494501878576,
+          "cost_matched_full_svd": 0.0
+        },
+        {
+          "layer": 3,
+          "head": 1,
+          "selected_block_cost": 768.8194538275536,
+          "restricted_blocks": 0.06691511930887252,
+          "cost_matched_unstructured_sparse": 0.06210605398111689,
+          "cost_matched_projected_dense_low_rank": 0.06526607513820788,
+          "cost_matched_full_svd": 0.0
+        },
+        {
+          "layer": 3,
+          "head": 2,
+          "selected_block_cost": 1566.6310836138973,
+          "restricted_blocks": 0.03499530981018259,
+          "cost_matched_unstructured_sparse": 0.029808230410941338,
+          "cost_matched_projected_dense_low_rank": 0.03738030191809366,
+          "cost_matched_full_svd": 0.05962100319012601
+        },
+        {
+          "layer": 3,
+          "head": 3,
+          "selected_block_cost": 104.82526143467051,
+          "restricted_blocks": 0.002109189385676434,
+          "cost_matched_unstructured_sparse": 0.0016715511909915107,
+          "cost_matched_projected_dense_low_rank": 0.0,
+          "cost_matched_full_svd": 0.0
+        },
+        {
+          "layer": 3,
+          "head": 4,
+          "selected_block_cost": 1309.8629181254794,
+          "restricted_blocks": 0.024918488561289833,
+          "cost_matched_unstructured_sparse": 0.021269810910870483,
+          "cost_matched_projected_dense_low_rank": 0.026140105875732116,
+          "cost_matched_full_svd": 0.05150765532683843
+        },
+        {
+          "layer": 3,
+          "head": 5,
+          "selected_block_cost": 224.61277099119985,
+          "restricted_blocks": 0.005275020877497412,
+          "cost_matched_unstructured_sparse": 0.004236698189764092,
+          "cost_matched_projected_dense_low_rank": 0.0,
+          "cost_matched_full_svd": 0.0
+        },
+        {
+          "layer": 3,
+          "head": 6,
+          "selected_block_cost": 837.4283424104156,
+          "restricted_blocks": 0.1123846776574959,
+          "cost_matched_unstructured_sparse": 0.10478472205249345,
+          "cost_matched_projected_dense_low_rank": 0.1119618138857809,
+          "cost_matched_full_svd": 0.0
+        },
+        {
+          "layer": 3,
+          "head": 7,
+          "selected_block_cost": 881.394047243081,
+          "restricted_blocks": 0.023977301801382567,
+          "cost_matched_unstructured_sparse": 0.019324758331843463,
+          "cost_matched_projected_dense_low_rank": 0.022448831164588387,
+          "cost_matched_full_svd": 0.0
+        }
+      ]
+    },
+    {
+      "anchor_head_parity": 1,
+      "budget_cap": 4000.0,
+      "mean_actual_selected_block_cost": 1435.1204012540052,
+      "mean_energy_fraction_at_per_head_selected_cost": {
+        "restricted_blocks": 0.056008181112307424,
+        "cost_matched_unstructured_sparse": 0.049971654295612455,
+        "cost_matched_projected_dense_low_rank": 0.05743586718269363,
+        "cost_matched_full_svd": 0.0769472533201145
+      },
+      "fraction_of_heads_where_blocks_beat_sparse": 1.0,
+      "fraction_of_heads_where_blocks_beat_dense_low_rank": 0.4375,
+      "heads": [
+        {
+          "layer": 2,
+          "head": 0,
+          "selected_block_cost": 2485.564287825065,
+          "restricted_blocks": 0.05835860162758314,
+          "cost_matched_unstructured_sparse": 0.048846217845418045,
+          "cost_matched_projected_dense_low_rank": 0.06837725427580939,
+          "cost_matched_full_svd": 0.11360916006131437
+        },
+        {
+          "layer": 2,
+          "head": 1,
+          "selected_block_cost": 2546.512845074063,
+          "restricted_blocks": 0.04580475427210014,
+          "cost_matched_unstructured_sparse": 0.04283562553112415,
+          "cost_matched_projected_dense_low_rank": 0.051972914411810435,
+          "cost_matched_full_svd": 0.11055547495561628
+        },
+        {
+          "layer": 2,
+          "head": 2,
+          "selected_block_cost": 2560.0063570711395,
+          "restricted_blocks": 0.0881734451354862,
+          "cost_matched_unstructured_sparse": 0.08458805331293608,
+          "cost_matched_projected_dense_low_rank": 0.09378149221793342,
+          "cost_matched_full_svd": 0.16740161206909093
+        },
+        {
+          "layer": 2,
+          "head": 3,
+          "selected_block_cost": 1207.4009844236182,
+          "restricted_blocks": 0.02397572741965663,
+          "cost_matched_unstructured_sparse": 0.020674784342583703,
+          "cost_matched_projected_dense_low_rank": 0.024473604012300528,
+          "cost_matched_full_svd": 0.06209866487928201
+        },
+        {
+          "layer": 2,
+          "head": 4,
+          "selected_block_cost": 826.073067499765,
+          "restricted_blocks": 0.015651381863445803,
+          "cost_matched_unstructured_sparse": 0.012836172467376564,
+          "cost_matched_projected_dense_low_rank": 0.014996365845356244,
+          "cost_matched_full_svd": 0.0
+        },
+        {
+          "layer": 2,
+          "head": 5,
+          "selected_block_cost": 1065.120994315426,
+          "restricted_blocks": 0.12014830927418607,
+          "cost_matched_unstructured_sparse": 0.1096575600669915,
+          "cost_matched_projected_dense_low_rank": 0.12160004544751563,
+          "cost_matched_full_svd": 0.18529737331125412
+        },
+        {
+          "layer": 2,
+          "head": 6,
+          "selected_block_cost": 2529.5299926577304,
+          "restricted_blocks": 0.18504054069382442,
+          "cost_matched_unstructured_sparse": 0.16642529147471818,
+          "cost_matched_projected_dense_low_rank": 0.19405802162474087,
+          "cost_matched_full_svd": 0.326399821986281
+        },
+        {
+          "layer": 2,
+          "head": 7,
+          "selected_block_cost": 3800.017176162826,
+          "restricted_blocks": 0.1047032742910795,
+          "cost_matched_unstructured_sparse": 0.0923864948763267,
+          "cost_matched_projected_dense_low_rank": 0.12782606181065254,
+          "cost_matched_full_svd": 0.1546652873420287
+        },
+        {
+          "layer": 3,
+          "head": 0,
+          "selected_block_cost": 724.9143114790724,
+          "restricted_blocks": 0.06467110594725418,
+          "cost_matched_unstructured_sparse": 0.05749257956875869,
+          "cost_matched_projected_dense_low_rank": 0.053994772359501,
+          "cost_matched_full_svd": 0.0
+        },
+        {
+          "layer": 3,
+          "head": 1,
+          "selected_block_cost": 608.1913060395991,
+          "restricted_blocks": 0.035872903823711035,
+          "cost_matched_unstructured_sparse": 0.03145463564531455,
+          "cost_matched_projected_dense_low_rank": 0.030790257139198023,
+          "cost_matched_full_svd": 0.0
+        },
+        {
+          "layer": 3,
+          "head": 2,
+          "selected_block_cost": 1668.6727771249105,
+          "restricted_blocks": 0.0394370249776979,
+          "cost_matched_unstructured_sparse": 0.03347954053028274,
+          "cost_matched_projected_dense_low_rank": 0.04304045161686928,
+          "cost_matched_full_svd": 0.05962100319012601
+        },
+        {
+          "layer": 3,
+          "head": 3,
+          "selected_block_cost": 170.267245320538,
+          "restricted_blocks": 0.0032909545182983452,
+          "cost_matched_unstructured_sparse": 0.0027340152103805487,
+          "cost_matched_projected_dense_low_rank": 0.0,
+          "cost_matched_full_svd": 0.0
+        },
+        {
+          "layer": 3,
+          "head": 4,
+          "selected_block_cost": 1090.715026986397,
+          "restricted_blocks": 0.01827510801763303,
+          "cost_matched_unstructured_sparse": 0.01646163680103542,
+          "cost_matched_projected_dense_low_rank": 0.018569858086190577,
+          "cost_matched_full_svd": 0.05150765532683843
+        },
+        {
+          "layer": 3,
+          "head": 5,
+          "selected_block_cost": 206.49513819924798,
+          "restricted_blocks": 0.004940395781304844,
+          "cost_matched_unstructured_sparse": 0.003957007926090492,
+          "cost_matched_projected_dense_low_rank": 0.0,
+          "cost_matched_full_svd": 0.0
+        },
+        {
+          "layer": 3,
+          "head": 6,
+          "selected_block_cost": 641.8138262707878,
+          "restricted_blocks": 0.06883513224283468,
+          "cost_matched_unstructured_sparse": 0.06064341057550219,
+          "cost_matched_projected_dense_low_rank": 0.058123579571769494,
+          "cost_matched_full_svd": 0.0
+        },
+        {
+          "layer": 3,
+          "head": 7,
+          "selected_block_cost": 830.6310836138974,
+          "restricted_blocks": 0.01895223791082289,
+          "cost_matched_unstructured_sparse": 0.015073442554959694,
+          "cost_matched_projected_dense_low_rank": 0.01736919650345072,
+          "cost_matched_full_svd": 0.0
+        }
+      ]
+    }
+  ]
+}

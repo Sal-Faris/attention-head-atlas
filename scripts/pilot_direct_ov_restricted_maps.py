@@ -12,7 +12,7 @@ import numpy as np
 from head_atlas.factor_io import load_factor_bundle
 from head_atlas.factors import factorized_frobenius_norm, factorized_singular_components
 from head_atlas.restricted_maps import (
-    fit_restricted_map,
+    fit_restricted_map_path,
     population_operator_bases,
     project_operator,
     shared_basis_scalar_cost,
@@ -52,40 +52,37 @@ SYNTHETIC_BUDGETS = (100.0, 250.0, 500.0, 1_000.0)
 def fit_frontier(coefficients: np.ndarray, maximum_blocks: int) -> list[dict[str, object]]:
     """Fit the block model over a fixed complexity grid."""
 
-    frontier: list[dict[str, object]] = [
-        {"scalar_cost": 0.0, "captured_energy": 0.0, "blocks": []}
-    ]
+    frontier: list[dict[str, object]] = [{"scalar_cost": 0.0, "captured_energy": 0.0, "blocks": []}]
     support_sizes = tuple(size for size in (4, 8, 16, 32, 64) if size <= len(coefficients))
     for penalty in PENALTIES:
-        fit = fit_restricted_map(
+        fits = fit_restricted_map_path(
             coefficients,
             complexity_penalty=penalty,
             support_sizes=support_sizes,
             maximum_blocks=maximum_blocks,
         )
-        frontier.append(
-            {
-                "penalty": penalty,
-                "scalar_cost": fit.scalar_cost,
-                "captured_energy": fit.captured_energy,
-                "blocks": [
-                    {
-                        "read_dimension": len(block.read_indices),
-                        "write_dimension": len(block.write_indices),
-                        "core_rank": block.core_rank,
-                        "scalar_cost": block.scalar_cost,
-                        "energy_gain": block.energy_gain,
-                    }
-                    for block in fit.blocks
-                ],
-            }
-        )
+        for fit in fits[1:]:
+            frontier.append(
+                {
+                    "penalty": penalty,
+                    "scalar_cost": fit.scalar_cost,
+                    "captured_energy": fit.captured_energy,
+                    "blocks": [
+                        {
+                            "read_dimension": len(block.read_indices),
+                            "write_dimension": len(block.write_indices),
+                            "core_rank": block.core_rank,
+                            "scalar_cost": block.scalar_cost,
+                            "energy_gain": block.energy_gain,
+                        }
+                        for block in fit.blocks
+                    ],
+                }
+            )
     return frontier
 
 
-def select_at_budget(
-    frontier: list[dict[str, object]], available_cost: float
-) -> dict[str, object]:
+def select_at_budget(frontier: list[dict[str, object]], available_cost: float) -> dict[str, object]:
     eligible = [item for item in frontier if item["scalar_cost"] <= max(available_cost, 0.0)]
     return max(eligible, key=lambda item: (item["captured_energy"], -item["scalar_cost"]))
 
@@ -105,9 +102,7 @@ def unstructured_sparse_energy(
     return float(np.sum(energy[:retained]))
 
 
-def projected_dense_low_rank_energy(
-    coefficients: np.ndarray, available_cost: float
-) -> float:
+def projected_dense_low_rank_energy(coefficients: np.ndarray, available_cost: float) -> float:
     dimension = len(coefficients)
     singular_values = np.linalg.svd(coefficients, compute_uv=False)
     selected = 0
@@ -140,9 +135,7 @@ def synthetic_matrix(rng: np.random.Generator, dimension: int) -> np.ndarray:
     for read_size, write_size, rank in specifications:
         rows = permutation_rows[row_start : row_start + read_size]
         columns = permutation_columns[column_start : column_start + write_size]
-        core = rng.standard_normal((read_size, rank)) @ rng.standard_normal(
-            (rank, write_size)
-        )
+        core = rng.standard_normal((read_size, rank)) @ rng.standard_normal((rank, write_size))
         values[np.ix_(rows, columns)] += core
         row_start += read_size
         column_start += write_size
@@ -173,9 +166,7 @@ def run_synthetic_calibration(
         "definition": "three variable-size planted restricted maps plus small dense noise",
         "budgets": list(SYNTHETIC_BUDGETS),
         "planted_mean_energy": [float(np.mean(values)) for values in planted],
-        "spectrum_matched_rotation_mean_energy": [
-            float(np.mean(values)) for values in rotated
-        ],
+        "spectrum_matched_rotation_mean_energy": [float(np.mean(values)) for values in rotated],
         "dense_low_rank_mean_energy": [float(np.mean(values)) for values in dense],
         "samples": samples,
     }
@@ -193,7 +184,12 @@ def summarize_real_heads(
 ) -> tuple[dict[str, object], list[dict[str, object]]]:
     method_values = {
         name: [[] for _ in TOTAL_BUDGETS]
-        for name in ("restricted_blocks", "projected_dense_low_rank", "unstructured_sparse", "full_svd")
+        for name in (
+            "restricted_blocks",
+            "projected_dense_low_rank",
+            "unstructured_sparse",
+            "full_svd",
+        )
     }
     null_values = [[] for _ in TOTAL_BUDGETS]
     per_head = []
@@ -203,9 +199,7 @@ def summarize_real_heads(
         frontier = fit_frontier(coefficients, maximum_blocks)
         head_record = {"layer": operator.layer, "head": operator.head, "budgets": []}
         null_frontiers = [
-            fit_frontier(
-                spectrum_matched_rotation(coefficients, rng), maximum_blocks
-            )
+            fit_frontier(spectrum_matched_rotation(coefficients, rng), maximum_blocks)
             for _ in range(null_repetitions)
         ]
         for budget_index, budget in enumerate(TOTAL_BUDGETS):
@@ -253,10 +247,7 @@ def summarize_real_heads(
             float(np.mean(values)) for values in null_values
         ],
         "restricted_minus_rotation": [
-            float(
-                np.mean(method_values["restricted_blocks"][index])
-                - np.mean(null_values[index])
-            )
+            float(np.mean(method_values["restricted_blocks"][index]) - np.mean(null_values[index]))
             for index in range(len(TOTAL_BUDGETS))
         ],
     }
