@@ -54,16 +54,16 @@ python scripts/extract_operators.py `
 
 ## Status
 
-Checkpoint 0031 directly fits variable-support, variable-rank restricted maps
-in coordinates defined independently by earlier OV writers and later Q/K/V
-readers. Real blocks beat spectrum-matched rotations in reciprocal anchor
-splits and beat isolated sparse entries at their actual selected cost. They do
-not beat one dense projected low-rank map on average or at a common budget, so
-this is architectural localization but not yet evidence for several separable
+Checkpoint 0032 discovers residual-axis modules solely from which earlier OV
+heads write them and which later Q/K/V components read them. Coarse module
+boundaries recur modestly across disjoint anchor sets, but untouched OV heads
+align with them only at two-module resolution in layer 3, and one reciprocal
+split misses the strongest partition-specificity gate. This is evidence for
+weak reusable architectural organization, not yet for several crisp OV
 compartments.
 
 Read the methods, results, and revised gate in
-[`docs/checkpoints/0031-architectural-ov-restricted-map-pilot.md`](docs/checkpoints/0031-architectural-ov-restricted-map-pilot.md).
+[`docs/checkpoints/0032-architectural-module-pair-pilot.md`](docs/checkpoints/0032-architectural-module-pair-pilot.md).
 The main Pythia figures are:
 
 - `results/pythia-70m-deduped/activation_validation_pilot.png`
@@ -79,6 +79,7 @@ The main Pythia figures are:
 - `results/pythia-70m-deduped/gain_residualized_ov_compartments_v1.png`
 - `results/pythia-70m-deduped/direct_ov_restricted_map_summary_v1.png`
 - `results/pythia-70m-deduped/architectural_ov_restricted_map_pilot_v1.png`
+- `results/pythia-70m-deduped/architectural_module_pairs_v1.png`
 - `results/pythia-70m-deduped/atom_emergence.png`
 - `results/pythia-70m-deduped/atom_reuse.png`
 - `results/pythia-70m-deduped/rotary_qk_robustness.png`

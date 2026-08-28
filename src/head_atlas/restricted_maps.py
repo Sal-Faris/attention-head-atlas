@@ -73,20 +73,18 @@ def _trace_normalized_covariance(factor: Array, gram: Array | None = None) -> Ar
     return covariance / trace
 
 
-def architectural_operator_bases(
+def architectural_anchor_covariances(
     ov_operators: Sequence[FactorizedHeadOperator],
     qk_operators: Sequence[FactorizedHeadOperator],
     *,
     target_layer: int,
     anchor_head_parity: int,
-    dimension: int,
-) -> tuple[Array, Array]:
-    """Build target-independent OV read/write coordinates from model wiring.
+) -> tuple[tuple[Array, ...], tuple[Array, ...]]:
+    """Return target-independent upstream and downstream anchor covariances.
 
     Earlier OV writers define directions that can reach the target layer. Later
     Q, K, and V readers define directions through which the target's output can
-    be consumed. Only heads with the requested parity are used as anchors. The
-    target-layer matrices themselves never enter either covariance.
+    be consumed. Every covariance has unit trace so anchor scale cannot dominate.
     """
 
     if not ov_operators or not qk_operators:
@@ -94,8 +92,6 @@ def architectural_operator_bases(
     if anchor_head_parity not in {0, 1}:
         raise ValueError("anchor head parity must be zero or one")
     width = ov_operators[0].d_model
-    if dimension < 1 or dimension > width:
-        raise ValueError("basis dimension must lie within the residual width")
     if any(operator.kind != "OV" or operator.d_model != width for operator in ov_operators):
         raise ValueError("OV anchors must be aligned OV operators of one width")
     if any(operator.kind != "QK" or operator.d_model != width for operator in qk_operators):
@@ -115,30 +111,56 @@ def architectural_operator_bases(
         for operator in ov_operators
         if operator.layer > target_layer and operator.head % 2 == anchor_head_parity
     }
-    downstream_ov = [
-        operator
+    downstream_ov = {
+        (operator.layer, operator.head): operator
         for operator in ov_operators
         if (operator.layer, operator.head) in downstream_locations
-    ]
-    downstream_qk = [
-        operator
+    }
+    downstream_qk = {
+        (operator.layer, operator.head): operator
         for operator in qk_operators
         if (operator.layer, operator.head) in downstream_locations
-    ]
+    }
     if not upstream or not downstream_ov:
         raise ValueError("target layer needs both earlier producers and later consumers")
 
-    read_covariance = np.zeros((width, width), dtype=np.float64)
+    read_covariances = []
     for operator in upstream:
         left = np.asarray(operator.left, dtype=np.float64)
         right = np.asarray(operator.right, dtype=np.float64)
-        read_covariance += _trace_normalized_covariance(right, left.T @ left)
+        read_covariances.append(_trace_normalized_covariance(right, left.T @ left))
 
-    write_covariance = np.zeros((width, width), dtype=np.float64)
-    for ov_operator, qk_operator in zip(downstream_ov, downstream_qk, strict=True):
-        write_covariance += _trace_normalized_covariance(qk_operator.left)
-        write_covariance += _trace_normalized_covariance(qk_operator.right)
-        write_covariance += _trace_normalized_covariance(ov_operator.left)
+    write_covariances = []
+    for location in sorted(downstream_locations):
+        ov_operator = downstream_ov[location]
+        qk_operator = downstream_qk[location]
+        write_covariances.append(_trace_normalized_covariance(qk_operator.left))
+        write_covariances.append(_trace_normalized_covariance(qk_operator.right))
+        write_covariances.append(_trace_normalized_covariance(ov_operator.left))
+    return tuple(read_covariances), tuple(write_covariances)
+
+
+def architectural_operator_bases(
+    ov_operators: Sequence[FactorizedHeadOperator],
+    qk_operators: Sequence[FactorizedHeadOperator],
+    *,
+    target_layer: int,
+    anchor_head_parity: int,
+    dimension: int,
+) -> tuple[Array, Array]:
+    """Build target-independent OV read/write coordinates from model wiring."""
+
+    read_family, write_family = architectural_anchor_covariances(
+        ov_operators,
+        qk_operators,
+        target_layer=target_layer,
+        anchor_head_parity=anchor_head_parity,
+    )
+    width = ov_operators[0].d_model
+    if dimension < 1 or dimension > width:
+        raise ValueError("basis dimension must lie within the residual width")
+    read_covariance = np.sum(read_family, axis=0)
+    write_covariance = np.sum(write_family, axis=0)
 
     _, read_vectors = np.linalg.eigh(read_covariance)
     _, write_vectors = np.linalg.eigh(write_covariance)
