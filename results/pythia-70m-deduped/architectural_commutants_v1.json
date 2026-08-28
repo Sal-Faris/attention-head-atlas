@@ -1,0 +1,785 @@
+{
+  "status": "approximate-commutant compartment-existence pilot",
+  "model": "EleutherAI/pythia-70m-deduped",
+  "revision": "step143000",
+  "discovery": "weights only; no target OV matrix, prompts, activations, labels, or transformation classes",
+  "target_layers": [
+    2,
+    3
+  ],
+  "architectural_dimension": 32,
+  "mathematical_test": "lowest non-scalar eigenmodes of mean double-commutator L(X)=mean_a [G_a,[G_a,X]] over normalized architectural covariances",
+  "interpretation_rule": "a low non-scalar eigenvalue indicates an operator whose spectral subspaces are approximately reducing compartments for every covariance in the family",
+  "stable_compartment_gate": "both reciprocal held-out projector tests have p<=0.05 and the two learned projectors overlap above size-matched random pairs at p<=0.05",
+  "stable_compartment_families": [],
+  "synthetic_calibration": {
+    "definition": "three planted invariant blocks of dimensions 3, 4, and 5 with arbitrary dense PSD maps inside",
+    "lowest_nontrivial_eigenvalues": [
+      7.141100821486164e-17,
+      1.2911272459795506e-16,
+      0.009493664771483296,
+      0.017633411061995757
+    ],
+    "spectrum_rotation_lowest_mean": 0.026299457429064577,
+    "lower_tail_p_value": 0.05
+  },
+  "families": [
+    {
+      "label": "p0-L2-read",
+      "anchor_count": 8,
+      "commutant_eigenvalues": [
+        0.0026614118415272925,
+        0.0028829095156929847,
+        0.002953370635634757,
+        0.0031659714204587196,
+        0.0031972431379966118,
+        0.0032779846657887734
+      ],
+      "lowest_nontrivial_eigenvalue": 0.0026614118415272925,
+      "spectrum_rotation_lowest_mean": 0.003277133951401,
+      "spectrum_rotation_lowest_samples": [
+        0.003317718492817834,
+        0.003188668190191151,
+        0.0029590658787143165,
+        0.0035331292709834617,
+        0.0038323046185315896,
+        0.0029202438570212694,
+        0.0028801999290247564,
+        0.0036614122558593608,
+        0.0034740755827324045,
+        0.0030704036347518663,
+        0.003176511667228128,
+        0.0033982032773959506,
+        0.0034313155120054,
+        0.0035538839007818986,
+        0.003455892568848513,
+        0.0031281131833236237,
+        0.003217675850132215,
+        0.003170756699652233,
+        0.002895970706623028
+      ],
+      "spectrum_rotation_mean_spectrum": [
+        0.003277133951401,
+        0.0034927359257919273,
+        0.0036587165676297924,
+        0.0037871199376890005,
+        0.0039046956427935876,
+        0.004032784112631749
+      ],
+      "lower_tail_p_value": 0.05,
+      "full_family_projector": {
+        "rank": 2,
+        "complement_rank": 30,
+        "relative_mode_eigengap": 0.10153205866613506,
+        "commutator_energy": 0.003550684806324045
+      },
+      "crossfit": {
+        "directions": [
+          {
+            "training_anchor_offset": 0,
+            "training_anchor_count": 4,
+            "held_out_anchor_count": 4,
+            "projector_rank": 2,
+            "mode_relative_eigengap": 0.03379630971565385,
+            "held_out_mode_commutator_energy": 0.0842274257371485,
+            "random_mode_mean": 0.04030903717423949,
+            "held_out_mode_energy_ratio_to_random": 2.0895419896304586,
+            "mode_randomization_p_value": 1.0,
+            "held_out_commutator_energy": 0.04662894210911969,
+            "size_matched_random_mean": 0.03805459181809161,
+            "held_out_energy_ratio_to_random": 1.2253171005489996,
+            "randomization_p_value": 0.8
+          },
+          {
+            "training_anchor_offset": 1,
+            "training_anchor_count": 4,
+            "held_out_anchor_count": 4,
+            "projector_rank": 2,
+            "mode_relative_eigengap": 0.35579650714354594,
+            "held_out_mode_commutator_energy": 0.01849607273312147,
+            "random_mode_mean": 0.04068499695701503,
+            "held_out_mode_energy_ratio_to_random": 0.45461654458677103,
+            "mode_randomization_p_value": 0.01,
+            "held_out_commutator_energy": 0.03130934484515328,
+            "size_matched_random_mean": 0.03587524732194027,
+            "held_out_energy_ratio_to_random": 0.8727283345028085,
+            "randomization_p_value": 0.41
+          }
+        ],
+        "mean_held_out_energy_ratio_to_random": 1.049022717525904,
+        "mean_held_out_mode_energy_ratio_to_random": 1.2720792671086147,
+        "both_mode_directions_p_at_most_0.05": false,
+        "both_directions_p_at_most_0.05": false,
+        "split_projector_overlap": 0.18998465744160004,
+        "random_split_projector_overlap_mean": 0.07342772781567318,
+        "split_projector_overlap_upper_tail_p_value": 0.02
+      }
+    },
+    {
+      "label": "p0-L2-write",
+      "anchor_count": 36,
+      "commutant_eigenvalues": [
+        0.006520219845533017,
+        0.007550105823050924,
+        0.008812186294793075,
+        0.009269089301306993,
+        0.00955769364209756,
+        0.009867206638778086
+      ],
+      "lowest_nontrivial_eigenvalue": 0.006520219845533017,
+      "spectrum_rotation_lowest_mean": 0.008535802179156277,
+      "spectrum_rotation_lowest_samples": [
+        0.009466940195591,
+        0.008127364825496931,
+        0.008733667916128953,
+        0.00819527035468312,
+        0.008546911893493764,
+        0.008765261410448763,
+        0.00790313450337006,
+        0.00923694589123237,
+        0.008003043112302108,
+        0.008931898295237438,
+        0.009925269696786773,
+        0.0074190399313247,
+        0.009392408382752166,
+        0.008194167772368598,
+        0.008682349894231216,
+        0.008867202804713464,
+        0.007947844139633748,
+        0.008175470284485505,
+        0.007666050099688579
+      ],
+      "spectrum_rotation_mean_spectrum": [
+        0.008535802179156277,
+        0.009027021527761914,
+        0.00939166153085529,
+        0.00965745385450384,
+        0.009820154492902,
+        0.010068847279690579
+      ],
+      "lower_tail_p_value": 0.05,
+      "full_family_projector": {
+        "rank": 4,
+        "complement_rank": 28,
+        "relative_mode_eigengap": 0.19003884302132174,
+        "commutator_energy": 0.006343741911890317
+      },
+      "crossfit": {
+        "directions": [
+          {
+            "training_anchor_offset": 0,
+            "training_anchor_count": 18,
+            "held_out_anchor_count": 18,
+            "projector_rank": 2,
+            "mode_relative_eigengap": 0.04911397237244898,
+            "held_out_mode_commutator_energy": 0.02481913680701004,
+            "random_mode_mean": 0.04777796658184208,
+            "held_out_mode_energy_ratio_to_random": 0.5194682524735681,
+            "mode_randomization_p_value": 0.01,
+            "held_out_commutator_energy": 0.027417949502239705,
+            "size_matched_random_mean": 0.045241219733960995,
+            "held_out_energy_ratio_to_random": 0.6060391312053423,
+            "randomization_p_value": 0.01
+          },
+          {
+            "training_anchor_offset": 1,
+            "training_anchor_count": 18,
+            "held_out_anchor_count": 18,
+            "projector_rank": 3,
+            "mode_relative_eigengap": 0.011561112289837755,
+            "held_out_mode_commutator_energy": 0.05306048668782926,
+            "random_mode_mean": 0.04827834754109813,
+            "held_out_mode_energy_ratio_to_random": 1.0990534968633758,
+            "mode_randomization_p_value": 0.96,
+            "held_out_commutator_energy": 0.033600597957554414,
+            "size_matched_random_mean": 0.0443214101358376,
+            "held_out_energy_ratio_to_random": 0.7581121145418046,
+            "randomization_p_value": 0.03
+          }
+        ],
+        "mean_held_out_energy_ratio_to_random": 0.6820756228735734,
+        "mean_held_out_mode_energy_ratio_to_random": 0.809260874668472,
+        "both_mode_directions_p_at_most_0.05": false,
+        "both_directions_p_at_most_0.05": true,
+        "split_projector_overlap": 0.0280829847068632,
+        "random_split_projector_overlap_mean": 0.1069735492810464,
+        "split_projector_overlap_upper_tail_p_value": 0.98
+      }
+    },
+    {
+      "label": "p0-L3-read",
+      "anchor_count": 12,
+      "commutant_eigenvalues": [
+        0.00406877025954816,
+        0.004207553408461847,
+        0.004276229835754533,
+        0.004310058908236606,
+        0.004416194919591598,
+        0.0046630450328650356
+      ],
+      "lowest_nontrivial_eigenvalue": 0.00406877025954816,
+      "spectrum_rotation_lowest_mean": 0.004550970221624951,
+      "spectrum_rotation_lowest_samples": [
+        0.0042729550935509935,
+        0.004973592655718325,
+        0.0046646573038237535,
+        0.004040825958492504,
+        0.004275352478578455,
+        0.00457455823627567,
+        0.004558918147542232,
+        0.005102413126418743,
+        0.004885374375362961,
+        0.004450748097573022,
+        0.004235756849081217,
+        0.004583814629332789,
+        0.004740575167684963,
+        0.004519673233906416,
+        0.004594880782831304,
+        0.004919897862807656,
+        0.004454907835205551,
+        0.004243476204573408,
+        0.004376056172114101
+      ],
+      "spectrum_rotation_mean_spectrum": [
+        0.00455097022162495,
+        0.00485578923490217,
+        0.0051343187325558984,
+        0.005304201975437592,
+        0.005422079286822457,
+        0.005552098375740895
+      ],
+      "lower_tail_p_value": 0.1,
+      "full_family_projector": {
+        "rank": 3,
+        "complement_rank": 29,
+        "relative_mode_eigengap": 0.14465541553064967,
+        "commutator_energy": 0.004794599483301868
+      },
+      "crossfit": {
+        "directions": [
+          {
+            "training_anchor_offset": 0,
+            "training_anchor_count": 6,
+            "held_out_anchor_count": 6,
+            "projector_rank": 2,
+            "mode_relative_eigengap": 0.03388995725459264,
+            "held_out_mode_commutator_energy": 0.020349019932862995,
+            "random_mode_mean": 0.0439471518598085,
+            "held_out_mode_energy_ratio_to_random": 0.46303387299764975,
+            "mode_randomization_p_value": 0.01,
+            "held_out_commutator_energy": 0.015702549278336458,
+            "size_matched_random_mean": 0.04398885818881714,
+            "held_out_energy_ratio_to_random": 0.356966512086653,
+            "randomization_p_value": 0.02
+          },
+          {
+            "training_anchor_offset": 1,
+            "training_anchor_count": 6,
+            "held_out_anchor_count": 6,
+            "projector_rank": 3,
+            "mode_relative_eigengap": 0.1363692143894213,
+            "held_out_mode_commutator_energy": 0.03450402055940286,
+            "random_mode_mean": 0.03856345623728018,
+            "held_out_mode_energy_ratio_to_random": 0.8947336137897057,
+            "mode_randomization_p_value": 0.11,
+            "held_out_commutator_energy": 0.025329515836849826,
+            "size_matched_random_mean": 0.035695775624772066,
+            "held_out_energy_ratio_to_random": 0.7095942136993855,
+            "randomization_p_value": 0.07
+          }
+        ],
+        "mean_held_out_energy_ratio_to_random": 0.5332803628930192,
+        "mean_held_out_mode_energy_ratio_to_random": 0.6788837433936777,
+        "both_mode_directions_p_at_most_0.05": false,
+        "both_directions_p_at_most_0.05": false,
+        "split_projector_overlap": 0.07553534636655826,
+        "random_split_projector_overlap_mean": 0.09204600839786407,
+        "split_projector_overlap_upper_tail_p_value": 0.57
+      }
+    },
+    {
+      "label": "p0-L3-write",
+      "anchor_count": 24,
+      "commutant_eigenvalues": [
+        0.003351135472973979,
+        0.005461779700626658,
+        0.005652914119601804,
+        0.005747906242735269,
+        0.006058479325364913,
+        0.006203577229235359
+      ],
+      "lowest_nontrivial_eigenvalue": 0.003351135472973979,
+      "spectrum_rotation_lowest_mean": 0.005213065471667518,
+      "spectrum_rotation_lowest_samples": [
+        0.0051550808482227015,
+        0.004874176466572379,
+        0.0051775554384848104,
+        0.005583412592099264,
+        0.005540538296737987,
+        0.005381723206237217,
+        0.005704733803687697,
+        0.00539626335372938,
+        0.00498698575386798,
+        0.004997351947386739,
+        0.005844651735228509,
+        0.005229911653494712,
+        0.005283063392698345,
+        0.004619578537512477,
+        0.004937464465553674,
+        0.005340918998249789,
+        0.005020425245670117,
+        0.004670651078131694,
+        0.005303757148117352
+      ],
+      "spectrum_rotation_mean_spectrum": [
+        0.005213065471667517,
+        0.005609383541196424,
+        0.005889870894712099,
+        0.006069220248942228,
+        0.006256842168339412,
+        0.006424067683337084
+      ],
+      "lower_tail_p_value": 0.05,
+      "full_family_projector": {
+        "rank": 3,
+        "complement_rank": 29,
+        "relative_mode_eigengap": 0.3285194047805356,
+        "commutator_energy": 0.0038920821705488522
+      },
+      "crossfit": {
+        "directions": [
+          {
+            "training_anchor_offset": 0,
+            "training_anchor_count": 12,
+            "held_out_anchor_count": 12,
+            "projector_rank": 2,
+            "mode_relative_eigengap": 0.012526968037948925,
+            "held_out_mode_commutator_energy": 0.024737533572561272,
+            "random_mode_mean": 0.048574711696564306,
+            "held_out_mode_energy_ratio_to_random": 0.5092677384704057,
+            "mode_randomization_p_value": 0.01,
+            "held_out_commutator_energy": 0.028681394280814315,
+            "size_matched_random_mean": 0.0461198429326287,
+            "held_out_energy_ratio_to_random": 0.6218883772590411,
+            "randomization_p_value": 0.03
+          },
+          {
+            "training_anchor_offset": 1,
+            "training_anchor_count": 12,
+            "held_out_anchor_count": 12,
+            "projector_rank": 3,
+            "mode_relative_eigengap": 0.011133134848010625,
+            "held_out_mode_commutator_energy": 0.07052629956244381,
+            "random_mode_mean": 0.049952171284294064,
+            "held_out_mode_energy_ratio_to_random": 1.4118765560971451,
+            "mode_randomization_p_value": 1.0,
+            "held_out_commutator_energy": 0.03506950707165359,
+            "size_matched_random_mean": 0.04667850698041966,
+            "held_out_energy_ratio_to_random": 0.7512988169558268,
+            "randomization_p_value": 0.04
+          }
+        ],
+        "mean_held_out_energy_ratio_to_random": 0.686593597107434,
+        "mean_held_out_mode_energy_ratio_to_random": 0.9605721472837754,
+        "both_mode_directions_p_at_most_0.05": false,
+        "both_directions_p_at_most_0.05": true,
+        "split_projector_overlap": 0.012601376783109434,
+        "random_split_projector_overlap_mean": 0.09193115487337676,
+        "split_projector_overlap_upper_tail_p_value": 1.0
+      }
+    },
+    {
+      "label": "p1-L2-read",
+      "anchor_count": 8,
+      "commutant_eigenvalues": [
+        0.0021132741478056155,
+        0.002699883276595693,
+        0.003059347508495584,
+        0.0031842681047649295,
+        0.003239161435972224,
+        0.0032816679354882986
+      ],
+      "lowest_nontrivial_eigenvalue": 0.0021132741478056155,
+      "spectrum_rotation_lowest_mean": 0.0033346029058772242,
+      "spectrum_rotation_lowest_samples": [
+        0.0028755096327682745,
+        0.0027632153185379303,
+        0.0035566607272720418,
+        0.003202180472430626,
+        0.0035764804469708006,
+        0.0031192675673219475,
+        0.0029907096121149983,
+        0.0029182963264151114,
+        0.0030689563478068457,
+        0.0034511229154464,
+        0.0037341587816214516,
+        0.003331978105059653,
+        0.0034555423109240797,
+        0.0037106391950103923,
+        0.0035212633864501216,
+        0.0033371071069511586,
+        0.0038531471572186373,
+        0.0033231230528025643,
+        0.003568096748544228
+      ],
+      "spectrum_rotation_mean_spectrum": [
+        0.0033346029058772242,
+        0.0036879493949224205,
+        0.0039317168483476396,
+        0.004130166109436703,
+        0.004268521752442,
+        0.004387680816792753
+      ],
+      "lower_tail_p_value": 0.05,
+      "full_family_projector": {
+        "rank": 2,
+        "complement_rank": 30,
+        "relative_mode_eigengap": 0.016593249517428153,
+        "commutator_energy": 0.009989851148296876
+      },
+      "crossfit": {
+        "directions": [
+          {
+            "training_anchor_offset": 0,
+            "training_anchor_count": 4,
+            "held_out_anchor_count": 4,
+            "projector_rank": 2,
+            "mode_relative_eigengap": 0.022443935684624626,
+            "held_out_mode_commutator_energy": 0.04485481611084948,
+            "random_mode_mean": 0.04121790653724309,
+            "held_out_mode_energy_ratio_to_random": 1.0882361546023742,
+            "mode_randomization_p_value": 0.93,
+            "held_out_commutator_energy": 0.017347735218399298,
+            "size_matched_random_mean": 0.038686926720333144,
+            "held_out_energy_ratio_to_random": 0.4484133708476162,
+            "randomization_p_value": 0.01
+          },
+          {
+            "training_anchor_offset": 1,
+            "training_anchor_count": 4,
+            "held_out_anchor_count": 4,
+            "projector_rank": 2,
+            "mode_relative_eigengap": 0.028004736801400386,
+            "held_out_mode_commutator_energy": 0.03215673215586912,
+            "random_mode_mean": 0.04173504106439221,
+            "held_out_mode_energy_ratio_to_random": 0.7704971969778369,
+            "mode_randomization_p_value": 0.01,
+            "held_out_commutator_energy": 0.027453174511263796,
+            "size_matched_random_mean": 0.039239095344031534,
+            "held_out_energy_ratio_to_random": 0.6996383140479197,
+            "randomization_p_value": 0.22
+          }
+        ],
+        "mean_held_out_energy_ratio_to_random": 0.5740258424477679,
+        "mean_held_out_mode_energy_ratio_to_random": 0.9293666757901056,
+        "both_mode_directions_p_at_most_0.05": false,
+        "both_directions_p_at_most_0.05": false,
+        "split_projector_overlap": 0.009062982207068514,
+        "random_split_projector_overlap_mean": 0.06906516385116078,
+        "split_projector_overlap_upper_tail_p_value": 0.97
+      }
+    },
+    {
+      "label": "p1-L2-write",
+      "anchor_count": 36,
+      "commutant_eigenvalues": [
+        0.005437784654078551,
+        0.007547621919210984,
+        0.007872652152612762,
+        0.00824019150624299,
+        0.008706643793664018,
+        0.009023357866190483
+      ],
+      "lowest_nontrivial_eigenvalue": 0.005437784654078551,
+      "spectrum_rotation_lowest_mean": 0.006858804389404432,
+      "spectrum_rotation_lowest_samples": [
+        0.007960825561385472,
+        0.005789596504719311,
+        0.007038771905233944,
+        0.007714234469773072,
+        0.006881220057851024,
+        0.006197912591459354,
+        0.006390057575964704,
+        0.006873731108611067,
+        0.006448489576673242,
+        0.007164274179053364,
+        0.007833973266775611,
+        0.006111874409341907,
+        0.007039754527654325,
+        0.007558234188163903,
+        0.006440581406979754,
+        0.006824911018209826,
+        0.006073746153900402,
+        0.007147507732646966,
+        0.006827587164286968
+      ],
+      "spectrum_rotation_mean_spectrum": [
+        0.006858804389404433,
+        0.007387753308219111,
+        0.007845768811278157,
+        0.008203677751342033,
+        0.008508403998131667,
+        0.008777459171560222
+      ],
+      "lower_tail_p_value": 0.05,
+      "full_family_projector": {
+        "rank": 6,
+        "complement_rank": 26,
+        "relative_mode_eigengap": 0.31440798037225665,
+        "commutator_energy": 0.004950552354030666
+      },
+      "crossfit": {
+        "directions": [
+          {
+            "training_anchor_offset": 0,
+            "training_anchor_count": 18,
+            "held_out_anchor_count": 18,
+            "projector_rank": 2,
+            "mode_relative_eigengap": 0.01839085566703723,
+            "held_out_mode_commutator_energy": 0.056309543632620765,
+            "random_mode_mean": 0.050008984883229746,
+            "held_out_mode_energy_ratio_to_random": 1.1259885351422896,
+            "mode_randomization_p_value": 0.99,
+            "held_out_commutator_energy": 0.047869647770012715,
+            "size_matched_random_mean": 0.04739051074400526,
+            "held_out_energy_ratio_to_random": 1.0101104001304326,
+            "randomization_p_value": 0.53
+          },
+          {
+            "training_anchor_offset": 1,
+            "training_anchor_count": 18,
+            "held_out_anchor_count": 18,
+            "projector_rank": 2,
+            "mode_relative_eigengap": 0.0987891498550745,
+            "held_out_mode_commutator_energy": 0.050992650143550804,
+            "random_mode_mean": 0.05033829103109479,
+            "held_out_mode_energy_ratio_to_random": 1.0129992317786833,
+            "mode_randomization_p_value": 0.68,
+            "held_out_commutator_energy": 0.038845477671331,
+            "size_matched_random_mean": 0.04786767837340723,
+            "held_out_energy_ratio_to_random": 0.8115178966546978,
+            "randomization_p_value": 0.22
+          }
+        ],
+        "mean_held_out_energy_ratio_to_random": 0.9108141483925651,
+        "mean_held_out_mode_energy_ratio_to_random": 1.0694938834604866,
+        "both_mode_directions_p_at_most_0.05": false,
+        "both_directions_p_at_most_0.05": false,
+        "split_projector_overlap": 0.1851429011300863,
+        "random_split_projector_overlap_mean": 0.05993629735716068,
+        "split_projector_overlap_upper_tail_p_value": 0.02
+      }
+    },
+    {
+      "label": "p1-L3-read",
+      "anchor_count": 12,
+      "commutant_eigenvalues": [
+        0.004655410360519197,
+        0.004907932843682637,
+        0.005333001027233746,
+        0.005456452454178818,
+        0.0056023410374362185,
+        0.005704541726446026
+      ],
+      "lowest_nontrivial_eigenvalue": 0.004655410360519197,
+      "spectrum_rotation_lowest_mean": 0.0054295749805515665,
+      "spectrum_rotation_lowest_samples": [
+        0.005168230902428429,
+        0.00587725050941051,
+        0.005381779906608873,
+        0.005156540030857279,
+        0.0049222724248269715,
+        0.005778315596618531,
+        0.005091897237690483,
+        0.004790667218137131,
+        0.006194914197666837,
+        0.005189116992895616,
+        0.006044107988044868,
+        0.005005156852138575,
+        0.005788796907115365,
+        0.005815220569244738,
+        0.005778635595847198,
+        0.005496254641912633,
+        0.004658535961534422,
+        0.004783023283742951,
+        0.006241207813758351
+      ],
+      "spectrum_rotation_mean_spectrum": [
+        0.0054295749805515665,
+        0.005795666095388047,
+        0.0061110130421039395,
+        0.006337027165284404,
+        0.006533115576536563,
+        0.006673070732958443
+      ],
+      "lower_tail_p_value": 0.05,
+      "full_family_projector": {
+        "rank": 2,
+        "complement_rank": 30,
+        "relative_mode_eigengap": 0.16699827369142034,
+        "commutator_energy": 0.005070007449305723
+      },
+      "crossfit": {
+        "directions": [
+          {
+            "training_anchor_offset": 0,
+            "training_anchor_count": 6,
+            "held_out_anchor_count": 6,
+            "projector_rank": 3,
+            "mode_relative_eigengap": 0.029389020090848258,
+            "held_out_mode_commutator_energy": 0.01976757849651396,
+            "random_mode_mean": 0.03995727514317172,
+            "held_out_mode_energy_ratio_to_random": 0.494717881178943,
+            "mode_randomization_p_value": 0.01,
+            "held_out_commutator_energy": 0.02126638949953774,
+            "size_matched_random_mean": 0.03695168187210006,
+            "held_out_energy_ratio_to_random": 0.5755188511620816,
+            "randomization_p_value": 0.01
+          },
+          {
+            "training_anchor_offset": 1,
+            "training_anchor_count": 6,
+            "held_out_anchor_count": 6,
+            "projector_rank": 2,
+            "mode_relative_eigengap": 0.05478936842377681,
+            "held_out_mode_commutator_energy": 0.0323365549130961,
+            "random_mode_mean": 0.04341592593399532,
+            "held_out_mode_energy_ratio_to_random": 0.7448085977080612,
+            "mode_randomization_p_value": 0.01,
+            "held_out_commutator_energy": 0.034414844984230426,
+            "size_matched_random_mean": 0.04022270731097113,
+            "held_out_energy_ratio_to_random": 0.8556073741670653,
+            "randomization_p_value": 0.35
+          }
+        ],
+        "mean_held_out_energy_ratio_to_random": 0.7155631126645734,
+        "mean_held_out_mode_energy_ratio_to_random": 0.6197632394435021,
+        "both_mode_directions_p_at_most_0.05": true,
+        "both_directions_p_at_most_0.05": false,
+        "split_projector_overlap": 0.023749929217124068,
+        "random_split_projector_overlap_mean": 0.09559685676397524,
+        "split_projector_overlap_upper_tail_p_value": 0.99
+      }
+    },
+    {
+      "label": "p1-L3-write",
+      "anchor_count": 24,
+      "commutant_eigenvalues": [
+        0.002832981297224839,
+        0.004821372465687247,
+        0.005067535107766059,
+        0.005705055020122209,
+        0.005970903398747671,
+        0.006102849191806905
+      ],
+      "lowest_nontrivial_eigenvalue": 0.002832981297224839,
+      "spectrum_rotation_lowest_mean": 0.004215568419918705,
+      "spectrum_rotation_lowest_samples": [
+        0.004924472559114302,
+        0.004572126293656402,
+        0.003739609577915813,
+        0.004120329472008019,
+        0.004236423167289323,
+        0.003832151963005564,
+        0.00475872934349567,
+        0.0042659792324696265,
+        0.004325805349637023,
+        0.0039023314263570462,
+        0.003980606744814882,
+        0.0037236068873976918,
+        0.004272280440697513,
+        0.0037295373867318516,
+        0.004466966359775238,
+        0.00398250549758135,
+        0.004736919930131204,
+        0.0039772475926507025,
+        0.004548170753726179
+      ],
+      "spectrum_rotation_mean_spectrum": [
+        0.004215568419918705,
+        0.004498865579589748,
+        0.004790608316368071,
+        0.00498005079368492,
+        0.005171641576303721,
+        0.005341266682595365
+      ],
+      "lower_tail_p_value": 0.05,
+      "full_family_projector": {
+        "rank": 4,
+        "complement_rank": 28,
+        "relative_mode_eigengap": 0.4106083032752224,
+        "commutator_energy": 0.0031172316846624047
+      },
+      "crossfit": {
+        "directions": [
+          {
+            "training_anchor_offset": 0,
+            "training_anchor_count": 12,
+            "held_out_anchor_count": 12,
+            "projector_rank": 2,
+            "mode_relative_eigengap": 0.0027740605442141087,
+            "held_out_mode_commutator_energy": 0.04381329683340191,
+            "random_mode_mean": 0.051885800234877766,
+            "held_out_mode_energy_ratio_to_random": 0.8444178683776087,
+            "mode_randomization_p_value": 0.02,
+            "held_out_commutator_energy": 0.061517662075703944,
+            "size_matched_random_mean": 0.04854858930556527,
+            "held_out_energy_ratio_to_random": 1.2671359344452051,
+            "randomization_p_value": 0.94
+          },
+          {
+            "training_anchor_offset": 1,
+            "training_anchor_count": 12,
+            "held_out_anchor_count": 12,
+            "projector_rank": 2,
+            "mode_relative_eigengap": 0.0034301592795810336,
+            "held_out_mode_commutator_energy": 0.043163384277630314,
+            "random_mode_mean": 0.05107269066089778,
+            "held_out_mode_energy_ratio_to_random": 0.8451362894549242,
+            "mode_randomization_p_value": 0.01,
+            "held_out_commutator_energy": 0.05409513568468191,
+            "size_matched_random_mean": 0.047741546393978186,
+            "held_out_energy_ratio_to_random": 1.133083022453272,
+            "randomization_p_value": 0.71
+          }
+        ],
+        "mean_held_out_energy_ratio_to_random": 1.2001094784492385,
+        "mean_held_out_mode_energy_ratio_to_random": 0.8447770789162665,
+        "both_mode_directions_p_at_most_0.05": true,
+        "both_directions_p_at_most_0.05": false,
+        "split_projector_overlap": 0.246214261232928,
+        "random_split_projector_overlap_mean": 0.061743040267226615,
+        "split_projector_overlap_upper_tail_p_value": 0.02
+      }
+    }
+  ],
+  "population_tests": {
+    "parity_0_read": {
+      "observed_mean_lowest_eigenvalue": 0.0033650910505377265,
+      "null_mean_lowest_eigenvalue": 0.003914052086512975,
+      "observed_to_null_ratio": 0.859746108676771,
+      "lower_tail_p_value": 0.05
+    },
+    "parity_0_write": {
+      "observed_mean_lowest_eigenvalue": 0.004935677659253498,
+      "null_mean_lowest_eigenvalue": 0.006874433825411898,
+      "observed_to_null_ratio": 0.7179758776654985,
+      "lower_tail_p_value": 0.05
+    },
+    "parity_1_read": {
+      "observed_mean_lowest_eigenvalue": 0.0033843422541624067,
+      "null_mean_lowest_eigenvalue": 0.004382088943214396,
+      "observed_to_null_ratio": 0.7723125427207529,
+      "lower_tail_p_value": 0.05
+    },
+    "parity_1_write": {
+      "observed_mean_lowest_eigenvalue": 0.004135382975651695,
+      "null_mean_lowest_eigenvalue": 0.005537186404661569,
+      "observed_to_null_ratio": 0.7468383170503807,
+      "lower_tail_p_value": 0.05
+    }
+  },
+  "null_repetitions": 19,
+  "random_projectors_per_crossfit": 99,
+  "seed": 16180
+}

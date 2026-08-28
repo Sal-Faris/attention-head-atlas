@@ -54,16 +54,16 @@ python scripts/extract_operators.py `
 
 ## Status
 
-Checkpoint 0032 discovers residual-axis modules solely from which earlier OV
-heads write them and which later Q/K/V components read them. Coarse module
-boundaries recur modestly across disjoint anchor sets, but untouched OV heads
-align with them only at two-module resolution in layer 3, and one reciprocal
-split misses the strongest partition-specificity gate. This is evidence for
-weak reusable architectural organization, not yet for several crisp OV
-compartments.
+Checkpoint 0033 uses an approximate-commutant test to search for read/write
+compartments without fixing their number, dimensions, memberships, or internal
+transformation type. Real architectural covariance families have lower
+commutant energy than spectrum-rotated controls, but no candidate projector
+both generalizes reciprocally and recurs across split fits. This is evidence
+for non-random shared geometry, not stable hard compartments in the tested
+32-dimensional slices.
 
 Read the methods, results, and revised gate in
-[`docs/checkpoints/0032-architectural-module-pair-pilot.md`](docs/checkpoints/0032-architectural-module-pair-pilot.md).
+[`docs/checkpoints/0033-architectural-commutant-pilot.md`](docs/checkpoints/0033-architectural-commutant-pilot.md).
 The main Pythia figures are:
 
 - `results/pythia-70m-deduped/activation_validation_pilot.png`
@@ -80,6 +80,7 @@ The main Pythia figures are:
 - `results/pythia-70m-deduped/direct_ov_restricted_map_summary_v1.png`
 - `results/pythia-70m-deduped/architectural_ov_restricted_map_pilot_v1.png`
 - `results/pythia-70m-deduped/architectural_module_pairs_v1.png`
+- `results/pythia-70m-deduped/architectural_commutants_v1.png`
 - `results/pythia-70m-deduped/atom_emergence.png`
 - `results/pythia-70m-deduped/atom_reuse.png`
 - `results/pythia-70m-deduped/rotary_qk_robustness.png`
