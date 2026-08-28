@@ -54,16 +54,15 @@ python scripts/extract_operators.py `
 
 ## Status
 
-Checkpoint 0029 tests whether the OV singular-channel organization survives a
-flexible within-head singular-gain correction. Held-out architectural R2 falls
-from about 9.2% to 0.7--0.8%, below the 1.9--2.1% produced after random
-read/write re-pairing. No individual head survives both reciprocal screens.
-This rejects SVD-channel fingerprint clustering as a route to compartments and
-redirects the next experiment toward direct variable-rank restricted maps with
-an explicit residual and full MDL cost.
+Checkpoint 0030 directly fits variable-support, variable-rank restricted maps
+to held-out OV heads. The detector strongly recovers planted blocks and finds
+reciprocal non-random structure in real weights. The real effect is explained
+better by unstructured sparsity in population-derived axes than by compact
+blocks, however, and one dense low-rank map also wins at matched cost. The
+result is reusable shared-axis structure, not yet compartmental transformations.
 
 Read the methods, results, and revised gate in
-[`docs/checkpoints/0029-gain-residualized-ov-compartments.md`](docs/checkpoints/0029-gain-residualized-ov-compartments.md).
+[`docs/checkpoints/0030-direct-ov-restricted-map-pilot.md`](docs/checkpoints/0030-direct-ov-restricted-map-pilot.md).
 The main Pythia figures are:
 
 - `results/pythia-70m-deduped/activation_validation_pilot.png`
@@ -77,6 +76,7 @@ The main Pythia figures are:
 - `results/pythia-70m-deduped/architectural_ov_compartments_v1.png`
 - `results/pythia-70m-deduped/architectural_ov_compartment_confounders_v1.png`
 - `results/pythia-70m-deduped/gain_residualized_ov_compartments_v1.png`
+- `results/pythia-70m-deduped/direct_ov_restricted_map_summary_v1.png`
 - `results/pythia-70m-deduped/atom_emergence.png`
 - `results/pythia-70m-deduped/atom_reuse.png`
 - `results/pythia-70m-deduped/rotary_qk_robustness.png`
