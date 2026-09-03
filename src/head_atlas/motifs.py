@@ -6,12 +6,8 @@ from scipy.optimize import linear_sum_assignment
 Array = np.ndarray
 
 
-def matched_atom_similarity(first: Array, second: Array, eps: float = 1e-12) -> float:
-    """Mean absolute cosine after optimal one-to-one atom matching.
-
-    Dictionary atoms have arbitrary order and sign. Hungarian matching removes
-    those symmetries before measuring reproducibility.
-    """
+def matched_atom_similarities(first: Array, second: Array, eps: float = 1e-12) -> Array:
+    """Return absolute cosines for optimally matched atoms in first-dictionary order."""
 
     first_array = np.asarray(first, dtype=np.float64)
     second_array = np.asarray(second, dtype=np.float64)
@@ -29,4 +25,16 @@ def matched_atom_similarity(first: Array, second: Array, eps: float = 1e-12) -> 
     normalized_second = second_array / second_norms[:, None]
     similarities = np.abs(normalized_first @ normalized_second.T)
     rows, columns = linear_sum_assignment(-similarities)
-    return float(np.mean(similarities[rows, columns]))
+    matched = np.empty(first_array.shape[0], dtype=np.float64)
+    matched[rows] = similarities[rows, columns]
+    return matched
+
+
+def matched_atom_similarity(first: Array, second: Array, eps: float = 1e-12) -> float:
+    """Mean absolute cosine after optimal one-to-one atom matching.
+
+    Dictionary atoms have arbitrary order and sign. Hungarian matching removes
+    those symmetries before measuring reproducibility.
+    """
+
+    return float(np.mean(matched_atom_similarities(first, second, eps=eps)))

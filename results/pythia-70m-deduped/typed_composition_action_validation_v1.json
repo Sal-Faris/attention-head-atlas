@@ -1,0 +1,71 @@
+{
+  "status": "held-out activation-weighted validation of static typed composition edges",
+  "action": "RMS actual attention-weighted source OV output after linear application of target Q/K/V reader",
+  "static_edge": "scale-free OV-writer to Q/K/V-reader overlap",
+  "selection": "all cross-layer head pairs; no activation-based edge selection",
+  "types": {
+    "Q": {
+      "discovery_prediction": {
+        "mean_within_layer_pair_spearman": 0.5515018315018315,
+        "head_identity_shuffle_mean": 0.0023416823416823416,
+        "head_identity_shuffle_standard_deviation": 0.0627981939817031,
+        "upper_tail_p_value": 0.001
+      },
+      "confirmation_prediction": {
+        "mean_within_layer_pair_spearman": 0.5542307692307692,
+        "head_identity_shuffle_mean": -0.002078244300466523,
+        "head_identity_shuffle_standard_deviation": 0.06136159735801064,
+        "upper_tail_p_value": 0.001
+      },
+      "split_reliability": {
+        "mean_within_layer_pair_spearman": 0.987130647130647,
+        "head_identity_shuffle_mean": 0.0020646317868540094,
+        "head_identity_shuffle_standard_deviation": 0.06999354663680832,
+        "upper_tail_p_value": 0.001
+      }
+    },
+    "K": {
+      "discovery_prediction": {
+        "mean_within_layer_pair_spearman": 0.5241880341880342,
+        "head_identity_shuffle_mean": 0.0016744766744766753,
+        "head_identity_shuffle_standard_deviation": 0.05749730302591914,
+        "upper_tail_p_value": 0.001
+      },
+      "confirmation_prediction": {
+        "mean_within_layer_pair_spearman": 0.5280463980463981,
+        "head_identity_shuffle_mean": -0.0004606468495357383,
+        "head_identity_shuffle_standard_deviation": 0.05868710379896129,
+        "upper_tail_p_value": 0.001
+      },
+      "split_reliability": {
+        "mean_within_layer_pair_spearman": 0.9955067155067153,
+        "head_identity_shuffle_mean": 0.0012682432126876568,
+        "head_identity_shuffle_standard_deviation": 0.06864348230702204,
+        "upper_tail_p_value": 0.001
+      }
+    },
+    "V": {
+      "discovery_prediction": {
+        "mean_within_layer_pair_spearman": 0.43263431013431014,
+        "head_identity_shuffle_mean": -0.0006909565242898568,
+        "head_identity_shuffle_standard_deviation": 0.050335545062628155,
+        "upper_tail_p_value": 0.001
+      },
+      "confirmation_prediction": {
+        "mean_within_layer_pair_spearman": 0.43915140415140413,
+        "head_identity_shuffle_mean": 0.0027975350197572413,
+        "head_identity_shuffle_standard_deviation": 0.04926654443631865,
+        "upper_tail_p_value": 0.001
+      },
+      "split_reliability": {
+        "mean_within_layer_pair_spearman": 0.9929609279609278,
+        "head_identity_shuffle_mean": -0.0021397588064254736,
+        "head_identity_shuffle_standard_deviation": 0.06895889550918038,
+        "upper_tail_p_value": 0.001
+      }
+    }
+  },
+  "sequences_per_split": 32,
+  "seed": 0,
+  "resamples": 999
+}

@@ -1,0 +1,922 @@
+{
+  "status": "unrestricted QK population modes followed by emergent-rank audit",
+  "model": "EleutherAI/pythia-70m-deduped",
+  "model_revision": "step143000",
+  "operator_metadata": {
+    "architectures": [
+      "GPTNeoXForCausalLM"
+    ],
+    "d_head": 64,
+    "d_model": 512,
+    "format": "factorized-head-operator-v1",
+    "git_commit": "c343ed925f0de6f4a2f5e5a6e6417fd5a1d34e53",
+    "kind": "QK",
+    "model": "EleutherAI/pythia-70m-deduped",
+    "model_type": "gpt_neox",
+    "n_heads": 8,
+    "n_layers": 6,
+    "numpy": "2.5.2",
+    "operator_count": 48,
+    "python": "3.12.4",
+    "revision": "step143000",
+    "rope_theta": 10000,
+    "rotary_pct": 0.25,
+    "snapshot_commit": "9a7c847e93250c8f24d4b7e7134dbf369e8fc9cb",
+    "source_format": "huggingface-safetensors",
+    "weight_processing": "fold_layer_norm_and_center_readers_and_writers"
+  },
+  "normalization": "unit Frobenius norm per complete QK operator",
+  "method": "uncentered full-operator PCA; SVD is applied only after modes are learned",
+  "component_counts": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "truncation_ranks": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256
+  ],
+  "schemes": {
+    "head_parity": {
+      "curves": {
+        "1": {
+          "unrestricted_full_rank_variance_recovered": 0.043202702512384825,
+          "truncated_variance_recovered": {
+            "1": 0.0017981844559654264,
+            "2": 0.003756868113583116,
+            "4": 0.007549891902289165,
+            "8": 0.013420799105726498,
+            "16": 0.021290110912279205,
+            "32": 0.03220054833729824,
+            "64": 0.04014893533951379,
+            "128": 0.04314636659622497,
+            "256": 0.043244662462414665
+          }
+        },
+        "2": {
+          "unrestricted_full_rank_variance_recovered": 0.059627970825576415,
+          "truncated_variance_recovered": {
+            "1": 0.003549254741231349,
+            "2": 0.0065619630166870585,
+            "4": 0.011155552323184968,
+            "8": 0.018443953676981865,
+            "16": 0.02852737950179362,
+            "32": 0.04330734060716274,
+            "64": 0.05482854476513507,
+            "128": 0.0592144582164512,
+            "256": 0.059647416153211466
+          }
+        },
+        "4": {
+          "unrestricted_full_rank_variance_recovered": 0.07169705741687289,
+          "truncated_variance_recovered": {
+            "1": 0.004253154396822281,
+            "2": 0.008094543401560829,
+            "4": 0.01339309510971527,
+            "8": 0.022004782522634284,
+            "16": 0.03402032340410964,
+            "32": 0.050805753037541035,
+            "64": 0.06418700625543988,
+            "128": 0.07013485684276824,
+            "256": 0.0715141393427364
+          }
+        },
+        "8": {
+          "unrestricted_full_rank_variance_recovered": 0.08098052601625463,
+          "truncated_variance_recovered": {
+            "1": 0.004800134832328806,
+            "2": 0.008737358894494496,
+            "4": 0.014302100950574076,
+            "8": 0.023490218861551636,
+            "16": 0.03631749206193715,
+            "32": 0.05455869718108143,
+            "64": 0.07015588653438712,
+            "128": 0.07837303916662611,
+            "256": 0.08063718037204151
+          }
+        },
+        "16": {
+          "unrestricted_full_rank_variance_recovered": 0.09106299332669754,
+          "truncated_variance_recovered": {
+            "1": 0.005645996148851143,
+            "2": 0.009797779276485376,
+            "4": 0.015907220273087625,
+            "8": 0.02561222863866885,
+            "16": 0.03934955954507458,
+            "32": 0.059347575139171035,
+            "64": 0.07745591836076507,
+            "128": 0.0869681388294474,
+            "256": 0.09040863759757181
+          }
+        }
+      },
+      "mean_mode_dimensions_across_folds": [
+        {
+          "stable_rank": 19.65590190660647,
+          "entropy_rank": 71.38223757568224,
+          "rank_50_percent_energy": 17.0,
+          "rank_80_percent_energy": 42.0,
+          "rank_90_percent_energy": 66.0,
+          "rank_95_percent_energy": 94.0,
+          "largest_gap_rank_below_99_percent_energy": 18.0,
+          "largest_gap_ratio": 1.0928101426933727
+        },
+        {
+          "stable_rank": 13.371381782682842,
+          "entropy_rank": 100.5429273368693,
+          "rank_50_percent_energy": 22.5,
+          "rank_80_percent_energy": 66.0,
+          "rank_90_percent_energy": 103.0,
+          "rank_95_percent_energy": 144.5,
+          "largest_gap_rank_below_99_percent_energy": 1.5,
+          "largest_gap_ratio": 1.2253132708206875
+        },
+        {
+          "stable_rank": 17.714013584680092,
+          "entropy_rank": 129.15457423352734,
+          "rank_50_percent_energy": 28.5,
+          "rank_80_percent_energy": 89.5,
+          "rank_90_percent_energy": 138.0,
+          "rank_95_percent_energy": 185.5,
+          "largest_gap_rank_below_99_percent_energy": 1.0,
+          "largest_gap_ratio": 1.2438203528264378
+        },
+        {
+          "stable_rank": 30.87788659770941,
+          "entropy_rank": 149.479014886365,
+          "rank_50_percent_energy": 34.5,
+          "rank_80_percent_energy": 94.5,
+          "rank_90_percent_energy": 142.5,
+          "rank_95_percent_energy": 189.5,
+          "largest_gap_rank_below_99_percent_energy": 4.0,
+          "largest_gap_ratio": 1.096330124055595
+        },
+        {
+          "stable_rank": 44.158173816866864,
+          "entropy_rank": 149.1486514946187,
+          "rank_50_percent_energy": 38.0,
+          "rank_80_percent_energy": 90.5,
+          "rank_90_percent_energy": 132.5,
+          "rank_95_percent_energy": 170.5,
+          "largest_gap_rank_below_99_percent_energy": 2.0,
+          "largest_gap_ratio": 1.0726335715059687
+        },
+        {
+          "stable_rank": 39.12919229851303,
+          "entropy_rank": 193.55110344024226,
+          "rank_50_percent_energy": 47.5,
+          "rank_80_percent_energy": 122.5,
+          "rank_90_percent_energy": 178.5,
+          "rank_95_percent_energy": 230.0,
+          "largest_gap_rank_below_99_percent_energy": 1.0,
+          "largest_gap_ratio": 1.1201748183297155
+        },
+        {
+          "stable_rank": 46.37856234559265,
+          "entropy_rank": 189.76670086612071,
+          "rank_50_percent_energy": 49.0,
+          "rank_80_percent_energy": 117.0,
+          "rank_90_percent_energy": 166.5,
+          "rank_95_percent_energy": 213.5,
+          "largest_gap_rank_below_99_percent_energy": 1.0,
+          "largest_gap_ratio": 1.1317511237516857
+        },
+        {
+          "stable_rank": 22.7380431839071,
+          "entropy_rank": 131.68704297545523,
+          "rank_50_percent_energy": 29.5,
+          "rank_80_percent_energy": 87.0,
+          "rank_90_percent_energy": 134.0,
+          "rank_95_percent_energy": 181.0,
+          "largest_gap_rank_below_99_percent_energy": 1.5,
+          "largest_gap_ratio": 1.1473432765397233
+        },
+        {
+          "stable_rank": 34.928848725204034,
+          "entropy_rank": 147.330205012185,
+          "rank_50_percent_energy": 35.0,
+          "rank_80_percent_energy": 90.0,
+          "rank_90_percent_energy": 135.5,
+          "rank_95_percent_energy": 181.5,
+          "largest_gap_rank_below_99_percent_energy": 2.0,
+          "largest_gap_ratio": 1.0709240958848147
+        },
+        {
+          "stable_rank": 32.880172964373315,
+          "entropy_rank": 164.90893902592973,
+          "rank_50_percent_energy": 40.5,
+          "rank_80_percent_energy": 102.0,
+          "rank_90_percent_energy": 150.0,
+          "rank_95_percent_energy": 196.5,
+          "largest_gap_rank_below_99_percent_energy": 1.0,
+          "largest_gap_ratio": 1.1613569905562002
+        },
+        {
+          "stable_rank": 35.03732202531316,
+          "entropy_rank": 160.22111685752617,
+          "rank_50_percent_energy": 39.5,
+          "rank_80_percent_energy": 99.5,
+          "rank_90_percent_energy": 148.0,
+          "rank_95_percent_energy": 195.5,
+          "largest_gap_rank_below_99_percent_energy": 2.5,
+          "largest_gap_ratio": 1.1504459021757654
+        },
+        {
+          "stable_rank": 35.79842122402913,
+          "entropy_rank": 154.83339994615392,
+          "rank_50_percent_energy": 38.5,
+          "rank_80_percent_energy": 94.5,
+          "rank_90_percent_energy": 140.0,
+          "rank_95_percent_energy": 185.0,
+          "largest_gap_rank_below_99_percent_energy": 28.5,
+          "largest_gap_ratio": 1.1717572620966497
+        },
+        {
+          "stable_rank": 34.67793958545967,
+          "entropy_rank": 145.85123393634694,
+          "rank_50_percent_energy": 34.0,
+          "rank_80_percent_energy": 89.0,
+          "rank_90_percent_energy": 133.5,
+          "rank_95_percent_energy": 183.0,
+          "largest_gap_rank_below_99_percent_energy": 3.5,
+          "largest_gap_ratio": 1.0686181539259558
+        },
+        {
+          "stable_rank": 37.18309410745809,
+          "entropy_rank": 175.4311988257211,
+          "rank_50_percent_energy": 44.5,
+          "rank_80_percent_energy": 110.0,
+          "rank_90_percent_energy": 157.5,
+          "rank_95_percent_energy": 203.0,
+          "largest_gap_rank_below_99_percent_energy": 1.0,
+          "largest_gap_ratio": 1.1690163877138713
+        },
+        {
+          "stable_rank": 30.09169525749656,
+          "entropy_rank": 133.91309114812248,
+          "rank_50_percent_energy": 35.5,
+          "rank_80_percent_energy": 86.5,
+          "rank_90_percent_energy": 122.5,
+          "rank_95_percent_energy": 155.5,
+          "largest_gap_rank_below_99_percent_energy": 52.0,
+          "largest_gap_ratio": 1.2973527574886208
+        },
+        {
+          "stable_rank": 20.76667010047176,
+          "entropy_rank": 155.62715446528273,
+          "rank_50_percent_energy": 37.5,
+          "rank_80_percent_energy": 103.5,
+          "rank_90_percent_energy": 155.0,
+          "rank_95_percent_energy": 205.0,
+          "largest_gap_rank_below_99_percent_energy": 1.0,
+          "largest_gap_ratio": 1.3959271499895762
+        }
+      ],
+      "disjoint_training_mode_stability": {
+        "1": {
+          "matched_mode_cosines": [
+            0.6139352619657045
+          ],
+          "mean_matched_mode_cosine": 0.6139352619657045,
+          "median_matched_mode_cosine": 0.6139352619657045,
+          "canonical_cosines_between_mode_spans": [
+            0.6139352619657045
+          ],
+          "mode_span_overlap_fraction": 0.37691650588489817
+        },
+        "2": {
+          "matched_mode_cosines": [
+            0.6139352619657051,
+            0.2741701171131177
+          ],
+          "mean_matched_mode_cosine": 0.4440526895394114,
+          "median_matched_mode_cosine": 0.4440526895394114,
+          "canonical_cosines_between_mode_spans": [
+            0.6941812230759841,
+            0.3542867893211821
+          ],
+          "mode_span_overlap_fraction": 0.30370334977939045
+        },
+        "4": {
+          "matched_mode_cosines": [
+            0.6139352619657051,
+            0.2741701171131177,
+            0.16779579048263557,
+            0.17514852489880126
+          ],
+          "mean_matched_mode_cosine": 0.3077624236150649,
+          "median_matched_mode_cosine": 0.22465932100595948,
+          "canonical_cosines_between_mode_spans": [
+            0.7101455019448758,
+            0.4058510887032386,
+            0.31862889098713076,
+            0.17420716706767378
+          ],
+          "mode_span_overlap_fraction": 0.2002235618408942
+        },
+        "8": {
+          "matched_mode_cosines": [
+            0.6139352619657051,
+            0.2741701171131177,
+            0.16779579048263557,
+            0.17514852489880126,
+            0.09495147503124056,
+            0.0556538822113592,
+            0.14761251883227794,
+            0.01717479882821365
+          ],
+          "mean_matched_mode_cosine": 0.19330529617041886,
+          "median_matched_mode_cosine": 0.15770415465745674,
+          "canonical_cosines_between_mode_spans": [
+            0.7141521732812262,
+            0.4221489005659801,
+            0.3292112321023194,
+            0.289634357825008,
+            0.20810585596482895,
+            0.09880627606479907,
+            0.08414716287516615,
+            0.0012030850919745185
+          ],
+          "mode_span_overlap_fraction": 0.11758050466709023
+        },
+        "16": {
+          "matched_mode_cosines": [
+            0.6139352619657051,
+            0.2741701171131177,
+            0.16779579048263557,
+            0.17514852489880126,
+            0.18024334960484545,
+            0.0556538822113592,
+            0.07173505378848097,
+            0.02946978023878639,
+            0.006695630906978859,
+            0.016384295466482166,
+            0.12090479194683723,
+            0.06786497476145596,
+            0.02440672902385067,
+            0.02186719011543972,
+            0.015561597999080325,
+            0.0802287713289208
+          ],
+          "mean_matched_mode_cosine": 0.12012910886579858,
+          "median_matched_mode_cosine": 0.06980001427496846,
+          "canonical_cosines_between_mode_spans": [
+            0.7146933520083119,
+            0.5034456760969446,
+            0.4485700811250416,
+            0.3480322453996867,
+            0.2273090310780451,
+            0.16607904805855436,
+            0.14089359430620108,
+            0.14039918100064486,
+            0.10067260845733836,
+            0.0820297646237595,
+            0.05822350684146723,
+            0.027215288340938993,
+            0.021182492258376262,
+            0.012724677505086265,
+            0.007485849981048039,
+            0.0021027623523168894
+          ],
+          "mode_span_overlap_fraction": 0.07669161615384217
+        }
+      },
+      "primary": {
+        "components": 4,
+        "truncation_rank": 64,
+        "observed": {
+          "unrestricted_variance_recovered": 0.07169705741687289,
+          "rank_truncated_variance_recovered": 0.06418700625543988,
+          "median_entropy_rank": 114.84875078519832,
+          "median_rank_90_percent_energy": 120.5,
+          "median_disjoint_training_mode_cosine": 0.22465932100595948,
+          "disjoint_training_mode_span_overlap_fraction": 0.2002235618408942
+        },
+        "null_comparisons": {
+          "spectrum_matched_haar": {
+            "unrestricted_variance_recovered": {
+              "null_mean": 1.485698519139125e-05,
+              "null_standard_deviation": 1.588150913798774e-06,
+              "observed_minus_null_mean": 0.0716822004316815,
+              "upper_tail_p_value": 0.1
+            },
+            "rank_truncated_variance_recovered": {
+              "null_mean": 1.5415064501840447e-05,
+              "null_standard_deviation": 1.498649300090084e-06,
+              "observed_minus_null_mean": 0.06417159119093804,
+              "upper_tail_p_value": 0.1
+            },
+            "median_entropy_rank": {
+              "null_mean": 205.98032570662133,
+              "null_standard_deviation": 6.315272379452456,
+              "observed_minus_null_mean": -91.13157492142301,
+              "lower_tail_p_value": 0.1
+            },
+            "median_rank_90_percent_energy": {
+              "null_mean": 189.91666666666666,
+              "null_standard_deviation": 3.8151743807531986,
+              "observed_minus_null_mean": -69.41666666666666,
+              "lower_tail_p_value": 0.1
+            },
+            "median_disjoint_training_mode_cosine": {
+              "null_mean": 0.0022657482731486094,
+              "null_standard_deviation": 0.0004413423398995053,
+              "observed_minus_null_mean": 0.22239357273281088,
+              "upper_tail_p_value": 0.1
+            },
+            "disjoint_training_mode_span_overlap_fraction": {
+              "null_mean": 1.33581597732608e-05,
+              "null_standard_deviation": 4.719559306750033e-06,
+              "observed_minus_null_mean": 0.20021020368112094,
+              "upper_tail_p_value": 0.1
+            }
+          },
+          "within_layer_side_pairing_shuffle": {
+            "unrestricted_variance_recovered": {
+              "null_mean": 0.0021313024442122072,
+              "null_standard_deviation": 0.003326673592949195,
+              "observed_minus_null_mean": 0.06956575497266068,
+              "upper_tail_p_value": 0.1
+            },
+            "rank_truncated_variance_recovered": {
+              "null_mean": 0.0021244271968490027,
+              "null_standard_deviation": 0.00320093474543335,
+              "observed_minus_null_mean": 0.06206257905859088,
+              "upper_tail_p_value": 0.1
+            },
+            "median_entropy_rank": {
+              "null_mean": 114.55143299487408,
+              "null_standard_deviation": 16.420097764952384,
+              "observed_minus_null_mean": 0.297317790324243,
+              "lower_tail_p_value": 0.6
+            },
+            "median_rank_90_percent_energy": {
+              "null_mean": 123.11111111111111,
+              "null_standard_deviation": 14.03374460556843,
+              "observed_minus_null_mean": -2.6111111111111143,
+              "lower_tail_p_value": 0.5
+            },
+            "median_disjoint_training_mode_cosine": {
+              "null_mean": 0.012691132087826337,
+              "null_standard_deviation": 0.005000150925249658,
+              "observed_minus_null_mean": 0.21196818891813313,
+              "upper_tail_p_value": 0.1
+            },
+            "disjoint_training_mode_span_overlap_fraction": {
+              "null_mean": 0.007500353412396309,
+              "null_standard_deviation": 0.011986740358273759,
+              "observed_minus_null_mean": 0.1927232084284979,
+              "upper_tail_p_value": 0.1
+            }
+          }
+        }
+      }
+    },
+    "layer_parity": {
+      "curves": {
+        "1": {
+          "unrestricted_full_rank_variance_recovered": 0.012583141249012067,
+          "truncated_variance_recovered": {
+            "1": 0.00045614262127212596,
+            "2": 0.0007773988069528549,
+            "4": 0.0016195819889177065,
+            "8": 0.0027352659882766994,
+            "16": 0.0047176051872260105,
+            "32": 0.008568707267528853,
+            "64": 0.011448783810379226,
+            "128": 0.012428504151115818,
+            "256": 0.012576333329538265
+          }
+        },
+        "2": {
+          "unrestricted_full_rank_variance_recovered": 0.014041869664953395,
+          "truncated_variance_recovered": {
+            "1": 0.0007809703017623501,
+            "2": 0.001186888630047842,
+            "4": 0.002087394710881184,
+            "8": 0.0034411292999865736,
+            "16": 0.005697818362997783,
+            "32": 0.00979870691970484,
+            "64": 0.012800036313639459,
+            "128": 0.01381831782033725,
+            "256": 0.014021629701867702
+          }
+        },
+        "4": {
+          "unrestricted_full_rank_variance_recovered": 0.016513126335082243,
+          "truncated_variance_recovered": {
+            "1": 0.0010729319163178725,
+            "2": 0.0016015171776298336,
+            "4": 0.0027712230363789955,
+            "8": 0.0045841344257428985,
+            "16": 0.007519257641404996,
+            "32": 0.012150388916591082,
+            "64": 0.015394192704073308,
+            "128": 0.016420736958276443,
+            "256": 0.016514085800191314
+          }
+        },
+        "8": {
+          "unrestricted_full_rank_variance_recovered": 0.01777686281919537,
+          "truncated_variance_recovered": {
+            "1": 0.0012723388889566006,
+            "2": 0.0019124130990460463,
+            "4": 0.003177826682568332,
+            "8": 0.0052509421009242305,
+            "16": 0.008394400892303191,
+            "32": 0.013194342478364245,
+            "64": 0.016541307028642108,
+            "128": 0.01760748080938451,
+            "256": 0.017753437346273375
+          }
+        },
+        "16": {
+          "unrestricted_full_rank_variance_recovered": 0.02020914017561222,
+          "truncated_variance_recovered": {
+            "1": 0.0017021648255441553,
+            "2": 0.002548706649474622,
+            "4": 0.004106044669093474,
+            "8": 0.006685208671973551,
+            "16": 0.0102555166890714,
+            "32": 0.01527707014157504,
+            "64": 0.01877222993026536,
+            "128": 0.019956523696501437,
+            "256": 0.020178377349918907
+          }
+        }
+      },
+      "mean_mode_dimensions_across_folds": [
+        {
+          "stable_rank": 19.016149404354426,
+          "entropy_rank": 54.793000570940194,
+          "rank_50_percent_energy": 14.5,
+          "rank_80_percent_energy": 33.0,
+          "rank_90_percent_energy": 48.0,
+          "rank_95_percent_energy": 63.5,
+          "largest_gap_rank_below_99_percent_energy": 31.5,
+          "largest_gap_ratio": 1.1111508084863155
+        },
+        {
+          "stable_rank": 23.946935660450997,
+          "entropy_rank": 71.39662839527944,
+          "rank_50_percent_energy": 17.0,
+          "rank_80_percent_energy": 42.5,
+          "rank_90_percent_energy": 70.0,
+          "rank_95_percent_energy": 112.5,
+          "largest_gap_rank_below_99_percent_energy": 29.5,
+          "largest_gap_ratio": 1.174199047857492
+        },
+        {
+          "stable_rank": 24.424343809434447,
+          "entropy_rank": 134.9748975859356,
+          "rank_50_percent_energy": 29.5,
+          "rank_80_percent_energy": 86.0,
+          "rank_90_percent_energy": 134.5,
+          "rank_95_percent_energy": 182.5,
+          "largest_gap_rank_below_99_percent_energy": 2.5,
+          "largest_gap_ratio": 1.1443266332019877
+        },
+        {
+          "stable_rank": 13.20956161528179,
+          "entropy_rank": 104.36686238826866,
+          "rank_50_percent_energy": 20.5,
+          "rank_80_percent_energy": 71.5,
+          "rank_90_percent_energy": 118.0,
+          "rank_95_percent_energy": 168.0,
+          "largest_gap_rank_below_99_percent_energy": 1.0,
+          "largest_gap_ratio": 1.2870057400337536
+        },
+        {
+          "stable_rank": 31.10766441397262,
+          "entropy_rank": 143.26072155069613,
+          "rank_50_percent_energy": 32.5,
+          "rank_80_percent_energy": 92.0,
+          "rank_90_percent_energy": 141.0,
+          "rank_95_percent_energy": 189.5,
+          "largest_gap_rank_below_99_percent_energy": 3.5,
+          "largest_gap_ratio": 1.101057618275938
+        },
+        {
+          "stable_rank": 32.101087697161056,
+          "entropy_rank": 146.35337962554127,
+          "rank_50_percent_energy": 36.0,
+          "rank_80_percent_energy": 89.5,
+          "rank_90_percent_energy": 133.5,
+          "rank_95_percent_energy": 177.0,
+          "largest_gap_rank_below_99_percent_energy": 1.0,
+          "largest_gap_ratio": 1.1681997098772805
+        },
+        {
+          "stable_rank": 21.109370829194695,
+          "entropy_rank": 147.28834223758741,
+          "rank_50_percent_energy": 33.5,
+          "rank_80_percent_energy": 99.0,
+          "rank_90_percent_energy": 150.5,
+          "rank_95_percent_energy": 200.5,
+          "largest_gap_rank_below_99_percent_energy": 1.0,
+          "largest_gap_ratio": 1.2242384744434984
+        },
+        {
+          "stable_rank": 24.291468541978865,
+          "entropy_rank": 120.17786112100603,
+          "rank_50_percent_energy": 27.0,
+          "rank_80_percent_energy": 73.0,
+          "rank_90_percent_energy": 114.5,
+          "rank_95_percent_energy": 157.5,
+          "largest_gap_rank_below_99_percent_energy": 2.0,
+          "largest_gap_ratio": 1.1615703496481657
+        },
+        {
+          "stable_rank": 29.818468944375056,
+          "entropy_rank": 119.42357333848274,
+          "rank_50_percent_energy": 28.0,
+          "rank_80_percent_energy": 69.5,
+          "rank_90_percent_energy": 111.5,
+          "rank_95_percent_energy": 155.0,
+          "largest_gap_rank_below_99_percent_energy": 2.0,
+          "largest_gap_ratio": 1.0908098583628605
+        },
+        {
+          "stable_rank": 33.28080015846437,
+          "entropy_rank": 106.74708139029829,
+          "rank_50_percent_energy": 26.0,
+          "rank_80_percent_energy": 63.5,
+          "rank_90_percent_energy": 93.0,
+          "rank_95_percent_energy": 124.5,
+          "largest_gap_rank_below_99_percent_energy": 53.0,
+          "largest_gap_ratio": 1.0592591135627438
+        },
+        {
+          "stable_rank": 37.72919702196525,
+          "entropy_rank": 143.73540717488135,
+          "rank_50_percent_energy": 36.0,
+          "rank_80_percent_energy": 88.0,
+          "rank_90_percent_energy": 127.5,
+          "rank_95_percent_energy": 168.0,
+          "largest_gap_rank_below_99_percent_energy": 13.0,
+          "largest_gap_ratio": 1.089709819685745
+        },
+        {
+          "stable_rank": 31.75031658975462,
+          "entropy_rank": 157.2774681993444,
+          "rank_50_percent_energy": 39.5,
+          "rank_80_percent_energy": 98.0,
+          "rank_90_percent_energy": 142.0,
+          "rank_95_percent_energy": 184.5,
+          "largest_gap_rank_below_99_percent_energy": 1.5,
+          "largest_gap_ratio": 1.149130179766403
+        },
+        {
+          "stable_rank": 49.341522394210685,
+          "entropy_rank": 170.4920373660899,
+          "rank_50_percent_energy": 43.5,
+          "rank_80_percent_energy": 104.5,
+          "rank_90_percent_energy": 148.0,
+          "rank_95_percent_energy": 191.0,
+          "largest_gap_rank_below_99_percent_energy": 2.0,
+          "largest_gap_ratio": 1.052309134991777
+        },
+        {
+          "stable_rank": 24.47902039802473,
+          "entropy_rank": 128.67929532849203,
+          "rank_50_percent_energy": 30.0,
+          "rank_80_percent_energy": 80.0,
+          "rank_90_percent_energy": 120.5,
+          "rank_95_percent_energy": 164.5,
+          "largest_gap_rank_below_99_percent_energy": 3.0,
+          "largest_gap_ratio": 1.116181015301092
+        },
+        {
+          "stable_rank": 18.689757392826397,
+          "entropy_rank": 140.04712408439786,
+          "rank_50_percent_energy": 33.0,
+          "rank_80_percent_energy": 89.5,
+          "rank_90_percent_energy": 134.0,
+          "rank_95_percent_energy": 180.0,
+          "largest_gap_rank_below_99_percent_energy": 1.0,
+          "largest_gap_ratio": 1.3116940382229014
+        },
+        {
+          "stable_rank": 30.68846465074538,
+          "entropy_rank": 142.62968649053172,
+          "rank_50_percent_energy": 34.5,
+          "rank_80_percent_energy": 88.0,
+          "rank_90_percent_energy": 130.5,
+          "rank_95_percent_energy": 173.0,
+          "largest_gap_rank_below_99_percent_energy": 1.0,
+          "largest_gap_ratio": 1.1273990560355713
+        }
+      ],
+      "disjoint_training_mode_stability": {
+        "1": {
+          "matched_mode_cosines": [
+            0.29703426604004385
+          ],
+          "mean_matched_mode_cosine": 0.29703426604004385,
+          "median_matched_mode_cosine": 0.29703426604004385,
+          "canonical_cosines_between_mode_spans": [
+            0.29703426604004385
+          ],
+          "mode_span_overlap_fraction": 0.08822935520194755
+        },
+        "2": {
+          "matched_mode_cosines": [
+            0.2970342660400442,
+            0.016355583299247724
+          ],
+          "mean_matched_mode_cosine": 0.15669492466964596,
+          "median_matched_mode_cosine": 0.15669492466964596,
+          "canonical_cosines_between_mode_spans": [
+            0.3205534009575192,
+            0.022791536417976453
+          ],
+          "mode_span_overlap_fraction": 0.05163696849886201
+        },
+        "4": {
+          "matched_mode_cosines": [
+            0.2970342660400442,
+            0.038211768643693945,
+            0.11060297633669801,
+            0.010327536192121152
+          ],
+          "mean_matched_mode_cosine": 0.11404413680313934,
+          "median_matched_mode_cosine": 0.07440737249019598,
+          "canonical_cosines_between_mode_spans": [
+            0.3333384405878491,
+            0.12514545053124262,
+            0.05524599865691202,
+            0.015788573591226086
+          ],
+          "mode_span_overlap_fraction": 0.032519324796462946
+        },
+        "8": {
+          "matched_mode_cosines": [
+            0.2970342660400442,
+            0.04790879165723933,
+            0.11060297633669801,
+            0.014620890610254187,
+            0.02980621585501253,
+            0.01240997572336508,
+            0.04068868003330964,
+            0.011705978513966818
+          ],
+          "mean_matched_mode_cosine": 0.07059722184623622,
+          "median_matched_mode_cosine": 0.035247447944161084,
+          "canonical_cosines_between_mode_spans": [
+            0.3426174101070995,
+            0.16234287114415943,
+            0.07640056256634956,
+            0.05349843833963966,
+            0.02266452974051802,
+            0.009266059358300197,
+            0.0017650695951744835,
+            0.0009678929067498479
+          ],
+          "mode_span_overlap_fraction": 0.0191305774296007
+        },
+        "16": {
+          "matched_mode_cosines": [
+            0.2970342660400442,
+            0.07714155866128797,
+            0.11060297633669801,
+            0.04729464015259343,
+            0.02980621585501253,
+            0.02496982969208392,
+            0.008249745392595487,
+            0.0017256969825169288,
+            0.033170519465565394,
+            0.026436025569258625,
+            0.00973914063875737,
+            0.009954650459761238,
+            0.016507256470470983,
+            0.003959777521862998,
+            0.004281322076392007,
+            0.13344886978245205
+          ],
+          "mean_matched_mode_cosine": 0.05214515569358457,
+          "median_matched_mode_cosine": 0.025702927630671273,
+          "canonical_cosines_between_mode_spans": [
+            0.36208740995430455,
+            0.18807266171567488,
+            0.1581375049960246,
+            0.10772188064316128,
+            0.08490180575216166,
+            0.05768918051727864,
+            0.03876453830024214,
+            0.026441774150727283,
+            0.015879210215840458,
+            0.011197982782086287,
+            0.007510394965177466,
+            0.006645113465720075,
+            0.0036802088490691994,
+            0.0035367642765232847,
+            0.0018296676650962787,
+            0.00015389102354711114
+          ],
+          "mode_span_overlap_fraction": 0.013520989957025546
+        }
+      },
+      "primary": {
+        "components": 4,
+        "truncation_rank": 64,
+        "observed": {
+          "unrestricted_variance_recovered": 0.016513126335082243,
+          "rank_truncated_variance_recovered": 0.015394192704073308,
+          "median_entropy_rank": 87.88174539177405,
+          "median_rank_90_percent_energy": 94.0,
+          "median_disjoint_training_mode_cosine": 0.07440737249019598,
+          "disjoint_training_mode_span_overlap_fraction": 0.032519324796462946
+        },
+        "null_comparisons": {
+          "spectrum_matched_haar": {
+            "unrestricted_variance_recovered": {
+              "null_mean": 1.442887874142836e-05,
+              "null_standard_deviation": 1.5069121254804972e-06,
+              "observed_minus_null_mean": 0.016498697456340815,
+              "upper_tail_p_value": 0.1
+            },
+            "rank_truncated_variance_recovered": {
+              "null_mean": 1.527672356387499e-05,
+              "null_standard_deviation": 1.6063672602785892e-06,
+              "observed_minus_null_mean": 0.015378915980509432,
+              "upper_tail_p_value": 0.1
+            },
+            "median_entropy_rank": {
+              "null_mean": 210.83132788761316,
+              "null_standard_deviation": 5.432071534559672,
+              "observed_minus_null_mean": -122.94958249583911,
+              "lower_tail_p_value": 0.1
+            },
+            "median_rank_90_percent_energy": {
+              "null_mean": 193.22222222222223,
+              "null_standard_deviation": 2.6152449546532934,
+              "observed_minus_null_mean": -99.22222222222223,
+              "lower_tail_p_value": 0.1
+            },
+            "median_disjoint_training_mode_cosine": {
+              "null_mean": 0.0019671084717212237,
+              "null_standard_deviation": 0.0003612000469535128,
+              "observed_minus_null_mean": 0.07244026401847475,
+              "upper_tail_p_value": 0.1
+            },
+            "disjoint_training_mode_span_overlap_fraction": {
+              "null_mean": 1.2667308312553956e-05,
+              "null_standard_deviation": 2.6888544053882556e-06,
+              "observed_minus_null_mean": 0.03250665748815039,
+              "upper_tail_p_value": 0.1
+            }
+          },
+          "within_layer_side_pairing_shuffle": {
+            "unrestricted_variance_recovered": {
+              "null_mean": 0.00036663938662821413,
+              "null_standard_deviation": 0.00034763630791991517,
+              "observed_minus_null_mean": 0.01614648694845403,
+              "upper_tail_p_value": 0.1
+            },
+            "rank_truncated_variance_recovered": {
+              "null_mean": 0.00038001732411751626,
+              "null_standard_deviation": 0.00034764237845934037,
+              "observed_minus_null_mean": 0.015014175379955792,
+              "upper_tail_p_value": 0.1
+            },
+            "median_entropy_rank": {
+              "null_mean": 97.35407743846385,
+              "null_standard_deviation": 8.947169736198884,
+              "observed_minus_null_mean": -9.4723320466898,
+              "lower_tail_p_value": 0.3
+            },
+            "median_rank_90_percent_energy": {
+              "null_mean": 106.55555555555556,
+              "null_standard_deviation": 9.943435703027747,
+              "observed_minus_null_mean": -12.555555555555557,
+              "lower_tail_p_value": 0.2
+            },
+            "median_disjoint_training_mode_cosine": {
+              "null_mean": 0.009110260649158798,
+              "null_standard_deviation": 0.002641578846003709,
+              "observed_minus_null_mean": 0.06529711184103718,
+              "upper_tail_p_value": 0.1
+            },
+            "disjoint_training_mode_span_overlap_fraction": {
+              "null_mean": 0.0011373601134648241,
+              "null_standard_deviation": 0.001219809442223439,
+              "observed_minus_null_mean": 0.03138196468299812,
+              "upper_tail_p_value": 0.1
+            }
+          }
+        }
+      }
+    }
+  },
+  "null_repetitions": 9,
+  "seed": 41
+}

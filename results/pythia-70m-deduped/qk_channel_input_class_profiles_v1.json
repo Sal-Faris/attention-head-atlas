@@ -1,0 +1,856 @@
+{
+  "profiles": {
+    "L2H0_query": {
+      "classes": [
+        {
+          "class": 0,
+          "dominant_component_distribution": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "event_fraction": 0.0,
+          "examples": []
+        },
+        {
+          "class": 1,
+          "dominant_component_distribution": [
+            0.34984082065794125,
+            0.22603466572338168,
+            0.024407499115670323,
+            0.39971701450300673
+          ],
+          "event_fraction": 0.7932098765432098,
+          "examples": [
+            {
+              "context": " a good dog training collar\n\nObserve",
+              "position": 20,
+              "token": " collar"
+            },
+            {
+              "context": " MP is the right firm to partner with for",
+              "position": 13,
+              "token": " firm"
+            },
+            {
+              "context": "post.com/dispatch/news/th",
+              "position": 25,
+              "token": "dispatch"
+            },
+            {
+              "context": " that they'd making that strange dream a reality",
+              "position": 29,
+              "token": " that"
+            },
+            {
+              "context": " \"Ree\" Drummond (n\u00e9e Smith",
+              "position": 13,
+              "token": " Drum"
+            }
+          ]
+        },
+        {
+          "class": 2,
+          "dominant_component_distribution": [
+            0.5343347639484979,
+            0.15879828326180256,
+            0.03862660944206009,
+            0.26824034334763946
+          ],
+          "event_fraction": 0.1307519640852974,
+          "examples": [
+            {
+              "context": "America Benefit Trust;  InternationalAssociation of",
+              "position": 47,
+              "token": ";"
+            },
+            {
+              "context": " CSS properties.\n    #\n    #",
+              "position": 50,
+              "token": "    "
+            },
+            {
+              "context": " in exprtk?\n\nWhen I",
+              "position": 14,
+              "token": "?"
+            },
+            {
+              "context": " seeds, legumes, etc., which liquid",
+              "position": 27,
+              "token": ","
+            },
+            {
+              "context": ", Aztecs, and Chinese forces against",
+              "position": 27,
+              "token": ","
+            }
+          ]
+        },
+        {
+          "class": 3,
+          "dominant_component_distribution": [
+            0.5682656826568265,
+            0.1918819188191882,
+            0.05166051660516605,
+            0.1881918819188192
+          ],
+          "event_fraction": 0.0760381593714927,
+          "examples": [
+            {
+              "context": "uters/130326/exclusive-open",
+              "position": 38,
+              "token": "/"
+            },
+            {
+              "context": "cool/prisma/releases/tag/",
+              "position": 55,
+              "token": "/"
+            },
+            {
+              "context": " 1.0//EN\" \"http://",
+              "position": 32,
+              "token": "EN"
+            },
+            {
+              "context": "  [Category2]\n  - Item",
+              "position": 56,
+              "token": "]"
+            },
+            {
+              "context": "\n$19.99 Regular Price\n\n",
+              "position": 22,
+              "token": "99"
+            }
+          ]
+        }
+      ],
+      "coarse_class_count": 4,
+      "coarse_test": {
+        "bh_q": 0.0008095238095238096,
+        "excess_mutual_information": 0.015965001165225444,
+        "mutual_information": 0.017024784634611254,
+        "null_mean": 0.0010597834693858105,
+        "upper_tail_p": 0.0005
+      },
+      "full_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.051826193155143904,
+        "mutual_information": 0.055825484350763226,
+        "null_mean": 0.00399929119561932,
+        "upper_tail_p": 0.0005
+      }
+    },
+    "L3H0_key": {
+      "classes": [
+        {
+          "class": 0,
+          "dominant_component_distribution": [
+            0.3183279742765273,
+            0.04180064308681672,
+            0.5491961414790997,
+            0.09067524115755626
+          ],
+          "event_fraction": 0.4396381113938366,
+          "examples": [
+            {
+              "context": " benchmark score. Many apps upload the results to",
+              "position": 20,
+              "token": " apps"
+            },
+            {
+              "context": "<|endoftext|>The retinal vasculature is prone",
+              "position": 2,
+              "token": " retinal"
+            },
+            {
+              "context": " I decided to use \u201cshow me, tell",
+              "position": 43,
+              "token": " \u201c"
+            },
+            {
+              "context": " may be used for master clock generation for a",
+              "position": 25,
+              "token": " master"
+            },
+            {
+              "context": "Q:\n\nPage transitions, depending on",
+              "position": 5,
+              "token": "Page"
+            }
+          ]
+        },
+        {
+          "class": 1,
+          "dominant_component_distribution": [
+            0.14893617021276595,
+            0.05106382978723404,
+            0.6553191489361702,
+            0.14468085106382977
+          ],
+          "event_fraction": 0.06644048628781453,
+          "examples": [
+            {
+              "context": "<|endoftext|>Culinary Cannabis",
+              "position": 1,
+              "token": "C"
+            },
+            {
+              "context": "<|endoftext|>Vue.component('",
+              "position": 1,
+              "token": "V"
+            },
+            {
+              "context": "<|endoftext|>Vehicle Safety Qu",
+              "position": 1,
+              "token": "V"
+            },
+            {
+              "context": "<|endoftext|>Taco Bell serves tac",
+              "position": 1,
+              "token": "T"
+            },
+            {
+              "context": "<|endoftext|>Utah Jazz, Miller",
+              "position": 1,
+              "token": "U"
+            }
+          ]
+        },
+        {
+          "class": 2,
+          "dominant_component_distribution": [
+            0.3360655737704918,
+            0.043219076005961254,
+            0.5156482861400894,
+            0.10506706408345752
+          ],
+          "event_fraction": 0.37941758552445576,
+          "examples": [
+            {
+              "context": "<|endoftext|>(DVD) THE",
+              "position": 1,
+              "token": "("
+            },
+            {
+              "context": " Sofia tells everyone that before she was a",
+              "position": 27,
+              "token": " that"
+            },
+            {
+              "context": "<|endoftext|>[Developmental disorders in",
+              "position": 1,
+              "token": "["
+            },
+            {
+              "context": "visible: {\n            type: Boolean,",
+              "position": 44,
+              "token": "            "
+            },
+            {
+              "context": "<|endoftext|>2 Comments:\n\n",
+              "position": 1,
+              "token": "2"
+            }
+          ]
+        },
+        {
+          "class": 3,
+          "dominant_component_distribution": [
+            0.3333333333333333,
+            0.07654320987654321,
+            0.2074074074074074,
+            0.38271604938271603
+          ],
+          "event_fraction": 0.11450381679389313,
+          "examples": [
+            {
+              "context": "<|endoftext|>OUR WORK\n\nTo",
+              "position": 1,
+              "token": "OUR"
+            },
+            {
+              "context": "<|endoftext|>President George Bush has claimed",
+              "position": 1,
+              "token": "President"
+            },
+            {
+              "context": "<|endoftext|>Congress prepares to override 9",
+              "position": 1,
+              "token": "Congress"
+            },
+            {
+              "context": "<|endoftext|>Portsmouth Bombers",
+              "position": 1,
+              "token": "Port"
+            },
+            {
+              "context": "<|endoftext|>News coverage of the climate",
+              "position": 1,
+              "token": "News"
+            }
+          ]
+        }
+      ],
+      "coarse_class_count": 4,
+      "coarse_test": {
+        "bh_q": 0.0008095238095238096,
+        "excess_mutual_information": 0.03820097263913878,
+        "mutual_information": 0.04250615219874199,
+        "null_mean": 0.004305179559603204,
+        "upper_tail_p": 0.0005
+      },
+      "full_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.03748494748415797,
+        "mutual_information": 0.0435732199185323,
+        "null_mean": 0.006088272434374332,
+        "upper_tail_p": 0.0005
+      }
+    },
+    "L3H2_query": {
+      "classes": [
+        {
+          "class": 0,
+          "dominant_component_distribution": [
+            0.2949640287769784,
+            0.3645083932853717,
+            0.2805755395683453,
+            0.05995203836930456
+          ],
+          "event_fraction": 0.3506165919282511,
+          "examples": [
+            {
+              "context": " release a software update early next month that will",
+              "position": 38,
+              "token": " early"
+            },
+            {
+              "context": " Sofia tells everyone that before she was a",
+              "position": 27,
+              "token": " that"
+            },
+            {
+              "context": " the successful projects that we have undertaken. The",
+              "position": 31,
+              "token": " we"
+            },
+            {
+              "context": "The company recently announced that they'd making that",
+              "position": 25,
+              "token": " that"
+            },
+            {
+              "context": " single one of them,\u201d Brinkley wrote",
+              "position": 28,
+              "token": ",\u201d"
+            }
+          ]
+        },
+        {
+          "class": 1,
+          "dominant_component_distribution": [
+            0.42,
+            0.19,
+            0.31,
+            0.08
+          ],
+          "event_fraction": 0.028026905829596414,
+          "examples": [
+            {
+              "context": " plist PUBLIC \"-//Apple//DTD PL",
+              "position": 22,
+              "token": "//"
+            },
+            {
+              "context": "ived article that was published on sltrib",
+              "position": 51,
+              "token": " published"
+            },
+            {
+              "context": "\n  module Script\n    # This is",
+              "position": 30,
+              "token": "\n"
+            },
+            {
+              "context": " Inc., Appellants,v",
+              "position": 63,
+              "token": "v"
+            },
+            {
+              "context": ".\nIt is well known that if there",
+              "position": 18,
+              "token": " well"
+            }
+          ]
+        },
+        {
+          "class": 2,
+          "dominant_component_distribution": [
+            0.45041322314049587,
+            0.2128099173553719,
+            0.2796143250688705,
+            0.05716253443526171
+          ],
+          "event_fraction": 0.4069506726457399,
+          "examples": [
+            {
+              "context": "visible: {\n            type: Boolean,",
+              "position": 44,
+              "token": "            "
+            },
+            {
+              "context": "anas\"\n\nto June 3, 1968",
+              "position": 10,
+              "token": "to"
+            },
+            {
+              "context": "ORE, Feb 7 (Reuters) - Canada",
+              "position": 8,
+              "token": " ("
+            },
+            {
+              "context": "X) MARRIAGES IN CANADA",
+              "position": 15,
+              "token": "AGES"
+            },
+            {
+              "context": " Year?\n\n| by Tisar",
+              "position": 10,
+              "token": "|"
+            }
+          ]
+        },
+        {
+          "class": 3,
+          "dominant_component_distribution": [
+            0.39738562091503266,
+            0.24052287581699347,
+            0.3111111111111111,
+            0.050980392156862744
+          ],
+          "event_fraction": 0.21440582959641255,
+          "examples": [
+            {
+              "context": "avor volatiles.\nTo be generally",
+              "position": 46,
+              "token": "."
+            },
+            {
+              "context": " Jeff Garzik. The duo appeared on",
+              "position": 33,
+              "token": "."
+            },
+            {
+              "context": " good dog training collar\n\nObserve your",
+              "position": 21,
+              "token": "\n"
+            },
+            {
+              "context": "rop Grumman\n\nWith Zach Mont",
+              "position": 17,
+              "token": "\n"
+            },
+            {
+              "context": "erie Solanas\"\n\nto June 3",
+              "position": 8,
+              "token": "\n"
+            }
+          ]
+        }
+      ],
+      "coarse_class_count": 4,
+      "coarse_test": {
+        "bh_q": 0.0008095238095238096,
+        "excess_mutual_information": 0.014032091729878305,
+        "mutual_information": 0.015362911191627786,
+        "null_mean": 0.0013308194617494815,
+        "upper_tail_p": 0.0005
+      },
+      "full_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.019549335133432856,
+        "mutual_information": 0.021822054437225354,
+        "null_mean": 0.0022727193037924993,
+        "upper_tail_p": 0.0005
+      }
+    },
+    "L3H7_key": {
+      "classes": [
+        {
+          "class": 0,
+          "dominant_component_distribution": [
+            0.0,
+            0.014145810663764961,
+            0.9488574537540805,
+            0.036996735582154515
+          ],
+          "event_fraction": 0.7777150916784203,
+          "examples": [
+            {
+              "context": "<|endoftext|>\nLinux users file EU",
+              "position": 1,
+              "token": "\n"
+            },
+            {
+              "context": "<|endoftext|>OUR WORK\n\nTo truly see",
+              "position": 3,
+              "token": "\n"
+            },
+            {
+              "context": " guild by lois\n\nLondon Travel It",
+              "position": 17,
+              "token": "\n"
+            },
+            {
+              "context": "ass/script'\nrequire 'sass",
+              "position": 8,
+              "token": "\n"
+            },
+            {
+              "context": " - RPRT\nT1 - Weak",
+              "position": 6,
+              "token": "\n"
+            }
+          ]
+        },
+        {
+          "class": 1,
+          "dominant_component_distribution": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "event_fraction": 0.0,
+          "examples": []
+        },
+        {
+          "class": 2,
+          "dominant_component_distribution": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "event_fraction": 0.0,
+          "examples": []
+        },
+        {
+          "class": 3,
+          "dominant_component_distribution": [
+            0.04187817258883249,
+            0.33121827411167515,
+            0.6015228426395939,
+            0.025380710659898477
+          ],
+          "event_fraction": 0.22228490832157968,
+          "examples": [
+            {
+              "context": "<|endoftext|>Description\n\nShop-",
+              "position": 1,
+              "token": "Description"
+            },
+            {
+              "context": "<|endoftext|>February\u2019s Quick Look",
+              "position": 1,
+              "token": "February"
+            },
+            {
+              "context": "<|endoftext|>VIOLENT/NON-CON",
+              "position": 3,
+              "token": "ENT"
+            },
+            {
+              "context": "\n\nReview Policy\n\n4 stars is",
+              "position": 6,
+              "token": "\n"
+            },
+            {
+              "context": "<|endoftext|>2013: The Titanic",
+              "position": 1,
+              "token": "2013"
+            }
+          ]
+        }
+      ],
+      "coarse_class_count": 4,
+      "coarse_test": {
+        "bh_q": 0.0008095238095238096,
+        "excess_mutual_information": 0.1018466351478797,
+        "mutual_information": 0.1081796298550622,
+        "null_mean": 0.006332994707182506,
+        "upper_tail_p": 0.0005
+      },
+      "full_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.1018466351478797,
+        "mutual_information": 0.1081796298550622,
+        "null_mean": 0.006332994707182506,
+        "upper_tail_p": 0.0005
+      }
+    },
+    "L5H0_key": {
+      "classes": [
+        {
+          "class": 0,
+          "dominant_component_distribution": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "event_fraction": 0.0,
+          "examples": []
+        },
+        {
+          "class": 1,
+          "dominant_component_distribution": [
+            0.05014749262536873,
+            0.41002949852507375,
+            0.2713864306784661,
+            0.26843657817109146
+          ],
+          "event_fraction": 0.09461345241417807,
+          "examples": [
+            {
+              "context": ".com in 2013, and information in",
+              "position": 60,
+              "token": ","
+            },
+            {
+              "context": "/PropertyList-1.0.dtd",
+              "position": 49,
+              "token": "1"
+            },
+            {
+              "context": " minerals including titanium dioxide, zinc oxide and iron",
+              "position": 28,
+              "token": ","
+            },
+            {
+              "context": " - Eric Hobsbawm (Interest",
+              "position": 43,
+              "token": "b"
+            },
+            {
+              "context": "ortin-4 (MC-4)",
+              "position": 15,
+              "token": " ("
+            }
+          ]
+        },
+        {
+          "class": 2,
+          "dominant_component_distribution": [
+            0.03666121112929623,
+            0.48805237315875616,
+            0.21800327332242225,
+            0.2572831423895254
+          ],
+          "event_fraction": 0.8526374546469438,
+          "examples": [
+            {
+              "context": "\nMen with high mate quality (e.",
+              "position": 9,
+              "token": " mate"
+            },
+            {
+              "context": " a story portraying a Conqueror/",
+              "position": 27,
+              "token": " a"
+            },
+            {
+              "context": "<|endoftext|>2013: The Titanic Year?",
+              "position": 3,
+              "token": " The"
+            },
+            {
+              "context": " Biblical Evidence of a Gospel Which Continually",
+              "position": 23,
+              "token": " a"
+            },
+            {
+              "context": "<|endoftext|>No bond for Virginia plasma center st",
+              "position": 3,
+              "token": " for"
+            }
+          ]
+        },
+        {
+          "class": 3,
+          "dominant_component_distribution": [
+            0.0,
+            0.9047619047619048,
+            0.0582010582010582,
+            0.037037037037037035
+          ],
+          "event_fraction": 0.052749092938878035,
+          "examples": [
+            {
+              "context": "<|endoftext|>News coverage of the climate",
+              "position": 1,
+              "token": "News"
+            },
+            {
+              "context": "<|endoftext|>Portsmouth Bombers",
+              "position": 1,
+              "token": "Port"
+            },
+            {
+              "context": "xml version=\"1.0\" encoding=\"",
+              "position": 6,
+              "token": "."
+            },
+            {
+              "context": "<|endoftext|>Pages\n\nReview Policy\n",
+              "position": 2,
+              "token": "\n"
+            },
+            {
+              "context": "erie Solanas\"\n\nto June 3",
+              "position": 8,
+              "token": "\n"
+            }
+          ]
+        }
+      ],
+      "coarse_class_count": 4,
+      "coarse_test": {
+        "bh_q": 0.0008095238095238096,
+        "excess_mutual_information": 0.021374645442153534,
+        "mutual_information": 0.022579514826753494,
+        "null_mean": 0.001204869384599961,
+        "upper_tail_p": 0.0005
+      },
+      "full_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.022519833352732947,
+        "mutual_information": 0.025835610534264364,
+        "null_mean": 0.0033157771815314177,
+        "upper_tail_p": 0.0005
+      }
+    },
+    "L5H1_key": {
+      "classes": [
+        {
+          "class": 0,
+          "dominant_component_distribution": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "event_fraction": 0.000281928390188892,
+          "examples": [
+            {
+              "context": "<|endoftext|>Short-chain fatty acid enemas fail",
+              "position": 4,
+              "token": " fatty"
+            }
+          ]
+        },
+        {
+          "class": 1,
+          "dominant_component_distribution": [
+            0.053742802303262956,
+            0.3877159309021113,
+            0.005758157389635317,
+            0.5527831094049904
+          ],
+          "event_fraction": 0.14688469128841275,
+          "examples": [
+            {
+              "context": "<|endoftext|>OUR WORK\n\nTo",
+              "position": 1,
+              "token": "OUR"
+            },
+            {
+              "context": "<|endoftext|>News coverage of the climate",
+              "position": 1,
+              "token": "News"
+            },
+            {
+              "context": "<|endoftext|>Portsmouth Bombers",
+              "position": 1,
+              "token": "Port"
+            },
+            {
+              "context": "<|endoftext|>require 'sass/",
+              "position": 1,
+              "token": "require"
+            },
+            {
+              "context": "<|endoftext|>Congress prepares to override 9",
+              "position": 1,
+              "token": "Congress"
+            }
+          ]
+        },
+        {
+          "class": 2,
+          "dominant_component_distribution": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "event_fraction": 0.0,
+          "examples": []
+        },
+        {
+          "class": 3,
+          "dominant_component_distribution": [
+            0.36132231404958676,
+            0.35173553719008266,
+            0.08264462809917356,
+            0.20429752066115703
+          ],
+          "event_fraction": 0.8528333803213983,
+          "examples": [
+            {
+              "context": "<|endoftext|>2013: The Titanic Year?",
+              "position": 3,
+              "token": " The"
+            },
+            {
+              "context": "UncategorizedObserve your dog",
+              "position": 6,
+              "token": "ized"
+            },
+            {
+              "context": "\nMen with high mate quality (e.",
+              "position": 9,
+              "token": " mate"
+            },
+            {
+              "context": "My secret Santa did amazing with providing myself,",
+              "position": 5,
+              "token": " amazing"
+            },
+            {
+              "context": " a story portraying a Conqueror/",
+              "position": 27,
+              "token": " a"
+            }
+          ]
+        }
+      ],
+      "coarse_class_count": 4,
+      "coarse_test": {
+        "bh_q": 0.0008095238095238096,
+        "excess_mutual_information": 0.05749501249886784,
+        "mutual_information": 0.05965923653022495,
+        "null_mean": 0.0021642240313571085,
+        "upper_tail_p": 0.0005
+      },
+      "full_test": {
+        "bh_q": 0.0007083333333333334,
+        "excess_mutual_information": 0.06667604485985955,
+        "mutual_information": 0.06954654860883698,
+        "null_mean": 0.002870503748977426,
+        "upper_tail_p": 0.0005
+      }
+    }
+  }
+}

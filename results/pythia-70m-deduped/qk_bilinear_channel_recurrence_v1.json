@@ -1,0 +1,91 @@
+{
+  "n_excluded_family_edges": 18,
+  "rank_4_left": {
+    "all_exact_layer_pairs": {
+      "lower_tail_p": 0.0125,
+      "null_mean": 1.4119428830596543,
+      "observed": 1.4059349956644407,
+      "ratio": 0.9957449501199407
+    },
+    "excluding_all_known_family_edges": {
+      "lower_tail_p": 0.018,
+      "null_mean": 1.4123519721247197,
+      "observed": 1.4059349956644407,
+      "ratio": 0.9954565316670848
+    },
+    "n_recurrent_edges": 12
+  },
+  "rank_4_left_offset_stratified": {
+    "all_exact_layer_pairs": {
+      "lower_tail_p": 0.019,
+      "null_mean": 1.4115178635335903,
+      "observed": 1.4069010464106766,
+      "ratio": 0.9967291826464343
+    },
+    "excluding_all_known_family_edges": {
+      "lower_tail_p": 0.017,
+      "null_mean": 1.41198086185082,
+      "observed": 1.4069010464106766,
+      "ratio": 0.9964023482347453
+    },
+    "n_offset_bins": 6,
+    "observed_edge_offset_coverage": [
+      4,
+      5,
+      5,
+      2,
+      5,
+      4,
+      5,
+      5,
+      2,
+      5,
+      5,
+      6
+    ]
+  },
+  "rank_4_right": {
+    "all_exact_layer_pairs": {
+      "lower_tail_p": 0.0005,
+      "null_mean": 1.4105954223293904,
+      "observed": 1.3943431094107963,
+      "ratio": 0.9884784023389529
+    },
+    "excluding_all_known_family_edges": {
+      "lower_tail_p": 0.0005,
+      "null_mean": 1.4112342443332,
+      "observed": 1.3943431094107963,
+      "ratio": 0.9880309488022773
+    },
+    "n_recurrent_edges": 12
+  },
+  "rank_4_right_offset_stratified": {
+    "all_exact_layer_pairs": {
+      "lower_tail_p": 0.0005,
+      "null_mean": 1.4097693337898982,
+      "observed": 1.3950768566714509,
+      "ratio": 0.9895780985113718
+    },
+    "excluding_all_known_family_edges": {
+      "lower_tail_p": 0.0005,
+      "null_mean": 1.4106194132811822,
+      "observed": 1.3950768566714509,
+      "ratio": 0.9889817505250559
+    },
+    "n_offset_bins": 6,
+    "observed_edge_offset_coverage": [
+      2,
+      5,
+      6,
+      5,
+      5,
+      5,
+      5,
+      2,
+      5,
+      6,
+      6,
+      5
+    ]
+  }
+}

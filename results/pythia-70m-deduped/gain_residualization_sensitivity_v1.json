@@ -1,0 +1,93 @@
+{
+  "status": "gain-residualization smoothness sensitivity",
+  "model": "EleutherAI/pythia-70m-deduped",
+  "revision": "step143000",
+  "results": [
+    {
+      "gain_knots": 3,
+      "splits": [
+        {
+          "discovery_parity": 0,
+          "population_mean_confirmation_r2": 0.0075951485620483475,
+          "mean_component_count": 1.3125,
+          "multicomponent_heads": 15
+        },
+        {
+          "discovery_parity": 1,
+          "population_mean_confirmation_r2": 0.00671823769494298,
+          "mean_component_count": 1.2916666666666667,
+          "multicomponent_heads": 14
+        }
+      ]
+    },
+    {
+      "gain_knots": 4,
+      "splits": [
+        {
+          "discovery_parity": 0,
+          "population_mean_confirmation_r2": 0.005982300108408553,
+          "mean_component_count": 1.3333333333333333,
+          "multicomponent_heads": 16
+        },
+        {
+          "discovery_parity": 1,
+          "population_mean_confirmation_r2": 0.008784942104598195,
+          "mean_component_count": 1.3333333333333333,
+          "multicomponent_heads": 16
+        }
+      ]
+    },
+    {
+      "gain_knots": 5,
+      "splits": [
+        {
+          "discovery_parity": 0,
+          "population_mean_confirmation_r2": 0.004775342634245172,
+          "mean_component_count": 1.25,
+          "multicomponent_heads": 12
+        },
+        {
+          "discovery_parity": 1,
+          "population_mean_confirmation_r2": 0.008245426213959123,
+          "mean_component_count": 1.3125,
+          "multicomponent_heads": 15
+        }
+      ]
+    },
+    {
+      "gain_knots": 6,
+      "splits": [
+        {
+          "discovery_parity": 0,
+          "population_mean_confirmation_r2": 0.007238656943614276,
+          "mean_component_count": 1.2708333333333333,
+          "multicomponent_heads": 12
+        },
+        {
+          "discovery_parity": 1,
+          "population_mean_confirmation_r2": 0.008274133586264424,
+          "mean_component_count": 1.2916666666666667,
+          "multicomponent_heads": 13
+        }
+      ]
+    },
+    {
+      "gain_knots": 8,
+      "splits": [
+        {
+          "discovery_parity": 0,
+          "population_mean_confirmation_r2": 0.005886370937943867,
+          "mean_component_count": 1.25,
+          "multicomponent_heads": 12
+        },
+        {
+          "discovery_parity": 1,
+          "population_mean_confirmation_r2": 0.0071970627710753535,
+          "mean_component_count": 1.2916666666666667,
+          "multicomponent_heads": 14
+        }
+      ]
+    }
+  ],
+  "seed": 16180
+}

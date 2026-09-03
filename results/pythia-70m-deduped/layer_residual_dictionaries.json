@@ -1,0 +1,898 @@
+{
+  "analysis_status": "exploratory layer-confound diagnosis",
+  "functional_labels_used": false,
+  "residualization": "subtract each checkpoint-by-layer coordinate centroid",
+  "views": {
+    "JOINT": {
+      "artifact": "artifacts\\pythia-70m-deduped\\joint_residual_compact_dictionary.npz",
+      "compact_active_atoms": 2,
+      "compact_components": 8,
+      "compact_trajectory_relative_squared_error": 0.9813102464331221,
+      "validation": {
+        "16": {
+          "folds": [
+            {
+              "baseline_squared_error": 33.859665163832204,
+              "fold": 0,
+              "relative_squared_error": {
+                "dictionary_2": 0.9864285819860075,
+                "dictionary_4": 0.9842025549203816,
+                "dictionary_8": 0.9836658639344349,
+                "kmeans": 1.006484210911691,
+                "pca": 0.9841490373480659
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 35.42593425181759,
+              "fold": 1,
+              "relative_squared_error": {
+                "dictionary_2": 0.9829858643218294,
+                "dictionary_4": 0.9810660018035526,
+                "dictionary_8": 0.9804685222848183,
+                "kmeans": 1.004060724324229,
+                "pca": 0.9791336747560078
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 32.91301750930272,
+              "fold": 2,
+              "relative_squared_error": {
+                "dictionary_2": 0.9738223075489068,
+                "dictionary_4": 0.9698925299927357,
+                "dictionary_8": 0.9692185801474167,
+                "kmeans": 0.999565806226137,
+                "pca": 0.967442117638054
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 33.92866762481748,
+              "fold": 3,
+              "relative_squared_error": {
+                "dictionary_2": 0.9787211375332197,
+                "dictionary_4": 0.9747927791440608,
+                "dictionary_8": 0.9742104921738157,
+                "kmeans": 1.0139126866613297,
+                "pca": 0.9719155784592975
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 33.80348036781527,
+              "fold": 4,
+              "relative_squared_error": {
+                "dictionary_2": 0.9816984763063085,
+                "dictionary_4": 0.9797598033227862,
+                "dictionary_8": 0.9791727046518854,
+                "kmeans": 1.0056921539812782,
+                "pca": 0.9802199833197086
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 33.37319330861549,
+              "fold": 5,
+              "relative_squared_error": {
+                "dictionary_2": 0.975525405659686,
+                "dictionary_4": 0.9730824913872769,
+                "dictionary_8": 0.9725935698569063,
+                "kmeans": 1.0017390099604886,
+                "pca": 0.9713461239225422
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            }
+          ],
+          "mean_relative_squared_error": {
+            "dictionary_2": 0.9798636288926597,
+            "dictionary_4": 0.9771326934284655,
+            "dictionary_8": 0.9765549555082128,
+            "kmeans": 1.005242432010859,
+            "pca": 0.9757010859072793
+          },
+          "standard_error_relative_squared_error": {
+            "dictionary_2": 0.0019393870090691483,
+            "dictionary_4": 0.002210994231065403,
+            "dictionary_8": 0.0022191974689023015,
+            "kmeans": 0.002023298131044714,
+            "pca": 0.0026145573301145104
+          }
+        },
+        "32": {
+          "folds": [
+            {
+              "baseline_squared_error": 33.859665163832204,
+              "fold": 0,
+              "relative_squared_error": {
+                "dictionary_2": 0.9846799743190884,
+                "dictionary_4": 0.9780070348975732,
+                "dictionary_8": 0.9739055424000959,
+                "kmeans": 1.0146305106195206,
+                "pca": 0.9795500800615511
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 35.42593425181759,
+              "fold": 1,
+              "relative_squared_error": {
+                "dictionary_2": 0.980308160066863,
+                "dictionary_4": 0.9750326254950497,
+                "dictionary_8": 0.9717875780074998,
+                "kmeans": 1.0123236923127223,
+                "pca": 0.9742865135147587
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 32.91301750930272,
+              "fold": 2,
+              "relative_squared_error": {
+                "dictionary_2": 0.9768489727170642,
+                "dictionary_4": 0.963883765818868,
+                "dictionary_8": 0.9532264487065558,
+                "kmeans": 1.0060930568211897,
+                "pca": 0.9602367360106182
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 33.92866762481748,
+              "fold": 3,
+              "relative_squared_error": {
+                "dictionary_2": 0.9799811999506292,
+                "dictionary_4": 0.9696315040643412,
+                "dictionary_8": 0.9627147343894612,
+                "kmeans": 1.0122914387571726,
+                "pca": 0.9659778075318358
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 33.80348036781527,
+              "fold": 4,
+              "relative_squared_error": {
+                "dictionary_2": 0.9769226519039463,
+                "dictionary_4": 0.9719451668289453,
+                "dictionary_8": 0.9688775344978499,
+                "kmeans": 1.0120178656278163,
+                "pca": 0.9761267599885438
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 33.37319330861549,
+              "fold": 5,
+              "relative_squared_error": {
+                "dictionary_2": 0.9766419833558105,
+                "dictionary_4": 0.9680120418428675,
+                "dictionary_8": 0.9641701394939554,
+                "kmeans": 1.012343587131789,
+                "pca": 0.9661348778839253
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            }
+          ],
+          "mean_relative_squared_error": {
+            "dictionary_2": 0.979230490385567,
+            "dictionary_4": 0.9710853564912741,
+            "dictionary_8": 0.9657803295825697,
+            "kmeans": 1.0116166918783684,
+            "pca": 0.9703854624985387
+          },
+          "standard_error_relative_squared_error": {
+            "dictionary_2": 0.0012795822943511314,
+            "dictionary_4": 0.002062778840831438,
+            "dictionary_8": 0.0030620761274815994,
+            "kmeans": 0.0011724347558355974,
+            "pca": 0.0030147551153964576
+          }
+        },
+        "8": {
+          "folds": [
+            {
+              "baseline_squared_error": 33.859665163832204,
+              "fold": 0,
+              "relative_squared_error": {
+                "dictionary_2": 0.9883955729804876,
+                "dictionary_4": 0.9880240080106683,
+                "dictionary_8": 0.987933852003342,
+                "kmeans": 1.0045339705576302,
+                "pca": 0.9872460400918263
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 35.42593425181759,
+              "fold": 1,
+              "relative_squared_error": {
+                "dictionary_2": 0.9842043802595092,
+                "dictionary_4": 0.983380624112504,
+                "dictionary_8": 0.9832677522244131,
+                "kmeans": 1.0074697877211587,
+                "pca": 0.9813276972637998
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 32.91301750930272,
+              "fold": 2,
+              "relative_squared_error": {
+                "dictionary_2": 0.97357449429892,
+                "dictionary_4": 0.9730779140116701,
+                "dictionary_8": 0.9730138271703439,
+                "kmeans": 1.0022210465591759,
+                "pca": 0.9725074445758473
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 33.92866762481748,
+              "fold": 3,
+              "relative_squared_error": {
+                "dictionary_2": 0.9802718161297087,
+                "dictionary_4": 0.979888155894679,
+                "dictionary_8": 0.9798040172835162,
+                "kmeans": 1.0019245214960142,
+                "pca": 0.9765111603100449
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 33.80348036781527,
+              "fold": 4,
+              "relative_squared_error": {
+                "dictionary_2": 0.9834855719861542,
+                "dictionary_4": 0.9831356616909608,
+                "dictionary_8": 0.9830365609507814,
+                "kmeans": 1.0018876559784977,
+                "pca": 0.9827045641014983
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 33.37319330861549,
+              "fold": 5,
+              "relative_squared_error": {
+                "dictionary_2": 0.9779296429439532,
+                "dictionary_4": 0.9776060591777456,
+                "dictionary_8": 0.9775235386418822,
+                "kmeans": 0.9995489700714688,
+                "pca": 0.9755154854738844
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            }
+          ],
+          "mean_relative_squared_error": {
+            "dictionary_2": 0.9813102464331221,
+            "dictionary_4": 0.980852070483038,
+            "dictionary_8": 0.9807632580457132,
+            "kmeans": 1.002930992063991,
+            "pca": 0.9793020653028167
+          },
+          "standard_error_relative_squared_error": {
+            "dictionary_2": 0.002126488362515033,
+            "dictionary_4": 0.0021209140304066097,
+            "dictionary_8": 0.0021160294456210723,
+            "kmeans": 0.0011137599178428744,
+            "pca": 0.0022142050994109464
+          }
+        }
+      },
+      "variance_fraction_after_checkpoint_layer_residualization": 0.8561447144778231
+    },
+    "OV": {
+      "artifact": "artifacts\\pythia-70m-deduped\\ov_residual_compact_dictionary.npz",
+      "compact_active_atoms": 2,
+      "compact_components": 8,
+      "compact_trajectory_relative_squared_error": 0.9820200673565243,
+      "validation": {
+        "16": {
+          "folds": [
+            {
+              "baseline_squared_error": 34.829237407513716,
+              "fold": 0,
+              "relative_squared_error": {
+                "dictionary_2": 0.9811039485130201,
+                "dictionary_4": 0.978797577633381,
+                "dictionary_8": 0.9780326155824446,
+                "kmeans": 1.014603903070903,
+                "pca": 0.9774670442725374
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 36.64095651554048,
+              "fold": 1,
+              "relative_squared_error": {
+                "dictionary_2": 0.9760761474916587,
+                "dictionary_4": 0.9724755112234555,
+                "dictionary_8": 0.9712755916277735,
+                "kmeans": 1.007781146708553,
+                "pca": 0.9696250938697237
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 35.366519263768524,
+              "fold": 2,
+              "relative_squared_error": {
+                "dictionary_2": 0.9708170074983737,
+                "dictionary_4": 0.9677662373367916,
+                "dictionary_8": 0.9659283615134454,
+                "kmeans": 0.9988527421108696,
+                "pca": 0.9663449762814666
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 35.41464454300735,
+              "fold": 3,
+              "relative_squared_error": {
+                "dictionary_2": 0.9838434262165935,
+                "dictionary_4": 0.9816208618032913,
+                "dictionary_8": 0.9807604072428914,
+                "kmeans": 1.0059490861316918,
+                "pca": 0.975451408985419
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 34.787132922523455,
+              "fold": 4,
+              "relative_squared_error": {
+                "dictionary_2": 0.9863117703871116,
+                "dictionary_4": 0.9836819285428408,
+                "dictionary_8": 0.9828665010011643,
+                "kmeans": 1.013145331435705,
+                "pca": 0.9832699957293045
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 35.12335871912855,
+              "fold": 5,
+              "relative_squared_error": {
+                "dictionary_2": 0.9749967628293023,
+                "dictionary_4": 0.9725022370131714,
+                "dictionary_8": 0.9717132772844828,
+                "kmeans": 1.008322118888831,
+                "pca": 0.9655379119556193
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            }
+          ],
+          "mean_relative_squared_error": {
+            "dictionary_2": 0.97885817715601,
+            "dictionary_4": 0.9761407255921553,
+            "dictionary_8": 0.9750961257087004,
+            "kmeans": 1.0081090547244256,
+            "pca": 0.972949405182345
+          },
+          "standard_error_relative_squared_error": {
+            "dictionary_2": 0.0023997421275174778,
+            "dictionary_4": 0.002521672372666873,
+            "dictionary_8": 0.002653135470391388,
+            "kmeans": 0.0022952475950887233,
+            "pca": 0.0028447813851425136
+          }
+        },
+        "32": {
+          "folds": [
+            {
+              "baseline_squared_error": 34.829237407513716,
+              "fold": 0,
+              "relative_squared_error": {
+                "dictionary_2": 0.9764343461404075,
+                "dictionary_4": 0.9683373426478644,
+                "dictionary_8": 0.961695168522184,
+                "kmeans": 1.0183416667031753,
+                "pca": 0.9694143452921038
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 36.64095651554048,
+              "fold": 1,
+              "relative_squared_error": {
+                "dictionary_2": 0.9731573925136402,
+                "dictionary_4": 0.9671241979004667,
+                "dictionary_8": 0.9624359100746909,
+                "kmeans": 1.0141100177664772,
+                "pca": 0.9637976071830084
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 35.366519263768524,
+              "fold": 2,
+              "relative_squared_error": {
+                "dictionary_2": 0.9678635684922609,
+                "dictionary_4": 0.959865525676149,
+                "dictionary_8": 0.9523069798375274,
+                "kmeans": 1.009460985518418,
+                "pca": 0.9553194697507158
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 35.41464454300735,
+              "fold": 3,
+              "relative_squared_error": {
+                "dictionary_2": 0.9714484613254704,
+                "dictionary_4": 0.9630144400595407,
+                "dictionary_8": 0.9578406666687159,
+                "kmeans": 1.005362207037293,
+                "pca": 0.9588773767749896
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 34.787132922523455,
+              "fold": 4,
+              "relative_squared_error": {
+                "dictionary_2": 0.9837882068144517,
+                "dictionary_4": 0.976700547686568,
+                "dictionary_8": 0.972973645543531,
+                "kmeans": 1.0289683505901956,
+                "pca": 0.9777278361896482
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 35.12335871912855,
+              "fold": 5,
+              "relative_squared_error": {
+                "dictionary_2": 0.9736927128285181,
+                "dictionary_4": 0.9602665782072759,
+                "dictionary_8": 0.9507751043845044,
+                "kmeans": 1.0165738592159308,
+                "pca": 0.9587366725566152
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            }
+          ],
+          "mean_relative_squared_error": {
+            "dictionary_2": 0.9743974480191246,
+            "dictionary_4": 0.9658847720296441,
+            "dictionary_8": 0.9596712458385257,
+            "kmeans": 1.015469514471915,
+            "pca": 0.9639788846245135
+          },
+          "standard_error_relative_squared_error": {
+            "dictionary_2": 0.002204221693667093,
+            "dictionary_4": 0.0025856431585190237,
+            "dictionary_8": 0.003293520081818439,
+            "kmeans": 0.0033256364170708777,
+            "pca": 0.003401482024942759
+          }
+        },
+        "8": {
+          "folds": [
+            {
+              "baseline_squared_error": 34.829237407513716,
+              "fold": 0,
+              "relative_squared_error": {
+                "dictionary_2": 0.9841393676580726,
+                "dictionary_4": 0.9829478840560363,
+                "dictionary_8": 0.9827894642992065,
+                "kmeans": 1.0020374743578662,
+                "pca": 0.9820297584207305
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 36.64095651554048,
+              "fold": 1,
+              "relative_squared_error": {
+                "dictionary_2": 0.9768936761691468,
+                "dictionary_4": 0.9753476825470112,
+                "dictionary_8": 0.9752183169233373,
+                "kmeans": 1.009724115236287,
+                "pca": 0.974260365720019
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 35.366519263768524,
+              "fold": 2,
+              "relative_squared_error": {
+                "dictionary_2": 0.9741354650595654,
+                "dictionary_4": 0.9732689728384396,
+                "dictionary_8": 0.9731375344884925,
+                "kmeans": 0.9992068148861782,
+                "pca": 0.9737210458614229
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 35.41464454300735,
+              "fold": 3,
+              "relative_squared_error": {
+                "dictionary_2": 0.9865326548784605,
+                "dictionary_4": 0.9859824157217042,
+                "dictionary_8": 0.985884520614505,
+                "kmeans": 1.0023800060804817,
+                "pca": 0.981098859636596
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 34.787132922523455,
+              "fold": 4,
+              "relative_squared_error": {
+                "dictionary_2": 0.9904659616309334,
+                "dictionary_4": 0.9895734376160605,
+                "dictionary_8": 0.9894426575809642,
+                "kmeans": 1.0013742964284424,
+                "pca": 0.9887522478978622
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 35.12335871912855,
+              "fold": 5,
+              "relative_squared_error": {
+                "dictionary_2": 0.9799532787429663,
+                "dictionary_4": 0.9792174022332535,
+                "dictionary_8": 0.9790570947283871,
+                "kmeans": 1.002302845411157,
+                "pca": 0.9740865744888646
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            }
+          ],
+          "mean_relative_squared_error": {
+            "dictionary_2": 0.9820200673565243,
+            "dictionary_4": 0.9810562991687508,
+            "dictionary_8": 0.9809215981058155,
+            "kmeans": 1.0028375920667354,
+            "pca": 0.9789914753375825
+          },
+          "standard_error_relative_squared_error": {
+            "dictionary_2": 0.0025093589165770193,
+            "dictionary_4": 0.0025625421105994924,
+            "dictionary_8": 0.0025646534139598365,
+            "kmeans": 0.0014592635778956818,
+            "pca": 0.0024709228442217606
+          }
+        }
+      },
+      "variance_fraction_after_checkpoint_layer_residualization": 0.878211431169359
+    },
+    "QK": {
+      "artifact": "artifacts\\pythia-70m-deduped\\qk_residual_compact_dictionary.npz",
+      "compact_active_atoms": 2,
+      "compact_components": 8,
+      "compact_trajectory_relative_squared_error": 0.972575354540396,
+      "validation": {
+        "16": {
+          "folds": [
+            {
+              "baseline_squared_error": 32.89009292015071,
+              "fold": 0,
+              "relative_squared_error": {
+                "dictionary_2": 0.9858349702713263,
+                "dictionary_4": 0.9828445985341445,
+                "dictionary_8": 0.9824170112633541,
+                "kmeans": 1.0020082346036354,
+                "pca": 0.9815914985919053
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 34.21091198809471,
+              "fold": 1,
+              "relative_squared_error": {
+                "dictionary_2": 0.9817264341223847,
+                "dictionary_4": 0.9794271525479243,
+                "dictionary_8": 0.9782637852091813,
+                "kmeans": 1.0048041509220302,
+                "pca": 0.9770518290039203
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 30.459515754836914,
+              "fold": 2,
+              "relative_squared_error": {
+                "dictionary_2": 0.958722540976794,
+                "dictionary_4": 0.9498228273866999,
+                "dictionary_8": 0.9493683786252467,
+                "kmeans": 1.0019183620371397,
+                "pca": 0.9481228808197741
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 32.44269070662763,
+              "fold": 3,
+              "relative_squared_error": {
+                "dictionary_2": 0.9711489478736389,
+                "dictionary_4": 0.9636490201225435,
+                "dictionary_8": 0.9599028548096639,
+                "kmeans": 1.0069364166636647,
+                "pca": 0.9608354375210054
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 32.81982781310709,
+              "fold": 4,
+              "relative_squared_error": {
+                "dictionary_2": 0.9684114183716535,
+                "dictionary_4": 0.9671659783425199,
+                "dictionary_8": 0.9666956345847131,
+                "kmeans": 1.001229412893768,
+                "pca": 0.9670528639175302
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 31.623027898102436,
+              "fold": 5,
+              "relative_squared_error": {
+                "dictionary_2": 0.9680596903320008,
+                "dictionary_4": 0.9655647580791133,
+                "dictionary_8": 0.9652563920102873,
+                "kmeans": 0.9985063103605666,
+                "pca": 0.9662788733368253
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            }
+          ],
+          "mean_relative_squared_error": {
+            "dictionary_2": 0.9723173336579664,
+            "dictionary_4": 0.9680790558354909,
+            "dictionary_8": 0.9669840094170744,
+            "kmeans": 1.0025671479134675,
+            "pca": 0.9668222305318267
+          },
+          "standard_error_relative_squared_error": {
+            "dictionary_2": 0.004044852224166885,
+            "dictionary_4": 0.0048541083887391635,
+            "dictionary_8": 0.004929272794992813,
+            "kmeans": 0.0011987206470091285,
+            "pca": 0.004860150076347909
+          }
+        },
+        "32": {
+          "folds": [
+            {
+              "baseline_squared_error": 32.89009292015071,
+              "fold": 0,
+              "relative_squared_error": {
+                "dictionary_2": 0.981851087244195,
+                "dictionary_4": 0.9748795153144776,
+                "dictionary_8": 0.9711487134862693,
+                "kmeans": 1.006060654760594,
+                "pca": 0.9769915410409861
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 34.21091198809471,
+              "fold": 1,
+              "relative_squared_error": {
+                "dictionary_2": 0.9773997146502926,
+                "dictionary_4": 0.9732829999589911,
+                "dictionary_8": 0.9705548701994828,
+                "kmeans": 1.007840406498844,
+                "pca": 0.9723140711640745
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 30.459515754836914,
+              "fold": 2,
+              "relative_squared_error": {
+                "dictionary_2": 0.9648529529746659,
+                "dictionary_4": 0.9455050656836854,
+                "dictionary_8": 0.9316468440551617,
+                "kmeans": 1.0006970938035018,
+                "pca": 0.9380386569545061
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 32.44269070662763,
+              "fold": 3,
+              "relative_squared_error": {
+                "dictionary_2": 0.9676094126607014,
+                "dictionary_4": 0.9544381542549224,
+                "dictionary_8": 0.9452250770203322,
+                "kmeans": 1.0105486340543122,
+                "pca": 0.9512872850704059
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 32.81982781310709,
+              "fold": 4,
+              "relative_squared_error": {
+                "dictionary_2": 0.964804782359502,
+                "dictionary_4": 0.9604831475425687,
+                "dictionary_8": 0.9585632886018164,
+                "kmeans": 1.0068468685082752,
+                "pca": 0.9603154380855101
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 31.623027898102436,
+              "fold": 5,
+              "relative_squared_error": {
+                "dictionary_2": 0.9684852479420338,
+                "dictionary_4": 0.9596628251469196,
+                "dictionary_8": 0.9574404434159832,
+                "kmeans": 0.9997186199176317,
+                "pca": 0.9601821348515753
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            }
+          ],
+          "mean_relative_squared_error": {
+            "dictionary_2": 0.9708338663052318,
+            "dictionary_4": 0.9613752846502607,
+            "dictionary_8": 0.9557632061298409,
+            "kmeans": 1.0052853795905266,
+            "pca": 0.9598548545278428
+          },
+          "standard_error_relative_squared_error": {
+            "dictionary_2": 0.0029012859719001714,
+            "dictionary_4": 0.004574836915288623,
+            "dictionary_8": 0.006215067267464977,
+            "kmeans": 0.0017254032282488084,
+            "pca": 0.005769364714966647
+          }
+        },
+        "8": {
+          "folds": [
+            {
+              "baseline_squared_error": 32.89009292015071,
+              "fold": 0,
+              "relative_squared_error": {
+                "dictionary_2": 0.9843096003588918,
+                "dictionary_4": 0.9840209583048184,
+                "dictionary_8": 0.9839339543312581,
+                "kmeans": 1.00111578701281,
+                "pca": 0.9844525824748536
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 34.21091198809471,
+              "fold": 1,
+              "relative_squared_error": {
+                "dictionary_2": 0.9824658690479335,
+                "dictionary_4": 0.9821530930266107,
+                "dictionary_8": 0.982095619497587,
+                "kmeans": 1.0029978507023987,
+                "pca": 0.9808312033481252
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 30.459515754836914,
+              "fold": 2,
+              "relative_squared_error": {
+                "dictionary_2": 0.9584565568579904,
+                "dictionary_4": 0.953118970164865,
+                "dictionary_8": 0.9529509142347132,
+                "kmeans": 1.0000456546931091,
+                "pca": 0.9569155316138565
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 32.44269070662763,
+              "fold": 3,
+              "relative_squared_error": {
+                "dictionary_2": 0.9702433137503421,
+                "dictionary_4": 0.9657076156826981,
+                "dictionary_8": 0.965657728498929,
+                "kmeans": 1.0015561185589583,
+                "pca": 0.9650575705086558
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 32.81982781310709,
+              "fold": 4,
+              "relative_squared_error": {
+                "dictionary_2": 0.9693537315018085,
+                "dictionary_4": 0.969027820826215,
+                "dictionary_8": 0.9689436075436237,
+                "kmeans": 0.9984562655609133,
+                "pca": 0.9690369905842214
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            },
+            {
+              "baseline_squared_error": 31.623027898102436,
+              "fold": 5,
+              "relative_squared_error": {
+                "dictionary_2": 0.9706230557254102,
+                "dictionary_4": 0.9704204226230005,
+                "dictionary_8": 0.9703755979363194,
+                "kmeans": 0.9985023777422263,
+                "pca": 0.9694408384548748
+              },
+              "test_samples": 40,
+              "train_samples": 200
+            }
+          ],
+          "mean_relative_squared_error": {
+            "dictionary_2": 0.972575354540396,
+            "dictionary_4": 0.9707414801047013,
+            "dictionary_8": 0.9706595703404052,
+            "kmeans": 1.000445675711736,
+            "pca": 0.9709557861640978
+          },
+          "standard_error_relative_squared_error": {
+            "dictionary_2": 0.0038922315367135598,
+            "dictionary_4": 0.0046386125956472185,
+            "dictionary_8": 0.00464984796233566,
+            "kmeans": 0.0007323456883553169,
+            "pca": 0.0041536406280327206
+          }
+        }
+      },
+      "variance_fraction_after_checkpoint_layer_residualization": 0.8339833273470332
+    }
+  }
+}

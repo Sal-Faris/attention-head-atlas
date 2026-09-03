@@ -1,0 +1,316 @@
+{
+  "analysis_status": "preregistered trajectory-bootstrap stability audit",
+  "bootstrap_unit": "complete layer/head trajectory",
+  "matching": "Hungarian mean absolute atom cosine",
+  "profile": "compact",
+  "repetitions": 20,
+  "seed": 0,
+  "views": {
+    "JOINT": {
+      "bootstrap_advantage_over_random": 0.21489780866375172,
+      "components": 8,
+      "initialization_stability": {
+        "count": 190,
+        "maximum": 1.0,
+        "mean": 1.0,
+        "minimum": 1.0,
+        "standard_deviation": 0.0
+      },
+      "passes_preregistered_0.10_advantage": true,
+      "per_atom": [
+        {
+          "atom": 0,
+          "bootstrap_advantage_over_random": 0.6207091304754888,
+          "initialization_similarity_mean": 1.0000000000000004,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.05869682803249866,
+          "trajectory_bootstrap_similarity_mean": 0.6794059585079875,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.3130190019448166
+        },
+        {
+          "atom": 1,
+          "bootstrap_advantage_over_random": 0.39387369192265015,
+          "initialization_similarity_mean": 1.0000000000000007,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.060817388397831816,
+          "trajectory_bootstrap_similarity_mean": 0.45469108032048194,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.19557417758250892
+        },
+        {
+          "atom": 2,
+          "bootstrap_advantage_over_random": 0.3185459997346332,
+          "initialization_similarity_mean": 0.9999999999999991,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.06359773114839185,
+          "trajectory_bootstrap_similarity_mean": 0.38214373088302506,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.20131849545992325
+        },
+        {
+          "atom": 3,
+          "bootstrap_advantage_over_random": 0.3053344212456829,
+          "initialization_similarity_mean": 1.0000000000000004,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.06516047008011645,
+          "trajectory_bootstrap_similarity_mean": 0.3704948913257993,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.2717889626487611
+        },
+        {
+          "atom": 4,
+          "bootstrap_advantage_over_random": 0.40145468360735653,
+          "initialization_similarity_mean": 1.0,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.06164634671105275,
+          "trajectory_bootstrap_similarity_mean": 0.46310103031840927,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.3039359890806666
+        },
+        {
+          "atom": 5,
+          "bootstrap_advantage_over_random": 0.33421279355589667,
+          "initialization_similarity_mean": 1.0000000000000002,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.05396619250294489,
+          "trajectory_bootstrap_similarity_mean": 0.38817898605884155,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.3760367427841595
+        },
+        {
+          "atom": 6,
+          "bootstrap_advantage_over_random": 0.29666464583514607,
+          "initialization_similarity_mean": 1.0000000000000002,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.05233792241851513,
+          "trajectory_bootstrap_similarity_mean": 0.3490025682536612,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.2925369461955652
+        },
+        {
+          "atom": 7,
+          "bootstrap_advantage_over_random": 0.20040461548242544,
+          "initialization_similarity_mean": 1.0000000000000002,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.06659629086257517,
+          "trajectory_bootstrap_similarity_mean": 0.2670009063450006,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.4142315528741794
+        }
+      ],
+      "random_dictionary_baseline": {
+        "count": 20,
+        "maximum": 0.0657747427326082,
+        "mean": 0.058419160007244085,
+        "minimum": 0.048533788168718374,
+        "standard_deviation": 0.0039019665627205357
+      },
+      "stable_atom_count": 8,
+      "trajectory_bootstrap_stability": {
+        "count": 190,
+        "maximum": 0.5813156954688927,
+        "mean": 0.2733169686709958,
+        "minimum": 0.06492774935502048,
+        "standard_deviation": 0.09629090683924521
+      },
+      "trajectory_count": 48
+    },
+    "OV": {
+      "bootstrap_advantage_over_random": 0.20529958559359385,
+      "components": 8,
+      "initialization_stability": {
+        "count": 190,
+        "maximum": 1.0000000000000002,
+        "mean": 1.0000000000000002,
+        "minimum": 1.0000000000000002,
+        "standard_deviation": 0.0
+      },
+      "passes_preregistered_0.10_advantage": true,
+      "per_atom": [
+        {
+          "atom": 0,
+          "bootstrap_advantage_over_random": 0.315921018867527,
+          "initialization_similarity_mean": 0.9999999999999998,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.07506537693106152,
+          "trajectory_bootstrap_similarity_mean": 0.3909863957985885,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.3689085700902507
+        },
+        {
+          "atom": 1,
+          "bootstrap_advantage_over_random": 0.38531016628962944,
+          "initialization_similarity_mean": 1.0000000000000009,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.09911470952067848,
+          "trajectory_bootstrap_similarity_mean": 0.4844248758103079,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.3186651894817843
+        },
+        {
+          "atom": 2,
+          "bootstrap_advantage_over_random": 0.31832839538121727,
+          "initialization_similarity_mean": 1.0,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.08930918651585733,
+          "trajectory_bootstrap_similarity_mean": 0.4076375818970746,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.18529551136816802
+        },
+        {
+          "atom": 3,
+          "bootstrap_advantage_over_random": 0.3485024028347026,
+          "initialization_similarity_mean": 0.9999999999999994,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.07350278274120171,
+          "trajectory_bootstrap_similarity_mean": 0.4220051855759043,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.46455653815629155
+        },
+        {
+          "atom": 4,
+          "bootstrap_advantage_over_random": 0.4670517365045094,
+          "initialization_similarity_mean": 1.0,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.08020089025785182,
+          "trajectory_bootstrap_similarity_mean": 0.5472526267623612,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.370206800003435
+        },
+        {
+          "atom": 5,
+          "bootstrap_advantage_over_random": 0.41300516891743055,
+          "initialization_similarity_mean": 1.0000000000000004,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.07719157346409894,
+          "trajectory_bootstrap_similarity_mean": 0.4901967423815295,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.37376898046469487
+        },
+        {
+          "atom": 6,
+          "bootstrap_advantage_over_random": 0.1870313940627742,
+          "initialization_similarity_mean": 0.9999999999999998,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.0864949580550778,
+          "trajectory_bootstrap_similarity_mean": 0.273526352117852,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.3542822087800463
+        },
+        {
+          "atom": 7,
+          "bootstrap_advantage_over_random": 0.17052315566948173,
+          "initialization_similarity_mean": 1.0000000000000007,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.09000230610107206,
+          "trajectory_bootstrap_similarity_mean": 0.2605254617705538,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.2842798606819185
+        }
+      ],
+      "random_dictionary_baseline": {
+        "count": 20,
+        "maximum": 0.09705382724711031,
+        "mean": 0.08278823257267508,
+        "minimum": 0.06712653088015538,
+        "standard_deviation": 0.007840008457143917
+      },
+      "stable_atom_count": 8,
+      "trajectory_bootstrap_stability": {
+        "count": 190,
+        "maximum": 0.6216577189781912,
+        "mean": 0.28808781816626894,
+        "minimum": 0.055481719034077136,
+        "standard_deviation": 0.11356731090834475
+      },
+      "trajectory_count": 48
+    },
+    "QK": {
+      "bootstrap_advantage_over_random": 0.2298118214875466,
+      "components": 8,
+      "initialization_stability": {
+        "count": 190,
+        "maximum": 0.9999999999999999,
+        "mean": 0.9999999999999999,
+        "minimum": 0.9999999999999999,
+        "standard_deviation": 0.0
+      },
+      "passes_preregistered_0.10_advantage": true,
+      "per_atom": [
+        {
+          "atom": 0,
+          "bootstrap_advantage_over_random": 0.6959514605380636,
+          "initialization_similarity_mean": 1.0000000000000004,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.08154439347396483,
+          "trajectory_bootstrap_similarity_mean": 0.7774958540120284,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.3102284415632231
+        },
+        {
+          "atom": 1,
+          "bootstrap_advantage_over_random": 0.3869369529040041,
+          "initialization_similarity_mean": 1.0000000000000004,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.07628414646349997,
+          "trajectory_bootstrap_similarity_mean": 0.46322109936750405,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.36662430871671714
+        },
+        {
+          "atom": 2,
+          "bootstrap_advantage_over_random": 0.45526281758512566,
+          "initialization_similarity_mean": 0.9999999999999994,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.0770052979999394,
+          "trajectory_bootstrap_similarity_mean": 0.532268115585065,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.3819576233203307
+        },
+        {
+          "atom": 3,
+          "bootstrap_advantage_over_random": 0.40292392329241383,
+          "initialization_similarity_mean": 1.0000000000000004,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.09770295328246033,
+          "trajectory_bootstrap_similarity_mean": 0.5006268765748741,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.2993078272126077
+        },
+        {
+          "atom": 4,
+          "bootstrap_advantage_over_random": 0.3647077381494682,
+          "initialization_similarity_mean": 1.0,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.07834682163242698,
+          "trajectory_bootstrap_similarity_mean": 0.44305455978189523,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.28263544434708643
+        },
+        {
+          "atom": 5,
+          "bootstrap_advantage_over_random": 0.2752386628699098,
+          "initialization_similarity_mean": 0.9999999999999993,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.09064438009366382,
+          "trajectory_bootstrap_similarity_mean": 0.3658830429635736,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.2809840163581403
+        },
+        {
+          "atom": 6,
+          "bootstrap_advantage_over_random": 0.18004299421551792,
+          "initialization_similarity_mean": 0.9999999999999993,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.07752980498308495,
+          "trajectory_bootstrap_similarity_mean": 0.2575727991986029,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.2816737907897247
+        },
+        {
+          "atom": 7,
+          "bootstrap_advantage_over_random": 0.35262773533791003,
+          "initialization_similarity_mean": 0.9999999999999998,
+          "passes_0.10_advantage": true,
+          "random_match_similarity_mean": 0.08838067046909179,
+          "trajectory_bootstrap_similarity_mean": 0.44100840580700185,
+          "trajectory_bootstrap_similarity_standard_deviation": 0.36117876944097305
+        }
+      ],
+      "random_dictionary_baseline": {
+        "count": 20,
+        "maximum": 0.10221409131549766,
+        "mean": 0.08417474261375077,
+        "minimum": 0.06457653493845227,
+        "standard_deviation": 0.009822544679694855
+      },
+      "stable_atom_count": 8,
+      "trajectory_bootstrap_stability": {
+        "count": 190,
+        "maximum": 0.5661224459935945,
+        "mean": 0.3139865641012974,
+        "minimum": 0.09406313885988045,
+        "standard_deviation": 0.08861738135708958
+      },
+      "trajectory_count": 48
+    }
+  }
+}

@@ -1,0 +1,416 @@
+{
+  "conditional_model": "rank-one map per populated discovery query-class/key-class pair plus a rank-one fallback",
+  "equal_budget_control": "one global low-rank map with identical number of rank-one factors",
+  "heads": {
+    "L1H3": {
+      "conditional_rank_one_groups": 7,
+      "confirmation_group_event_counts": {
+        "0": 4,
+        "1": 80,
+        "10": 13,
+        "11": 31,
+        "12": 67,
+        "13": 1084,
+        "14": 90,
+        "15": 237,
+        "2": 12,
+        "3": 20,
+        "4": 158,
+        "5": 1397,
+        "6": 66,
+        "7": 168,
+        "8": 8,
+        "9": 141
+      },
+      "confirmation_r2": {
+        "conditional_maps": 0.07448024060917713,
+        "global_equal_budget": 0.8600208751974047,
+        "global_rank_four": 0.6937491500141096
+      },
+      "key_classes": 4,
+      "query_classes": 4,
+      "total_rank_budget": 8
+    },
+    "L2H0": {
+      "conditional_rank_one_groups": 3,
+      "confirmation_group_event_counts": {
+        "13": 271,
+        "5": 2827,
+        "9": 466
+      },
+      "confirmation_r2": {
+        "conditional_maps": -0.1233101721733516,
+        "global_equal_budget": 0.44324377152221606,
+        "global_rank_four": 0.44324377152221606
+      },
+      "key_classes": 4,
+      "query_classes": 4,
+      "total_rank_budget": 4
+    },
+    "L2H7": {
+      "conditional_rank_one_groups": 6,
+      "confirmation_group_event_counts": {
+        "0": 10,
+        "1": 1583,
+        "13": 160,
+        "14": 65,
+        "2": 797,
+        "4": 2,
+        "5": 619,
+        "6": 312,
+        "9": 31
+      },
+      "confirmation_r2": {
+        "conditional_maps": 0.3941494228416722,
+        "global_equal_budget": 0.9936720833314887,
+        "global_rank_four": 0.9487274189981774
+      },
+      "key_classes": 4,
+      "query_classes": 4,
+      "total_rank_budget": 7
+    },
+    "L3H0": {
+      "conditional_rank_one_groups": 7,
+      "confirmation_group_event_counts": {
+        "0": 4,
+        "10": 266,
+        "11": 44,
+        "2": 17,
+        "4": 1171,
+        "5": 221,
+        "6": 1059,
+        "7": 361,
+        "8": 380,
+        "9": 14
+      },
+      "confirmation_r2": {
+        "conditional_maps": 0.19296889458666577,
+        "global_equal_budget": 0.48468224054503983,
+        "global_rank_four": 0.48289818252279093
+      },
+      "key_classes": 4,
+      "query_classes": 4,
+      "total_rank_budget": 8
+    },
+    "L3H2": {
+      "conditional_rank_one_groups": 4,
+      "confirmation_group_event_counts": {
+        "1": 1241,
+        "11": 1,
+        "13": 762,
+        "15": 3,
+        "3": 10,
+        "5": 100,
+        "9": 1451
+      },
+      "confirmation_r2": {
+        "conditional_maps": -0.144994433754138,
+        "global_equal_budget": 0.4612231560158404,
+        "global_rank_four": 0.4150441972267387
+      },
+      "key_classes": 4,
+      "query_classes": 4,
+      "total_rank_budget": 5
+    },
+    "L3H4": {
+      "conditional_rank_one_groups": 5,
+      "confirmation_group_event_counts": {
+        "1": 12,
+        "10": 5,
+        "12": 346,
+        "13": 2632,
+        "14": 18,
+        "15": 50,
+        "5": 7,
+        "8": 23,
+        "9": 467
+      },
+      "confirmation_r2": {
+        "conditional_maps": 0.29501298681335664,
+        "global_equal_budget": 0.7821888482511994,
+        "global_rank_four": 0.6903257033264836
+      },
+      "key_classes": 4,
+      "query_classes": 4,
+      "total_rank_budget": 6
+    },
+    "L3H5": {
+      "conditional_rank_one_groups": 4,
+      "confirmation_group_event_counts": {
+        "1": 80,
+        "12": 9,
+        "13": 913,
+        "4": 20,
+        "5": 2160,
+        "8": 1,
+        "9": 315
+      },
+      "confirmation_r2": {
+        "conditional_maps": 0.029331540023452618,
+        "global_equal_budget": -0.0785493644933295,
+        "global_rank_four": -0.08564233339220562
+      },
+      "key_classes": 4,
+      "query_classes": 4,
+      "total_rank_budget": 5
+    },
+    "L3H7": {
+      "conditional_rank_one_groups": 4,
+      "confirmation_group_event_counts": {
+        "0": 19,
+        "11": 729,
+        "4": 172,
+        "7": 59,
+        "8": 2566
+      },
+      "confirmation_r2": {
+        "conditional_maps": 0.5699736096429968,
+        "global_equal_budget": 0.878840937523609,
+        "global_rank_four": 0.8731009064327973
+      },
+      "key_classes": 4,
+      "query_classes": 3,
+      "total_rank_budget": 5
+    },
+    "L4H1": {
+      "conditional_rank_one_groups": 8,
+      "confirmation_group_event_counts": {
+        "0": 4,
+        "1": 39,
+        "10": 692,
+        "11": 945,
+        "2": 13,
+        "3": 51,
+        "4": 382,
+        "5": 485,
+        "6": 34,
+        "7": 446,
+        "8": 175,
+        "9": 273
+      },
+      "confirmation_r2": {
+        "conditional_maps": -11.715439463470007,
+        "global_equal_budget": -0.7345466045852345,
+        "global_rank_four": -0.15121526359315074
+      },
+      "key_classes": 3,
+      "query_classes": 4,
+      "total_rank_budget": 9
+    },
+    "L4H4": {
+      "conditional_rank_one_groups": 6,
+      "confirmation_group_event_counts": {
+        "1": 1,
+        "10": 843,
+        "11": 57,
+        "12": 139,
+        "13": 499,
+        "14": 1323,
+        "15": 121,
+        "2": 1,
+        "4": 14,
+        "5": 178,
+        "6": 113,
+        "7": 13,
+        "8": 91,
+        "9": 178
+      },
+      "confirmation_r2": {
+        "conditional_maps": -0.011426397509283648,
+        "global_equal_budget": -0.5080031281943329,
+        "global_rank_four": -0.04868703431092736
+      },
+      "key_classes": 4,
+      "query_classes": 4,
+      "total_rank_budget": 7
+    },
+    "L4H5": {
+      "conditional_rank_one_groups": 8,
+      "confirmation_group_event_counts": {
+        "0": 1487,
+        "1": 222,
+        "10": 183,
+        "11": 49,
+        "12": 2,
+        "13": 3,
+        "14": 3,
+        "15": 13,
+        "2": 396,
+        "3": 110,
+        "4": 751,
+        "5": 42,
+        "6": 90,
+        "7": 35,
+        "8": 160,
+        "9": 35
+      },
+      "confirmation_r2": {
+        "conditional_maps": 0.09175651514514738,
+        "global_equal_budget": 0.2127462246915447,
+        "global_rank_four": 0.3506267968468376
+      },
+      "key_classes": 4,
+      "query_classes": 4,
+      "total_rank_budget": 9
+    },
+    "L4H7": {
+      "conditional_rank_one_groups": 6,
+      "confirmation_group_event_counts": {
+        "10": 1817,
+        "11": 679,
+        "14": 20,
+        "2": 61,
+        "3": 3,
+        "5": 7,
+        "6": 709,
+        "7": 176,
+        "9": 25
+      },
+      "confirmation_r2": {
+        "conditional_maps": -5.3837100899260015,
+        "global_equal_budget": -0.3549236970814391,
+        "global_rank_four": -0.17835494989255896
+      },
+      "key_classes": 4,
+      "query_classes": 4,
+      "total_rank_budget": 7
+    },
+    "L5H0": {
+      "conditional_rank_one_groups": 6,
+      "confirmation_group_event_counts": {
+        "1": 11,
+        "10": 210,
+        "11": 5,
+        "13": 74,
+        "14": 701,
+        "15": 54,
+        "2": 72,
+        "3": 2,
+        "5": 134,
+        "6": 2072,
+        "7": 128,
+        "9": 120
+      },
+      "confirmation_r2": {
+        "conditional_maps": -0.2068721579483317,
+        "global_equal_budget": -0.1917247544170304,
+        "global_rank_four": 0.17590031233285897
+      },
+      "key_classes": 4,
+      "query_classes": 4,
+      "total_rank_budget": 7
+    },
+    "L5H1": {
+      "conditional_rank_one_groups": 6,
+      "confirmation_group_event_counts": {
+        "1": 18,
+        "11": 611,
+        "12": 1,
+        "13": 135,
+        "15": 949,
+        "3": 230,
+        "5": 271,
+        "7": 1235,
+        "9": 97
+      },
+      "confirmation_r2": {
+        "conditional_maps": -3.7991654828565977,
+        "global_equal_budget": 0.11631108490044251,
+        "global_rank_four": 0.26670013005669413
+      },
+      "key_classes": 4,
+      "query_classes": 4,
+      "total_rank_budget": 7
+    },
+    "L5H2": {
+      "conditional_rank_one_groups": 6,
+      "confirmation_group_event_counts": {
+        "0": 1,
+        "10": 1015,
+        "11": 95,
+        "2": 1,
+        "3": 134,
+        "4": 88,
+        "5": 3,
+        "6": 359,
+        "7": 1123,
+        "8": 78,
+        "9": 673
+      },
+      "confirmation_r2": {
+        "conditional_maps": 0.04415485120977636,
+        "global_equal_budget": -0.12762399884751496,
+        "global_rank_four": 0.10555354917850424
+      },
+      "key_classes": 3,
+      "query_classes": 4,
+      "total_rank_budget": 7
+    },
+    "L5H3": {
+      "conditional_rank_one_groups": 10,
+      "confirmation_group_event_counts": {
+        "0": 91,
+        "1": 147,
+        "10": 196,
+        "11": 1361,
+        "12": 7,
+        "13": 47,
+        "14": 1,
+        "15": 25,
+        "2": 15,
+        "3": 118,
+        "4": 29,
+        "5": 273,
+        "6": 42,
+        "7": 236,
+        "8": 99,
+        "9": 882
+      },
+      "confirmation_r2": {
+        "conditional_maps": -1.1424659983185443,
+        "global_equal_budget": -0.14235511366286935,
+        "global_rank_four": 0.12769751443204624
+      },
+      "key_classes": 4,
+      "query_classes": 4,
+      "total_rank_budget": 11
+    },
+    "L5H4": {
+      "conditional_rank_one_groups": 7,
+      "confirmation_group_event_counts": {
+        "0": 17,
+        "1": 1186,
+        "10": 568,
+        "11": 86,
+        "12": 2,
+        "13": 112,
+        "14": 100,
+        "15": 8,
+        "2": 419,
+        "3": 123,
+        "4": 4,
+        "5": 58,
+        "6": 113,
+        "7": 3,
+        "8": 28,
+        "9": 747
+      },
+      "confirmation_r2": {
+        "conditional_maps": 0.09412040217021378,
+        "global_equal_budget": -0.6523042582530008,
+        "global_rank_four": 0.07074720574979332
+      },
+      "key_classes": 4,
+      "query_classes": 4,
+      "total_rank_budget": 8
+    }
+  },
+  "status": "held-out class-conditional QK map evaluation",
+  "summary": {
+    "conditional_minus_equal_budget_mean": -1.3637843550210489,
+    "heads_conditional_beats_equal_budget": 4,
+    "mean_conditional_r2": -1.2200844548772825,
+    "mean_global_equal_budget_r2": 0.14369990014376668,
+    "mean_global_rank_four_r2": 0.3047303092618356
+  }
+}

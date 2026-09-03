@@ -1,0 +1,371 @@
+{
+  "status": "static scale-free OV-writer to Q/K/V-reader composition atlas",
+  "revisions": [
+    "step16000",
+    "step64000",
+    "step143000"
+  ],
+  "edge_definition": "||W_O(source) @ W_reader(target)||_F / (||W_O(source)||_F ||W_reader(target)||_F)",
+  "temporal_null": "independent source- and target-head permutations within each ordered layer pair",
+  "types": {
+    "Q": {
+      "temporal_identity": {
+        "mean_layer_pair_spearman": 0.41577228327228327,
+        "head_identity_shuffle_mean": -0.002689459911682134,
+        "head_identity_shuffle_standard_deviation": 0.05685386979215597,
+        "upper_tail_p_value": 0.001
+      },
+      "final_top_edges": [
+        {
+          "source_layer": 2,
+          "source_head": 6,
+          "target_layer": 3,
+          "target_head": 3,
+          "normalized_overlap": 0.22260776162147522
+        },
+        {
+          "source_layer": 2,
+          "source_head": 6,
+          "target_layer": 3,
+          "target_head": 5,
+          "normalized_overlap": 0.2204517424106598
+        },
+        {
+          "source_layer": 3,
+          "source_head": 0,
+          "target_layer": 4,
+          "target_head": 2,
+          "normalized_overlap": 0.21660931408405304
+        },
+        {
+          "source_layer": 2,
+          "source_head": 5,
+          "target_layer": 3,
+          "target_head": 5,
+          "normalized_overlap": 0.21586307883262634
+        },
+        {
+          "source_layer": 3,
+          "source_head": 6,
+          "target_layer": 4,
+          "target_head": 1,
+          "normalized_overlap": 0.21005186438560486
+        },
+        {
+          "source_layer": 2,
+          "source_head": 5,
+          "target_layer": 3,
+          "target_head": 3,
+          "normalized_overlap": 0.2098543643951416
+        },
+        {
+          "source_layer": 3,
+          "source_head": 6,
+          "target_layer": 4,
+          "target_head": 2,
+          "normalized_overlap": 0.20866277813911438
+        },
+        {
+          "source_layer": 3,
+          "source_head": 6,
+          "target_layer": 4,
+          "target_head": 7,
+          "normalized_overlap": 0.20573623478412628
+        },
+        {
+          "source_layer": 3,
+          "source_head": 6,
+          "target_layer": 4,
+          "target_head": 0,
+          "normalized_overlap": 0.190104678273201
+        },
+        {
+          "source_layer": 3,
+          "source_head": 0,
+          "target_layer": 4,
+          "target_head": 1,
+          "normalized_overlap": 0.1767074018716812
+        },
+        {
+          "source_layer": 2,
+          "source_head": 6,
+          "target_layer": 3,
+          "target_head": 1,
+          "normalized_overlap": 0.17154155671596527
+        },
+        {
+          "source_layer": 2,
+          "source_head": 2,
+          "target_layer": 3,
+          "target_head": 5,
+          "normalized_overlap": 0.17095085978507996
+        },
+        {
+          "source_layer": 2,
+          "source_head": 2,
+          "target_layer": 3,
+          "target_head": 3,
+          "normalized_overlap": 0.16947732865810394
+        },
+        {
+          "source_layer": 3,
+          "source_head": 6,
+          "target_layer": 4,
+          "target_head": 6,
+          "normalized_overlap": 0.16793443262577057
+        },
+        {
+          "source_layer": 2,
+          "source_head": 6,
+          "target_layer": 3,
+          "target_head": 0,
+          "normalized_overlap": 0.1668863147497177
+        }
+      ],
+      "final_overlap_summary": {
+        "mean": 0.05789831540508506,
+        "standard_deviation": 0.02478002833420108
+      }
+    },
+    "K": {
+      "temporal_identity": {
+        "mean_layer_pair_spearman": 0.7685164835164836,
+        "head_identity_shuffle_mean": 0.00024633913522802435,
+        "head_identity_shuffle_standard_deviation": 0.0639433236733929,
+        "upper_tail_p_value": 0.001
+      },
+      "final_top_edges": [
+        {
+          "source_layer": 2,
+          "source_head": 7,
+          "target_layer": 3,
+          "target_head": 6,
+          "normalized_overlap": 0.12444775551557541
+        },
+        {
+          "source_layer": 2,
+          "source_head": 7,
+          "target_layer": 3,
+          "target_head": 1,
+          "normalized_overlap": 0.1136363297700882
+        },
+        {
+          "source_layer": 2,
+          "source_head": 7,
+          "target_layer": 3,
+          "target_head": 3,
+          "normalized_overlap": 0.09382803738117218
+        },
+        {
+          "source_layer": 1,
+          "source_head": 3,
+          "target_layer": 2,
+          "target_head": 5,
+          "normalized_overlap": 0.08477625995874405
+        },
+        {
+          "source_layer": 2,
+          "source_head": 1,
+          "target_layer": 3,
+          "target_head": 6,
+          "normalized_overlap": 0.08393263071775436
+        },
+        {
+          "source_layer": 2,
+          "source_head": 0,
+          "target_layer": 3,
+          "target_head": 0,
+          "normalized_overlap": 0.07908400148153305
+        },
+        {
+          "source_layer": 2,
+          "source_head": 7,
+          "target_layer": 3,
+          "target_head": 0,
+          "normalized_overlap": 0.07647261023521423
+        },
+        {
+          "source_layer": 1,
+          "source_head": 5,
+          "target_layer": 3,
+          "target_head": 0,
+          "normalized_overlap": 0.07481241226196289
+        },
+        {
+          "source_layer": 1,
+          "source_head": 5,
+          "target_layer": 2,
+          "target_head": 5,
+          "normalized_overlap": 0.07460135966539383
+        },
+        {
+          "source_layer": 1,
+          "source_head": 1,
+          "target_layer": 2,
+          "target_head": 6,
+          "normalized_overlap": 0.07454859465360641
+        },
+        {
+          "source_layer": 2,
+          "source_head": 1,
+          "target_layer": 3,
+          "target_head": 0,
+          "normalized_overlap": 0.07401474565267563
+        },
+        {
+          "source_layer": 2,
+          "source_head": 7,
+          "target_layer": 3,
+          "target_head": 5,
+          "normalized_overlap": 0.07347496598958969
+        },
+        {
+          "source_layer": 1,
+          "source_head": 3,
+          "target_layer": 2,
+          "target_head": 3,
+          "normalized_overlap": 0.07185658812522888
+        },
+        {
+          "source_layer": 2,
+          "source_head": 0,
+          "target_layer": 3,
+          "target_head": 5,
+          "normalized_overlap": 0.06945523619651794
+        },
+        {
+          "source_layer": 1,
+          "source_head": 3,
+          "target_layer": 3,
+          "target_head": 6,
+          "normalized_overlap": 0.06936180591583252
+        }
+      ],
+      "final_overlap_summary": {
+        "mean": 0.04507828798183861,
+        "standard_deviation": 0.010138306651818836
+      }
+    },
+    "V": {
+      "temporal_identity": {
+        "mean_layer_pair_spearman": 0.7392704517704517,
+        "head_identity_shuffle_mean": -0.002158244936022713,
+        "head_identity_shuffle_standard_deviation": 0.06166734266842307,
+        "upper_tail_p_value": 0.001
+      },
+      "final_top_edges": [
+        {
+          "source_layer": 4,
+          "source_head": 7,
+          "target_layer": 5,
+          "target_head": 4,
+          "normalized_overlap": 0.09535133093595505
+        },
+        {
+          "source_layer": 3,
+          "source_head": 5,
+          "target_layer": 5,
+          "target_head": 4,
+          "normalized_overlap": 0.08556051552295685
+        },
+        {
+          "source_layer": 1,
+          "source_head": 1,
+          "target_layer": 2,
+          "target_head": 7,
+          "normalized_overlap": 0.0803733766078949
+        },
+        {
+          "source_layer": 1,
+          "source_head": 1,
+          "target_layer": 2,
+          "target_head": 1,
+          "normalized_overlap": 0.07917878031730652
+        },
+        {
+          "source_layer": 3,
+          "source_head": 6,
+          "target_layer": 5,
+          "target_head": 4,
+          "normalized_overlap": 0.07805705815553665
+        },
+        {
+          "source_layer": 1,
+          "source_head": 0,
+          "target_layer": 2,
+          "target_head": 1,
+          "normalized_overlap": 0.07726135849952698
+        },
+        {
+          "source_layer": 3,
+          "source_head": 3,
+          "target_layer": 5,
+          "target_head": 4,
+          "normalized_overlap": 0.07552917301654816
+        },
+        {
+          "source_layer": 1,
+          "source_head": 0,
+          "target_layer": 2,
+          "target_head": 7,
+          "normalized_overlap": 0.06993123888969421
+        },
+        {
+          "source_layer": 1,
+          "source_head": 3,
+          "target_layer": 2,
+          "target_head": 6,
+          "normalized_overlap": 0.06862638145685196
+        },
+        {
+          "source_layer": 4,
+          "source_head": 6,
+          "target_layer": 5,
+          "target_head": 6,
+          "normalized_overlap": 0.0683116689324379
+        },
+        {
+          "source_layer": 4,
+          "source_head": 1,
+          "target_layer": 5,
+          "target_head": 7,
+          "normalized_overlap": 0.0678417906165123
+        },
+        {
+          "source_layer": 0,
+          "source_head": 3,
+          "target_layer": 1,
+          "target_head": 4,
+          "normalized_overlap": 0.06776787340641022
+        },
+        {
+          "source_layer": 0,
+          "source_head": 3,
+          "target_layer": 2,
+          "target_head": 5,
+          "normalized_overlap": 0.0672442764043808
+        },
+        {
+          "source_layer": 3,
+          "source_head": 1,
+          "target_layer": 5,
+          "target_head": 4,
+          "normalized_overlap": 0.06705421954393387
+        },
+        {
+          "source_layer": 1,
+          "source_head": 7,
+          "target_layer": 2,
+          "target_head": 1,
+          "normalized_overlap": 0.06698379665613174
+        }
+      ],
+      "final_overlap_summary": {
+        "mean": 0.03812167657500443,
+        "standard_deviation": 0.01081243879428859
+      }
+    }
+  },
+  "seed": 0,
+  "resamples": 999
+}

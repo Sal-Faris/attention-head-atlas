@@ -54,14 +54,38 @@ python scripts/extract_operators.py `
 
 ## Status
 
-Checkpoint 0002 finds strong non-random population directions and statistically
-significant local recovery of published functional families, while global
-cluster quality is weak. Cross-validated sparse mixtures reconstruct held-out
-operators substantially better than hard cluster centroids.
+Checkpoint 0033 uses an approximate-commutant test to search for read/write
+compartments without fixing their number, dimensions, memberships, or internal
+transformation type. Real architectural covariance families have lower
+commutant energy than spectrum-rotated controls, but no candidate projector
+both generalizes reciprocally and recurs across split fits. This is evidence
+for non-random shared geometry, not stable hard compartments in the tested
+32-dimensional slices.
 
-Read the methods, numbers, caveats, and next confirmation gate in
-[`docs/checkpoints/0002-operator-geometry.md`](docs/checkpoints/0002-operator-geometry.md).
-The main generated figures are:
+Read the methods, results, and revised gate in
+[`docs/checkpoints/0033-architectural-commutant-pilot.md`](docs/checkpoints/0033-architectural-commutant-pilot.md).
+The main Pythia figures are:
+
+- `results/pythia-70m-deduped/activation_validation_pilot.png`
+- `results/pythia-70m-deduped/recurrent_pair_behavior.png`
+- `results/pythia-70m-deduped/subspace_family_audit.png`
+- `results/pythia-70m-deduped/dictionary_residual_null.png`
+- `results/pythia-70m-deduped/factor_subspace_atlas.png`
+- `results/pythia-70m-deduped/trajectory_geometry.png`
+- `results/pythia-70m-deduped/intrinsic_core_mdl_audit_v1.png`
+- `results/pythia-70m-deduped/intrinsic_core_profiles_v1.png`
+- `results/pythia-70m-deduped/architectural_ov_compartments_v1.png`
+- `results/pythia-70m-deduped/architectural_ov_compartment_confounders_v1.png`
+- `results/pythia-70m-deduped/gain_residualized_ov_compartments_v1.png`
+- `results/pythia-70m-deduped/direct_ov_restricted_map_summary_v1.png`
+- `results/pythia-70m-deduped/architectural_ov_restricted_map_pilot_v1.png`
+- `results/pythia-70m-deduped/architectural_module_pairs_v1.png`
+- `results/pythia-70m-deduped/architectural_commutants_v1.png`
+- `results/pythia-70m-deduped/atom_emergence.png`
+- `results/pythia-70m-deduped/atom_reuse.png`
+- `results/pythia-70m-deduped/rotary_qk_robustness.png`
+
+The GPT-2 development figures remain:
 
 - `results/gpt2-small/null_structure_comparison.png`
 - `results/gpt2-small/functional_operator_atlas.png`

@@ -1,0 +1,626 @@
+{
+  "status": "gauge-invariant typed writer-to-reader channel reuse pilot",
+  "model": "EleutherAI/pythia-70m-deduped",
+  "revision": "step143000",
+  "scope": "all adjacent-layer OV-writer to Q/K/V-reader edges",
+  "discovery": "weights only; no prompts, activations, labels, or semantic operator types",
+  "representation": {
+    "writer": "orthonormal span of columns of OV.right (= W_O.T)",
+    "Q_reader": "orthonormal span of columns of QK.left (= W_Q)",
+    "K_reader": "orthonormal span of columns of QK.right (= W_K)",
+    "V_reader": "orthonormal span of columns of OV.left (= W_V)",
+    "gauge_invariance": "invariant to invertible changes of internal head coordinates"
+  },
+  "crossfit": "learn the mean normalized overlap covariance on each balanced training half and test the held-out half across 16 deterministic splits",
+  "balanced_split_schedule": {
+    "partner_count": 8,
+    "split_count": 16,
+    "seed": 2718,
+    "same_for_real_and_all_nulls": true
+  },
+  "ranks": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "primary_descriptive_rank": 4,
+  "null": "for the confirmatory endpoint, one shared random permutation of ambient residual coordinates per Q-reader partner layer, shared across all partner heads; null evaluation is restricted to fan_out/Q plus its source-mismatch control for economy",
+  "null_preserves": "each partner spectrum, each individual subspace dimension, and all pairwise subspace geometry within a jointly permuted layer",
+  "null_repetitions": 199,
+  "seed": 3407,
+  "p_values": "empirical permutation p-values only; no Gaussian tail approximation",
+  "confirmatory_endpoint": "fan_out/Q/rank4; intersection-union p is the maximum of the one-sided empirical p-values for total overlap, equal-partner normalized reuse, and overlap-weighted reuse; all other endpoints are descriptive",
+  "results": {
+    "fan_out": {
+      "Q": {
+        "family_count": 40,
+        "ranks": {
+          "1": {
+            "real_mean_pair_overlap": 0.16159680350201647,
+            "null_mean_pair_overlap": 0.12524637972870867,
+            "overlap_advantage": 0.0363504237733078,
+            "overlap_empirical_upper_tail_p_value": 0.005,
+            "real_equal_partner_crossfit_capture": 0.04015424859265297,
+            "null_equal_partner_crossfit_capture_mean": 0.025898171633636537,
+            "equal_partner_capture_advantage": 0.014256076959016435,
+            "equal_partner_empirical_upper_tail_p_value": 0.005,
+            "real_overlap_weighted_crossfit_capture": 0.03932744522338842,
+            "null_overlap_weighted_crossfit_capture_mean": 0.02589750038451612,
+            "weighted_capture_advantage": 0.0134299448388723,
+            "weighted_empirical_upper_tail_p_value": 0.005,
+            "repeated_split_p_values": [
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005
+            ]
+          },
+          "2": {
+            "real_mean_pair_overlap": 0.16159680350201647,
+            "null_mean_pair_overlap": 0.12524637972870867,
+            "overlap_advantage": 0.0363504237733078,
+            "overlap_empirical_upper_tail_p_value": 0.005,
+            "real_equal_partner_crossfit_capture": 0.07345801665441427,
+            "null_equal_partner_crossfit_capture_mean": 0.05058586306350772,
+            "equal_partner_capture_advantage": 0.022872153590906552,
+            "equal_partner_empirical_upper_tail_p_value": 0.005,
+            "real_overlap_weighted_crossfit_capture": 0.07175693611334694,
+            "null_overlap_weighted_crossfit_capture_mean": 0.05058493896709443,
+            "weighted_capture_advantage": 0.021171997146252508,
+            "weighted_empirical_upper_tail_p_value": 0.005,
+            "repeated_split_p_values": [
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005
+            ]
+          },
+          "4": {
+            "real_mean_pair_overlap": 0.16159680350201647,
+            "null_mean_pair_overlap": 0.12524637972870867,
+            "overlap_advantage": 0.0363504237733078,
+            "overlap_empirical_upper_tail_p_value": 0.005,
+            "real_equal_partner_crossfit_capture": 0.13052152176230555,
+            "null_equal_partner_crossfit_capture_mean": 0.09742278310150934,
+            "equal_partner_capture_advantage": 0.03309873866079621,
+            "equal_partner_empirical_upper_tail_p_value": 0.005,
+            "real_overlap_weighted_crossfit_capture": 0.12756915222767282,
+            "null_overlap_weighted_crossfit_capture_mean": 0.09742094938537528,
+            "weighted_capture_advantage": 0.030148202842297536,
+            "weighted_empirical_upper_tail_p_value": 0.005,
+            "repeated_split_p_values": [
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005
+            ],
+            "confirmatory_endpoint": true,
+            "intersection_union_p_value": 0.005,
+            "all_three_positive_excess": true,
+            "leave_one_source_layer_out": {
+              "0": {
+                "observed": {
+                  "mean_pair_overlap": 0.15677290190150056,
+                  "equal_partner_capture": 0.1315143586036751,
+                  "overlap_weighted_capture": 0.12800549493369773
+                },
+                "null_means": {
+                  "mean_pair_overlap": 0.1252606749059713,
+                  "equal_partner_capture": 0.1004124146376374,
+                  "overlap_weighted_capture": 0.10040922330276153
+                },
+                "empirical_p_values": {
+                  "mean_pair_overlap": 0.005,
+                  "equal_partner_capture": 0.005,
+                  "overlap_weighted_capture": 0.005
+                }
+              },
+              "1": {
+                "observed": {
+                  "mean_pair_overlap": 0.15922359902249578,
+                  "equal_partner_capture": 0.13512062780701914,
+                  "overlap_weighted_capture": 0.13135504077622986
+                },
+                "null_means": {
+                  "mean_pair_overlap": 0.12524535964832323,
+                  "equal_partner_capture": 0.10009482035782219,
+                  "overlap_weighted_capture": 0.1000919340087357
+                },
+                "empirical_p_values": {
+                  "mean_pair_overlap": 0.005,
+                  "equal_partner_capture": 0.005,
+                  "overlap_weighted_capture": 0.005
+                }
+              },
+              "2": {
+                "observed": {
+                  "mean_pair_overlap": 0.15494896488895293,
+                  "equal_partner_capture": 0.1381260456420301,
+                  "overlap_weighted_capture": 0.13419049571789857
+                },
+                "null_means": {
+                  "mean_pair_overlap": 0.12524471454679065,
+                  "equal_partner_capture": 0.09799398962487009,
+                  "overlap_weighted_capture": 0.09799595441379483
+                },
+                "empirical_p_values": {
+                  "mean_pair_overlap": 0.005,
+                  "equal_partner_capture": 0.005,
+                  "overlap_weighted_capture": 0.005
+                }
+              },
+              "3": {
+                "observed": {
+                  "mean_pair_overlap": 0.16037062644862154,
+                  "equal_partner_capture": 0.12173002194985422,
+                  "overlap_weighted_capture": 0.11917069335628133
+                },
+                "null_means": {
+                  "mean_pair_overlap": 0.12524207310799867,
+                  "equal_partner_capture": 0.09123373937690878,
+                  "overlap_weighted_capture": 0.0912318156526208
+                },
+                "empirical_p_values": {
+                  "mean_pair_overlap": 0.005,
+                  "equal_partner_capture": 0.005,
+                  "overlap_weighted_capture": 0.005
+                }
+              },
+              "4": {
+                "observed": {
+                  "mean_pair_overlap": 0.17666792524851155,
+                  "equal_partner_capture": 0.12611655480894934,
+                  "overlap_weighted_capture": 0.12512403635425665
+                },
+                "null_means": {
+                  "mean_pair_overlap": 0.12523907643445947,
+                  "equal_partner_capture": 0.09737895151030838,
+                  "overlap_weighted_capture": 0.09737581954896354
+                },
+                "empirical_p_values": {
+                  "mean_pair_overlap": 0.005,
+                  "equal_partner_capture": 0.005,
+                  "overlap_weighted_capture": 0.005
+                }
+              }
+            }
+          },
+          "8": {
+            "real_mean_pair_overlap": 0.16159680350201647,
+            "null_mean_pair_overlap": 0.12524637972870867,
+            "overlap_advantage": 0.0363504237733078,
+            "overlap_empirical_upper_tail_p_value": 0.005,
+            "real_equal_partner_crossfit_capture": 0.227572966909994,
+            "null_equal_partner_crossfit_capture_mean": 0.1840469577052614,
+            "equal_partner_capture_advantage": 0.043526009204732624,
+            "equal_partner_empirical_upper_tail_p_value": 0.005,
+            "real_overlap_weighted_crossfit_capture": 0.22321111737920077,
+            "null_overlap_weighted_crossfit_capture_mean": 0.18404405313759678,
+            "weighted_capture_advantage": 0.03916706424160399,
+            "weighted_empirical_upper_tail_p_value": 0.005,
+            "repeated_split_p_values": [
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005
+            ]
+          },
+          "16": {
+            "real_mean_pair_overlap": 0.16159680350201647,
+            "null_mean_pair_overlap": 0.12524637972870867,
+            "overlap_advantage": 0.0363504237733078,
+            "overlap_empirical_upper_tail_p_value": 0.005,
+            "real_equal_partner_crossfit_capture": 0.38578371357900676,
+            "null_equal_partner_crossfit_capture_mean": 0.3379733903764063,
+            "equal_partner_capture_advantage": 0.04781032320260048,
+            "equal_partner_empirical_upper_tail_p_value": 0.005,
+            "real_overlap_weighted_crossfit_capture": 0.3809837631014929,
+            "null_overlap_weighted_crossfit_capture_mean": 0.33796988016210183,
+            "weighted_capture_advantage": 0.04301388293939107,
+            "weighted_empirical_upper_tail_p_value": 0.005,
+            "repeated_split_p_values": [
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005,
+              0.005
+            ]
+          }
+        },
+        "rank4_by_layer": {
+          "0": {
+            "real_rank4_capture": 0.12655017439682753,
+            "null_rank4_capture_mean": 0.08546425695699719,
+            "rank4_advantage": 0.04108591743983034,
+            "rank4_empirical_upper_tail_p_value": 0.1111111111111111,
+            "repeated_split_p_values": [
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111
+            ]
+          },
+          "1": {
+            "real_rank4_capture": 0.11212509758345136,
+            "null_rank4_capture_mean": 0.08673463407625812,
+            "rank4_advantage": 0.025390463507193248,
+            "rank4_empirical_upper_tail_p_value": 0.1111111111111111,
+            "repeated_split_p_values": [
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111
+            ]
+          },
+          "2": {
+            "real_rank4_capture": 0.10010342624340748,
+            "null_rank4_capture_mean": 0.09513795700806657,
+            "rank4_advantage": 0.0049654692353409136,
+            "rank4_empirical_upper_tail_p_value": 0.1111111111111111,
+            "repeated_split_p_values": [
+              1.0,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              1.0,
+              0.1111111111111111,
+              0.1111111111111111,
+              1.0,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              1.0
+            ]
+          },
+          "3": {
+            "real_rank4_capture": 0.16568752101211104,
+            "null_rank4_capture_mean": 0.12217895799991163,
+            "rank4_advantage": 0.04350856301219941,
+            "rank4_empirical_upper_tail_p_value": 0.1111111111111111,
+            "repeated_split_p_values": [
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111
+            ]
+          },
+          "4": {
+            "real_rank4_capture": 0.14814138957573042,
+            "null_rank4_capture_mean": 0.09759810946631334,
+            "rank4_advantage": 0.05054328010941708,
+            "rank4_empirical_upper_tail_p_value": 0.1111111111111111,
+            "repeated_split_p_values": [
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111,
+              0.1111111111111111
+            ]
+          }
+        },
+        "source_mismatch_control": {
+          "description": "same source writers, but Q-reader partners from the nearest different target layer",
+          "actual_target_layer_statistics": {
+            "mean_pair_overlap": 0.16159680350201647,
+            "equal_partner_capture": 0.13052152176230555,
+            "overlap_weighted_capture": 0.12756915222767282
+          },
+          "mismatched_target_layer_statistics": {
+            "mean_pair_overlap": 0.14753821475619094,
+            "equal_partner_capture": 0.10941180264926711,
+            "overlap_weighted_capture": 0.1093946690720687
+          },
+          "actual_minus_mismatch": {
+            "mean_pair_overlap": 0.014058588745825523,
+            "equal_partner_capture": 0.02110971911303844,
+            "overlap_weighted_capture": 0.018174483155604118
+          },
+          "empirical_p_values_for_actual_minus_mismatch": {
+            "mean_pair_overlap": 0.005,
+            "equal_partner_capture": 0.005,
+            "overlap_weighted_capture": 0.005
+          }
+        }
+      },
+      "K": {
+        "family_count": 40,
+        "ranks": {
+          "1": {
+            "real_mean_pair_overlap": 0.13872356086893314,
+            "real_equal_partner_crossfit_capture": 0.03288172329765454,
+            "real_overlap_weighted_crossfit_capture": 0.03243965259135167,
+            "descriptive_only": true
+          },
+          "2": {
+            "real_mean_pair_overlap": 0.13872356086893314,
+            "real_equal_partner_crossfit_capture": 0.061203271558624726,
+            "real_overlap_weighted_crossfit_capture": 0.06038310571915608,
+            "descriptive_only": true
+          },
+          "4": {
+            "real_mean_pair_overlap": 0.13872356086893314,
+            "real_equal_partner_crossfit_capture": 0.1122186222788247,
+            "real_overlap_weighted_crossfit_capture": 0.11164356358256375,
+            "descriptive_only": true
+          },
+          "8": {
+            "real_mean_pair_overlap": 0.13872356086893314,
+            "real_equal_partner_crossfit_capture": 0.20162720921017435,
+            "real_overlap_weighted_crossfit_capture": 0.2017122243800588,
+            "descriptive_only": true
+          },
+          "16": {
+            "real_mean_pair_overlap": 0.13872356086893314,
+            "real_equal_partner_crossfit_capture": 0.3495907459155584,
+            "real_overlap_weighted_crossfit_capture": 0.3528821318440577,
+            "descriptive_only": true
+          }
+        },
+        "rank4_by_layer": {},
+        "descriptive_only": true
+      },
+      "V": {
+        "family_count": 40,
+        "ranks": {
+          "1": {
+            "real_mean_pair_overlap": 0.10131051399179594,
+            "real_equal_partner_crossfit_capture": 0.02599893936503464,
+            "real_overlap_weighted_crossfit_capture": 0.026084401157893178,
+            "descriptive_only": true
+          },
+          "2": {
+            "real_mean_pair_overlap": 0.10131051399179594,
+            "real_equal_partner_crossfit_capture": 0.049192204793065644,
+            "real_overlap_weighted_crossfit_capture": 0.04924642731004728,
+            "descriptive_only": true
+          },
+          "4": {
+            "real_mean_pair_overlap": 0.10131051399179594,
+            "real_equal_partner_crossfit_capture": 0.09355232251548098,
+            "real_overlap_weighted_crossfit_capture": 0.09288679722260716,
+            "descriptive_only": true
+          },
+          "8": {
+            "real_mean_pair_overlap": 0.10131051399179594,
+            "real_equal_partner_crossfit_capture": 0.17614525603230452,
+            "real_overlap_weighted_crossfit_capture": 0.17563675663599576,
+            "descriptive_only": true
+          },
+          "16": {
+            "real_mean_pair_overlap": 0.10131051399179594,
+            "real_equal_partner_crossfit_capture": 0.3274814892994179,
+            "real_overlap_weighted_crossfit_capture": 0.32674623785812723,
+            "descriptive_only": true
+          }
+        },
+        "rank4_by_layer": {},
+        "descriptive_only": true
+      }
+    },
+    "fan_in": {
+      "Q": {
+        "family_count": 40,
+        "ranks": {
+          "1": {
+            "real_mean_pair_overlap": 0.16159680350201647,
+            "real_equal_partner_crossfit_capture": 0.04824221195825804,
+            "real_overlap_weighted_crossfit_capture": 0.04677895815382406,
+            "descriptive_only": true
+          },
+          "2": {
+            "real_mean_pair_overlap": 0.16159680350201647,
+            "real_equal_partner_crossfit_capture": 0.07322279070428545,
+            "real_overlap_weighted_crossfit_capture": 0.07169109306565886,
+            "descriptive_only": true
+          },
+          "4": {
+            "real_mean_pair_overlap": 0.16159680350201647,
+            "real_equal_partner_crossfit_capture": 0.11756689831902611,
+            "real_overlap_weighted_crossfit_capture": 0.11608603111215206,
+            "descriptive_only": true
+          },
+          "8": {
+            "real_mean_pair_overlap": 0.16159680350201647,
+            "real_equal_partner_crossfit_capture": 0.19960187576385113,
+            "real_overlap_weighted_crossfit_capture": 0.19795491371441173,
+            "descriptive_only": true
+          },
+          "16": {
+            "real_mean_pair_overlap": 0.16159680350201647,
+            "real_equal_partner_crossfit_capture": 0.3488099636120791,
+            "real_overlap_weighted_crossfit_capture": 0.3480249535384332,
+            "descriptive_only": true
+          }
+        },
+        "rank4_by_layer": {},
+        "descriptive_only": true
+      },
+      "K": {
+        "family_count": 40,
+        "ranks": {
+          "1": {
+            "real_mean_pair_overlap": 0.13872356086893314,
+            "real_equal_partner_crossfit_capture": 0.028645572076760495,
+            "real_overlap_weighted_crossfit_capture": 0.02754379739628614,
+            "descriptive_only": true
+          },
+          "2": {
+            "real_mean_pair_overlap": 0.13872356086893314,
+            "real_equal_partner_crossfit_capture": 0.053416766756175224,
+            "real_overlap_weighted_crossfit_capture": 0.05145637262260241,
+            "descriptive_only": true
+          },
+          "4": {
+            "real_mean_pair_overlap": 0.13872356086893314,
+            "real_equal_partner_crossfit_capture": 0.09932369082656445,
+            "real_overlap_weighted_crossfit_capture": 0.09628743528158859,
+            "descriptive_only": true
+          },
+          "8": {
+            "real_mean_pair_overlap": 0.13872356086893314,
+            "real_equal_partner_crossfit_capture": 0.18458439843186034,
+            "real_overlap_weighted_crossfit_capture": 0.17955821467432648,
+            "descriptive_only": true
+          },
+          "16": {
+            "real_mean_pair_overlap": 0.13872356086893314,
+            "real_equal_partner_crossfit_capture": 0.33593504118475426,
+            "real_overlap_weighted_crossfit_capture": 0.32883883579120843,
+            "descriptive_only": true
+          }
+        },
+        "rank4_by_layer": {},
+        "descriptive_only": true
+      },
+      "V": {
+        "family_count": 40,
+        "ranks": {
+          "1": {
+            "real_mean_pair_overlap": 0.10131051399179594,
+            "real_equal_partner_crossfit_capture": 0.032869495100294806,
+            "real_overlap_weighted_crossfit_capture": 0.030224041553281462,
+            "descriptive_only": true
+          },
+          "2": {
+            "real_mean_pair_overlap": 0.10131051399179594,
+            "real_equal_partner_crossfit_capture": 0.06140137848316727,
+            "real_overlap_weighted_crossfit_capture": 0.05742666924824138,
+            "descriptive_only": true
+          },
+          "4": {
+            "real_mean_pair_overlap": 0.10131051399179594,
+            "real_equal_partner_crossfit_capture": 0.11278302284911028,
+            "real_overlap_weighted_crossfit_capture": 0.10706844270290797,
+            "descriptive_only": true
+          },
+          "8": {
+            "real_mean_pair_overlap": 0.10131051399179594,
+            "real_equal_partner_crossfit_capture": 0.20292516270293123,
+            "real_overlap_weighted_crossfit_capture": 0.19541229701654844,
+            "descriptive_only": true
+          },
+          "16": {
+            "real_mean_pair_overlap": 0.10131051399179594,
+            "real_equal_partner_crossfit_capture": 0.35763019198655394,
+            "real_overlap_weighted_crossfit_capture": 0.3485945900593451,
+            "descriptive_only": true
+          }
+        },
+        "rank4_by_layer": {},
+        "descriptive_only": true
+      }
+    }
+  }
+}

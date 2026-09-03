@@ -1,0 +1,111 @@
+{
+  "status": "calibrated normalized-residual QK channel transfer with source-layer controls",
+  "channel_rank": 1,
+  "control": "Alternative donor heads from the same donor layer; recipient and calibration procedure fixed.",
+  "edges": [
+    {
+      "donor": "L3H2",
+      "recipient": "L4H5",
+      "transfer_r2": 0.08336316124758858,
+      "alternative_donor_mean_r2": 0.012264165677597407,
+      "alternative_donor_rank": 1,
+      "alternative_donor_count": 7
+    },
+    {
+      "donor": "L3H2",
+      "recipient": "L5H1",
+      "transfer_r2": 0.06495619081668624,
+      "alternative_donor_mean_r2": 0.012438277939833922,
+      "alternative_donor_rank": 2,
+      "alternative_donor_count": 7
+    },
+    {
+      "donor": "L1H3",
+      "recipient": "L2H7",
+      "transfer_r2": 0.006078793760282308,
+      "alternative_donor_mean_r2": 0.0030664249400711757,
+      "alternative_donor_rank": 2,
+      "alternative_donor_count": 7
+    },
+    {
+      "donor": "L4H4",
+      "recipient": "L5H2",
+      "transfer_r2": 0.015312319252844486,
+      "alternative_donor_mean_r2": 0.024258808122649276,
+      "alternative_donor_rank": 5,
+      "alternative_donor_count": 7
+    },
+    {
+      "donor": "L3H5",
+      "recipient": "L4H7",
+      "transfer_r2": 0.0009126663363727694,
+      "alternative_donor_mean_r2": 0.08317843574875365,
+      "alternative_donor_rank": 7,
+      "alternative_donor_count": 7
+    },
+    {
+      "donor": "L4H4",
+      "recipient": "L5H0",
+      "transfer_r2": 0.02403974876358428,
+      "alternative_donor_mean_r2": 0.017748912822902536,
+      "alternative_donor_rank": 4,
+      "alternative_donor_count": 7
+    },
+    {
+      "donor": "L3H0",
+      "recipient": "L4H1",
+      "transfer_r2": 0.10454494334397468,
+      "alternative_donor_mean_r2": 0.05676640638528452,
+      "alternative_donor_rank": 3,
+      "alternative_donor_count": 7
+    },
+    {
+      "donor": "L4H5",
+      "recipient": "L5H3",
+      "transfer_r2": -0.007498598046578264,
+      "alternative_donor_mean_r2": 0.004787654006284241,
+      "alternative_donor_rank": 8,
+      "alternative_donor_count": 7
+    },
+    {
+      "donor": "L4H4",
+      "recipient": "L5H4",
+      "transfer_r2": 0.005283034264611519,
+      "alternative_donor_mean_r2": 0.02959898205040742,
+      "alternative_donor_rank": 8,
+      "alternative_donor_count": 7
+    },
+    {
+      "donor": "L2H0",
+      "recipient": "L3H4",
+      "transfer_r2": 0.06332831201778788,
+      "alternative_donor_mean_r2": 0.004051380116665139,
+      "alternative_donor_rank": 1,
+      "alternative_donor_count": 7
+    },
+    {
+      "donor": "L2H0",
+      "recipient": "L3H7",
+      "transfer_r2": -0.020461630513860296,
+      "alternative_donor_mean_r2": 0.07968774744535816,
+      "alternative_donor_rank": 8,
+      "alternative_donor_count": 7
+    },
+    {
+      "donor": "L3H4",
+      "recipient": "L5H0",
+      "transfer_r2": 0.0027122452126587815,
+      "alternative_donor_mean_r2": 0.01720965806654784,
+      "alternative_donor_rank": 4,
+      "alternative_donor_count": 7
+    }
+  ],
+  "mean_transfer_r2": 0.028547598871329415,
+  "mean_alternative_donor_r2": 0.02875473777686294,
+  "source_layer_control_null_mean": 0.02879556589616868,
+  "source_layer_control_null_standard_deviation": 0.012924961869412084,
+  "source_layer_control_upper_tail_p_value": 0.4788,
+  "maximum_held_out_qk_factor_reconstruction_relative_error": 2.3310893482175743e-07,
+  "seed": 0,
+  "resamples": 9999
+}

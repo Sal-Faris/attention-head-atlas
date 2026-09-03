@@ -1,0 +1,237 @@
+{
+  "analysis_status": "held-out validation of weight-selected recurrent edges",
+  "behavior_split": "held-out test documents only",
+  "edge_selection": "top recurrent cross-layer three-nearest-neighbor edges from checkpoint 0006",
+  "multiple_testing": "Benjamini-Hochberg across all reported view/rank/side/target tests",
+  "null": "independent random head pairs with each edge's exact ordered layer pair",
+  "permutations": 999,
+  "seed": 0,
+  "tests": {
+    "OV": {
+      "head_result_centered": [
+        {
+          "edge_count": 12,
+          "fdr_q_value": 0.22600000000000003,
+          "lower_tail_p_value": 0.226,
+          "null_mean": 1.412851236334668,
+          "null_standard_deviation": 0.014057627677728996,
+          "observed_mean_distance": 1.402805644993691,
+          "observed_to_null_mean_ratio": 0.9928898449584558,
+          "rank": 4,
+          "side": "left",
+          "z_score": -0.7146007542148672
+        },
+        {
+          "edge_count": 12,
+          "fdr_q_value": 0.09211764705882353,
+          "lower_tail_p_value": 0.087,
+          "null_mean": 1.3958885109997565,
+          "null_standard_deviation": 0.009169009049108794,
+          "observed_mean_distance": 1.3833075769778211,
+          "observed_to_null_mean_ratio": 0.9909871498169114,
+          "rank": 4,
+          "side": "right",
+          "z_score": -1.372114909534114
+        },
+        {
+          "edge_count": 12,
+          "fdr_q_value": 0.04846153846153847,
+          "lower_tail_p_value": 0.035,
+          "null_mean": 1.403436068391331,
+          "null_standard_deviation": 0.01434184506791268,
+          "observed_mean_distance": 1.3760536054814434,
+          "observed_to_null_mean_ratio": 0.9804889844812993,
+          "rank": 8,
+          "side": "left",
+          "z_score": -1.9092705841001538
+        },
+        {
+          "edge_count": 12,
+          "fdr_q_value": 0.01,
+          "lower_tail_p_value": 0.003,
+          "null_mean": 1.3974297729687903,
+          "null_standard_deviation": 0.010106621287723806,
+          "observed_mean_distance": 1.366237800744793,
+          "observed_to_null_mean_ratio": 0.9776790413175962,
+          "rank": 8,
+          "side": "right",
+          "z_score": -3.086290792540647
+        },
+        {
+          "edge_count": 12,
+          "fdr_q_value": 0.09211764705882353,
+          "lower_tail_p_value": 0.084,
+          "null_mean": 1.389646644342976,
+          "null_standard_deviation": 0.012987041533798576,
+          "observed_mean_distance": 1.3722370696632877,
+          "observed_to_null_mean_ratio": 0.9874719413380662,
+          "rank": 16,
+          "side": "left",
+          "z_score": -1.3405343037042068
+        },
+        {
+          "edge_count": 12,
+          "fdr_q_value": 0.01,
+          "lower_tail_p_value": 0.002,
+          "null_mean": 1.4091365143540038,
+          "null_standard_deviation": 0.01729683377243697,
+          "observed_mean_distance": 1.3428511130502556,
+          "observed_to_null_mean_ratio": 0.9529602699039166,
+          "rank": 16,
+          "side": "right",
+          "z_score": -3.832227457106974
+        }
+      ],
+      "ov_response_centered": [
+        {
+          "edge_count": 12,
+          "fdr_q_value": 0.0588,
+          "lower_tail_p_value": 0.049,
+          "null_mean": 1.4235628077357851,
+          "null_standard_deviation": 0.012586363390754663,
+          "observed_mean_distance": 1.4003425239597025,
+          "observed_to_null_mean_ratio": 0.9836886130700372,
+          "rank": 4,
+          "side": "left",
+          "z_score": -1.8448763201242986
+        },
+        {
+          "edge_count": 12,
+          "fdr_q_value": 0.054,
+          "lower_tail_p_value": 0.042,
+          "null_mean": 1.4033196122135259,
+          "null_standard_deviation": 0.009643774707407581,
+          "observed_mean_distance": 1.3848283017834415,
+          "observed_to_null_mean_ratio": 0.9868231653935791,
+          "rank": 4,
+          "side": "right",
+          "z_score": -1.9174349247168523
+        },
+        {
+          "edge_count": 12,
+          "fdr_q_value": 0.01,
+          "lower_tail_p_value": 0.003,
+          "null_mean": 1.4161897930311764,
+          "null_standard_deviation": 0.01547248791618939,
+          "observed_mean_distance": 1.3606491378522012,
+          "observed_to_null_mean_ratio": 0.9607816300807412,
+          "rank": 8,
+          "side": "left",
+          "z_score": -3.5896395899499227
+        },
+        {
+          "edge_count": 12,
+          "fdr_q_value": 0.01,
+          "lower_tail_p_value": 0.004,
+          "null_mean": 1.407926781031508,
+          "null_standard_deviation": 0.010972323052998358,
+          "observed_mean_distance": 1.3703952304504183,
+          "observed_to_null_mean_ratio": 0.9733426829528788,
+          "rank": 8,
+          "side": "right",
+          "z_score": -3.4205655812178724
+        },
+        {
+          "edge_count": 12,
+          "fdr_q_value": 0.01,
+          "lower_tail_p_value": 0.005,
+          "null_mean": 1.408760463930612,
+          "null_standard_deviation": 0.015391161840446031,
+          "observed_mean_distance": 1.3648818499240534,
+          "observed_to_null_mean_ratio": 0.9688530341885575,
+          "rank": 16,
+          "side": "left",
+          "z_score": -2.8508967978785793
+        },
+        {
+          "edge_count": 12,
+          "fdr_q_value": 0.009000000000000001,
+          "lower_tail_p_value": 0.001,
+          "null_mean": 1.4235444557463985,
+          "null_standard_deviation": 0.0145811563150907,
+          "observed_mean_distance": 1.3354868121658747,
+          "observed_to_null_mean_ratio": 0.9381419784783939,
+          "rank": 16,
+          "side": "right",
+          "z_score": -6.039139947316041
+        }
+      ]
+    },
+    "QK": {
+      "attention_centered": [
+        {
+          "edge_count": 12,
+          "fdr_q_value": 0.0108,
+          "lower_tail_p_value": 0.006,
+          "null_mean": 1.3461713463540073,
+          "null_standard_deviation": 0.04890849783000957,
+          "observed_mean_distance": 1.2236339126487512,
+          "observed_to_null_mean_ratio": 0.9089733754643208,
+          "rank": 4,
+          "side": "left",
+          "z_score": -2.505442594682775
+        },
+        {
+          "edge_count": 12,
+          "fdr_q_value": 0.01,
+          "lower_tail_p_value": 0.005,
+          "null_mean": 1.37812081268222,
+          "null_standard_deviation": 0.052268377236011604,
+          "observed_mean_distance": 1.240511873570086,
+          "observed_to_null_mean_ratio": 0.9001474051869898,
+          "rank": 4,
+          "side": "right",
+          "z_score": -2.632737926620092
+        },
+        {
+          "edge_count": 12,
+          "fdr_q_value": 0.01,
+          "lower_tail_p_value": 0.004,
+          "null_mean": 1.3721634449771878,
+          "null_standard_deviation": 0.054802913616227314,
+          "observed_mean_distance": 1.2265862005772568,
+          "observed_to_null_mean_ratio": 0.8939067755136479,
+          "rank": 8,
+          "side": "left",
+          "z_score": -2.656377823620406
+        },
+        {
+          "edge_count": 12,
+          "fdr_q_value": 0.009000000000000001,
+          "lower_tail_p_value": 0.001,
+          "null_mean": 1.3427860147926065,
+          "null_standard_deviation": 0.055778204024626,
+          "observed_mean_distance": 1.151168743688756,
+          "observed_to_null_mean_ratio": 0.8572987289166504,
+          "rank": 8,
+          "side": "right",
+          "z_score": -3.4353431497947056
+        },
+        {
+          "edge_count": 12,
+          "fdr_q_value": 0.021272727272727273,
+          "lower_tail_p_value": 0.013,
+          "null_mean": 1.348657304074549,
+          "null_standard_deviation": 0.05584092316569343,
+          "observed_mean_distance": 1.2173785092397218,
+          "observed_to_null_mean_ratio": 0.9026596345578605,
+          "rank": 16,
+          "side": "left",
+          "z_score": -2.350942416286557
+        },
+        {
+          "edge_count": 12,
+          "fdr_q_value": 0.024000000000000004,
+          "lower_tail_p_value": 0.016,
+          "null_mean": 1.3013492693891109,
+          "null_standard_deviation": 0.062279424925706345,
+          "observed_mean_distance": 1.1726285249536825,
+          "observed_to_null_mean_ratio": 0.9010867048045808,
+          "rank": 16,
+          "side": "right",
+          "z_score": -2.066826156294481
+        }
+      ]
+    }
+  }
+}

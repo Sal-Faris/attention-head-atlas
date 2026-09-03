@@ -1,0 +1,5099 @@
+{
+  "analysis_status": "descriptive subspace-family stability audit",
+  "bootstrap": "80-percent item subsampling compared with the full final-checkpoint cut",
+  "bootstrap_repetitions": 200,
+  "cluster_method": "average linkage; final cut selected by maximum silhouette over fixed range",
+  "clusterability_null": "independent Haar-random subspaces with matched width and rank",
+  "haar_repetitions": 49,
+  "late_checkpoint_count": 3,
+  "maximum_clusters": 10,
+  "metric": "normalized chordal projector distance",
+  "model": "EleutherAI/pythia-70m-deduped",
+  "neighbors": 3,
+  "null_repetitions": 499,
+  "ranks": [
+    4,
+    8,
+    16
+  ],
+  "seed": 0,
+  "side_semantics": {
+    "OV": {
+      "left": "read/value",
+      "right": "write/output"
+    },
+    "QK": {
+      "left": "query",
+      "right": "key"
+    }
+  },
+  "temporal_null": "independent head-identity shuffles within layers",
+  "views": {
+    "OV": {
+      "late_checkpoints": [
+        "step16000",
+        "step64000",
+        "step143000"
+      ],
+      "operator_count": 48,
+      "rank_results": {
+        "16": {
+          "left_right_pairing": {
+            "cluster_adjusted_mutual_information": {
+              "null_mean": 0.32784885761256455,
+              "null_standard_deviation": 0.03238532240275636,
+              "observed": 0.4692337687793333,
+              "upper_tail_p_value": 0.002,
+              "z_score": 4.365709546085461
+            },
+            "neighbor_overlap": {
+              "null_mean": 0.20060955243820974,
+              "null_standard_deviation": 0.03432008760790934,
+              "observed": 0.4861111111111111,
+              "upper_tail_p_value": 0.002,
+              "z_score": 8.31878874945253
+            },
+            "pairwise_distance_spearman": {
+              "null_mean": 0.10017255761247286,
+              "null_standard_deviation": 0.0368209681502042,
+              "observed": 0.291750420397204,
+              "upper_tail_p_value": 0.002,
+              "z_score": 5.20295560951101
+            }
+          },
+          "sides": {
+            "left": {
+              "assignments": [
+                {
+                  "cluster": 2,
+                  "head": 0,
+                  "layer": 0
+                },
+                {
+                  "cluster": 2,
+                  "head": 1,
+                  "layer": 0
+                },
+                {
+                  "cluster": 2,
+                  "head": 2,
+                  "layer": 0
+                },
+                {
+                  "cluster": 2,
+                  "head": 3,
+                  "layer": 0
+                },
+                {
+                  "cluster": 2,
+                  "head": 4,
+                  "layer": 0
+                },
+                {
+                  "cluster": 7,
+                  "head": 5,
+                  "layer": 0
+                },
+                {
+                  "cluster": 2,
+                  "head": 6,
+                  "layer": 0
+                },
+                {
+                  "cluster": 7,
+                  "head": 7,
+                  "layer": 0
+                },
+                {
+                  "cluster": 4,
+                  "head": 0,
+                  "layer": 1
+                },
+                {
+                  "cluster": 4,
+                  "head": 1,
+                  "layer": 1
+                },
+                {
+                  "cluster": 0,
+                  "head": 2,
+                  "layer": 1
+                },
+                {
+                  "cluster": 8,
+                  "head": 3,
+                  "layer": 1
+                },
+                {
+                  "cluster": 8,
+                  "head": 4,
+                  "layer": 1
+                },
+                {
+                  "cluster": 8,
+                  "head": 5,
+                  "layer": 1
+                },
+                {
+                  "cluster": 6,
+                  "head": 6,
+                  "layer": 1
+                },
+                {
+                  "cluster": 4,
+                  "head": 7,
+                  "layer": 1
+                },
+                {
+                  "cluster": 0,
+                  "head": 0,
+                  "layer": 2
+                },
+                {
+                  "cluster": 4,
+                  "head": 1,
+                  "layer": 2
+                },
+                {
+                  "cluster": 0,
+                  "head": 2,
+                  "layer": 2
+                },
+                {
+                  "cluster": 0,
+                  "head": 3,
+                  "layer": 2
+                },
+                {
+                  "cluster": 0,
+                  "head": 4,
+                  "layer": 2
+                },
+                {
+                  "cluster": 8,
+                  "head": 5,
+                  "layer": 2
+                },
+                {
+                  "cluster": 8,
+                  "head": 6,
+                  "layer": 2
+                },
+                {
+                  "cluster": 4,
+                  "head": 7,
+                  "layer": 2
+                },
+                {
+                  "cluster": 1,
+                  "head": 0,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 1,
+                  "layer": 3
+                },
+                {
+                  "cluster": 3,
+                  "head": 2,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 3,
+                  "layer": 3
+                },
+                {
+                  "cluster": 0,
+                  "head": 4,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 5,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 6,
+                  "layer": 3
+                },
+                {
+                  "cluster": 3,
+                  "head": 7,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 0,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 1,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 2,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 3,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 4,
+                  "layer": 4
+                },
+                {
+                  "cluster": 3,
+                  "head": 5,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 6,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 7,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 0,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 1,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 2,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 3,
+                  "layer": 5
+                },
+                {
+                  "cluster": 5,
+                  "head": 4,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 5,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 6,
+                  "layer": 5
+                },
+                {
+                  "cluster": 9,
+                  "head": 7,
+                  "layer": 5
+                }
+              ],
+              "best_silhouette": {
+                "null_mean": 0.0007544668851990234,
+                "null_standard_deviation": 0.00010961305285521601,
+                "observed": 0.022245985764173,
+                "upper_tail_p_value": 0.02,
+                "z_score": 196.06715002602255
+              },
+              "cluster_sizes": [
+                1,
+                1,
+                1,
+                2,
+                3,
+                5,
+                5,
+                6,
+                6,
+                18
+              ],
+              "late_checkpoint_stability": {
+                "cluster_adjusted_rand": {
+                  "null_mean": 0.25952494569571893,
+                  "null_standard_deviation": 0.03741615580995482,
+                  "observed": 0.4694534073377683,
+                  "upper_tail_p_value": 0.002,
+                  "z_score": 5.61063682512773
+                },
+                "cross_layer_neighbor_overlap": {
+                  "null_mean": 0.17233077265642394,
+                  "null_standard_deviation": 0.024682926437955065,
+                  "observed": 0.53125,
+                  "upper_tail_p_value": 0.002,
+                  "z_score": 14.54119422369886
+                },
+                "neighbor_overlap": {
+                  "null_mean": 0.19139668225339565,
+                  "null_standard_deviation": 0.02438521905909577,
+                  "observed": 0.6493055555555556,
+                  "upper_tail_p_value": 0.002,
+                  "z_score": 18.7781324495159
+                }
+              },
+              "layer_mixing": {
+                "size_weighted_normalized_layer_entropy": 0.3889637223167935,
+                "within_cluster_cross_layer_pair_fraction": 0.6280193236714976
+              },
+              "recurrent_cross_layer_edges": [
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.8739385008811951,
+                  "first_head": 5,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 2,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.8950508236885071,
+                  "first_head": 1,
+                  "first_layer": 1,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 2
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9003067016601562,
+                  "first_head": 3,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 6,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9087396264076233,
+                  "first_head": 5,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.913303792476654,
+                  "first_head": 6,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9152898192405701,
+                  "first_head": 1,
+                  "first_layer": 1,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 1,
+                  "second_layer": 2
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.917962372303009,
+                  "first_head": 0,
+                  "first_layer": 1,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 1,
+                  "second_layer": 2
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9264419674873352,
+                  "first_head": 6,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 2,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9290421605110168,
+                  "first_head": 3,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9323236346244812,
+                  "first_head": 0,
+                  "first_layer": 1,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 2
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9494771957397461,
+                  "first_head": 3,
+                  "first_layer": 1,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 6,
+                  "second_layer": 2
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9588403105735779,
+                  "first_head": 0,
+                  "first_layer": 2,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 4,
+                  "second_layer": 3
+                }
+              ],
+              "selected_cluster_count": 10,
+              "singleton_count": 3,
+              "subsampled_cluster_stability": {
+                "mean_adjusted_rand": 0.8062504278714505,
+                "median_adjusted_rand": 0.8084509436074836,
+                "q05_adjusted_rand": 0.6349687743463255,
+                "q95_adjusted_rand": 0.9763190693809721
+              }
+            },
+            "right": {
+              "assignments": [
+                {
+                  "cluster": 3,
+                  "head": 0,
+                  "layer": 0
+                },
+                {
+                  "cluster": 3,
+                  "head": 1,
+                  "layer": 0
+                },
+                {
+                  "cluster": 3,
+                  "head": 2,
+                  "layer": 0
+                },
+                {
+                  "cluster": 3,
+                  "head": 3,
+                  "layer": 0
+                },
+                {
+                  "cluster": 3,
+                  "head": 4,
+                  "layer": 0
+                },
+                {
+                  "cluster": 3,
+                  "head": 5,
+                  "layer": 0
+                },
+                {
+                  "cluster": 3,
+                  "head": 6,
+                  "layer": 0
+                },
+                {
+                  "cluster": 3,
+                  "head": 7,
+                  "layer": 0
+                },
+                {
+                  "cluster": 5,
+                  "head": 0,
+                  "layer": 1
+                },
+                {
+                  "cluster": 5,
+                  "head": 1,
+                  "layer": 1
+                },
+                {
+                  "cluster": 5,
+                  "head": 2,
+                  "layer": 1
+                },
+                {
+                  "cluster": 3,
+                  "head": 3,
+                  "layer": 1
+                },
+                {
+                  "cluster": 4,
+                  "head": 4,
+                  "layer": 1
+                },
+                {
+                  "cluster": 3,
+                  "head": 5,
+                  "layer": 1
+                },
+                {
+                  "cluster": 4,
+                  "head": 6,
+                  "layer": 1
+                },
+                {
+                  "cluster": 5,
+                  "head": 7,
+                  "layer": 1
+                },
+                {
+                  "cluster": 6,
+                  "head": 0,
+                  "layer": 2
+                },
+                {
+                  "cluster": 7,
+                  "head": 1,
+                  "layer": 2
+                },
+                {
+                  "cluster": 6,
+                  "head": 2,
+                  "layer": 2
+                },
+                {
+                  "cluster": 6,
+                  "head": 3,
+                  "layer": 2
+                },
+                {
+                  "cluster": 6,
+                  "head": 4,
+                  "layer": 2
+                },
+                {
+                  "cluster": 6,
+                  "head": 5,
+                  "layer": 2
+                },
+                {
+                  "cluster": 6,
+                  "head": 6,
+                  "layer": 2
+                },
+                {
+                  "cluster": 8,
+                  "head": 7,
+                  "layer": 2
+                },
+                {
+                  "cluster": 1,
+                  "head": 0,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 1,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 2,
+                  "layer": 3
+                },
+                {
+                  "cluster": 2,
+                  "head": 3,
+                  "layer": 3
+                },
+                {
+                  "cluster": 6,
+                  "head": 4,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 5,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 6,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 7,
+                  "layer": 3
+                },
+                {
+                  "cluster": 2,
+                  "head": 0,
+                  "layer": 4
+                },
+                {
+                  "cluster": 2,
+                  "head": 1,
+                  "layer": 4
+                },
+                {
+                  "cluster": 9,
+                  "head": 2,
+                  "layer": 4
+                },
+                {
+                  "cluster": 9,
+                  "head": 3,
+                  "layer": 4
+                },
+                {
+                  "cluster": 2,
+                  "head": 4,
+                  "layer": 4
+                },
+                {
+                  "cluster": 9,
+                  "head": 5,
+                  "layer": 4
+                },
+                {
+                  "cluster": 2,
+                  "head": 6,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 7,
+                  "layer": 4
+                },
+                {
+                  "cluster": 0,
+                  "head": 0,
+                  "layer": 5
+                },
+                {
+                  "cluster": 0,
+                  "head": 1,
+                  "layer": 5
+                },
+                {
+                  "cluster": 0,
+                  "head": 2,
+                  "layer": 5
+                },
+                {
+                  "cluster": 0,
+                  "head": 3,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 4,
+                  "layer": 5
+                },
+                {
+                  "cluster": 0,
+                  "head": 5,
+                  "layer": 5
+                },
+                {
+                  "cluster": 0,
+                  "head": 6,
+                  "layer": 5
+                },
+                {
+                  "cluster": 0,
+                  "head": 7,
+                  "layer": 5
+                }
+              ],
+              "best_silhouette": {
+                "null_mean": 0.0007544668851990234,
+                "null_standard_deviation": 0.00010961305285521601,
+                "observed": 0.0320352767108717,
+                "upper_tail_p_value": 0.02,
+                "z_score": 285.3748619426775
+              },
+              "cluster_sizes": [
+                1,
+                1,
+                2,
+                3,
+                4,
+                5,
+                7,
+                7,
+                8,
+                10
+              ],
+              "late_checkpoint_stability": {
+                "cluster_adjusted_rand": {
+                  "null_mean": 0.3097332448481483,
+                  "null_standard_deviation": 0.021844134923809586,
+                  "observed": 0.33844191954953734,
+                  "upper_tail_p_value": 0.108,
+                  "z_score": 1.3142509328715635
+                },
+                "cross_layer_neighbor_overlap": {
+                  "null_mean": 0.15421120017813403,
+                  "null_standard_deviation": 0.023134147242560615,
+                  "observed": 0.5625,
+                  "upper_tail_p_value": 0.002,
+                  "z_score": 17.648750807236336
+                },
+                "neighbor_overlap": {
+                  "null_mean": 0.21142980405254952,
+                  "null_standard_deviation": 0.02555722225212215,
+                  "observed": 0.625,
+                  "upper_tail_p_value": 0.002,
+                  "z_score": 16.182126205562483
+                }
+              },
+              "layer_mixing": {
+                "size_weighted_normalized_layer_entropy": 0.18908120735564063,
+                "within_cluster_cross_layer_pair_fraction": 0.28888888888888886
+              },
+              "recurrent_cross_layer_edges": [
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.8796132802963257,
+                  "first_head": 7,
+                  "first_layer": 4,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 4,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9023084044456482,
+                  "first_head": 2,
+                  "first_layer": 2,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 4,
+                  "second_layer": 3
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.907402515411377,
+                  "first_head": 5,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9080519676208496,
+                  "first_head": 6,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9114065170288086,
+                  "first_head": 0,
+                  "first_layer": 2,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 4,
+                  "second_layer": 3
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9137459397315979,
+                  "first_head": 4,
+                  "first_layer": 2,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 4,
+                  "second_layer": 3
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9194846153259277,
+                  "first_head": 3,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 6,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9217056632041931,
+                  "first_head": 2,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 5,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9278867840766907,
+                  "first_head": 5,
+                  "first_layer": 4,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 1,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9291200041770935,
+                  "first_head": 1,
+                  "first_layer": 0,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 3,
+                  "second_layer": 1
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9312068819999695,
+                  "first_head": 0,
+                  "first_layer": 2,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 3
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9329577684402466,
+                  "first_head": 0,
+                  "first_layer": 0,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 6,
+                  "second_layer": 1
+                }
+              ],
+              "selected_cluster_count": 10,
+              "singleton_count": 2,
+              "subsampled_cluster_stability": {
+                "mean_adjusted_rand": 0.79507880665813,
+                "median_adjusted_rand": 0.8174319808955309,
+                "q05_adjusted_rand": 0.5868751812517469,
+                "q95_adjusted_rand": 0.9475608248288703
+              }
+            }
+          }
+        },
+        "4": {
+          "left_right_pairing": {
+            "cluster_adjusted_mutual_information": {
+              "null_mean": 0.34197990125512395,
+              "null_standard_deviation": 0.02738434026279599,
+              "observed": 0.4957259865885129,
+              "upper_tail_p_value": 0.002,
+              "z_score": 5.614379746159757
+            },
+            "neighbor_overlap": {
+              "null_mean": 0.2276358272099755,
+              "null_standard_deviation": 0.040891427343868636,
+              "observed": 0.4444444444444444,
+              "upper_tail_p_value": 0.002,
+              "z_score": 5.3020554995857285
+            },
+            "pairwise_distance_spearman": {
+              "null_mean": 0.1111135201534134,
+              "null_standard_deviation": 0.02746951520841675,
+              "observed": 0.24862958596702445,
+              "upper_tail_p_value": 0.002,
+              "z_score": 5.006133700221825
+            }
+          },
+          "sides": {
+            "left": {
+              "assignments": [
+                {
+                  "cluster": 4,
+                  "head": 0,
+                  "layer": 0
+                },
+                {
+                  "cluster": 4,
+                  "head": 1,
+                  "layer": 0
+                },
+                {
+                  "cluster": 4,
+                  "head": 2,
+                  "layer": 0
+                },
+                {
+                  "cluster": 4,
+                  "head": 3,
+                  "layer": 0
+                },
+                {
+                  "cluster": 4,
+                  "head": 4,
+                  "layer": 0
+                },
+                {
+                  "cluster": 4,
+                  "head": 5,
+                  "layer": 0
+                },
+                {
+                  "cluster": 4,
+                  "head": 6,
+                  "layer": 0
+                },
+                {
+                  "cluster": 4,
+                  "head": 7,
+                  "layer": 0
+                },
+                {
+                  "cluster": 2,
+                  "head": 0,
+                  "layer": 1
+                },
+                {
+                  "cluster": 2,
+                  "head": 1,
+                  "layer": 1
+                },
+                {
+                  "cluster": 5,
+                  "head": 2,
+                  "layer": 1
+                },
+                {
+                  "cluster": 6,
+                  "head": 3,
+                  "layer": 1
+                },
+                {
+                  "cluster": 6,
+                  "head": 4,
+                  "layer": 1
+                },
+                {
+                  "cluster": 6,
+                  "head": 5,
+                  "layer": 1
+                },
+                {
+                  "cluster": 7,
+                  "head": 6,
+                  "layer": 1
+                },
+                {
+                  "cluster": 2,
+                  "head": 7,
+                  "layer": 1
+                },
+                {
+                  "cluster": 0,
+                  "head": 0,
+                  "layer": 2
+                },
+                {
+                  "cluster": 2,
+                  "head": 1,
+                  "layer": 2
+                },
+                {
+                  "cluster": 0,
+                  "head": 2,
+                  "layer": 2
+                },
+                {
+                  "cluster": 0,
+                  "head": 3,
+                  "layer": 2
+                },
+                {
+                  "cluster": 0,
+                  "head": 4,
+                  "layer": 2
+                },
+                {
+                  "cluster": 6,
+                  "head": 5,
+                  "layer": 2
+                },
+                {
+                  "cluster": 6,
+                  "head": 6,
+                  "layer": 2
+                },
+                {
+                  "cluster": 2,
+                  "head": 7,
+                  "layer": 2
+                },
+                {
+                  "cluster": 6,
+                  "head": 0,
+                  "layer": 3
+                },
+                {
+                  "cluster": 6,
+                  "head": 1,
+                  "layer": 3
+                },
+                {
+                  "cluster": 8,
+                  "head": 2,
+                  "layer": 3
+                },
+                {
+                  "cluster": 3,
+                  "head": 3,
+                  "layer": 3
+                },
+                {
+                  "cluster": 0,
+                  "head": 4,
+                  "layer": 3
+                },
+                {
+                  "cluster": 3,
+                  "head": 5,
+                  "layer": 3
+                },
+                {
+                  "cluster": 6,
+                  "head": 6,
+                  "layer": 3
+                },
+                {
+                  "cluster": 0,
+                  "head": 7,
+                  "layer": 3
+                },
+                {
+                  "cluster": 3,
+                  "head": 0,
+                  "layer": 4
+                },
+                {
+                  "cluster": 3,
+                  "head": 1,
+                  "layer": 4
+                },
+                {
+                  "cluster": 3,
+                  "head": 2,
+                  "layer": 4
+                },
+                {
+                  "cluster": 3,
+                  "head": 3,
+                  "layer": 4
+                },
+                {
+                  "cluster": 3,
+                  "head": 4,
+                  "layer": 4
+                },
+                {
+                  "cluster": 8,
+                  "head": 5,
+                  "layer": 4
+                },
+                {
+                  "cluster": 3,
+                  "head": 6,
+                  "layer": 4
+                },
+                {
+                  "cluster": 3,
+                  "head": 7,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 0,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 1,
+                  "layer": 5
+                },
+                {
+                  "cluster": 3,
+                  "head": 2,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 3,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 4,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 5,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 6,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 7,
+                  "layer": 5
+                }
+              ],
+              "best_silhouette": {
+                "null_mean": 0.0009223552867720969,
+                "null_standard_deviation": 0.00011267255411587811,
+                "observed": 0.014479812773283451,
+                "upper_tail_p_value": 0.02,
+                "z_score": 120.32617519762785
+              },
+              "cluster_sizes": [
+                1,
+                1,
+                2,
+                5,
+                6,
+                7,
+                8,
+                8,
+                10
+              ],
+              "late_checkpoint_stability": {
+                "cluster_adjusted_rand": {
+                  "null_mean": 0.3180217863110474,
+                  "null_standard_deviation": 0.03187629159751196,
+                  "observed": 0.4584203709950967,
+                  "upper_tail_p_value": 0.002,
+                  "z_score": 4.404483007521736
+                },
+                "cross_layer_neighbor_overlap": {
+                  "null_mean": 0.11954464484524603,
+                  "null_standard_deviation": 0.022441408430623328,
+                  "observed": 0.3645833333333333,
+                  "upper_tail_p_value": 0.002,
+                  "z_score": 10.919042325066812
+                },
+                "neighbor_overlap": {
+                  "null_mean": 0.19006067690937428,
+                  "null_standard_deviation": 0.023155887043568017,
+                  "observed": 0.5590277777777777,
+                  "upper_tail_p_value": 0.002,
+                  "z_score": 15.934051680861474
+                }
+              },
+              "layer_mixing": {
+                "size_weighted_normalized_layer_entropy": 0.2935451147468494,
+                "within_cluster_cross_layer_pair_fraction": 0.39864864864864863
+              },
+              "recurrent_cross_layer_edges": [
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9685782194137573,
+                  "first_head": 3,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 6,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9782705307006836,
+                  "first_head": 3,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 3,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9790067076683044,
+                  "first_head": 3,
+                  "first_layer": 1,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 4,
+                  "second_layer": 3
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.979709267616272,
+                  "first_head": 4,
+                  "first_layer": 1,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 5,
+                  "second_layer": 2
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9801944494247437,
+                  "first_head": 3,
+                  "first_layer": 1,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 6,
+                  "second_layer": 2
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9815487861633301,
+                  "first_head": 3,
+                  "first_layer": 2,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 5,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9817085862159729,
+                  "first_head": 5,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 2,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9842716455459595,
+                  "first_head": 6,
+                  "first_layer": 2,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 0,
+                  "second_layer": 3
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.984991729259491,
+                  "first_head": 7,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 5,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9868988990783691,
+                  "first_head": 0,
+                  "first_layer": 1,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 2
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9869293570518494,
+                  "first_head": 5,
+                  "first_layer": 1,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 2,
+                  "second_layer": 3
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9872083067893982,
+                  "first_head": 7,
+                  "first_layer": 1,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 3,
+                  "second_layer": 2
+                }
+              ],
+              "selected_cluster_count": 9,
+              "singleton_count": 2,
+              "subsampled_cluster_stability": {
+                "mean_adjusted_rand": 0.7822231878922823,
+                "median_adjusted_rand": 0.7902120989514023,
+                "q05_adjusted_rand": 0.5912668128855023,
+                "q95_adjusted_rand": 0.9577718865665439
+              }
+            },
+            "right": {
+              "assignments": [
+                {
+                  "cluster": 0,
+                  "head": 0,
+                  "layer": 0
+                },
+                {
+                  "cluster": 0,
+                  "head": 1,
+                  "layer": 0
+                },
+                {
+                  "cluster": 0,
+                  "head": 2,
+                  "layer": 0
+                },
+                {
+                  "cluster": 0,
+                  "head": 3,
+                  "layer": 0
+                },
+                {
+                  "cluster": 0,
+                  "head": 4,
+                  "layer": 0
+                },
+                {
+                  "cluster": 0,
+                  "head": 5,
+                  "layer": 0
+                },
+                {
+                  "cluster": 0,
+                  "head": 6,
+                  "layer": 0
+                },
+                {
+                  "cluster": 0,
+                  "head": 7,
+                  "layer": 0
+                },
+                {
+                  "cluster": 8,
+                  "head": 0,
+                  "layer": 1
+                },
+                {
+                  "cluster": 8,
+                  "head": 1,
+                  "layer": 1
+                },
+                {
+                  "cluster": 8,
+                  "head": 2,
+                  "layer": 1
+                },
+                {
+                  "cluster": 0,
+                  "head": 3,
+                  "layer": 1
+                },
+                {
+                  "cluster": 0,
+                  "head": 4,
+                  "layer": 1
+                },
+                {
+                  "cluster": 0,
+                  "head": 5,
+                  "layer": 1
+                },
+                {
+                  "cluster": 0,
+                  "head": 6,
+                  "layer": 1
+                },
+                {
+                  "cluster": 8,
+                  "head": 7,
+                  "layer": 1
+                },
+                {
+                  "cluster": 0,
+                  "head": 0,
+                  "layer": 2
+                },
+                {
+                  "cluster": 9,
+                  "head": 1,
+                  "layer": 2
+                },
+                {
+                  "cluster": 0,
+                  "head": 2,
+                  "layer": 2
+                },
+                {
+                  "cluster": 0,
+                  "head": 3,
+                  "layer": 2
+                },
+                {
+                  "cluster": 0,
+                  "head": 4,
+                  "layer": 2
+                },
+                {
+                  "cluster": 0,
+                  "head": 5,
+                  "layer": 2
+                },
+                {
+                  "cluster": 0,
+                  "head": 6,
+                  "layer": 2
+                },
+                {
+                  "cluster": 7,
+                  "head": 7,
+                  "layer": 2
+                },
+                {
+                  "cluster": 1,
+                  "head": 0,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 1,
+                  "layer": 3
+                },
+                {
+                  "cluster": 3,
+                  "head": 2,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 3,
+                  "layer": 3
+                },
+                {
+                  "cluster": 0,
+                  "head": 4,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 5,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 6,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 7,
+                  "layer": 3
+                },
+                {
+                  "cluster": 4,
+                  "head": 0,
+                  "layer": 4
+                },
+                {
+                  "cluster": 2,
+                  "head": 1,
+                  "layer": 4
+                },
+                {
+                  "cluster": 6,
+                  "head": 2,
+                  "layer": 4
+                },
+                {
+                  "cluster": 6,
+                  "head": 3,
+                  "layer": 4
+                },
+                {
+                  "cluster": 2,
+                  "head": 4,
+                  "layer": 4
+                },
+                {
+                  "cluster": 3,
+                  "head": 5,
+                  "layer": 4
+                },
+                {
+                  "cluster": 4,
+                  "head": 6,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 7,
+                  "layer": 4
+                },
+                {
+                  "cluster": 5,
+                  "head": 0,
+                  "layer": 5
+                },
+                {
+                  "cluster": 5,
+                  "head": 1,
+                  "layer": 5
+                },
+                {
+                  "cluster": 5,
+                  "head": 2,
+                  "layer": 5
+                },
+                {
+                  "cluster": 5,
+                  "head": 3,
+                  "layer": 5
+                },
+                {
+                  "cluster": 5,
+                  "head": 4,
+                  "layer": 5
+                },
+                {
+                  "cluster": 5,
+                  "head": 5,
+                  "layer": 5
+                },
+                {
+                  "cluster": 5,
+                  "head": 6,
+                  "layer": 5
+                },
+                {
+                  "cluster": 5,
+                  "head": 7,
+                  "layer": 5
+                }
+              ],
+              "best_silhouette": {
+                "null_mean": 0.0009223552867720969,
+                "null_standard_deviation": 0.00011267255411587811,
+                "observed": 0.05092667842950307,
+                "upper_tail_p_value": 0.02,
+                "z_score": 443.80216224888284
+              },
+              "cluster_sizes": [
+                1,
+                1,
+                2,
+                2,
+                2,
+                2,
+                4,
+                7,
+                8,
+                19
+              ],
+              "late_checkpoint_stability": {
+                "cluster_adjusted_rand": {
+                  "null_mean": 0.15100667642037496,
+                  "null_standard_deviation": 0.0284709462103271,
+                  "observed": 0.22054971199049495,
+                  "upper_tail_p_value": 0.014,
+                  "z_score": 2.442596570425715
+                },
+                "cross_layer_neighbor_overlap": {
+                  "null_mean": 0.14846359385437538,
+                  "null_standard_deviation": 0.02226817562899361,
+                  "observed": 0.3784722222222222,
+                  "upper_tail_p_value": 0.002,
+                  "z_score": 10.329028843672807
+                },
+                "neighbor_overlap": {
+                  "null_mean": 0.23367568470273878,
+                  "null_standard_deviation": 0.03064317999600149,
+                  "observed": 0.5243055555555556,
+                  "upper_tail_p_value": 0.002,
+                  "z_score": 9.484324762989349
+                }
+              },
+              "layer_mixing": {
+                "size_weighted_normalized_layer_entropy": 0.31707872285543837,
+                "within_cluster_cross_layer_pair_fraction": 0.5608695652173913
+              },
+              "recurrent_cross_layer_edges": [
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.934476912021637,
+                  "first_head": 7,
+                  "first_layer": 0,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 2,
+                  "second_layer": 1
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.936445415019989,
+                  "first_head": 4,
+                  "first_layer": 0,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 3,
+                  "second_layer": 1
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9381542205810547,
+                  "first_head": 4,
+                  "first_layer": 2,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 4,
+                  "second_layer": 3
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9392539262771606,
+                  "first_head": 5,
+                  "first_layer": 0,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 3,
+                  "second_layer": 1
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9431002736091614,
+                  "first_head": 6,
+                  "first_layer": 0,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 4,
+                  "second_layer": 1
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.943429708480835,
+                  "first_head": 5,
+                  "first_layer": 0,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 2,
+                  "second_layer": 1
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9445919990539551,
+                  "first_head": 0,
+                  "first_layer": 0,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 6,
+                  "second_layer": 1
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9450434446334839,
+                  "first_head": 2,
+                  "first_layer": 0,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 6,
+                  "second_layer": 2
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9452458620071411,
+                  "first_head": 4,
+                  "first_layer": 0,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 4,
+                  "second_layer": 1
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9478937387466431,
+                  "first_head": 3,
+                  "first_layer": 0,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 6,
+                  "second_layer": 2
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9543734192848206,
+                  "first_head": 6,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9544160962104797,
+                  "first_head": 0,
+                  "first_layer": 0,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 4,
+                  "second_layer": 1
+                }
+              ],
+              "selected_cluster_count": 10,
+              "singleton_count": 2,
+              "subsampled_cluster_stability": {
+                "mean_adjusted_rand": 0.7794886458446257,
+                "median_adjusted_rand": 0.7313965096086872,
+                "q05_adjusted_rand": 0.5689345408450546,
+                "q95_adjusted_rand": 1.0
+              }
+            }
+          }
+        },
+        "8": {
+          "left_right_pairing": {
+            "cluster_adjusted_mutual_information": {
+              "null_mean": 0.27699132237728563,
+              "null_standard_deviation": 0.03580260601963007,
+              "observed": 0.41240634055363373,
+              "upper_tail_p_value": 0.002,
+              "z_score": 3.782267081399101
+            },
+            "neighbor_overlap": {
+              "null_mean": 0.22989033622801155,
+              "null_standard_deviation": 0.034018675538500416,
+              "observed": 0.47222222222222215,
+              "upper_tail_p_value": 0.002,
+              "z_score": 7.123495614047439
+            },
+            "pairwise_distance_spearman": {
+              "null_mean": 0.12367243429468412,
+              "null_standard_deviation": 0.0319252575194848,
+              "observed": 0.30320968045372976,
+              "upper_tail_p_value": 0.002,
+              "z_score": 5.623674172384341
+            }
+          },
+          "sides": {
+            "left": {
+              "assignments": [
+                {
+                  "cluster": 5,
+                  "head": 0,
+                  "layer": 0
+                },
+                {
+                  "cluster": 5,
+                  "head": 1,
+                  "layer": 0
+                },
+                {
+                  "cluster": 5,
+                  "head": 2,
+                  "layer": 0
+                },
+                {
+                  "cluster": 5,
+                  "head": 3,
+                  "layer": 0
+                },
+                {
+                  "cluster": 5,
+                  "head": 4,
+                  "layer": 0
+                },
+                {
+                  "cluster": 3,
+                  "head": 5,
+                  "layer": 0
+                },
+                {
+                  "cluster": 5,
+                  "head": 6,
+                  "layer": 0
+                },
+                {
+                  "cluster": 3,
+                  "head": 7,
+                  "layer": 0
+                },
+                {
+                  "cluster": 4,
+                  "head": 0,
+                  "layer": 1
+                },
+                {
+                  "cluster": 4,
+                  "head": 1,
+                  "layer": 1
+                },
+                {
+                  "cluster": 2,
+                  "head": 2,
+                  "layer": 1
+                },
+                {
+                  "cluster": 6,
+                  "head": 3,
+                  "layer": 1
+                },
+                {
+                  "cluster": 6,
+                  "head": 4,
+                  "layer": 1
+                },
+                {
+                  "cluster": 6,
+                  "head": 5,
+                  "layer": 1
+                },
+                {
+                  "cluster": 0,
+                  "head": 6,
+                  "layer": 1
+                },
+                {
+                  "cluster": 4,
+                  "head": 7,
+                  "layer": 1
+                },
+                {
+                  "cluster": 2,
+                  "head": 0,
+                  "layer": 2
+                },
+                {
+                  "cluster": 4,
+                  "head": 1,
+                  "layer": 2
+                },
+                {
+                  "cluster": 2,
+                  "head": 2,
+                  "layer": 2
+                },
+                {
+                  "cluster": 2,
+                  "head": 3,
+                  "layer": 2
+                },
+                {
+                  "cluster": 2,
+                  "head": 4,
+                  "layer": 2
+                },
+                {
+                  "cluster": 6,
+                  "head": 5,
+                  "layer": 2
+                },
+                {
+                  "cluster": 6,
+                  "head": 6,
+                  "layer": 2
+                },
+                {
+                  "cluster": 4,
+                  "head": 7,
+                  "layer": 2
+                },
+                {
+                  "cluster": 6,
+                  "head": 0,
+                  "layer": 3
+                },
+                {
+                  "cluster": 6,
+                  "head": 1,
+                  "layer": 3
+                },
+                {
+                  "cluster": 0,
+                  "head": 2,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 3,
+                  "layer": 3
+                },
+                {
+                  "cluster": 2,
+                  "head": 4,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 5,
+                  "layer": 3
+                },
+                {
+                  "cluster": 6,
+                  "head": 6,
+                  "layer": 3
+                },
+                {
+                  "cluster": 0,
+                  "head": 7,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 0,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 1,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 2,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 3,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 4,
+                  "layer": 4
+                },
+                {
+                  "cluster": 0,
+                  "head": 5,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 6,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 7,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 0,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 1,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 2,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 3,
+                  "layer": 5
+                },
+                {
+                  "cluster": 7,
+                  "head": 4,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 5,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 6,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 7,
+                  "layer": 5
+                }
+              ],
+              "best_silhouette": {
+                "null_mean": 0.0007887275454519785,
+                "null_standard_deviation": 9.486743820036366e-05,
+                "observed": 0.018082673844642086,
+                "upper_tail_p_value": 0.02,
+                "z_score": 182.295913405658
+              },
+              "cluster_sizes": [
+                1,
+                2,
+                4,
+                5,
+                6,
+                6,
+                8,
+                16
+              ],
+              "late_checkpoint_stability": {
+                "cluster_adjusted_rand": {
+                  "null_mean": 0.2485222762896722,
+                  "null_standard_deviation": 0.03548036717166406,
+                  "observed": 0.4721744686793379,
+                  "upper_tail_p_value": 0.002,
+                  "z_score": 6.303547855284955
+                },
+                "cross_layer_neighbor_overlap": {
+                  "null_mean": 0.14888805388554888,
+                  "null_standard_deviation": 0.02412685683108615,
+                  "observed": 0.46180555555555547,
+                  "upper_tail_p_value": 0.002,
+                  "z_score": 12.969675406156899
+                },
+                "neighbor_overlap": {
+                  "null_mean": 0.1927048541527499,
+                  "null_standard_deviation": 0.024860729709815958,
+                  "observed": 0.6319444444444444,
+                  "upper_tail_p_value": 0.002,
+                  "z_score": 17.66800875994666
+                }
+              },
+              "layer_mixing": {
+                "size_weighted_normalized_layer_entropy": 0.4315970416118781,
+                "within_cluster_cross_layer_pair_fraction": 0.6051282051282051
+              },
+              "recurrent_cross_layer_edges": [
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9385553002357483,
+                  "first_head": 5,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 2,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9476326107978821,
+                  "first_head": 1,
+                  "first_layer": 1,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 1,
+                  "second_layer": 2
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.956577718257904,
+                  "first_head": 3,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 6,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9618478417396545,
+                  "first_head": 3,
+                  "first_layer": 1,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 6,
+                  "second_layer": 2
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.962221086025238,
+                  "first_head": 3,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9623555541038513,
+                  "first_head": 1,
+                  "first_layer": 1,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 2
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9694727659225464,
+                  "first_head": 0,
+                  "first_layer": 1,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 1,
+                  "second_layer": 2
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9700555801391602,
+                  "first_head": 5,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.974224328994751,
+                  "first_head": 3,
+                  "first_layer": 4,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 6,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9755209684371948,
+                  "first_head": 3,
+                  "first_layer": 1,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 4,
+                  "second_layer": 3
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9756380319595337,
+                  "first_head": 4,
+                  "first_layer": 1,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 5,
+                  "second_layer": 2
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9764605164527893,
+                  "first_head": 7,
+                  "first_layer": 1,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 3,
+                  "second_layer": 2
+                }
+              ],
+              "selected_cluster_count": 8,
+              "singleton_count": 1,
+              "subsampled_cluster_stability": {
+                "mean_adjusted_rand": 0.7612123427595623,
+                "median_adjusted_rand": 0.7745810650985152,
+                "q05_adjusted_rand": 0.5198443401338991,
+                "q95_adjusted_rand": 0.9650284522109888
+              }
+            },
+            "right": {
+              "assignments": [
+                {
+                  "cluster": 1,
+                  "head": 0,
+                  "layer": 0
+                },
+                {
+                  "cluster": 1,
+                  "head": 1,
+                  "layer": 0
+                },
+                {
+                  "cluster": 1,
+                  "head": 2,
+                  "layer": 0
+                },
+                {
+                  "cluster": 1,
+                  "head": 3,
+                  "layer": 0
+                },
+                {
+                  "cluster": 1,
+                  "head": 4,
+                  "layer": 0
+                },
+                {
+                  "cluster": 1,
+                  "head": 5,
+                  "layer": 0
+                },
+                {
+                  "cluster": 1,
+                  "head": 6,
+                  "layer": 0
+                },
+                {
+                  "cluster": 1,
+                  "head": 7,
+                  "layer": 0
+                },
+                {
+                  "cluster": 2,
+                  "head": 0,
+                  "layer": 1
+                },
+                {
+                  "cluster": 2,
+                  "head": 1,
+                  "layer": 1
+                },
+                {
+                  "cluster": 2,
+                  "head": 2,
+                  "layer": 1
+                },
+                {
+                  "cluster": 1,
+                  "head": 3,
+                  "layer": 1
+                },
+                {
+                  "cluster": 1,
+                  "head": 4,
+                  "layer": 1
+                },
+                {
+                  "cluster": 1,
+                  "head": 5,
+                  "layer": 1
+                },
+                {
+                  "cluster": 1,
+                  "head": 6,
+                  "layer": 1
+                },
+                {
+                  "cluster": 2,
+                  "head": 7,
+                  "layer": 1
+                },
+                {
+                  "cluster": 4,
+                  "head": 0,
+                  "layer": 2
+                },
+                {
+                  "cluster": 9,
+                  "head": 1,
+                  "layer": 2
+                },
+                {
+                  "cluster": 4,
+                  "head": 2,
+                  "layer": 2
+                },
+                {
+                  "cluster": 4,
+                  "head": 3,
+                  "layer": 2
+                },
+                {
+                  "cluster": 4,
+                  "head": 4,
+                  "layer": 2
+                },
+                {
+                  "cluster": 4,
+                  "head": 5,
+                  "layer": 2
+                },
+                {
+                  "cluster": 4,
+                  "head": 6,
+                  "layer": 2
+                },
+                {
+                  "cluster": 5,
+                  "head": 7,
+                  "layer": 2
+                },
+                {
+                  "cluster": 3,
+                  "head": 0,
+                  "layer": 3
+                },
+                {
+                  "cluster": 3,
+                  "head": 1,
+                  "layer": 3
+                },
+                {
+                  "cluster": 0,
+                  "head": 2,
+                  "layer": 3
+                },
+                {
+                  "cluster": 3,
+                  "head": 3,
+                  "layer": 3
+                },
+                {
+                  "cluster": 4,
+                  "head": 4,
+                  "layer": 3
+                },
+                {
+                  "cluster": 3,
+                  "head": 5,
+                  "layer": 3
+                },
+                {
+                  "cluster": 3,
+                  "head": 6,
+                  "layer": 3
+                },
+                {
+                  "cluster": 3,
+                  "head": 7,
+                  "layer": 3
+                },
+                {
+                  "cluster": 6,
+                  "head": 0,
+                  "layer": 4
+                },
+                {
+                  "cluster": 8,
+                  "head": 1,
+                  "layer": 4
+                },
+                {
+                  "cluster": 0,
+                  "head": 2,
+                  "layer": 4
+                },
+                {
+                  "cluster": 0,
+                  "head": 3,
+                  "layer": 4
+                },
+                {
+                  "cluster": 6,
+                  "head": 4,
+                  "layer": 4
+                },
+                {
+                  "cluster": 0,
+                  "head": 5,
+                  "layer": 4
+                },
+                {
+                  "cluster": 6,
+                  "head": 6,
+                  "layer": 4
+                },
+                {
+                  "cluster": 3,
+                  "head": 7,
+                  "layer": 4
+                },
+                {
+                  "cluster": 7,
+                  "head": 0,
+                  "layer": 5
+                },
+                {
+                  "cluster": 7,
+                  "head": 1,
+                  "layer": 5
+                },
+                {
+                  "cluster": 7,
+                  "head": 2,
+                  "layer": 5
+                },
+                {
+                  "cluster": 7,
+                  "head": 3,
+                  "layer": 5
+                },
+                {
+                  "cluster": 7,
+                  "head": 4,
+                  "layer": 5
+                },
+                {
+                  "cluster": 7,
+                  "head": 5,
+                  "layer": 5
+                },
+                {
+                  "cluster": 7,
+                  "head": 6,
+                  "layer": 5
+                },
+                {
+                  "cluster": 7,
+                  "head": 7,
+                  "layer": 5
+                }
+              ],
+              "best_silhouette": {
+                "null_mean": 0.0007887275454519785,
+                "null_standard_deviation": 9.486743820036366e-05,
+                "observed": 0.04406821411061634,
+                "upper_tail_p_value": 0.02,
+                "z_score": 456.21013264589715
+              },
+              "cluster_sizes": [
+                1,
+                1,
+                1,
+                3,
+                4,
+                4,
+                7,
+                7,
+                8,
+                12
+              ],
+              "late_checkpoint_stability": {
+                "cluster_adjusted_rand": {
+                  "null_mean": 0.14894037324790171,
+                  "null_standard_deviation": 0.00845011074544264,
+                  "observed": 0.17554564902523678,
+                  "upper_tail_p_value": 0.008,
+                  "z_score": 3.148512082126731
+                },
+                "cross_layer_neighbor_overlap": {
+                  "null_mean": 0.14671008684034734,
+                  "null_standard_deviation": 0.023021720831965395,
+                  "observed": 0.4409722222222222,
+                  "upper_tail_p_value": 0.002,
+                  "z_score": 12.781934831443845
+                },
+                "neighbor_overlap": {
+                  "null_mean": 0.23476814740592294,
+                  "null_standard_deviation": 0.026049831118945065,
+                  "observed": 0.5555555555555555,
+                  "upper_tail_p_value": 0.002,
+                  "z_score": 12.314375731838656
+                }
+              },
+              "layer_mixing": {
+                "size_weighted_normalized_layer_entropy": 0.18172476228985024,
+                "within_cluster_cross_layer_pair_fraction": 0.31125827814569534
+              },
+              "recurrent_cross_layer_edges": [
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9322603344917297,
+                  "first_head": 4,
+                  "first_layer": 2,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 4,
+                  "second_layer": 3
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9329220652580261,
+                  "first_head": 1,
+                  "first_layer": 0,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 3,
+                  "second_layer": 1
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9332783818244934,
+                  "first_head": 2,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 5,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9389447569847107,
+                  "first_head": 2,
+                  "first_layer": 0,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 6,
+                  "second_layer": 2
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9419333338737488,
+                  "first_head": 3,
+                  "first_layer": 0,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 6,
+                  "second_layer": 2
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9445503354072571,
+                  "first_head": 3,
+                  "first_layer": 2,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 4,
+                  "second_layer": 3
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9467021822929382,
+                  "first_head": 4,
+                  "first_layer": 0,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 5,
+                  "second_layer": 1
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9481876492500305,
+                  "first_head": 0,
+                  "first_layer": 0,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 6,
+                  "second_layer": 1
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9484488368034363,
+                  "first_head": 6,
+                  "first_layer": 0,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 4,
+                  "second_layer": 1
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9495751857757568,
+                  "first_head": 6,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9507922530174255,
+                  "first_head": 6,
+                  "first_layer": 0,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 5,
+                  "second_layer": 2
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9514181017875671,
+                  "first_head": 4,
+                  "first_layer": 0,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 0,
+                  "second_layer": 1
+                }
+              ],
+              "selected_cluster_count": 10,
+              "singleton_count": 3,
+              "subsampled_cluster_stability": {
+                "mean_adjusted_rand": 0.9234962762038386,
+                "median_adjusted_rand": 0.9542461115380136,
+                "q05_adjusted_rand": 0.7662715374675967,
+                "q95_adjusted_rand": 1.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "QK": {
+      "late_checkpoints": [
+        "step16000",
+        "step64000",
+        "step143000"
+      ],
+      "operator_count": 48,
+      "rank_results": {
+        "16": {
+          "left_right_pairing": {
+            "cluster_adjusted_mutual_information": {
+              "null_mean": 0.4358707130920597,
+              "null_standard_deviation": 0.040222929790572966,
+              "observed": 0.6588561722049894,
+              "upper_tail_p_value": 0.002,
+              "z_score": 5.543739858681072
+            },
+            "neighbor_overlap": {
+              "null_mean": 0.28200846136717883,
+              "null_standard_deviation": 0.03765425833083026,
+              "observed": 0.673611111111111,
+              "upper_tail_p_value": 0.002,
+              "z_score": 10.399956528244743
+            },
+            "pairwise_distance_spearman": {
+              "null_mean": 0.5084420952932124,
+              "null_standard_deviation": 0.04310265170057549,
+              "observed": 0.7802490554219649,
+              "upper_tail_p_value": 0.002,
+              "z_score": 6.306038014016743
+            }
+          },
+          "sides": {
+            "left": {
+              "assignments": [
+                {
+                  "cluster": 1,
+                  "head": 0,
+                  "layer": 0
+                },
+                {
+                  "cluster": 7,
+                  "head": 1,
+                  "layer": 0
+                },
+                {
+                  "cluster": 5,
+                  "head": 2,
+                  "layer": 0
+                },
+                {
+                  "cluster": 5,
+                  "head": 3,
+                  "layer": 0
+                },
+                {
+                  "cluster": 1,
+                  "head": 4,
+                  "layer": 0
+                },
+                {
+                  "cluster": 8,
+                  "head": 5,
+                  "layer": 0
+                },
+                {
+                  "cluster": 1,
+                  "head": 6,
+                  "layer": 0
+                },
+                {
+                  "cluster": 4,
+                  "head": 7,
+                  "layer": 0
+                },
+                {
+                  "cluster": 2,
+                  "head": 0,
+                  "layer": 1
+                },
+                {
+                  "cluster": 6,
+                  "head": 1,
+                  "layer": 1
+                },
+                {
+                  "cluster": 6,
+                  "head": 2,
+                  "layer": 1
+                },
+                {
+                  "cluster": 0,
+                  "head": 3,
+                  "layer": 1
+                },
+                {
+                  "cluster": 0,
+                  "head": 4,
+                  "layer": 1
+                },
+                {
+                  "cluster": 0,
+                  "head": 5,
+                  "layer": 1
+                },
+                {
+                  "cluster": 0,
+                  "head": 6,
+                  "layer": 1
+                },
+                {
+                  "cluster": 0,
+                  "head": 7,
+                  "layer": 1
+                },
+                {
+                  "cluster": 0,
+                  "head": 0,
+                  "layer": 2
+                },
+                {
+                  "cluster": 0,
+                  "head": 1,
+                  "layer": 2
+                },
+                {
+                  "cluster": 0,
+                  "head": 2,
+                  "layer": 2
+                },
+                {
+                  "cluster": 0,
+                  "head": 3,
+                  "layer": 2
+                },
+                {
+                  "cluster": 0,
+                  "head": 4,
+                  "layer": 2
+                },
+                {
+                  "cluster": 3,
+                  "head": 5,
+                  "layer": 2
+                },
+                {
+                  "cluster": 2,
+                  "head": 6,
+                  "layer": 2
+                },
+                {
+                  "cluster": 0,
+                  "head": 7,
+                  "layer": 2
+                },
+                {
+                  "cluster": 3,
+                  "head": 0,
+                  "layer": 3
+                },
+                {
+                  "cluster": 3,
+                  "head": 1,
+                  "layer": 3
+                },
+                {
+                  "cluster": 0,
+                  "head": 2,
+                  "layer": 3
+                },
+                {
+                  "cluster": 3,
+                  "head": 3,
+                  "layer": 3
+                },
+                {
+                  "cluster": 0,
+                  "head": 4,
+                  "layer": 3
+                },
+                {
+                  "cluster": 3,
+                  "head": 5,
+                  "layer": 3
+                },
+                {
+                  "cluster": 3,
+                  "head": 6,
+                  "layer": 3
+                },
+                {
+                  "cluster": 0,
+                  "head": 7,
+                  "layer": 3
+                },
+                {
+                  "cluster": 3,
+                  "head": 0,
+                  "layer": 4
+                },
+                {
+                  "cluster": 3,
+                  "head": 1,
+                  "layer": 4
+                },
+                {
+                  "cluster": 3,
+                  "head": 2,
+                  "layer": 4
+                },
+                {
+                  "cluster": 3,
+                  "head": 3,
+                  "layer": 4
+                },
+                {
+                  "cluster": 3,
+                  "head": 4,
+                  "layer": 4
+                },
+                {
+                  "cluster": 3,
+                  "head": 5,
+                  "layer": 4
+                },
+                {
+                  "cluster": 3,
+                  "head": 6,
+                  "layer": 4
+                },
+                {
+                  "cluster": 3,
+                  "head": 7,
+                  "layer": 4
+                },
+                {
+                  "cluster": 3,
+                  "head": 0,
+                  "layer": 5
+                },
+                {
+                  "cluster": 3,
+                  "head": 1,
+                  "layer": 5
+                },
+                {
+                  "cluster": 3,
+                  "head": 2,
+                  "layer": 5
+                },
+                {
+                  "cluster": 3,
+                  "head": 3,
+                  "layer": 5
+                },
+                {
+                  "cluster": 3,
+                  "head": 4,
+                  "layer": 5
+                },
+                {
+                  "cluster": 3,
+                  "head": 5,
+                  "layer": 5
+                },
+                {
+                  "cluster": 3,
+                  "head": 6,
+                  "layer": 5
+                },
+                {
+                  "cluster": 3,
+                  "head": 7,
+                  "layer": 5
+                }
+              ],
+              "best_silhouette": {
+                "null_mean": 0.0007544668851990234,
+                "null_standard_deviation": 0.00010961305285521601,
+                "observed": 0.024557892188995095,
+                "upper_tail_p_value": 0.02,
+                "z_score": 217.158674845387
+              },
+              "cluster_sizes": [
+                1,
+                1,
+                1,
+                2,
+                2,
+                2,
+                3,
+                14,
+                22
+              ],
+              "late_checkpoint_stability": {
+                "cluster_adjusted_rand": {
+                  "null_mean": 0.4139039740246857,
+                  "null_standard_deviation": 0.03279491000678808,
+                  "observed": 0.44812643195142887,
+                  "upper_tail_p_value": 0.146,
+                  "z_score": 1.0435295574727788
+                },
+                "cross_layer_neighbor_overlap": {
+                  "null_mean": 0.19593353373413494,
+                  "null_standard_deviation": 0.021647903332793542,
+                  "observed": 0.53125,
+                  "upper_tail_p_value": 0.002,
+                  "z_score": 15.489558554980592
+                },
+                "neighbor_overlap": {
+                  "null_mean": 0.3007473279893119,
+                  "null_standard_deviation": 0.026603126112721545,
+                  "observed": 0.7326388888888888,
+                  "upper_tail_p_value": 0.002,
+                  "z_score": 16.234616904403858
+                }
+              },
+              "layer_mixing": {
+                "size_weighted_normalized_layer_entropy": 0.4990926774097837,
+                "within_cluster_cross_layer_pair_fraction": 0.698170731707317
+              },
+              "recurrent_cross_layer_edges": [
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.8963903784751892,
+                  "first_head": 0,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 3,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.90567547082901,
+                  "first_head": 3,
+                  "first_layer": 4,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 6,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9135503768920898,
+                  "first_head": 0,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 1,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9156017899513245,
+                  "first_head": 5,
+                  "first_layer": 4,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 6,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9166091680526733,
+                  "first_head": 5,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9169216752052307,
+                  "first_head": 0,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 2,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.93077152967453,
+                  "first_head": 5,
+                  "first_layer": 4,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 1,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9338412880897522,
+                  "first_head": 5,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 6,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9350786209106445,
+                  "first_head": 2,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 5,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9361386299133301,
+                  "first_head": 3,
+                  "first_layer": 4,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 1,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9365749955177307,
+                  "first_head": 6,
+                  "first_layer": 4,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 4,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9453451037406921,
+                  "first_head": 0,
+                  "first_layer": 2,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 3
+                }
+              ],
+              "selected_cluster_count": 9,
+              "singleton_count": 3,
+              "subsampled_cluster_stability": {
+                "mean_adjusted_rand": 0.703684772005327,
+                "median_adjusted_rand": 0.7445711317985217,
+                "q05_adjusted_rand": 0.40477224221543684,
+                "q95_adjusted_rand": 0.973038377583359
+              }
+            },
+            "right": {
+              "assignments": [
+                {
+                  "cluster": 4,
+                  "head": 0,
+                  "layer": 0
+                },
+                {
+                  "cluster": 5,
+                  "head": 1,
+                  "layer": 0
+                },
+                {
+                  "cluster": 6,
+                  "head": 2,
+                  "layer": 0
+                },
+                {
+                  "cluster": 6,
+                  "head": 3,
+                  "layer": 0
+                },
+                {
+                  "cluster": 4,
+                  "head": 4,
+                  "layer": 0
+                },
+                {
+                  "cluster": 0,
+                  "head": 5,
+                  "layer": 0
+                },
+                {
+                  "cluster": 4,
+                  "head": 6,
+                  "layer": 0
+                },
+                {
+                  "cluster": 0,
+                  "head": 7,
+                  "layer": 0
+                },
+                {
+                  "cluster": 2,
+                  "head": 0,
+                  "layer": 1
+                },
+                {
+                  "cluster": 1,
+                  "head": 1,
+                  "layer": 1
+                },
+                {
+                  "cluster": 3,
+                  "head": 2,
+                  "layer": 1
+                },
+                {
+                  "cluster": 1,
+                  "head": 3,
+                  "layer": 1
+                },
+                {
+                  "cluster": 1,
+                  "head": 4,
+                  "layer": 1
+                },
+                {
+                  "cluster": 1,
+                  "head": 5,
+                  "layer": 1
+                },
+                {
+                  "cluster": 1,
+                  "head": 6,
+                  "layer": 1
+                },
+                {
+                  "cluster": 1,
+                  "head": 7,
+                  "layer": 1
+                },
+                {
+                  "cluster": 1,
+                  "head": 0,
+                  "layer": 2
+                },
+                {
+                  "cluster": 1,
+                  "head": 1,
+                  "layer": 2
+                },
+                {
+                  "cluster": 1,
+                  "head": 2,
+                  "layer": 2
+                },
+                {
+                  "cluster": 1,
+                  "head": 3,
+                  "layer": 2
+                },
+                {
+                  "cluster": 1,
+                  "head": 4,
+                  "layer": 2
+                },
+                {
+                  "cluster": 1,
+                  "head": 5,
+                  "layer": 2
+                },
+                {
+                  "cluster": 2,
+                  "head": 6,
+                  "layer": 2
+                },
+                {
+                  "cluster": 1,
+                  "head": 7,
+                  "layer": 2
+                },
+                {
+                  "cluster": 1,
+                  "head": 0,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 1,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 2,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 3,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 4,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 5,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 6,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 7,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 0,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 1,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 2,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 3,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 4,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 5,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 6,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 7,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 0,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 1,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 2,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 3,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 4,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 5,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 6,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 7,
+                  "layer": 5
+                }
+              ],
+              "best_silhouette": {
+                "null_mean": 0.0007544668851990234,
+                "null_standard_deviation": 0.00010961305285521601,
+                "observed": 0.019220110116328726,
+                "upper_tail_p_value": 0.02,
+                "z_score": 168.46208321120582
+              },
+              "cluster_sizes": [
+                1,
+                1,
+                2,
+                2,
+                2,
+                3,
+                37
+              ],
+              "late_checkpoint_stability": {
+                "cluster_adjusted_rand": {
+                  "null_mean": 0.60498600151225,
+                  "null_standard_deviation": 0.04179540541085353,
+                  "observed": 0.7224059686071653,
+                  "upper_tail_p_value": 0.002,
+                  "z_score": 2.80939892652467
+                },
+                "cross_layer_neighbor_overlap": {
+                  "null_mean": 0.171419227343576,
+                  "null_standard_deviation": 0.02971353352961501,
+                  "observed": 0.5729166666666666,
+                  "upper_tail_p_value": 0.002,
+                  "z_score": 13.51227510262031
+                },
+                "neighbor_overlap": {
+                  "null_mean": 0.28187625250501,
+                  "null_standard_deviation": 0.025453784063896125,
+                  "observed": 0.6874999999999999,
+                  "upper_tail_p_value": 0.002,
+                  "z_score": 15.935695316529781
+                }
+              },
+              "layer_mixing": {
+                "size_weighted_normalized_layer_entropy": 0.7059138111699347,
+                "within_cluster_cross_layer_pair_fraction": 0.8139880952380952
+              },
+              "recurrent_cross_layer_edges": [
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.8979571461677551,
+                  "first_head": 0,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 1,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.8979856967926025,
+                  "first_head": 0,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 3,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9106412529945374,
+                  "first_head": 5,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9192914962768555,
+                  "first_head": 5,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 0,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.931877851486206,
+                  "first_head": 1,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9331079721450806,
+                  "first_head": 3,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9339802861213684,
+                  "first_head": 5,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 6,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9410021305084229,
+                  "first_head": 2,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 5,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9462277889251709,
+                  "first_head": 5,
+                  "first_layer": 4,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 6,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9464855790138245,
+                  "first_head": 5,
+                  "first_layer": 4,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 3,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9465391635894775,
+                  "first_head": 1,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 3,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9488741755485535,
+                  "first_head": 4,
+                  "first_layer": 4,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 2,
+                  "second_layer": 5
+                }
+              ],
+              "selected_cluster_count": 7,
+              "singleton_count": 2,
+              "subsampled_cluster_stability": {
+                "mean_adjusted_rand": 0.9092889738963188,
+                "median_adjusted_rand": 0.9200888026149916,
+                "q05_adjusted_rand": 0.6923101765838244,
+                "q95_adjusted_rand": 1.0
+              }
+            }
+          }
+        },
+        "4": {
+          "left_right_pairing": {
+            "cluster_adjusted_mutual_information": {
+              "null_mean": 0.4700709509032225,
+              "null_standard_deviation": 0.054198222841014186,
+              "observed": 0.6715744537435993,
+              "upper_tail_p_value": 0.002,
+              "z_score": 3.7178987110236053
+            },
+            "neighbor_overlap": {
+              "null_mean": 0.22649465597862387,
+              "null_standard_deviation": 0.03465692514303468,
+              "observed": 0.5138888888888888,
+              "upper_tail_p_value": 0.002,
+              "z_score": 8.292548508678799
+            },
+            "pairwise_distance_spearman": {
+              "null_mean": 0.4498471934420997,
+              "null_standard_deviation": 0.02888008796569739,
+              "observed": 0.6190028134510551,
+              "upper_tail_p_value": 0.002,
+              "z_score": 5.857171218102648
+            }
+          },
+          "sides": {
+            "left": {
+              "assignments": [
+                {
+                  "cluster": 1,
+                  "head": 0,
+                  "layer": 0
+                },
+                {
+                  "cluster": 6,
+                  "head": 1,
+                  "layer": 0
+                },
+                {
+                  "cluster": 4,
+                  "head": 2,
+                  "layer": 0
+                },
+                {
+                  "cluster": 4,
+                  "head": 3,
+                  "layer": 0
+                },
+                {
+                  "cluster": 1,
+                  "head": 4,
+                  "layer": 0
+                },
+                {
+                  "cluster": 7,
+                  "head": 5,
+                  "layer": 0
+                },
+                {
+                  "cluster": 1,
+                  "head": 6,
+                  "layer": 0
+                },
+                {
+                  "cluster": 8,
+                  "head": 7,
+                  "layer": 0
+                },
+                {
+                  "cluster": 0,
+                  "head": 0,
+                  "layer": 1
+                },
+                {
+                  "cluster": 2,
+                  "head": 1,
+                  "layer": 1
+                },
+                {
+                  "cluster": 2,
+                  "head": 2,
+                  "layer": 1
+                },
+                {
+                  "cluster": 5,
+                  "head": 3,
+                  "layer": 1
+                },
+                {
+                  "cluster": 3,
+                  "head": 4,
+                  "layer": 1
+                },
+                {
+                  "cluster": 3,
+                  "head": 5,
+                  "layer": 1
+                },
+                {
+                  "cluster": 3,
+                  "head": 6,
+                  "layer": 1
+                },
+                {
+                  "cluster": 2,
+                  "head": 7,
+                  "layer": 1
+                },
+                {
+                  "cluster": 5,
+                  "head": 0,
+                  "layer": 2
+                },
+                {
+                  "cluster": 5,
+                  "head": 1,
+                  "layer": 2
+                },
+                {
+                  "cluster": 3,
+                  "head": 2,
+                  "layer": 2
+                },
+                {
+                  "cluster": 5,
+                  "head": 3,
+                  "layer": 2
+                },
+                {
+                  "cluster": 5,
+                  "head": 4,
+                  "layer": 2
+                },
+                {
+                  "cluster": 3,
+                  "head": 5,
+                  "layer": 2
+                },
+                {
+                  "cluster": 0,
+                  "head": 6,
+                  "layer": 2
+                },
+                {
+                  "cluster": 5,
+                  "head": 7,
+                  "layer": 2
+                },
+                {
+                  "cluster": 5,
+                  "head": 0,
+                  "layer": 3
+                },
+                {
+                  "cluster": 5,
+                  "head": 1,
+                  "layer": 3
+                },
+                {
+                  "cluster": 5,
+                  "head": 2,
+                  "layer": 3
+                },
+                {
+                  "cluster": 5,
+                  "head": 3,
+                  "layer": 3
+                },
+                {
+                  "cluster": 5,
+                  "head": 4,
+                  "layer": 3
+                },
+                {
+                  "cluster": 5,
+                  "head": 5,
+                  "layer": 3
+                },
+                {
+                  "cluster": 5,
+                  "head": 6,
+                  "layer": 3
+                },
+                {
+                  "cluster": 5,
+                  "head": 7,
+                  "layer": 3
+                },
+                {
+                  "cluster": 5,
+                  "head": 0,
+                  "layer": 4
+                },
+                {
+                  "cluster": 5,
+                  "head": 1,
+                  "layer": 4
+                },
+                {
+                  "cluster": 5,
+                  "head": 2,
+                  "layer": 4
+                },
+                {
+                  "cluster": 5,
+                  "head": 3,
+                  "layer": 4
+                },
+                {
+                  "cluster": 5,
+                  "head": 4,
+                  "layer": 4
+                },
+                {
+                  "cluster": 5,
+                  "head": 5,
+                  "layer": 4
+                },
+                {
+                  "cluster": 5,
+                  "head": 6,
+                  "layer": 4
+                },
+                {
+                  "cluster": 5,
+                  "head": 7,
+                  "layer": 4
+                },
+                {
+                  "cluster": 5,
+                  "head": 0,
+                  "layer": 5
+                },
+                {
+                  "cluster": 5,
+                  "head": 1,
+                  "layer": 5
+                },
+                {
+                  "cluster": 5,
+                  "head": 2,
+                  "layer": 5
+                },
+                {
+                  "cluster": 5,
+                  "head": 3,
+                  "layer": 5
+                },
+                {
+                  "cluster": 5,
+                  "head": 4,
+                  "layer": 5
+                },
+                {
+                  "cluster": 5,
+                  "head": 5,
+                  "layer": 5
+                },
+                {
+                  "cluster": 5,
+                  "head": 6,
+                  "layer": 5
+                },
+                {
+                  "cluster": 5,
+                  "head": 7,
+                  "layer": 5
+                }
+              ],
+              "best_silhouette": {
+                "null_mean": 0.0009223552867720969,
+                "null_standard_deviation": 0.00011267255411587811,
+                "observed": 0.00948437351974925,
+                "upper_tail_p_value": 0.02,
+                "z_score": 75.99027376419943
+              },
+              "cluster_sizes": [
+                1,
+                1,
+                1,
+                2,
+                2,
+                3,
+                3,
+                5,
+                30
+              ],
+              "late_checkpoint_stability": {
+                "cluster_adjusted_rand": {
+                  "null_mean": 0.5519029034773888,
+                  "null_standard_deviation": 0.03250559208153495,
+                  "observed": 0.6484769228381043,
+                  "upper_tail_p_value": 0.006,
+                  "z_score": 2.9709970862390516
+                },
+                "cross_layer_neighbor_overlap": {
+                  "null_mean": 0.16069639278557113,
+                  "null_standard_deviation": 0.022914706350745634,
+                  "observed": 0.44791666666666663,
+                  "upper_tail_p_value": 0.002,
+                  "z_score": 12.534320513854173
+                },
+                "neighbor_overlap": {
+                  "null_mean": 0.2192579603651748,
+                  "null_standard_deviation": 0.02382126016327971,
+                  "observed": 0.5694444444444444,
+                  "upper_tail_p_value": 0.002,
+                  "z_score": 14.700586017656589
+                }
+              },
+              "layer_mixing": {
+                "size_weighted_normalized_layer_entropy": 0.567801840665301,
+                "within_cluster_cross_layer_pair_fraction": 0.7682119205298014
+              },
+              "recurrent_cross_layer_edges": [
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9096444249153137,
+                  "first_head": 3,
+                  "first_layer": 4,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 6,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9108718037605286,
+                  "first_head": 6,
+                  "first_layer": 4,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 4,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9329729676246643,
+                  "first_head": 4,
+                  "first_layer": 4,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 4,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9381314516067505,
+                  "first_head": 5,
+                  "first_layer": 4,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 1,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9395021796226501,
+                  "first_head": 2,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 1,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9411182403564453,
+                  "first_head": 3,
+                  "first_layer": 4,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 1,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9445551633834839,
+                  "first_head": 5,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9449602961540222,
+                  "first_head": 5,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 6,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9510128498077393,
+                  "first_head": 2,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 5,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9541478157043457,
+                  "first_head": 0,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 1,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9594323039054871,
+                  "first_head": 7,
+                  "first_layer": 4,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 4,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9605937004089355,
+                  "first_head": 3,
+                  "first_layer": 1,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 2
+                }
+              ],
+              "selected_cluster_count": 9,
+              "singleton_count": 3,
+              "subsampled_cluster_stability": {
+                "mean_adjusted_rand": 0.7438688509960931,
+                "median_adjusted_rand": 0.7589480506529487,
+                "q05_adjusted_rand": 0.49151655738789357,
+                "q95_adjusted_rand": 0.9972279957775976
+              }
+            },
+            "right": {
+              "assignments": [
+                {
+                  "cluster": 1,
+                  "head": 0,
+                  "layer": 0
+                },
+                {
+                  "cluster": 1,
+                  "head": 1,
+                  "layer": 0
+                },
+                {
+                  "cluster": 0,
+                  "head": 2,
+                  "layer": 0
+                },
+                {
+                  "cluster": 0,
+                  "head": 3,
+                  "layer": 0
+                },
+                {
+                  "cluster": 1,
+                  "head": 4,
+                  "layer": 0
+                },
+                {
+                  "cluster": 4,
+                  "head": 5,
+                  "layer": 0
+                },
+                {
+                  "cluster": 1,
+                  "head": 6,
+                  "layer": 0
+                },
+                {
+                  "cluster": 2,
+                  "head": 7,
+                  "layer": 0
+                },
+                {
+                  "cluster": 2,
+                  "head": 0,
+                  "layer": 1
+                },
+                {
+                  "cluster": 0,
+                  "head": 1,
+                  "layer": 1
+                },
+                {
+                  "cluster": 3,
+                  "head": 2,
+                  "layer": 1
+                },
+                {
+                  "cluster": 6,
+                  "head": 3,
+                  "layer": 1
+                },
+                {
+                  "cluster": 6,
+                  "head": 4,
+                  "layer": 1
+                },
+                {
+                  "cluster": 5,
+                  "head": 5,
+                  "layer": 1
+                },
+                {
+                  "cluster": 4,
+                  "head": 6,
+                  "layer": 1
+                },
+                {
+                  "cluster": 6,
+                  "head": 7,
+                  "layer": 1
+                },
+                {
+                  "cluster": 6,
+                  "head": 0,
+                  "layer": 2
+                },
+                {
+                  "cluster": 6,
+                  "head": 1,
+                  "layer": 2
+                },
+                {
+                  "cluster": 6,
+                  "head": 2,
+                  "layer": 2
+                },
+                {
+                  "cluster": 6,
+                  "head": 3,
+                  "layer": 2
+                },
+                {
+                  "cluster": 6,
+                  "head": 4,
+                  "layer": 2
+                },
+                {
+                  "cluster": 6,
+                  "head": 5,
+                  "layer": 2
+                },
+                {
+                  "cluster": 2,
+                  "head": 6,
+                  "layer": 2
+                },
+                {
+                  "cluster": 6,
+                  "head": 7,
+                  "layer": 2
+                },
+                {
+                  "cluster": 6,
+                  "head": 0,
+                  "layer": 3
+                },
+                {
+                  "cluster": 6,
+                  "head": 1,
+                  "layer": 3
+                },
+                {
+                  "cluster": 6,
+                  "head": 2,
+                  "layer": 3
+                },
+                {
+                  "cluster": 6,
+                  "head": 3,
+                  "layer": 3
+                },
+                {
+                  "cluster": 6,
+                  "head": 4,
+                  "layer": 3
+                },
+                {
+                  "cluster": 6,
+                  "head": 5,
+                  "layer": 3
+                },
+                {
+                  "cluster": 6,
+                  "head": 6,
+                  "layer": 3
+                },
+                {
+                  "cluster": 6,
+                  "head": 7,
+                  "layer": 3
+                },
+                {
+                  "cluster": 6,
+                  "head": 0,
+                  "layer": 4
+                },
+                {
+                  "cluster": 6,
+                  "head": 1,
+                  "layer": 4
+                },
+                {
+                  "cluster": 6,
+                  "head": 2,
+                  "layer": 4
+                },
+                {
+                  "cluster": 6,
+                  "head": 3,
+                  "layer": 4
+                },
+                {
+                  "cluster": 6,
+                  "head": 4,
+                  "layer": 4
+                },
+                {
+                  "cluster": 6,
+                  "head": 5,
+                  "layer": 4
+                },
+                {
+                  "cluster": 6,
+                  "head": 6,
+                  "layer": 4
+                },
+                {
+                  "cluster": 6,
+                  "head": 7,
+                  "layer": 4
+                },
+                {
+                  "cluster": 6,
+                  "head": 0,
+                  "layer": 5
+                },
+                {
+                  "cluster": 6,
+                  "head": 1,
+                  "layer": 5
+                },
+                {
+                  "cluster": 6,
+                  "head": 2,
+                  "layer": 5
+                },
+                {
+                  "cluster": 6,
+                  "head": 3,
+                  "layer": 5
+                },
+                {
+                  "cluster": 6,
+                  "head": 4,
+                  "layer": 5
+                },
+                {
+                  "cluster": 6,
+                  "head": 5,
+                  "layer": 5
+                },
+                {
+                  "cluster": 6,
+                  "head": 6,
+                  "layer": 5
+                },
+                {
+                  "cluster": 6,
+                  "head": 7,
+                  "layer": 5
+                }
+              ],
+              "best_silhouette": {
+                "null_mean": 0.0009223552867720969,
+                "null_standard_deviation": 0.00011267255411587811,
+                "observed": 0.008559379465959407,
+                "upper_tail_p_value": 0.02,
+                "z_score": 67.78069636491075
+              },
+              "cluster_sizes": [
+                1,
+                1,
+                2,
+                3,
+                3,
+                4,
+                34
+              ],
+              "late_checkpoint_stability": {
+                "cluster_adjusted_rand": {
+                  "null_mean": 0.6503086531738913,
+                  "null_standard_deviation": 0.05016967549257017,
+                  "observed": 0.7963730108178373,
+                  "upper_tail_p_value": 0.002,
+                  "z_score": 2.911407263648282
+                },
+                "cross_layer_neighbor_overlap": {
+                  "null_mean": 0.135750668002672,
+                  "null_standard_deviation": 0.0239331049491202,
+                  "observed": 0.3819444444444444,
+                  "upper_tail_p_value": 0.002,
+                  "z_score": 10.286746202181456
+                },
+                "neighbor_overlap": {
+                  "null_mean": 0.22368347806724562,
+                  "null_standard_deviation": 0.024932966465815984,
+                  "observed": 0.5520833333333333,
+                  "upper_tail_p_value": 0.002,
+                  "z_score": 13.171310991667836
+                }
+              },
+              "layer_mixing": {
+                "size_weighted_normalized_layer_entropy": 0.6937329815089021,
+                "within_cluster_cross_layer_pair_fraction": 0.7996515679442509
+              },
+              "recurrent_cross_layer_edges": [
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9338356852531433,
+                  "first_head": 2,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 5,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.947205662727356,
+                  "first_head": 2,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 1,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9502365589141846,
+                  "first_head": 3,
+                  "first_layer": 1,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 2
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.952580988407135,
+                  "first_head": 4,
+                  "first_layer": 4,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 2,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9542514085769653,
+                  "first_head": 5,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9593512415885925,
+                  "first_head": 4,
+                  "first_layer": 4,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 0,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.960233211517334,
+                  "first_head": 0,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 1,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9614960551261902,
+                  "first_head": 5,
+                  "first_layer": 4,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 3,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9618071913719177,
+                  "first_head": 4,
+                  "first_layer": 4,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 4,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9621620774269104,
+                  "first_head": 0,
+                  "first_layer": 2,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 4,
+                  "second_layer": 3
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9641103744506836,
+                  "first_head": 0,
+                  "first_layer": 2,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 3
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.964990496635437,
+                  "first_head": 4,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 0,
+                  "second_layer": 5
+                }
+              ],
+              "selected_cluster_count": 7,
+              "singleton_count": 2,
+              "subsampled_cluster_stability": {
+                "mean_adjusted_rand": 0.9749296161529721,
+                "median_adjusted_rand": 0.9891474106211287,
+                "q05_adjusted_rand": 0.9104750885445957,
+                "q95_adjusted_rand": 1.0
+              }
+            }
+          }
+        },
+        "8": {
+          "left_right_pairing": {
+            "cluster_adjusted_mutual_information": {
+              "null_mean": 0.4521186521833121,
+              "null_standard_deviation": 0.04294463131670086,
+              "observed": 0.6617556480067831,
+              "upper_tail_p_value": 0.002,
+              "z_score": 4.881564689133673
+            },
+            "neighbor_overlap": {
+              "null_mean": 0.2569166109997773,
+              "null_standard_deviation": 0.0400101095884362,
+              "observed": 0.6805555555555557,
+              "upper_tail_p_value": 0.002,
+              "z_score": 10.588297530637591
+            },
+            "pairwise_distance_spearman": {
+              "null_mean": 0.5014439701579585,
+              "null_standard_deviation": 0.036455100974722716,
+              "observed": 0.7505555646085786,
+              "upper_tail_p_value": 0.002,
+              "z_score": 6.833381002657199
+            }
+          },
+          "sides": {
+            "left": {
+              "assignments": [
+                {
+                  "cluster": 3,
+                  "head": 0,
+                  "layer": 0
+                },
+                {
+                  "cluster": 7,
+                  "head": 1,
+                  "layer": 0
+                },
+                {
+                  "cluster": 8,
+                  "head": 2,
+                  "layer": 0
+                },
+                {
+                  "cluster": 8,
+                  "head": 3,
+                  "layer": 0
+                },
+                {
+                  "cluster": 9,
+                  "head": 4,
+                  "layer": 0
+                },
+                {
+                  "cluster": 6,
+                  "head": 5,
+                  "layer": 0
+                },
+                {
+                  "cluster": 3,
+                  "head": 6,
+                  "layer": 0
+                },
+                {
+                  "cluster": 4,
+                  "head": 7,
+                  "layer": 0
+                },
+                {
+                  "cluster": 2,
+                  "head": 0,
+                  "layer": 1
+                },
+                {
+                  "cluster": 5,
+                  "head": 1,
+                  "layer": 1
+                },
+                {
+                  "cluster": 5,
+                  "head": 2,
+                  "layer": 1
+                },
+                {
+                  "cluster": 0,
+                  "head": 3,
+                  "layer": 1
+                },
+                {
+                  "cluster": 0,
+                  "head": 4,
+                  "layer": 1
+                },
+                {
+                  "cluster": 0,
+                  "head": 5,
+                  "layer": 1
+                },
+                {
+                  "cluster": 0,
+                  "head": 6,
+                  "layer": 1
+                },
+                {
+                  "cluster": 0,
+                  "head": 7,
+                  "layer": 1
+                },
+                {
+                  "cluster": 0,
+                  "head": 0,
+                  "layer": 2
+                },
+                {
+                  "cluster": 0,
+                  "head": 1,
+                  "layer": 2
+                },
+                {
+                  "cluster": 0,
+                  "head": 2,
+                  "layer": 2
+                },
+                {
+                  "cluster": 0,
+                  "head": 3,
+                  "layer": 2
+                },
+                {
+                  "cluster": 0,
+                  "head": 4,
+                  "layer": 2
+                },
+                {
+                  "cluster": 0,
+                  "head": 5,
+                  "layer": 2
+                },
+                {
+                  "cluster": 2,
+                  "head": 6,
+                  "layer": 2
+                },
+                {
+                  "cluster": 0,
+                  "head": 7,
+                  "layer": 2
+                },
+                {
+                  "cluster": 0,
+                  "head": 0,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 1,
+                  "layer": 3
+                },
+                {
+                  "cluster": 0,
+                  "head": 2,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 3,
+                  "layer": 3
+                },
+                {
+                  "cluster": 0,
+                  "head": 4,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 5,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 6,
+                  "layer": 3
+                },
+                {
+                  "cluster": 0,
+                  "head": 7,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 0,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 1,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 2,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 3,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 4,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 5,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 6,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 7,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 0,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 1,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 2,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 3,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 4,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 5,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 6,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 7,
+                  "layer": 5
+                }
+              ],
+              "best_silhouette": {
+                "null_mean": 0.0007887275454519785,
+                "null_standard_deviation": 9.486743820036366e-05,
+                "observed": 0.01899283590478715,
+                "upper_tail_p_value": 0.02,
+                "z_score": 191.88995407346616
+              },
+              "cluster_sizes": [
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                2,
+                2,
+                16,
+                20
+              ],
+              "late_checkpoint_stability": {
+                "cluster_adjusted_rand": {
+                  "null_mean": 0.3082636037798431,
+                  "null_standard_deviation": 0.024826177859503203,
+                  "observed": 0.3805987870218821,
+                  "upper_tail_p_value": 0.008,
+                  "z_score": 2.9136657141264246
+                },
+                "cross_layer_neighbor_overlap": {
+                  "null_mean": 0.18199593631707858,
+                  "null_standard_deviation": 0.021433053658078544,
+                  "observed": 0.48263888888888884,
+                  "upper_tail_p_value": 0.002,
+                  "z_score": 14.027070401071477
+                },
+                "neighbor_overlap": {
+                  "null_mean": 0.2547247272322422,
+                  "null_standard_deviation": 0.026185225611483592,
+                  "observed": 0.6631944444444444,
+                  "upper_tail_p_value": 0.002,
+                  "z_score": 15.599243759544574
+                }
+              },
+              "layer_mixing": {
+                "size_weighted_normalized_layer_entropy": 0.4608177500395377,
+                "within_cluster_cross_layer_pair_fraction": 0.6751592356687898
+              },
+              "recurrent_cross_layer_edges": [
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9171061515808105,
+                  "first_head": 3,
+                  "first_layer": 4,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 6,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9306283593177795,
+                  "first_head": 6,
+                  "first_layer": 4,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 4,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9355968832969666,
+                  "first_head": 0,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 3,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9365296959877014,
+                  "first_head": 5,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9398767948150635,
+                  "first_head": 5,
+                  "first_layer": 4,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 1,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.941730797290802,
+                  "first_head": 0,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 1,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9421624541282654,
+                  "first_head": 2,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 5,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9421965479850769,
+                  "first_head": 4,
+                  "first_layer": 4,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 4,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9443626403808594,
+                  "first_head": 3,
+                  "first_layer": 4,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 1,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9459595680236816,
+                  "first_head": 5,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 6,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.959510862827301,
+                  "first_head": 0,
+                  "first_layer": 2,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 3
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9602862596511841,
+                  "first_head": 0,
+                  "first_layer": 2,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 4,
+                  "second_layer": 3
+                }
+              ],
+              "selected_cluster_count": 10,
+              "singleton_count": 4,
+              "subsampled_cluster_stability": {
+                "mean_adjusted_rand": 0.6482460669779226,
+                "median_adjusted_rand": 0.6294882247083169,
+                "q05_adjusted_rand": 0.3786934926924327,
+                "q95_adjusted_rand": 0.9523766213052393
+              }
+            },
+            "right": {
+              "assignments": [
+                {
+                  "cluster": 3,
+                  "head": 0,
+                  "layer": 0
+                },
+                {
+                  "cluster": 8,
+                  "head": 1,
+                  "layer": 0
+                },
+                {
+                  "cluster": 6,
+                  "head": 2,
+                  "layer": 0
+                },
+                {
+                  "cluster": 6,
+                  "head": 3,
+                  "layer": 0
+                },
+                {
+                  "cluster": 3,
+                  "head": 4,
+                  "layer": 0
+                },
+                {
+                  "cluster": 4,
+                  "head": 5,
+                  "layer": 0
+                },
+                {
+                  "cluster": 3,
+                  "head": 6,
+                  "layer": 0
+                },
+                {
+                  "cluster": 5,
+                  "head": 7,
+                  "layer": 0
+                },
+                {
+                  "cluster": 2,
+                  "head": 0,
+                  "layer": 1
+                },
+                {
+                  "cluster": 0,
+                  "head": 1,
+                  "layer": 1
+                },
+                {
+                  "cluster": 7,
+                  "head": 2,
+                  "layer": 1
+                },
+                {
+                  "cluster": 1,
+                  "head": 3,
+                  "layer": 1
+                },
+                {
+                  "cluster": 1,
+                  "head": 4,
+                  "layer": 1
+                },
+                {
+                  "cluster": 0,
+                  "head": 5,
+                  "layer": 1
+                },
+                {
+                  "cluster": 1,
+                  "head": 6,
+                  "layer": 1
+                },
+                {
+                  "cluster": 1,
+                  "head": 7,
+                  "layer": 1
+                },
+                {
+                  "cluster": 1,
+                  "head": 0,
+                  "layer": 2
+                },
+                {
+                  "cluster": 1,
+                  "head": 1,
+                  "layer": 2
+                },
+                {
+                  "cluster": 1,
+                  "head": 2,
+                  "layer": 2
+                },
+                {
+                  "cluster": 1,
+                  "head": 3,
+                  "layer": 2
+                },
+                {
+                  "cluster": 1,
+                  "head": 4,
+                  "layer": 2
+                },
+                {
+                  "cluster": 1,
+                  "head": 5,
+                  "layer": 2
+                },
+                {
+                  "cluster": 2,
+                  "head": 6,
+                  "layer": 2
+                },
+                {
+                  "cluster": 1,
+                  "head": 7,
+                  "layer": 2
+                },
+                {
+                  "cluster": 1,
+                  "head": 0,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 1,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 2,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 3,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 4,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 5,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 6,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 7,
+                  "layer": 3
+                },
+                {
+                  "cluster": 1,
+                  "head": 0,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 1,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 2,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 3,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 4,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 5,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 6,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 7,
+                  "layer": 4
+                },
+                {
+                  "cluster": 1,
+                  "head": 0,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 1,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 2,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 3,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 4,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 5,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 6,
+                  "layer": 5
+                },
+                {
+                  "cluster": 1,
+                  "head": 7,
+                  "layer": 5
+                }
+              ],
+              "best_silhouette": {
+                "null_mean": 0.0007887275454519785,
+                "null_standard_deviation": 9.486743820036366e-05,
+                "observed": 0.013932399178252673,
+                "upper_tail_p_value": 0.02,
+                "z_score": 138.5477660421351
+              },
+              "cluster_sizes": [
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                2,
+                3,
+                35
+              ],
+              "late_checkpoint_stability": {
+                "cluster_adjusted_rand": {
+                  "null_mean": 0.5839682357240348,
+                  "null_standard_deviation": 0.042295695628604316,
+                  "observed": 0.6840885347115998,
+                  "upper_tail_p_value": 0.01,
+                  "z_score": 2.367151018550793
+                },
+                "cross_layer_neighbor_overlap": {
+                  "null_mean": 0.15703629481184592,
+                  "null_standard_deviation": 0.025534170646279282,
+                  "observed": 0.4652777777777777,
+                  "upper_tail_p_value": 0.002,
+                  "z_score": 12.071724875499227
+                },
+                "neighbor_overlap": {
+                  "null_mean": 0.2606810843910042,
+                  "null_standard_deviation": 0.025154609395168066,
+                  "observed": 0.6111111111111112,
+                  "upper_tail_p_value": 0.002,
+                  "z_score": 13.931046243453928
+                }
+              },
+              "layer_mixing": {
+                "size_weighted_normalized_layer_entropy": 0.6598533917789705,
+                "within_cluster_cross_layer_pair_fraction": 0.8069883527454242
+              },
+              "recurrent_cross_layer_edges": [
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9289766550064087,
+                  "first_head": 0,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 1,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.93361896276474,
+                  "first_head": 5,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9411550760269165,
+                  "first_head": 2,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 5,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9422455430030823,
+                  "first_head": 0,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 3,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9554641842842102,
+                  "first_head": 0,
+                  "first_layer": 2,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 4,
+                  "second_layer": 3
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.956173837184906,
+                  "first_head": 2,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 1,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9573994278907776,
+                  "first_head": 3,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 4
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.957817554473877,
+                  "first_head": 4,
+                  "first_layer": 4,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 2,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9596415758132935,
+                  "first_head": 5,
+                  "first_layer": 4,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 1,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9612797498703003,
+                  "first_head": 4,
+                  "first_layer": 4,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 0,
+                  "second_layer": 5
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.961422860622406,
+                  "first_head": 3,
+                  "first_layer": 1,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 2
+                },
+                {
+                  "checkpoint_recurrence_fraction": 1.0,
+                  "final_distance": 0.9633015990257263,
+                  "first_head": 4,
+                  "first_layer": 3,
+                  "mutual_at_final_checkpoint": 1,
+                  "second_head": 7,
+                  "second_layer": 5
+                }
+              ],
+              "selected_cluster_count": 9,
+              "singleton_count": 4,
+              "subsampled_cluster_stability": {
+                "mean_adjusted_rand": 0.8349261724806928,
+                "median_adjusted_rand": 0.9214821518876787,
+                "q05_adjusted_rand": 0.46949501306999875,
+                "q95_adjusted_rand": 1.0
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

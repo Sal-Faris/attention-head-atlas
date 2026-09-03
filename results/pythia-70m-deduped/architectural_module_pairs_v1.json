@@ -1,0 +1,2812 @@
+{
+  "status": "target-independent architectural module-pair pilot",
+  "model": "EleutherAI/pythia-70m-deduped",
+  "revision": "step143000",
+  "operator_kind": "OV",
+  "discovery": "weights only; target matrices do not define module boundaries",
+  "target_layers": [
+    2,
+    3
+  ],
+  "basis_dimension": 128,
+  "module_definition": "cluster residual axes by normalized diagonal usage profiles across individual earlier OV-writer or later Q/K/V-reader covariance anchors",
+  "compartment_statistic": "fraction of projected OV energy in the strongest k of k-squared externally defined read-module/write-module pairs",
+  "selection_control": "choose k by maximum population advantage and compare with the centered maximum over the same resolutions in every null repetition",
+  "nulls": {
+    "spectrum_rotation": "independent orientations preserving projected singular values",
+    "matched_partition_shuffle": "permute read and write module memberships while preserving every group size"
+  },
+  "anchor_splits": [
+    {
+      "anchor_head_parity": 0,
+      "target_head_count": 16,
+      "layer_modules": {
+        "2": {
+          "read_anchor_count": 8,
+          "write_anchor_count": 36,
+          "partitions": {
+            "2": {
+              "read_sizes": [
+                105,
+                23
+              ],
+              "write_sizes": [
+                48,
+                80
+              ]
+            },
+            "3": {
+              "read_sizes": [
+                19,
+                105,
+                4
+              ],
+              "write_sizes": [
+                79,
+                9,
+                40
+              ]
+            },
+            "4": {
+              "read_sizes": [
+                35,
+                73,
+                4,
+                16
+              ],
+              "write_sizes": [
+                19,
+                72,
+                6,
+                31
+              ]
+            },
+            "6": {
+              "read_sizes": [
+                12,
+                21,
+                43,
+                1,
+                6,
+                45
+              ],
+              "write_sizes": [
+                4,
+                3,
+                67,
+                34,
+                18,
+                2
+              ]
+            },
+            "8": {
+              "read_sizes": [
+                24,
+                10,
+                42,
+                6,
+                1,
+                5,
+                17,
+                23
+              ],
+              "write_sizes": [
+                27,
+                23,
+                4,
+                2,
+                16,
+                53,
+                2,
+                1
+              ]
+            }
+          }
+        },
+        "3": {
+          "read_anchor_count": 12,
+          "write_anchor_count": 24,
+          "partitions": {
+            "2": {
+              "read_sizes": [
+                30,
+                98
+              ],
+              "write_sizes": [
+                91,
+                37
+              ]
+            },
+            "3": {
+              "read_sizes": [
+                90,
+                32,
+                6
+              ],
+              "write_sizes": [
+                90,
+                32,
+                6
+              ]
+            },
+            "4": {
+              "read_sizes": [
+                90,
+                5,
+                32,
+                1
+              ],
+              "write_sizes": [
+                90,
+                31,
+                5,
+                2
+              ]
+            },
+            "6": {
+              "read_sizes": [
+                35,
+                21,
+                1,
+                63,
+                7,
+                1
+              ],
+              "write_sizes": [
+                89,
+                16,
+                16,
+                2,
+                2,
+                3
+              ]
+            },
+            "8": {
+              "read_sizes": [
+                25,
+                4,
+                52,
+                4,
+                22,
+                1,
+                2,
+                18
+              ],
+              "write_sizes": [
+                73,
+                7,
+                2,
+                17,
+                2,
+                12,
+                1,
+                14
+              ]
+            }
+          }
+        }
+      },
+      "resolutions": [
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "mean_projection_energy_fraction": 0.08174570608684767,
+      "mean_energy_fraction_of_projection_by_resolution": [
+        0.8094894063069349,
+        0.7747779669097808,
+        0.6818561833801771,
+        0.6189403257602337,
+        0.521537929279772
+      ],
+      "mean_selected_area_fraction_by_resolution": [
+        0.64794921875,
+        0.6681060791015625,
+        0.5639610290527344,
+        0.5331497192382812,
+        0.4324798583984375
+      ],
+      "mean_energy_enrichment_by_resolution": [
+        1.5243276888484931,
+        3.2461234203023466,
+        3.6918483935734003,
+        5.712320089161803,
+        5.613839806566103
+      ],
+      "mean_effective_pair_count_by_resolution": [
+        3.1305864811757362,
+        5.121067414784281,
+        8.836129345813267,
+        16.908370377639855,
+        31.578893222171
+      ],
+      "spectrum_rotation_test": {
+        "observed_population_by_resolution": [
+          0.8094894063069349,
+          0.7747779669097808,
+          0.6818561833801771,
+          0.6189403257602337,
+          0.521537929279772
+        ],
+        "null_population_mean_by_resolution": [
+          0.7933288186791022,
+          0.8508465610148213,
+          0.800228345705244,
+          0.7468359506793391,
+          0.6212814720166152
+        ],
+        "advantage_by_resolution": [
+          0.01616058762783268,
+          -0.07606859410504041,
+          -0.11837216232506698,
+          -0.12789562491910533,
+          -0.09974354273684316
+        ],
+        "selected_resolution": 2,
+        "selected_index": 0,
+        "selection_corrected_p_value": 0.01,
+        "observed_selected_advantage": 0.01616058762783268
+      },
+      "matched_partition_shuffle_test": {
+        "observed_population_by_resolution": [
+          0.8094894063069349,
+          0.7747779669097808,
+          0.6818561833801771,
+          0.6189403257602337,
+          0.521537929279772
+        ],
+        "null_population_mean_by_resolution": [
+          0.8059255336739709,
+          0.8588951771829383,
+          0.8110010945350901,
+          0.7694752766573896,
+          0.6555993994720449
+        ],
+        "advantage_by_resolution": [
+          0.0035638726329639825,
+          -0.08411721027315744,
+          -0.129144911154913,
+          -0.15053495089715585,
+          -0.13406147019227288
+        ],
+        "selected_resolution": 2,
+        "selected_index": 0,
+        "selection_corrected_p_value": 0.86,
+        "observed_selected_advantage": 0.0035638726329639825
+      },
+      "layer_and_resolution_corrected_spectrum_test": {
+        "configurations": [
+          {
+            "layer": 2,
+            "resolution": 2
+          },
+          {
+            "layer": 2,
+            "resolution": 3
+          },
+          {
+            "layer": 2,
+            "resolution": 4
+          },
+          {
+            "layer": 2,
+            "resolution": 6
+          },
+          {
+            "layer": 2,
+            "resolution": 8
+          },
+          {
+            "layer": 3,
+            "resolution": 2
+          },
+          {
+            "layer": 3,
+            "resolution": 3
+          },
+          {
+            "layer": 3,
+            "resolution": 4
+          },
+          {
+            "layer": 3,
+            "resolution": 6
+          },
+          {
+            "layer": 3,
+            "resolution": 8
+          }
+        ],
+        "observed_concentration": [
+          0.7958114942250414,
+          0.7807277245661305,
+          0.6036463915248879,
+          0.5599090056252789,
+          0.4351997690704038,
+          0.8231673183888285,
+          0.7688282092534313,
+          0.7600659752354662,
+          0.6779716458951885,
+          0.6078760894891403
+        ],
+        "null_mean_concentration": [
+          0.8198479217228573,
+          0.8547646729792121,
+          0.6985021040779008,
+          0.6818846682622711,
+          0.5547089350858174,
+          0.7668097156353464,
+          0.84692844905043,
+          0.9019545873325873,
+          0.8117872330964069,
+          0.6878540089474132
+        ],
+        "advantage": [
+          -0.02403642749781587,
+          -0.07403694841308162,
+          -0.09485571255301295,
+          -0.12197566263699222,
+          -0.11950916601541361,
+          0.05635760275348212,
+          -0.07810023979699865,
+          -0.14188861209712111,
+          -0.13381558720121833,
+          -0.07997791945827293
+        ],
+        "selected": {
+          "layer": 3,
+          "resolution": 2
+        },
+        "selected_advantage": 0.05635760275348212,
+        "selection_corrected_p_value": 0.01
+      },
+      "layer_and_resolution_corrected_partition_test": {
+        "configurations": [
+          {
+            "layer": 2,
+            "resolution": 2
+          },
+          {
+            "layer": 2,
+            "resolution": 3
+          },
+          {
+            "layer": 2,
+            "resolution": 4
+          },
+          {
+            "layer": 2,
+            "resolution": 6
+          },
+          {
+            "layer": 2,
+            "resolution": 8
+          },
+          {
+            "layer": 3,
+            "resolution": 2
+          },
+          {
+            "layer": 3,
+            "resolution": 3
+          },
+          {
+            "layer": 3,
+            "resolution": 4
+          },
+          {
+            "layer": 3,
+            "resolution": 6
+          },
+          {
+            "layer": 3,
+            "resolution": 8
+          }
+        ],
+        "observed_concentration": [
+          0.7958114942250414,
+          0.7807277245661305,
+          0.6036463915248879,
+          0.5599090056252789,
+          0.4351997690704038,
+          0.8231673183888285,
+          0.7688282092534313,
+          0.7600659752354662,
+          0.6779716458951885,
+          0.6078760894891403
+        ],
+        "null_mean_concentration": [
+          0.8205497949818034,
+          0.859823762285701,
+          0.7089874584342233,
+          0.6933874023779145,
+          0.571858196520099,
+          0.7913012723661385,
+          0.8579665920801751,
+          0.913014730635956,
+          0.8455631509368645,
+          0.7393406024239908
+        ],
+        "advantage": [
+          -0.024738300756761977,
+          -0.07909603771957052,
+          -0.10534106690933542,
+          -0.13347839675263562,
+          -0.13665842744969514,
+          0.03186604602269005,
+          -0.0891383828267438,
+          -0.1529487554004898,
+          -0.16759150504167597,
+          -0.1314645129348505
+        ],
+        "selected": {
+          "layer": 3,
+          "resolution": 2
+        },
+        "selected_advantage": 0.03186604602269005,
+        "selection_corrected_p_value": 0.11
+      },
+      "primary_selected_resolution": 2,
+      "mean_full_ov_energy_in_selected_pairs": 0.06683252650111975,
+      "fraction_heads_above_rotation_mean_at_selected_resolution": 0.5625,
+      "fraction_heads_above_partition_shuffle_mean_at_selected_resolution": 0.5,
+      "heads": [
+        {
+          "layer": 2,
+          "head": 0,
+          "projection_energy_fraction": 0.11204798085711185,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.778797029835786,
+              "area_fraction": 0.8203125,
+              "energy_enrichment": 0.9493906649426724,
+              "effective_pair_count": 3.381769522217828,
+              "rotation_mean": 0.819607520785801,
+              "partition_shuffle_mean": 0.8213118652835788
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.778797029835786,
+              "area_fraction": 0.8203125,
+              "energy_enrichment": 0.9493906649426724,
+              "effective_pair_count": 5.190234527387942,
+              "rotation_mean": 0.8536234000743685,
+              "partition_shuffle_mean": 0.8568241800294065
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.5890791053488478,
+              "area_fraction": 0.6973876953125,
+              "energy_enrichment": 0.8446938615469562,
+              "effective_pair_count": 11.133331564777404,
+              "rotation_mean": 0.6969723531388027,
+              "partition_shuffle_mean": 0.7011856942865834
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.5460479009062305,
+              "area_fraction": 0.67559814453125,
+              "energy_enrichment": 0.8082436361412666,
+              "effective_pair_count": 19.858162444732546,
+              "rotation_mean": 0.680513309573,
+              "partition_shuffle_mean": 0.6837142402264312
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.4305340281399063,
+              "area_fraction": 0.5516357421875,
+              "energy_enrichment": 0.7804679704629592,
+              "effective_pair_count": 36.88224596021314,
+              "rotation_mean": 0.5523509557520568,
+              "partition_shuffle_mean": 0.5578745392369161
+            }
+          ]
+        },
+        {
+          "layer": 2,
+          "head": 1,
+          "projection_energy_fraction": 0.07460321011602081,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.8392811102006604,
+              "area_fraction": 0.8203125,
+              "energy_enrichment": 1.0231236391017575,
+              "effective_pair_count": 3.1075822681810914,
+              "rotation_mean": 0.8191957838212226,
+              "partition_shuffle_mean": 0.8208032744354787
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.8392811102006607,
+              "area_fraction": 0.8203125,
+              "energy_enrichment": 1.0231236391017577,
+              "effective_pair_count": 4.36685398797863,
+              "rotation_mean": 0.85426060774477,
+              "partition_shuffle_mean": 0.8560161304062588
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.6490134300718088,
+              "area_fraction": 0.6973876953125,
+              "energy_enrichment": 0.9306350462363483,
+              "effective_pair_count": 9.547434626297868,
+              "rotation_mean": 0.6972047374530057,
+              "partition_shuffle_mean": 0.6989473378517548
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.6311228570976705,
+              "area_fraction": 0.67559814453125,
+              "energy_enrichment": 0.9341690207505857,
+              "effective_pair_count": 16.561135298651305,
+              "rotation_mean": 0.6798544239757754,
+              "partition_shuffle_mean": 0.6820065747010963
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.5039395677431531,
+              "area_fraction": 0.54852294921875,
+              "energy_enrichment": 0.9187210279185289,
+              "effective_pair_count": 30.44098831960478,
+              "rotation_mean": 0.5517688756039784,
+              "partition_shuffle_mean": 0.5533602326211544
+            }
+          ]
+        },
+        {
+          "layer": 2,
+          "head": 2,
+          "projection_energy_fraction": 0.11910426516483648,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.7387002192015744,
+              "area_fraction": 0.8203125,
+              "energy_enrichment": 0.9005107434076335,
+              "effective_pair_count": 3.503693536014836,
+              "rotation_mean": 0.8191712742686638,
+              "partition_shuffle_mean": 0.8190535812000762
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.7387002192015745,
+              "area_fraction": 0.8203125,
+              "energy_enrichment": 0.9005107434076336,
+              "effective_pair_count": 6.069203771035529,
+              "rotation_mean": 0.8537246794161683,
+              "partition_shuffle_mean": 0.8600323691521616
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.5117507022828471,
+              "area_fraction": 0.63946533203125,
+              "energy_enrichment": 0.8002790403934492,
+              "effective_pair_count": 12.427162169465115,
+              "rotation_mean": 0.69745663883227,
+              "partition_shuffle_mean": 0.710635376234168
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.47308741784159536,
+              "area_fraction": 0.63623046875,
+              "energy_enrichment": 0.7435786889789618,
+              "effective_pair_count": 22.48517164324004,
+              "rotation_mean": 0.6808986981931953,
+              "partition_shuffle_mean": 0.6909854654477549
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.3670257511590667,
+              "area_fraction": 0.5516357421875,
+              "energy_enrichment": 0.6653407730681732,
+              "effective_pair_count": 43.57033740794685,
+              "rotation_mean": 0.5533234177898946,
+              "partition_shuffle_mean": 0.5757348206947127
+            }
+          ]
+        },
+        {
+          "layer": 2,
+          "head": 3,
+          "projection_energy_fraction": 0.05622429408033579,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.8010925817577538,
+              "area_fraction": 0.8203125,
+              "energy_enrichment": 0.9765700044284998,
+              "effective_pair_count": 3.271528599222797,
+              "rotation_mean": 0.8193210352276167,
+              "partition_shuffle_mean": 0.8203487612816288
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.8010925817577538,
+              "area_fraction": 0.8203125,
+              "energy_enrichment": 0.9765700044284998,
+              "effective_pair_count": 4.834581052049417,
+              "rotation_mean": 0.8541472370534383,
+              "partition_shuffle_mean": 0.8540108266045993
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.6304981181462624,
+              "area_fraction": 0.6973876953125,
+              "energy_enrichment": 0.9040855214168007,
+              "effective_pair_count": 9.950494384098972,
+              "rotation_mean": 0.6969865968144393,
+              "partition_shuffle_mean": 0.6977638584555295
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.6041260511763521,
+              "area_fraction": 0.67559814453125,
+              "energy_enrichment": 0.8942091627494221,
+              "effective_pair_count": 17.51950809810098,
+              "rotation_mean": 0.6803334824579917,
+              "partition_shuffle_mean": 0.6830190729557916
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.4982793912718752,
+              "area_fraction": 0.54443359375,
+              "energy_enrichment": 0.9152252854930946,
+              "effective_pair_count": 33.4974064319982,
+              "rotation_mean": 0.5522239169433877,
+              "partition_shuffle_mean": 0.5565473810925723
+            }
+          ]
+        },
+        {
+          "layer": 2,
+          "head": 4,
+          "projection_energy_fraction": 0.046144274330501965,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.861598317454081,
+              "area_fraction": 0.8203125,
+              "energy_enrichment": 1.0503293774678322,
+              "effective_pair_count": 2.9691691384458623,
+              "rotation_mean": 0.8197561323921462,
+              "partition_shuffle_mean": 0.8193974582248387
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.861598317454081,
+              "area_fraction": 0.8203125,
+              "energy_enrichment": 1.0503293774678322,
+              "effective_pair_count": 4.255946100248093,
+              "rotation_mean": 0.8540872457177083,
+              "partition_shuffle_mean": 0.8546192671957977
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.671483657380485,
+              "area_fraction": 0.6973876953125,
+              "energy_enrichment": 0.9628556137337534,
+              "effective_pair_count": 8.92279902391865,
+              "rotation_mean": 0.6962019876685699,
+              "partition_shuffle_mean": 0.6979778483112024
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.6488365166276816,
+              "area_fraction": 0.67779541015625,
+              "energy_enrichment": 0.9572748751398411,
+              "effective_pair_count": 15.939141848683311,
+              "rotation_mean": 0.6799519771559398,
+              "partition_shuffle_mean": 0.6831915190450243
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.5239155676147416,
+              "area_fraction": 0.54852294921875,
+              "energy_enrichment": 0.9551388293980111,
+              "effective_pair_count": 30.947333018938977,
+              "rotation_mean": 0.5527144646142503,
+              "partition_shuffle_mean": 0.5575405282020679
+            }
+          ]
+        },
+        {
+          "layer": 2,
+          "head": 5,
+          "projection_energy_fraction": 0.08868852863286611,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.7141073225869278,
+              "area_fraction": 0.375,
+              "energy_enrichment": 1.9042861935651407,
+              "effective_pair_count": 3.440641740467309,
+              "rotation_mean": 0.8199882615599783,
+              "partition_shuffle_mean": 0.818143774725668
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.6655188752426877,
+              "area_fraction": 0.8203125,
+              "energy_enrichment": 0.8112992002958479,
+              "effective_pair_count": 6.5848077448336,
+              "rotation_mean": 0.8575940436765226,
+              "partition_shuffle_mean": 0.8747751184090343
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.5100456224391932,
+              "area_fraction": 0.3662109375,
+              "energy_enrichment": 1.3927645796739567,
+              "effective_pair_count": 12.27015753480737,
+              "rotation_mean": 0.7049386627928467,
+              "partition_shuffle_mean": 0.7334215275920681
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.42742615993388355,
+              "area_fraction": 0.4715576171875,
+              "energy_enrichment": 0.9064134357179328,
+              "effective_pair_count": 25.576146496857277,
+              "rotation_mean": 0.6887544325784285,
+              "partition_shuffle_mean": 0.7350736769199702
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.2895823336955029,
+              "area_fraction": 0.22137451171875,
+              "energy_enrichment": 1.3081105473579044,
+              "effective_pair_count": 52.42747451692416,
+              "rotation_mean": 0.5610247352642354,
+              "partition_shuffle_mean": 0.6017371386217504
+            }
+          ]
+        },
+        {
+          "layer": 2,
+          "head": 6,
+          "projection_energy_fraction": 0.14731686563182905,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.7594322827272456,
+              "area_fraction": 0.375,
+              "energy_enrichment": 2.0251527539393215,
+              "effective_pair_count": 3.2313409831209987,
+              "rotation_mean": 0.8201909295593173,
+              "partition_shuffle_mean": 0.8222298813256831
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.6873505728001986,
+              "area_fraction": 0.8203125,
+              "energy_enrichment": 0.8379130792230993,
+              "effective_pair_count": 6.307027267306574,
+              "rotation_mean": 0.8556505796802043,
+              "partition_shuffle_mean": 0.8672681217448809
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.5450682030905293,
+              "area_fraction": 0.3662109375,
+              "energy_enrichment": 1.4883995732392052,
+              "effective_pair_count": 12.101329858134148,
+              "rotation_mean": 0.7005699596784036,
+              "partition_shuffle_mean": 0.7310685003018541
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.43710230599805583,
+              "area_fraction": 0.38201904296875,
+              "energy_enrichment": 1.1441898356721756,
+              "effective_pair_count": 25.282874566442572,
+              "rotation_mean": 0.6841380514951534,
+              "partition_shuffle_mean": 0.7072926597678029
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.2834807675870873,
+              "area_fraction": 0.22381591796875,
+              "energy_enrichment": 1.2665800098573325,
+              "effective_pair_count": 51.01352318311465,
+              "rotation_mean": 0.5606989017679798,
+              "partition_shuffle_mean": 0.6145177124988508
+            }
+          ]
+        },
+        {
+          "layer": 2,
+          "head": 7,
+          "projection_energy_fraction": 0.09273200443160773,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.873483090036302,
+              "area_fraction": 0.8203125,
+              "energy_enrichment": 1.064817481187111,
+              "effective_pair_count": 2.9219678327161063,
+              "rotation_mean": 0.8215524361681107,
+              "partition_shuffle_mean": 0.8231097633774719
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.873483090036302,
+              "area_fraction": 0.8203125,
+              "energy_enrichment": 1.064817481187111,
+              "effective_pair_count": 3.82685876701252,
+              "rotation_mean": 0.8550295904705175,
+              "partition_shuffle_mean": 0.8550440847434724
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.7222322934391295,
+              "area_fraction": 0.678955078125,
+              "energy_enrichment": 1.0637409111566611,
+              "effective_pair_count": 8.411819850732035,
+              "rotation_mean": 0.6976858962448713,
+              "partition_shuffle_mean": 0.700899524440629
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.7115228354207622,
+              "area_fraction": 0.67193603515625,
+              "energy_enrichment": 1.0589145367911499,
+              "effective_pair_count": 13.79758330334875,
+              "rotation_mean": 0.6806329706686879,
+              "partition_shuffle_mean": 0.6818160099594441
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.5848407453518971,
+              "area_fraction": 0.54852294921875,
+              "energy_enrichment": 1.066210167113106,
+              "effective_pair_count": 25.19663577132939,
+              "rotation_mean": 0.5535662129507541,
+              "partition_shuffle_mean": 0.5575532191927671
+            }
+          ]
+        },
+        {
+          "layer": 3,
+          "head": 0,
+          "projection_energy_fraction": 0.16127905752400132,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.9256100286960811,
+              "area_fraction": 0.2890625,
+              "energy_enrichment": 3.2021103695431994,
+              "effective_pair_count": 2.440788259949371,
+              "rotation_mean": 0.7636875413535184,
+              "partition_shuffle_mean": 0.8250535015553929
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.875159112628038,
+              "area_fraction": 0.046875,
+              "energy_enrichment": 18.670061069398145,
+              "effective_pair_count": 3.8221412401781785,
+              "rotation_mean": 0.8471048963640501,
+              "partition_shuffle_mean": 0.8759557847721057
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.8021247017579722,
+              "area_fraction": 0.0521240234375,
+              "energy_enrichment": 15.388771795787608,
+              "effective_pair_count": 6.806849443632278,
+              "rotation_mean": 0.9041979839491998,
+              "partition_shuffle_mean": 0.9402847750011304
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.7536967389989832,
+              "area_fraction": 0.029052734375,
+              "energy_enrichment": 25.94236842806584,
+              "effective_pair_count": 12.953374946587022,
+              "rotation_mean": 0.8145492924386515,
+              "partition_shuffle_mean": 0.8856805543715015
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.7240664668868684,
+              "area_fraction": 0.028564453125,
+              "energy_enrichment": 25.348514943321476,
+              "effective_pair_count": 19.850138754660716,
+              "rotation_mean": 0.6912310531190359,
+              "partition_shuffle_mean": 0.8036082027329287
+            }
+          ]
+        },
+        {
+          "layer": 3,
+          "head": 1,
+          "projection_energy_fraction": 0.0797182407992103,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.8802894342538204,
+              "area_fraction": 0.2890625,
+              "energy_enrichment": 3.045325610391595,
+              "effective_pair_count": 2.662744355087563,
+              "rotation_mean": 0.7677148875180778,
+              "partition_shuffle_mean": 0.8164944625887806
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.8403698138278407,
+              "area_fraction": 0.5390625,
+              "energy_enrichment": 1.5589469010139654,
+              "effective_pair_count": 4.315732379345757,
+              "rotation_mean": 0.8459034304099828,
+              "partition_shuffle_mean": 0.8643324044859988
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.7609574525332863,
+              "area_fraction": 0.0521240234375,
+              "energy_enrichment": 14.598977637359908,
+              "effective_pair_count": 7.55835401003474,
+              "rotation_mean": 0.901430224665503,
+              "partition_shuffle_mean": 0.9307100449916538
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.7004354529219892,
+              "area_fraction": 0.029052734375,
+              "energy_enrichment": 24.109106009819055,
+              "effective_pair_count": 14.260293565511539,
+              "rotation_mean": 0.8127924636142968,
+              "partition_shuffle_mean": 0.887016159768141
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.6668528291181833,
+              "area_fraction": 0.028564453125,
+              "energy_enrichment": 23.345548615966486,
+              "effective_pair_count": 23.117982656950332,
+              "rotation_mean": 0.6903047624692508,
+              "partition_shuffle_mean": 0.7922055789963877
+            }
+          ]
+        },
+        {
+          "layer": 3,
+          "head": 2,
+          "projection_energy_fraction": 0.06238884039637976,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.7438387334393843,
+              "area_fraction": 0.765625,
+              "energy_enrichment": 0.9715444681657265,
+              "effective_pair_count": 3.408430939985733,
+              "rotation_mean": 0.7668740825347147,
+              "partition_shuffle_mean": 0.7749655438514353
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.6799430402378855,
+              "area_fraction": 0.703125,
+              "energy_enrichment": 0.9670301016716595,
+              "effective_pair_count": 6.2768829112785145,
+              "rotation_mean": 0.8453094311970444,
+              "partition_shuffle_mean": 0.8481438183411236
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.6799430402378855,
+              "area_fraction": 0.703125,
+              "energy_enrichment": 0.9670301016716595,
+              "effective_pair_count": 8.050004797032681,
+              "rotation_mean": 0.8994627729216974,
+              "partition_shuffle_mean": 0.9004112578719152
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.5728421055534927,
+              "area_fraction": 0.72332763671875,
+              "energy_enrichment": 0.791953848400002,
+              "effective_pair_count": 17.42488088773108,
+              "rotation_mean": 0.809599787687673,
+              "partition_shuffle_mean": 0.8224263169855006
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.48781209000964343,
+              "area_fraction": 0.61651611328125,
+              "energy_enrichment": 0.791239806228888,
+              "effective_pair_count": 31.914842585431966,
+              "rotation_mean": 0.6849771623422336,
+              "partition_shuffle_mean": 0.7000777311213683
+            }
+          ]
+        },
+        {
+          "layer": 3,
+          "head": 3,
+          "projection_energy_fraction": 0.014565727256807598,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.7976004462132416,
+              "area_fraction": 0.765625,
+              "energy_enrichment": 1.0417638481152542,
+              "effective_pair_count": 3.23176920063429,
+              "rotation_mean": 0.7670783291154187,
+              "partition_shuffle_mean": 0.7704669725569554
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.7511823549204573,
+              "area_fraction": 0.703125,
+              "energy_enrichment": 1.0683482381090947,
+              "effective_pair_count": 5.098258637923442,
+              "rotation_mean": 0.8460262616270201,
+              "partition_shuffle_mean": 0.8440860697307233
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.7969686034063941,
+              "area_fraction": 0.8514404296875,
+              "energy_enrichment": 0.9360239138502051,
+              "effective_pair_count": 6.0503842044215,
+              "rotation_mean": 0.9006845886250676,
+              "partition_shuffle_mean": 0.9007079672810372
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.720310980333823,
+              "area_fraction": 0.71990966796875,
+              "energy_enrichment": 1.0005574482229214,
+              "effective_pair_count": 11.531830594104465,
+              "rotation_mean": 0.8089375042291334,
+              "partition_shuffle_mean": 0.8169251145681005
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.6468509638705251,
+              "area_fraction": 0.62908935546875,
+              "energy_enrichment": 1.0282338403080122,
+              "effective_pair_count": 21.436031035606675,
+              "rotation_mean": 0.684653853484764,
+              "partition_shuffle_mean": 0.6927351404131133
+            }
+          ]
+        },
+        {
+          "layer": 3,
+          "head": 4,
+          "projection_energy_fraction": 0.062094065405704106,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.7446975733048948,
+              "area_fraction": 0.765625,
+              "energy_enrichment": 0.9726662181941483,
+              "effective_pair_count": 3.5259107191066263,
+              "rotation_mean": 0.7671430782863614,
+              "partition_shuffle_mean": 0.7643939609489557
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.6801003215465122,
+              "area_fraction": 0.845947265625,
+              "energy_enrichment": 0.8039512026131354,
+              "effective_pair_count": 5.923212354014116,
+              "rotation_mean": 0.8465068560277651,
+              "partition_shuffle_mean": 0.8484377221175672
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.7669778318414934,
+              "area_fraction": 0.9010009765625,
+              "energy_enrichment": 0.8512508330098244,
+              "effective_pair_count": 6.959987057683019,
+              "rotation_mean": 0.9018461229163374,
+              "partition_shuffle_mean": 0.9008582014003688
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.6412714492944066,
+              "area_fraction": 0.80364990234375,
+              "energy_enrichment": 0.797948767770909,
+              "effective_pair_count": 15.38510874730149,
+              "rotation_mean": 0.8100248592060877,
+              "partition_shuffle_mean": 0.8155653925625544
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.49904451087376406,
+              "area_fraction": 0.67999267578125,
+              "energy_enrichment": 0.7338968913163765,
+              "effective_pair_count": 30.783720336494802,
+              "rotation_mean": 0.6854905701872882,
+              "partition_shuffle_mean": 0.6910042549462659
+            }
+          ]
+        },
+        {
+          "layer": 3,
+          "head": 5,
+          "projection_energy_fraction": 0.01463891602469165,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.7919622916559409,
+              "area_fraction": 0.765625,
+              "energy_enrichment": 1.0343997278771473,
+              "effective_pair_count": 3.2752785367612236,
+              "rotation_mean": 0.7643441839569788,
+              "partition_shuffle_mean": 0.783799041185142
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.7274114186190259,
+              "area_fraction": 0.5390625,
+              "energy_enrichment": 1.3494008925106569,
+              "effective_pair_count": 5.614719210447903,
+              "rotation_mean": 0.8471062690360509,
+              "partition_shuffle_mean": 0.8442919701868709
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.7227522435358384,
+              "area_fraction": 0.703125,
+              "energy_enrichment": 1.0279143019176369,
+              "effective_pair_count": 7.526448856257802,
+              "rotation_mean": 0.9023716577023235,
+              "partition_shuffle_mean": 0.9040856527648383
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.6442092306024744,
+              "area_fraction": 0.5545654296875,
+              "energy_enrichment": 1.16164693310488,
+              "effective_pair_count": 14.669592955374684,
+              "rotation_mean": 0.8095571668579462,
+              "partition_shuffle_mean": 0.8303586502029723
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.5859939834319654,
+              "area_fraction": 0.53924560546875,
+              "energy_enrichment": 1.0866921816128263,
+              "effective_pair_count": 25.63239486563359,
+              "rotation_mean": 0.6858088135711131,
+              "partition_shuffle_mean": 0.7151243141547673
+            }
+          ]
+        },
+        {
+          "layer": 3,
+          "head": 6,
+          "projection_energy_fraction": 0.11982399736939783,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.9311563830881758,
+              "area_fraction": 0.2890625,
+              "energy_enrichment": 3.2212977577104462,
+              "effective_pair_count": 2.3278104341624064,
+              "rotation_mean": 0.7725273321181638,
+              "partition_shuffle_mean": 0.8244914526115611
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.8857246435738138,
+              "area_fraction": 0.046875,
+              "energy_enrichment": 18.895459062908028,
+              "effective_pair_count": 3.431325104165836,
+              "rotation_mean": 0.8504492026017625,
+              "partition_shuffle_mean": 0.8927725406678348
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.8387671176278296,
+              "area_fraction": 0.0521240234375,
+              "energy_enrichment": 16.091756973318923,
+              "effective_pair_count": 6.093544690870088,
+              "rotation_mean": 0.903924080349725,
+              "partition_shuffle_mean": 0.9246868441929059
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.8036541094090425,
+              "area_fraction": 0.02734375,
+              "energy_enrichment": 29.39077885838784,
+              "effective_pair_count": 10.850280565782597,
+              "rotation_mean": 0.818553178243853,
+              "partition_shuffle_mean": 0.8944690264082172
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.7749560738881647,
+              "area_fraction": 0.02685546875,
+              "energy_enrichment": 28.856546169508388,
+              "effective_pair_count": 16.483763650780052,
+              "rotation_mean": 0.6958838242806019,
+              "partition_shuffle_mean": 0.829101540590654
+            }
+          ]
+        },
+        {
+          "layer": 3,
+          "head": 7,
+          "projection_energy_fraction": 0.056561029368260435,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.7701836564590893,
+              "area_fraction": 0.765625,
+              "energy_enrichment": 1.0059541635384024,
+              "effective_pair_count": 3.388957632737735,
+              "rotation_mean": 0.7651082901995392,
+              "partition_shuffle_mean": 0.7707452436308821
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.7107349686738768,
+              "area_fraction": 0.703125,
+              "energy_enrichment": 1.0108230665584026,
+              "effective_pair_count": 6.019293581342454,
+              "rotation_mean": 0.8470212451397651,
+              "partition_shuffle_mean": 0.8457124263391782
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.7120368109430304,
+              "area_fraction": 0.867919921875,
+              "energy_enrichment": 0.8203945928615056,
+              "effective_pair_count": 7.567967460848611,
+              "rotation_mean": 0.901719267530842,
+              "partition_shuffle_mean": 0.9023731015837982
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.5873531000472965,
+              "area_fraction": 0.77716064453125,
+              "energy_enrichment": 0.7557679408760626,
+              "effective_pair_count": 16.43884007978798,
+              "rotation_mean": 0.8102836124936121,
+              "partition_shuffle_mean": 0.8120639926279282
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.47743179783400763,
+              "area_fraction": 0.63238525390625,
+              "energy_enrichment": 0.7549698461260864,
+              "effective_pair_count": 32.067473059107655,
+              "rotation_mean": 0.6844820321250173,
+              "partition_shuffle_mean": 0.6908680564364431
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "anchor_head_parity": 1,
+      "target_head_count": 16,
+      "layer_modules": {
+        "2": {
+          "read_anchor_count": 8,
+          "write_anchor_count": 36,
+          "partitions": {
+            "2": {
+              "read_sizes": [
+                120,
+                8
+              ],
+              "write_sizes": [
+                50,
+                78
+              ]
+            },
+            "3": {
+              "read_sizes": [
+                30,
+                90,
+                8
+              ],
+              "write_sizes": [
+                76,
+                7,
+                45
+              ]
+            },
+            "4": {
+              "read_sizes": [
+                89,
+                31,
+                6,
+                2
+              ],
+              "write_sizes": [
+                64,
+                26,
+                31,
+                7
+              ]
+            },
+            "6": {
+              "read_sizes": [
+                18,
+                67,
+                6,
+                26,
+                2,
+                9
+              ],
+              "write_sizes": [
+                64,
+                24,
+                18,
+                6,
+                3,
+                13
+              ]
+            },
+            "8": {
+              "read_sizes": [
+                13,
+                6,
+                14,
+                24,
+                2,
+                8,
+                38,
+                23
+              ],
+              "write_sizes": [
+                22,
+                64,
+                15,
+                3,
+                2,
+                4,
+                11,
+                7
+              ]
+            }
+          }
+        },
+        "3": {
+          "read_anchor_count": 12,
+          "write_anchor_count": 24,
+          "partitions": {
+            "2": {
+              "read_sizes": [
+                61,
+                67
+              ],
+              "write_sizes": [
+                80,
+                48
+              ]
+            },
+            "3": {
+              "read_sizes": [
+                59,
+                60,
+                9
+              ],
+              "write_sizes": [
+                7,
+                80,
+                41
+              ]
+            },
+            "4": {
+              "read_sizes": [
+                27,
+                56,
+                9,
+                36
+              ],
+              "write_sizes": [
+                76,
+                23,
+                7,
+                22
+              ]
+            },
+            "6": {
+              "read_sizes": [
+                10,
+                56,
+                32,
+                6,
+                21,
+                3
+              ],
+              "write_sizes": [
+                60,
+                20,
+                23,
+                4,
+                3,
+                18
+              ]
+            },
+            "8": {
+              "read_sizes": [
+                14,
+                55,
+                15,
+                5,
+                3,
+                25,
+                10,
+                1
+              ],
+              "write_sizes": [
+                60,
+                17,
+                18,
+                3,
+                1,
+                9,
+                3,
+                17
+              ]
+            }
+          }
+        }
+      },
+      "resolutions": [
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "mean_projection_energy_fraction": 0.08598954005399656,
+      "mean_energy_fraction_of_projection_by_resolution": [
+        0.83763989905629,
+        0.6786592098649638,
+        0.6693760644126476,
+        0.6202856669260955,
+        0.5397542392652623
+      ],
+      "mean_selected_area_fraction_by_resolution": [
+        0.625,
+        0.449432373046875,
+        0.4243736267089844,
+        0.452545166015625,
+        0.3895225524902344
+      ],
+      "mean_energy_enrichment_by_resolution": [
+        1.5454261056535563,
+        5.046407025239952,
+        4.485188884000731,
+        2.0014265256291948,
+        3.2484879415349712
+      ],
+      "mean_effective_pair_count_by_resolution": [
+        2.893217421133564,
+        6.1790216633662975,
+        9.01897813007508,
+        17.112268536724706,
+        30.686705894309103
+      ],
+      "spectrum_rotation_test": {
+        "observed_population_by_resolution": [
+          0.83763989905629,
+          0.6786592098649638,
+          0.6693760644126476,
+          0.6202856669260955,
+          0.5397542392652623
+        ],
+        "null_population_mean_by_resolution": [
+          0.7809947573583322,
+          0.7697614623634008,
+          0.7060638765001084,
+          0.6342243875499486,
+          0.5867864927220382
+        ],
+        "advantage_by_resolution": [
+          0.05664514169795776,
+          -0.09110225249843706,
+          -0.03668781208746075,
+          -0.01393872062385304,
+          -0.04703225345677586
+        ],
+        "selected_resolution": 2,
+        "selected_index": 0,
+        "selection_corrected_p_value": 0.01,
+        "observed_selected_advantage": 0.05664514169795776
+      },
+      "matched_partition_shuffle_test": {
+        "observed_population_by_resolution": [
+          0.83763989905629,
+          0.6786592098649638,
+          0.6693760644126476,
+          0.6202856669260955,
+          0.5397542392652623
+        ],
+        "null_population_mean_by_resolution": [
+          0.7972911176366593,
+          0.7803250181249458,
+          0.7253568086224925,
+          0.6679026997341859,
+          0.6272157598786824
+        ],
+        "advantage_by_resolution": [
+          0.04034878141963072,
+          -0.10166580825998206,
+          -0.05598074420984489,
+          -0.047617032808090376,
+          -0.08746152061342005
+        ],
+        "selected_resolution": 2,
+        "selected_index": 0,
+        "selection_corrected_p_value": 0.01,
+        "observed_selected_advantage": 0.04034878141963072
+      },
+      "layer_and_resolution_corrected_spectrum_test": {
+        "configurations": [
+          {
+            "layer": 2,
+            "resolution": 2
+          },
+          {
+            "layer": 2,
+            "resolution": 3
+          },
+          {
+            "layer": 2,
+            "resolution": 4
+          },
+          {
+            "layer": 2,
+            "resolution": 6
+          },
+          {
+            "layer": 2,
+            "resolution": 8
+          },
+          {
+            "layer": 3,
+            "resolution": 2
+          },
+          {
+            "layer": 3,
+            "resolution": 3
+          },
+          {
+            "layer": 3,
+            "resolution": 4
+          },
+          {
+            "layer": 3,
+            "resolution": 6
+          },
+          {
+            "layer": 3,
+            "resolution": 8
+          }
+        ],
+        "observed_concentration": [
+          0.8988967424569427,
+          0.6692761166418825,
+          0.6664183281068958,
+          0.566493369134919,
+          0.43578846217518025,
+          0.7763830556556374,
+          0.688042303088045,
+          0.6723338007183997,
+          0.6740779647172721,
+          0.6437200163553445
+        ],
+        "null_mean_concentration": [
+          0.9369003124994068,
+          0.8036030589841139,
+          0.7779927787951947,
+          0.6594182890501981,
+          0.5610317686608383,
+          0.6250892022172573,
+          0.735919865742687,
+          0.6341349742050214,
+          0.6090304860496992,
+          0.6125412167832388
+        ],
+        "advantage": [
+          -0.03800357004246402,
+          -0.13432694234223141,
+          -0.11157445068829885,
+          -0.09292491991527907,
+          -0.125243306485658,
+          0.1512938534383801,
+          -0.047877562654641936,
+          0.03819882651337825,
+          0.06504747866757288,
+          0.031178799572105675
+        ],
+        "selected": {
+          "layer": 3,
+          "resolution": 2
+        },
+        "selected_advantage": 0.1512938534383801,
+        "selection_corrected_p_value": 0.01
+      },
+      "layer_and_resolution_corrected_partition_test": {
+        "configurations": [
+          {
+            "layer": 2,
+            "resolution": 2
+          },
+          {
+            "layer": 2,
+            "resolution": 3
+          },
+          {
+            "layer": 2,
+            "resolution": 4
+          },
+          {
+            "layer": 2,
+            "resolution": 6
+          },
+          {
+            "layer": 2,
+            "resolution": 8
+          },
+          {
+            "layer": 3,
+            "resolution": 2
+          },
+          {
+            "layer": 3,
+            "resolution": 3
+          },
+          {
+            "layer": 3,
+            "resolution": 4
+          },
+          {
+            "layer": 3,
+            "resolution": 6
+          },
+          {
+            "layer": 3,
+            "resolution": 8
+          }
+        ],
+        "observed_concentration": [
+          0.8988967424569427,
+          0.6692761166418825,
+          0.6664183281068958,
+          0.566493369134919,
+          0.43578846217518025,
+          0.7763830556556374,
+          0.688042303088045,
+          0.6723338007183997,
+          0.6740779647172721,
+          0.6437200163553445
+        ],
+        "null_mean_concentration": [
+          0.9374764975922525,
+          0.8099350715705604,
+          0.7869018294633809,
+          0.6805910838557794,
+          0.5912566232462533,
+          0.6571057376810662,
+          0.7507149646793317,
+          0.6638117877816045,
+          0.6552143156125925,
+          0.6631748965111119
+        ],
+        "advantage": [
+          -0.03857975513530976,
+          -0.14065895492867797,
+          -0.12048350135648511,
+          -0.11409771472086039,
+          -0.15546816107107303,
+          0.1192773179745712,
+          -0.0626726615912867,
+          0.00852201293679511,
+          0.018863649104679636,
+          -0.019454880155767462
+        ],
+        "selected": {
+          "layer": 3,
+          "resolution": 2
+        },
+        "selected_advantage": 0.1192773179745712,
+        "selection_corrected_p_value": 0.01
+      },
+      "primary_selected_resolution": 2,
+      "mean_full_ov_energy_in_selected_pairs": 0.07365546521714808,
+      "fraction_heads_above_rotation_mean_at_selected_resolution": 0.75,
+      "fraction_heads_above_partition_shuffle_mean_at_selected_resolution": 0.75,
+      "heads": [
+        {
+          "layer": 2,
+          "head": 0,
+          "projection_energy_fraction": 0.1048167465108788,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.9280995997008779,
+              "area_fraction": 0.9375,
+              "energy_enrichment": 0.989972906347603,
+              "effective_pair_count": 2.529519536904006,
+              "rotation_mean": 0.9373340410513327,
+              "partition_shuffle_mean": 0.9387928776360099
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.6702601580164479,
+              "area_fraction": 0.7470703125,
+              "energy_enrichment": 0.8971848389658074,
+              "effective_pair_count": 6.368013769823583,
+              "rotation_mean": 0.8036938751151602,
+              "partition_shuffle_mean": 0.8035018674330539
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.6512717810451292,
+              "area_fraction": 0.6953125,
+              "energy_enrichment": 0.9366605390311971,
+              "effective_pair_count": 8.980896457537154,
+              "rotation_mean": 0.7786425205911672,
+              "partition_shuffle_mean": 0.7764901229836723
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.5367775031275401,
+              "area_fraction": 0.61273193359375,
+              "energy_enrichment": 0.8760397062697098,
+              "effective_pair_count": 21.049887412694737,
+              "rotation_mean": 0.6595459575413422,
+              "partition_shuffle_mean": 0.6616411862625751
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.3954678041028784,
+              "area_fraction": 0.54437255859375,
+              "energy_enrichment": 0.7264653551319161,
+              "effective_pair_count": 42.61670063401852,
+              "rotation_mean": 0.5599835511983121,
+              "partition_shuffle_mean": 0.5634211771390163
+            }
+          ]
+        },
+        {
+          "layer": 2,
+          "head": 1,
+          "projection_energy_fraction": 0.09121097050218932,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.9393773143742925,
+              "area_fraction": 0.9375,
+              "energy_enrichment": 1.002002468665912,
+              "effective_pair_count": 2.5094236308488456,
+              "rotation_mean": 0.9376100171573803,
+              "partition_shuffle_mean": 0.9379511512809474
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.6876421328925292,
+              "area_fraction": 0.8038330078125,
+              "energy_enrichment": 0.8554539639568108,
+              "effective_pair_count": 6.112350823340044,
+              "rotation_mean": 0.8048539501210066,
+              "partition_shuffle_mean": 0.8053249797468531
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.646771776365178,
+              "area_fraction": 0.69580078125,
+              "energy_enrichment": 0.929535858242726,
+              "effective_pair_count": 8.938481551833885,
+              "rotation_mean": 0.779217392793239,
+              "partition_shuffle_mean": 0.7783051460227244
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.4923738605270916,
+              "area_fraction": 0.6317138671875,
+              "energy_enrichment": 0.7794254425967023,
+              "effective_pair_count": 21.905370868168323,
+              "rotation_mean": 0.659089426359341,
+              "partition_shuffle_mean": 0.6599644776079825
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.4146300324671825,
+              "area_fraction": 0.53857421875,
+              "energy_enrichment": 0.7698660983615501,
+              "effective_pair_count": 40.02551827444961,
+              "rotation_mean": 0.5582651568972191,
+              "partition_shuffle_mean": 0.5596598142124188
+            }
+          ]
+        },
+        {
+          "layer": 2,
+          "head": 2,
+          "projection_energy_fraction": 0.1375084813578323,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.800896129333285,
+              "area_fraction": 0.9375,
+              "energy_enrichment": 0.8542892046221707,
+              "effective_pair_count": 2.9737743771168796,
+              "rotation_mean": 0.9364016365336271,
+              "partition_shuffle_mean": 0.9351903477672954
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.5272106029353322,
+              "area_fraction": 0.703125,
+              "energy_enrichment": 0.7498106352858057,
+              "effective_pair_count": 7.5103648359304644,
+              "rotation_mean": 0.8043783295499307,
+              "partition_shuffle_mean": 0.8105326201717316
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.5946501827382517,
+              "area_fraction": 0.556640625,
+              "energy_enrichment": 1.068283837059596,
+              "effective_pair_count": 9.85708186460124,
+              "rotation_mean": 0.778703319486453,
+              "partition_shuffle_mean": 0.7855909148126261
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.5376551872056198,
+              "area_fraction": 0.4698486328125,
+              "energy_enrichment": 1.1443157426834079,
+              "effective_pair_count": 20.220674162308953,
+              "rotation_mean": 0.6614890617604938,
+              "partition_shuffle_mean": 0.6815915187514591
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.41194401038999,
+              "area_fraction": 0.4443359375,
+              "energy_enrichment": 0.9271003662403292,
+              "effective_pair_count": 41.044355270130424,
+              "rotation_mean": 0.5641827540818435,
+              "partition_shuffle_mean": 0.6106239717629158
+            }
+          ]
+        },
+        {
+          "layer": 2,
+          "head": 3,
+          "projection_energy_fraction": 0.06568422840593743,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.9442227717261747,
+              "area_fraction": 0.9375,
+              "energy_enrichment": 1.0071709565079197,
+              "effective_pair_count": 2.470128424803139,
+              "rotation_mean": 0.937417284970045,
+              "partition_shuffle_mean": 0.9384964607909797
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.7026681360559255,
+              "area_fraction": 0.703125,
+              "energy_enrichment": 0.9993502379462051,
+              "effective_pair_count": 5.913930498818125,
+              "rotation_mean": 0.8024751413670611,
+              "partition_shuffle_mean": 0.8042020133651328
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.6949722232533349,
+              "area_fraction": 0.6953125,
+              "energy_enrichment": 0.9995106132182794,
+              "effective_pair_count": 8.199725138478199,
+              "rotation_mean": 0.7767469284778515,
+              "partition_shuffle_mean": 0.7787908553520504
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.6001418458553462,
+              "area_fraction": 0.6298828125,
+              "energy_enrichment": 0.9527833335749993,
+              "effective_pair_count": 17.707217633591878,
+              "rotation_mean": 0.6570167378961254,
+              "partition_shuffle_mean": 0.6619508281445298
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.4718876920152071,
+              "area_fraction": 0.5279541015625,
+              "energy_enrichment": 0.893804386818168,
+              "effective_pair_count": 36.364281063645734,
+              "rotation_mean": 0.5577260231105042,
+              "partition_shuffle_mean": 0.5622963908750339
+            }
+          ]
+        },
+        {
+          "layer": 2,
+          "head": 4,
+          "projection_energy_fraction": 0.04820958336521192,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.9552245677900743,
+              "area_fraction": 0.9375,
+              "energy_enrichment": 1.0189062056427458,
+              "effective_pair_count": 2.3845626269831173,
+              "rotation_mean": 0.9365832613051953,
+              "partition_shuffle_mean": 0.9384579068554711
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.7377811395478316,
+              "area_fraction": 0.703125,
+              "energy_enrichment": 1.0492887318013606,
+              "effective_pair_count": 5.723432299231694,
+              "rotation_mean": 0.802587323625741,
+              "partition_shuffle_mean": 0.8055576368263115
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.730154272079032,
+              "area_fraction": 0.6953125,
+              "energy_enrichment": 1.050109514900181,
+              "effective_pair_count": 7.7919614073736625,
+              "rotation_mean": 0.776612093478068,
+              "partition_shuffle_mean": 0.7811054886100456
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.6093923715424734,
+              "area_fraction": 0.61273193359375,
+              "energy_enrichment": 0.9945497176364064,
+              "effective_pair_count": 17.073939084938466,
+              "rotation_mean": 0.6580499804667197,
+              "partition_shuffle_mean": 0.6621933395936108
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.454396739999478,
+              "area_fraction": 0.5555419921875,
+              "energy_enrichment": 0.8179341010933253,
+              "effective_pair_count": 36.4762990484022,
+              "rotation_mean": 0.5592116508150429,
+              "partition_shuffle_mean": 0.5643477033489072
+            }
+          ]
+        },
+        {
+          "layer": 2,
+          "head": 5,
+          "projection_energy_fraction": 0.15114497654172449,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.8680832576597943,
+              "area_fraction": 0.390625,
+              "energy_enrichment": 2.2222931396090733,
+              "effective_pair_count": 2.699103584833325,
+              "rotation_mean": 0.9349031407276515,
+              "partition_shuffle_mean": 0.9378818725263673
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.6939059413668832,
+              "area_fraction": 0.0546875,
+              "energy_enrichment": 12.688565784994436,
+              "effective_pair_count": 6.115317209971558,
+              "rotation_mean": 0.8021173325044745,
+              "partition_shuffle_mean": 0.8205280822864212
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.7266975723413486,
+              "area_fraction": 0.22222900390625,
+              "energy_enrichment": 3.2700392818568127,
+              "effective_pair_count": 8.006637108461618,
+              "rotation_mean": 0.7769951157255246,
+              "partition_shuffle_mean": 0.8091066100223214
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.6408499536279232,
+              "area_fraction": 0.3052978515625,
+              "energy_enrichment": 2.0990974890523577,
+              "effective_pair_count": 15.986712553370946,
+              "rotation_mean": 0.6621240235556832,
+              "partition_shuffle_mean": 0.7416633831374626
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.47462458966959176,
+              "area_fraction": 0.0230712890625,
+              "energy_enrichment": 20.57208803477934,
+              "effective_pair_count": 34.83318133663404,
+              "rotation_mean": 0.5651013176180609,
+              "partition_shuffle_mean": 0.6746949576075633
+            }
+          ]
+        },
+        {
+          "layer": 2,
+          "head": 6,
+          "projection_energy_fraction": 0.2223865150937289,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.8057089315198765,
+              "area_fraction": 0.390625,
+              "energy_enrichment": 2.062614864690884,
+              "effective_pair_count": 2.8054944124140206,
+              "rotation_mean": 0.9375191425038073,
+              "partition_shuffle_mean": 0.9362933808563579
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.6003143211506248,
+              "area_fraction": 0.0546875,
+              "energy_enrichment": 10.977176158182854,
+              "effective_pair_count": 7.189099611685086,
+              "rotation_mean": 0.8034012287514147,
+              "partition_shuffle_mean": 0.8251800328234556
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.6003143211506249,
+              "area_fraction": 0.0546875,
+              "energy_enrichment": 10.977176158182855,
+              "effective_pair_count": 9.79231468990342,
+              "rotation_mean": 0.7771083756047336,
+              "partition_shuffle_mean": 0.8088003022747593
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.5613206196004646,
+              "area_fraction": 0.3052978515625,
+              "energy_enrichment": 1.8385999663202743,
+              "effective_pair_count": 20.5002501634079,
+              "rotation_mean": 0.658772685451936,
+              "partition_shuffle_mean": 0.7151516023198363
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.40901878428637717,
+              "area_fraction": 0.1624755859375,
+              "energy_enrichment": 2.517416890213375,
+              "effective_pair_count": 42.90945123709912,
+              "rotation_mean": 0.5644064383330971,
+              "partition_shuffle_mean": 0.6332443793584189
+            }
+          ]
+        },
+        {
+          "layer": 2,
+          "head": 7,
+          "projection_energy_fraction": 0.15897276770878688,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.9495613675511669,
+              "area_fraction": 0.9375,
+              "energy_enrichment": 1.0128654587212447,
+              "effective_pair_count": 2.43696712668364,
+              "rotation_mean": 0.9374339757462127,
+              "partition_shuffle_mean": 0.9367479830245884
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.7344265011694852,
+              "area_fraction": 0.8038330078125,
+              "energy_enrichment": 0.913655565312137,
+              "effective_pair_count": 5.56765653314282,
+              "rotation_mean": 0.8053172908381243,
+              "partition_shuffle_mean": 0.8046533399115239
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.6865144958822674,
+              "area_fraction": 0.77838134765625,
+              "energy_enrichment": 0.8819770642621398,
+              "effective_pair_count": 8.292122816132183,
+              "rotation_mean": 0.7799164842045255,
+              "partition_shuffle_mean": 0.7770251956288465
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.5534356115928935,
+              "area_fraction": 0.6317138671875,
+              "energy_enrichment": 0.876085899549562,
+              "effective_pair_count": 19.212322536537048,
+              "rotation_mean": 0.6592584393699404,
+              "partition_shuffle_mean": 0.6605723350287787
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.45433804447073706,
+              "area_fraction": 0.5506591796875,
+              "energy_enrichment": 0.8250803059863174,
+              "effective_pair_count": 34.568900307929155,
+              "rotation_mean": 0.559377257232625,
+              "partition_shuffle_mean": 0.561764591665752
+            }
+          ]
+        },
+        {
+          "layer": 3,
+          "head": 0,
+          "projection_energy_fraction": 0.07528022904881367,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.9234360103249893,
+              "area_fraction": 0.375,
+              "energy_enrichment": 2.4624960275333048,
+              "effective_pair_count": 2.4849606184568347,
+              "rotation_mean": 0.6221766722351258,
+              "partition_shuffle_mean": 0.6951215798081009
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.8066666289003757,
+              "area_fraction": 0.0546875,
+              "energy_enrichment": 14.750475499892584,
+              "effective_pair_count": 4.917063412334404,
+              "rotation_mean": 0.7356075032455699,
+              "partition_shuffle_mean": 0.7640791355298754
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.8066666289003758,
+              "area_fraction": 0.0546875,
+              "energy_enrichment": 14.750475499892586,
+              "effective_pair_count": 6.7822568824359575,
+              "rotation_mean": 0.6333536974429487,
+              "partition_shuffle_mean": 0.694481744220908
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.7608226386794891,
+              "area_fraction": 0.116943359375,
+              "energy_enrichment": 6.505907156641309,
+              "effective_pair_count": 11.10485881167789,
+              "rotation_mean": 0.6103707511927866,
+              "partition_shuffle_mean": 0.7119010389658451
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.6756758368589914,
+              "area_fraction": 0.095947265625,
+              "energy_enrichment": 7.042158340392948,
+              "effective_pair_count": 19.27549142857469,
+              "rotation_mean": 0.613423231751763,
+              "partition_shuffle_mean": 0.7105798822534951
+            }
+          ]
+        },
+        {
+          "layer": 3,
+          "head": 1,
+          "projection_energy_fraction": 0.045599017074766206,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.8906150192290264,
+              "area_fraction": 0.375,
+              "energy_enrichment": 2.3749733846107373,
+              "effective_pair_count": 2.720178350877124,
+              "rotation_mean": 0.6241812868165725,
+              "partition_shuffle_mean": 0.700303763262932
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.7590019194002189,
+              "area_fraction": 0.0546875,
+              "energy_enrichment": 13.878892240461145,
+              "effective_pair_count": 5.181293512479745,
+              "rotation_mean": 0.7347911806409707,
+              "partition_shuffle_mean": 0.7566727523469315
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.7590019194002188,
+              "area_fraction": 0.0546875,
+              "energy_enrichment": 13.878892240461143,
+              "effective_pair_count": 7.315425666644721,
+              "rotation_mean": 0.6340503193726118,
+              "partition_shuffle_mean": 0.6881475569850526
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.7463820701076899,
+              "area_fraction": 0.311767578125,
+              "energy_enrichment": 2.3940336406899747,
+              "effective_pair_count": 11.313937054676131,
+              "rotation_mean": 0.6099441211814907,
+              "partition_shuffle_mean": 0.6874182785154296
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.6914615641196908,
+              "area_fraction": 0.29644775390625,
+              "energy_enrichment": 2.3324904810658875,
+              "effective_pair_count": 19.04264116046195,
+              "rotation_mean": 0.6137959362646549,
+              "partition_shuffle_mean": 0.6969466852074712
+            }
+          ]
+        },
+        {
+          "layer": 3,
+          "head": 2,
+          "projection_energy_fraction": 0.07481274252596778,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.6708514688825663,
+              "area_fraction": 0.5234375,
+              "energy_enrichment": 1.2816266868204251,
+              "effective_pair_count": 3.6524273052098164,
+              "rotation_mean": 0.6218383482938873,
+              "partition_shuffle_mean": 0.6213928250542562
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.498334628728436,
+              "area_fraction": 0.58587646484375,
+              "energy_enrichment": 0.8505797017487963,
+              "effective_pair_count": 8.121812629932815,
+              "rotation_mean": 0.7331017448305689,
+              "partition_shuffle_mean": 0.741064490881334
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.47809155532497755,
+              "area_fraction": 0.4375,
+              "energy_enrichment": 1.092780697885663,
+              "effective_pair_count": 13.673770996934255,
+              "rotation_mean": 0.6293877854527093,
+              "partition_shuffle_mean": 0.6426255329749387
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.4946970831481143,
+              "area_fraction": 0.54443359375,
+              "energy_enrichment": 0.9086454047420072,
+              "effective_pair_count": 23.889623918650535,
+              "rotation_mean": 0.6049712149890136,
+              "partition_shuffle_mean": 0.6108918433311301
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.5113056331528691,
+              "area_fraction": 0.51788330078125,
+              "energy_enrichment": 0.9872989385476262,
+              "effective_pair_count": 32.352473235881554,
+              "rotation_mean": 0.6088468972133313,
+              "partition_shuffle_mean": 0.6187076828309779
+            }
+          ]
+        },
+        {
+          "layer": 3,
+          "head": 3,
+          "projection_energy_fraction": 0.011118625877516372,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.6701847527886802,
+              "area_fraction": 0.5234375,
+              "energy_enrichment": 1.2803529605515085,
+              "effective_pair_count": 3.70786936818336,
+              "rotation_mean": 0.62333655463171,
+              "partition_shuffle_mean": 0.6355408303193939
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.6008128951690137,
+              "area_fraction": 0.33892822265625,
+              "energy_enrichment": 1.7726847603906213,
+              "effective_pair_count": 6.907474175839798,
+              "rotation_mean": 0.733473141955043,
+              "partition_shuffle_mean": 0.7394490212994742
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.6169822170791658,
+              "area_fraction": 0.466064453125,
+              "energy_enrichment": 1.3238130755140194,
+              "effective_pair_count": 10.316880798105606,
+              "rotation_mean": 0.6320397917931729,
+              "partition_shuffle_mean": 0.6420527623295859
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.6408251328073465,
+              "area_fraction": 0.49072265625,
+              "energy_enrichment": 1.3058804696412396,
+              "effective_pair_count": 16.11919410923486,
+              "rotation_mean": 0.6076712684870433,
+              "partition_shuffle_mean": 0.6256492288563618
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.6186179123785235,
+              "area_fraction": 0.49224853515625,
+              "energy_enrichment": 1.256718645556073,
+              "effective_pair_count": 24.423826396528327,
+              "rotation_mean": 0.6098183001357982,
+              "partition_shuffle_mean": 0.6357864966580615
+            }
+          ]
+        },
+        {
+          "layer": 3,
+          "head": 4,
+          "projection_energy_fraction": 0.05577015648139289,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.6357860819243197,
+              "area_fraction": 0.5234375,
+              "energy_enrichment": 1.2146360968106407,
+              "effective_pair_count": 3.8209288380503112,
+              "rotation_mean": 0.6269642156005215,
+              "partition_shuffle_mean": 0.6205895621295198
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.6419148870506792,
+              "area_fraction": 0.72869873046875,
+              "energy_enrichment": 0.8809057299135881,
+              "effective_pair_count": 6.7031855560818485,
+              "rotation_mean": 0.7354375808520451,
+              "partition_shuffle_mean": 0.7338880332682244
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.5538223993675431,
+              "area_fraction": 0.58056640625,
+              "energy_enrichment": 0.9539346290199564,
+              "effective_pair_count": 11.560685321421506,
+              "rotation_mean": 0.6333938640364283,
+              "partition_shuffle_mean": 0.6377333489922
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.5955958756315325,
+              "area_fraction": 0.54443359375,
+              "energy_enrichment": 1.0939734110254515,
+              "effective_pair_count": 18.784278220892354,
+              "rotation_mean": 0.6078884382408419,
+              "partition_shuffle_mean": 0.6061131899599561
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.5988655923397245,
+              "area_fraction": 0.51788330078125,
+              "energy_enrichment": 1.1563716988678898,
+              "effective_pair_count": 26.402438078396436,
+              "rotation_mean": 0.6109955957590522,
+              "partition_shuffle_mean": 0.6102044607152662
+            }
+          ]
+        },
+        {
+          "layer": 3,
+          "head": 5,
+          "projection_energy_fraction": 0.010321680188304424,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.7737074002477136,
+              "area_fraction": 0.375,
+              "energy_enrichment": 2.0632197339939027,
+              "effective_pair_count": 3.220717920280239,
+              "rotation_mean": 0.6252345418434281,
+              "partition_shuffle_mean": 0.6601565203215133
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.6849233290370996,
+              "area_fraction": 0.33892822265625,
+              "energy_enrichment": 2.0208506794424346,
+              "effective_pair_count": 6.178771840641703,
+              "rotation_mean": 0.7386314838473097,
+              "partition_shuffle_mean": 0.7512551010996549
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.6743067577603662,
+              "area_fraction": 0.31060791015625,
+              "energy_enrichment": 2.170925902760039,
+              "effective_pair_count": 8.941882155104453,
+              "rotation_mean": 0.6340335342693321,
+              "partition_shuffle_mean": 0.6751930651837413
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.6640952392770276,
+              "area_fraction": 0.371826171875,
+              "energy_enrichment": 1.7860368352453744,
+              "effective_pair_count": 14.489088405329426,
+              "rotation_mean": 0.6071117131289707,
+              "partition_shuffle_mean": 0.6647372228067623
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.6245639634496051,
+              "area_fraction": 0.3509521484375,
+              "energy_enrichment": 1.7796271264623182,
+              "effective_pair_count": 23.3485773318378,
+              "rotation_mean": 0.6121970188834868,
+              "partition_shuffle_mean": 0.6750183941520256
+            }
+          ]
+        },
+        {
+          "layer": 3,
+          "head": 6,
+          "projection_energy_fraction": 0.07344571456739604,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.9704550744180224,
+              "area_fraction": 0.375,
+              "energy_enrichment": 2.5878801984480595,
+              "effective_pair_count": 2.1942101877373354,
+              "rotation_mean": 0.6297514702651927,
+              "partition_shuffle_mean": 0.6981099560067977
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.8796032837092748,
+              "area_fraction": 0.0546875,
+              "energy_enrichment": 16.084174330683883,
+              "effective_pair_count": 3.88168764250368,
+              "rotation_mean": 0.7411967393783895,
+              "partition_shuffle_mean": 0.7827142850320737
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.8796032837092748,
+              "area_fraction": 0.0546875,
+              "energy_enrichment": 16.084174330683883,
+              "effective_pair_count": 5.121443669423714,
+              "rotation_mean": 0.6421279932412084,
+              "partition_shuffle_mean": 0.6964139158879167
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.8534348364877812,
+              "area_fraction": 0.116943359375,
+              "energy_enrichment": 7.297847787586538,
+              "effective_pair_count": 7.57474805568779,
+              "rotation_mean": 0.6153786864583526,
+              "partition_shuffle_mean": 0.724113026517773
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.7804375356232028,
+              "area_fraction": 0.09613037109375,
+              "energy_enrichment": 8.118532434063845,
+              "effective_pair_count": 13.978131191306131,
+              "rotation_mean": 0.6190986742872402,
+              "partition_shuffle_mean": 0.7428488450478402
+            }
+          ]
+        },
+        {
+          "layer": 3,
+          "head": 7,
+          "projection_energy_fraction": 0.04955020561349778,
+          "resolutions": [
+            {
+              "resolution": 2,
+              "top_pair_count": 2,
+              "energy_fraction_of_projection": 0.676028637429781,
+              "area_fraction": 0.5234375,
+              "energy_enrichment": 1.2915173968807756,
+              "effective_pair_count": 3.6812124287550327,
+              "rotation_mean": 0.6272305280516212,
+              "partition_shuffle_mean": 0.6256308645460145
+            },
+            {
+              "resolution": 3,
+              "top_pair_count": 3,
+              "energy_fraction_of_projection": 0.6330808527092625,
+              "area_fraction": 0.4609375,
+              "energy_enrichment": 1.3734635448607728,
+              "effective_pair_count": 6.472892262103405,
+              "rotation_mean": 0.735119551191599,
+              "partition_shuffle_mean": 0.7365968979770862
+            },
+            {
+              "resolution": 4,
+              "top_pair_count": 4,
+              "energy_fraction_of_projection": 0.6101956442052754,
+              "area_fraction": 0.4375,
+              "energy_enrichment": 1.3947329010406295,
+              "effective_pair_count": 10.732083556809712,
+              "rotation_mean": 0.6346928080317606,
+              "partition_shuffle_mean": 0.6338463756784923
+            },
+            {
+              "resolution": 6,
+              "top_pair_count": 6,
+              "energy_fraction_of_projection": 0.6367708415991966,
+              "area_fraction": 0.54443359375,
+              "energy_enrichment": 1.1696024068117978,
+              "effective_pair_count": 16.86419359642804,
+              "rotation_mean": 0.6089076947190933,
+              "partition_shuffle_mean": 0.6108906959474809
+            },
+            {
+              "resolution": 8,
+              "top_pair_count": 8,
+              "energy_fraction_of_projection": 0.6488320929201479,
+              "area_fraction": 0.51788330078125,
+              "energy_enrichment": 1.2528538609786333,
+              "effective_pair_count": 23.32502831364999,
+              "rotation_mean": 0.6121540799705831,
+              "partition_shuffle_mean": 0.6153067252237566
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "cross_anchor_partition_stability": {
+    "observed_population_by_resolution": [
+      0.2691180601675535,
+      0.23367635434841005,
+      0.18772062678910195,
+      0.14654143547694254,
+      0.1196339012968223
+    ],
+    "null_population_mean_by_resolution": [
+      0.24106767778913743,
+      0.20995444931446014,
+      0.17248681582904332,
+      0.13405544133760983,
+      0.10777391698676544
+    ],
+    "advantage_by_resolution": [
+      0.02805038237841609,
+      0.023721905033949914,
+      0.01523381096005863,
+      0.012485994139332712,
+      0.01185998431005686
+    ],
+    "selected_resolution": 2,
+    "selected_index": 0,
+    "selection_corrected_p_value": 0.01,
+    "observed_selected_advantage": 0.02805038237841609,
+    "layers": [
+      {
+        "layer": 2,
+        "resolutions": [
+          {
+            "resolution": 2,
+            "mean_read_write_overlap": 0.29070096265300893,
+            "shuffle_mean": 0.26082057512793594
+          },
+          {
+            "resolution": 3,
+            "mean_read_write_overlap": 0.235085740129079,
+            "shuffle_mean": 0.21756376469828773
+          },
+          {
+            "resolution": 4,
+            "mean_read_write_overlap": 0.1846461237245851,
+            "shuffle_mean": 0.1678633118851008
+          },
+          {
+            "resolution": 6,
+            "mean_read_write_overlap": 0.13617326408696187,
+            "shuffle_mean": 0.12446753799842558
+          },
+          {
+            "resolution": 8,
+            "mean_read_write_overlap": 0.1066519686734281,
+            "shuffle_mean": 0.09527927022304955
+          }
+        ]
+      },
+      {
+        "layer": 3,
+        "resolutions": [
+          {
+            "resolution": 2,
+            "mean_read_write_overlap": 0.24753515768209813,
+            "shuffle_mean": 0.22131478045033917
+          },
+          {
+            "resolution": 3,
+            "mean_read_write_overlap": 0.2322669685677411,
+            "shuffle_mean": 0.20234513393063264
+          },
+          {
+            "resolution": 4,
+            "mean_read_write_overlap": 0.1907951298536188,
+            "shuffle_mean": 0.17711031977298597
+          },
+          {
+            "resolution": 6,
+            "mean_read_write_overlap": 0.15690960686692318,
+            "shuffle_mean": 0.14364334467679404
+          },
+          {
+            "resolution": 8,
+            "mean_read_write_overlap": 0.1326158339202165,
+            "shuffle_mean": 0.12026856375048134
+          }
+        ]
+      }
+    ]
+  },
+  "null_repetitions": 99,
+  "seed": 31415
+}

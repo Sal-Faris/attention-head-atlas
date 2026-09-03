@@ -1,0 +1,111 @@
+{
+  "status": "leave-complete-heads-out shared read/write support and coupling compression",
+  "splits": "two parity folds holding out four of eight heads in every layer",
+  "normalization": "each operator has unit Frobenius norm",
+  "views": {
+    "QK": {
+      "held_out_head_metrics": {
+        "16": {
+          "shared_support_variance_recovered": 0.024838485389288657,
+          "mean_core_full_operator_variance_recovered": 0.0024994036707150793,
+          "pca_4_full_operator_variance_recovered": 0.012856503641889202,
+          "pca_8_full_operator_variance_recovered": 0.014553995799296929,
+          "pca_16_full_operator_variance_recovered": 0.016074541552840608
+        },
+        "32": {
+          "shared_support_variance_recovered": 0.04924931741248561,
+          "mean_core_full_operator_variance_recovered": 0.004436707124729064,
+          "pca_4_full_operator_variance_recovered": 0.02006661762425925,
+          "pca_8_full_operator_variance_recovered": 0.02267509816656263,
+          "pca_16_full_operator_variance_recovered": 0.025716899219918675
+        },
+        "64": {
+          "shared_support_variance_recovered": 0.0990843839064057,
+          "mean_core_full_operator_variance_recovered": 0.0058871598309652145,
+          "pca_4_full_operator_variance_recovered": 0.03090034991818936,
+          "pca_8_full_operator_variance_recovered": 0.03442859841522147,
+          "pca_16_full_operator_variance_recovered": 0.03933925930112708
+        },
+        "128": {
+          "shared_support_variance_recovered": 0.20514387292008623,
+          "mean_core_full_operator_variance_recovered": 0.005467440596135082,
+          "pca_4_full_operator_variance_recovered": 0.04005961358666181,
+          "pca_8_full_operator_variance_recovered": 0.0453346367381775,
+          "pca_16_full_operator_variance_recovered": 0.05031880540342581
+        }
+      },
+      "primary": {
+        "support_dimension": 64,
+        "core_pca_components": 16,
+        "observed_full_operator_variance_recovered": 0.03933925930112708,
+        "null_comparisons": {
+          "spectrum_matched_haar": {
+            "null_mean": -0.00481673310339726,
+            "null_standard_deviation": 9.109904554591334e-05,
+            "observed_minus_null_mean": 0.04415599240452434,
+            "upper_tail_p_value": 0.05
+          },
+          "within_layer_side_pairing_shuffle": {
+            "null_mean": -0.003620499312002974,
+            "null_standard_deviation": 0.0016033863664401296,
+            "observed_minus_null_mean": 0.042959758613130054,
+            "upper_tail_p_value": 0.05
+          }
+        }
+      }
+    },
+    "OV": {
+      "held_out_head_metrics": {
+        "16": {
+          "shared_support_variance_recovered": 0.017340234174519128,
+          "mean_core_full_operator_variance_recovered": -0.0028810929839801136,
+          "pca_4_full_operator_variance_recovered": 0.0028722236138274556,
+          "pca_8_full_operator_variance_recovered": 0.008148746898026887,
+          "pca_16_full_operator_variance_recovered": 0.009456653382187406
+        },
+        "32": {
+          "shared_support_variance_recovered": 0.02820862369861596,
+          "mean_core_full_operator_variance_recovered": -0.0040353064368630065,
+          "pca_4_full_operator_variance_recovered": 0.0010489318830336413,
+          "pca_8_full_operator_variance_recovered": 0.0037302803458653297,
+          "pca_16_full_operator_variance_recovered": 0.008349740338004338
+        },
+        "64": {
+          "shared_support_variance_recovered": 0.05755773165378511,
+          "mean_core_full_operator_variance_recovered": -0.006872960733743533,
+          "pca_4_full_operator_variance_recovered": -0.0017599633495133777,
+          "pca_8_full_operator_variance_recovered": 0.0001342105376881857,
+          "pca_16_full_operator_variance_recovered": 0.00630723349367693
+        },
+        "128": {
+          "shared_support_variance_recovered": 0.14623553621518515,
+          "mean_core_full_operator_variance_recovered": -0.011369820929075755,
+          "pca_4_full_operator_variance_recovered": -0.0029053963195500064,
+          "pca_8_full_operator_variance_recovered": -0.0007772036044362946,
+          "pca_16_full_operator_variance_recovered": 0.0056488430387227374
+        }
+      },
+      "primary": {
+        "support_dimension": 64,
+        "core_pca_components": 16,
+        "observed_full_operator_variance_recovered": 0.00630723349367693,
+        "null_comparisons": {
+          "spectrum_matched_haar": {
+            "null_mean": -0.005379661345554187,
+            "null_standard_deviation": 9.527059901810766e-05,
+            "observed_minus_null_mean": 0.011686894839231117,
+            "upper_tail_p_value": 0.05
+          },
+          "within_layer_side_pairing_shuffle": {
+            "null_mean": -7.048356579029466e-05,
+            "null_standard_deviation": 0.0012737050974698438,
+            "observed_minus_null_mean": 0.006377717059467224,
+            "upper_tail_p_value": 0.05
+          }
+        }
+      }
+    }
+  },
+  "null_repetitions": 19,
+  "seed": 0
+}

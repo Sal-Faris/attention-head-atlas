@@ -5,6 +5,7 @@ import numpy as np
 from head_atlas.distances import (
     chordal_subspace_distances,
     normalized_frobenius_distances,
+    normalized_vector_distances,
     weighted_product_distances,
 )
 from head_atlas.operators import HeadOperator
@@ -15,6 +16,18 @@ def qk_operator(matrix, head=0):
 
 
 class DistanceTests(unittest.TestCase):
+    def test_normalized_vector_distances_remove_positive_scale(self):
+        distances = normalized_vector_distances(
+            np.asarray([[1.0, 0.0], [4.0, 0.0], [0.0, 2.0]])
+        )
+
+        self.assertAlmostEqual(distances[0, 1], 0.0)
+        self.assertAlmostEqual(distances[0, 2], np.sqrt(2.0))
+
+    def test_normalized_vector_distances_reject_zero_rows(self):
+        with self.assertRaisesRegex(ValueError, "near-zero"):
+            normalized_vector_distances(np.asarray([[1.0, 0.0], [0.0, 0.0]]))
+
     def test_chordal_distance_ignores_basis_rotation_within_subspace(self):
         first = np.asarray([[1.0, 0.0], [0.0, 1.0], [0.0, 0.0]])
         rotation = np.asarray([[0.0, -1.0], [1.0, 0.0]])

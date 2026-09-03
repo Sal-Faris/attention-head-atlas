@@ -1,0 +1,4585 @@
+{
+  "status": "direct variable-rank restricted-map pilot",
+  "model": "EleutherAI/pythia-70m-deduped",
+  "revision": "step143000",
+  "operator_kind": "OV",
+  "discovery": "weights only; no tokens, prompts, activations, or semantic labels",
+  "training_heads": [
+    {
+      "layer": 0,
+      "head": 0
+    },
+    {
+      "layer": 0,
+      "head": 2
+    },
+    {
+      "layer": 0,
+      "head": 4
+    },
+    {
+      "layer": 0,
+      "head": 6
+    },
+    {
+      "layer": 1,
+      "head": 0
+    },
+    {
+      "layer": 1,
+      "head": 2
+    },
+    {
+      "layer": 1,
+      "head": 4
+    },
+    {
+      "layer": 1,
+      "head": 6
+    },
+    {
+      "layer": 2,
+      "head": 0
+    },
+    {
+      "layer": 2,
+      "head": 2
+    },
+    {
+      "layer": 2,
+      "head": 4
+    },
+    {
+      "layer": 2,
+      "head": 6
+    },
+    {
+      "layer": 3,
+      "head": 0
+    },
+    {
+      "layer": 3,
+      "head": 2
+    },
+    {
+      "layer": 3,
+      "head": 4
+    },
+    {
+      "layer": 3,
+      "head": 6
+    },
+    {
+      "layer": 4,
+      "head": 0
+    },
+    {
+      "layer": 4,
+      "head": 2
+    },
+    {
+      "layer": 4,
+      "head": 4
+    },
+    {
+      "layer": 4,
+      "head": 6
+    },
+    {
+      "layer": 5,
+      "head": 0
+    },
+    {
+      "layer": 5,
+      "head": 2
+    },
+    {
+      "layer": 5,
+      "head": 4
+    },
+    {
+      "layer": 5,
+      "head": 6
+    }
+  ],
+  "evaluation_heads": [
+    {
+      "layer": 0,
+      "head": 1
+    },
+    {
+      "layer": 0,
+      "head": 3
+    },
+    {
+      "layer": 0,
+      "head": 5
+    },
+    {
+      "layer": 0,
+      "head": 7
+    },
+    {
+      "layer": 1,
+      "head": 1
+    },
+    {
+      "layer": 1,
+      "head": 3
+    },
+    {
+      "layer": 1,
+      "head": 5
+    },
+    {
+      "layer": 1,
+      "head": 7
+    },
+    {
+      "layer": 2,
+      "head": 1
+    },
+    {
+      "layer": 2,
+      "head": 3
+    },
+    {
+      "layer": 2,
+      "head": 5
+    },
+    {
+      "layer": 2,
+      "head": 7
+    },
+    {
+      "layer": 3,
+      "head": 1
+    },
+    {
+      "layer": 3,
+      "head": 3
+    },
+    {
+      "layer": 3,
+      "head": 5
+    },
+    {
+      "layer": 3,
+      "head": 7
+    },
+    {
+      "layer": 4,
+      "head": 1
+    },
+    {
+      "layer": 4,
+      "head": 3
+    },
+    {
+      "layer": 4,
+      "head": 5
+    },
+    {
+      "layer": 4,
+      "head": 7
+    },
+    {
+      "layer": 5,
+      "head": 1
+    },
+    {
+      "layer": 5,
+      "head": 3
+    },
+    {
+      "layer": 5,
+      "head": 5
+    },
+    {
+      "layer": 5,
+      "head": 7
+    }
+  ],
+  "basis_dimension": 64,
+  "dictionary_learning": "top eigenspaces of summed M M^T and M^T M over even-numbered training heads",
+  "restricted_map": "sum of variable read-support, write-support, and learned low-rank core blocks plus an explicit residual",
+  "complexity": "shared Stiefel basis degrees amortized conservatively over held-out heads; per-block support code plus arbitrary low-rank core parameters",
+  "synthetic_calibration": {
+    "definition": "three variable-size planted restricted maps plus small dense noise",
+    "budgets": [
+      100.0,
+      250.0,
+      500.0,
+      1000.0
+    ],
+    "planted_mean_energy": [
+      0.07290768319387668,
+      0.9010114881204926,
+      0.9842574516300155,
+      0.9998188041738877
+    ],
+    "spectrum_matched_rotation_mean_energy": [
+      0.21049588189918753,
+      0.32862012782867694,
+      0.47929026690455573,
+      0.9998351319554337
+    ],
+    "dense_low_rank_mean_energy": [
+      0.0,
+      0.391712392306403,
+      0.7795895733666233,
+      0.9998351319554336
+    ],
+    "samples": 12
+  },
+  "held_out_real_population": {
+    "total_scalar_budgets": [
+      4000.0,
+      8000.0,
+      16000.0,
+      32000.0
+    ],
+    "dictionary_scalar_cost_per_evaluation_head": 2557.3333333333335,
+    "mean_energy_fraction": {
+      "restricted_blocks": [
+        0.04165721351282447,
+        0.046044524996925566,
+        0.046044524996925566,
+        0.046044524996925566
+      ],
+      "projected_dense_low_rank": [
+        0.04827984431327659,
+        0.05595916878220014,
+        0.05595916878220014,
+        0.05595916878220014
+      ],
+      "unstructured_sparse": [
+        0.04444313082245291,
+        0.055733038696594406,
+        0.05595916878220014,
+        0.05595916878220014
+      ],
+      "full_svd": [
+        0.21224797171616325,
+        0.34187165147223086,
+        0.526559150643958,
+        0.772850663209311
+      ]
+    },
+    "spectrum_matched_rotation_mean_energy_fraction": [
+      0.0419717106530982,
+      0.045983332111413505,
+      0.045983332111413505,
+      0.045983332111413505
+    ],
+    "restricted_minus_rotation": [
+      -0.000314497140273734,
+      6.119288551206109e-05,
+      6.119288551206109e-05,
+      6.119288551206109e-05
+    ]
+  },
+  "held_out_heads": [
+    {
+      "layer": 0,
+      "head": 1,
+      "budgets": [
+        {
+          "total_scalar_budget": 4000.0,
+          "restricted_block_energy_fraction": 0.028704166756703037,
+          "projected_dense_low_rank_energy_fraction": 0.031895216053659414,
+          "unstructured_sparse_energy_fraction": 0.02810842937668758,
+          "full_svd_energy_fraction": 0.2137800730577003,
+          "null_mean_energy_fraction": 0.028710687885455166,
+          "null_samples": [
+            0.02879196799946789,
+            0.028873665103750532,
+            0.028732698554805907,
+            0.02865933656273542,
+            0.028855075616505157,
+            0.028461174460244983,
+            0.028600896900676277
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1008.0268540975604,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.02822660319129848
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.00018446175006116153
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00014647679036384345
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00014662502497954992
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 8000.0,
+          "restricted_block_energy_fraction": 0.028704166756703037,
+          "projected_dense_low_rank_energy_fraction": 0.03858998555207539,
+          "unstructured_sparse_energy_fraction": 0.03836672645518238,
+          "full_svd_energy_fraction": 0.36742617764182633,
+          "null_mean_energy_fraction": 0.028710687885455166,
+          "null_samples": [
+            0.02879196799946789,
+            0.028873665103750532,
+            0.028732698554805907,
+            0.02865933656273542,
+            0.028855075616505157,
+            0.028461174460244983,
+            0.028600896900676277
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1008.0268540975604,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.02822660319129848
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.00018446175006116153
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00014647679036384345
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00014662502497954992
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 16000.0,
+          "restricted_block_energy_fraction": 0.028704166756703037,
+          "projected_dense_low_rank_energy_fraction": 0.03858998555207539,
+          "unstructured_sparse_energy_fraction": 0.03858998555207539,
+          "full_svd_energy_fraction": 0.5771356328713582,
+          "null_mean_energy_fraction": 0.028710687885455166,
+          "null_samples": [
+            0.02879196799946789,
+            0.028873665103750532,
+            0.028732698554805907,
+            0.02865933656273542,
+            0.028855075616505157,
+            0.028461174460244983,
+            0.028600896900676277
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1008.0268540975604,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.02822660319129848
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.00018446175006116153
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00014647679036384345
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00014662502497954992
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 32000.0,
+          "restricted_block_energy_fraction": 0.028704166756703037,
+          "projected_dense_low_rank_energy_fraction": 0.03858998555207539,
+          "unstructured_sparse_energy_fraction": 0.03858998555207539,
+          "full_svd_energy_fraction": 0.8170536855535169,
+          "null_mean_energy_fraction": 0.028710687885455166,
+          "null_samples": [
+            0.02879196799946789,
+            0.028873665103750532,
+            0.028732698554805907,
+            0.02865933656273542,
+            0.028855075616505157,
+            0.028461174460244983,
+            0.028600896900676277
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1008.0268540975604,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.02822660319129848
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.00018446175006116153
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00014647679036384345
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00014662502497954992
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": 0,
+      "head": 3,
+      "budgets": [
+        {
+          "total_scalar_budget": 4000.0,
+          "restricted_block_energy_fraction": 0.06980127870939518,
+          "projected_dense_low_rank_energy_fraction": 0.07202609940489328,
+          "unstructured_sparse_energy_fraction": 0.05948304176508502,
+          "full_svd_energy_fraction": 0.5217280874339429,
+          "null_mean_energy_fraction": 0.06980127870939519,
+          "null_samples": [
+            0.06980127870939515,
+            0.06980127870939519,
+            0.0698012787093952,
+            0.06980127870939519,
+            0.06980127870939518,
+            0.06980127870939516,
+            0.0698012787093952
+          ],
+          "selected_scalar_cost_excluding_dictionary": 969.0,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.06980127870939518
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 8000.0,
+          "restricted_block_energy_fraction": 0.06980127870939518,
+          "projected_dense_low_rank_energy_fraction": 0.07527775005030138,
+          "unstructured_sparse_energy_fraction": 0.07496586173688388,
+          "full_svd_energy_fraction": 0.6674902195823326,
+          "null_mean_energy_fraction": 0.06980127870939519,
+          "null_samples": [
+            0.06980127870939515,
+            0.06980127870939519,
+            0.0698012787093952,
+            0.06980127870939519,
+            0.06980127870939518,
+            0.06980127870939516,
+            0.0698012787093952
+          ],
+          "selected_scalar_cost_excluding_dictionary": 969.0,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.06980127870939518
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 16000.0,
+          "restricted_block_energy_fraction": 0.06980127870939518,
+          "projected_dense_low_rank_energy_fraction": 0.07527775005030138,
+          "unstructured_sparse_energy_fraction": 0.07527775005030138,
+          "full_svd_energy_fraction": 0.7861012204132334,
+          "null_mean_energy_fraction": 0.06980127870939519,
+          "null_samples": [
+            0.06980127870939515,
+            0.06980127870939519,
+            0.0698012787093952,
+            0.06980127870939519,
+            0.06980127870939518,
+            0.06980127870939516,
+            0.0698012787093952
+          ],
+          "selected_scalar_cost_excluding_dictionary": 969.0,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.06980127870939518
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 32000.0,
+          "restricted_block_energy_fraction": 0.06980127870939518,
+          "projected_dense_low_rank_energy_fraction": 0.07527775005030138,
+          "unstructured_sparse_energy_fraction": 0.07527775005030138,
+          "full_svd_energy_fraction": 0.9069782204304094,
+          "null_mean_energy_fraction": 0.06980127870939519,
+          "null_samples": [
+            0.06980127870939515,
+            0.06980127870939519,
+            0.0698012787093952,
+            0.06980127870939519,
+            0.06980127870939518,
+            0.06980127870939516,
+            0.0698012787093952
+          ],
+          "selected_scalar_cost_excluding_dictionary": 969.0,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.06980127870939518
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": 0,
+      "head": 5,
+      "budgets": [
+        {
+          "total_scalar_budget": 4000.0,
+          "restricted_block_energy_fraction": 0.019030410353862617,
+          "projected_dense_low_rank_energy_fraction": 0.024773192716014695,
+          "unstructured_sparse_energy_fraction": 0.02273922683385476,
+          "full_svd_energy_fraction": 0.16258477276290903,
+          "null_mean_energy_fraction": 0.018936592498466836,
+          "null_samples": [
+            0.018934105909602678,
+            0.01909902985381199,
+            0.018944907266935665,
+            0.018902479403054166,
+            0.019123875524577005,
+            0.01876695650736185,
+            0.01878479302392452
+          ],
+          "selected_scalar_cost_excluding_dictionary": 653.7274791958183,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.017366132714937463
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 2,
+              "scalar_cost": 69.09942893026766,
+              "energy_gain": 0.0007389100346878878
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 2,
+              "scalar_cost": 35.00542627591564,
+              "energy_gain": 0.0003812020655488275
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 21.005426275915635,
+              "energy_gain": 0.00021718810031095615
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.00018042152112336007
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00014655591725412436
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 8000.0,
+          "restricted_block_energy_fraction": 0.019030410353862617,
+          "projected_dense_low_rank_energy_fraction": 0.03143995554255018,
+          "unstructured_sparse_energy_fraction": 0.03125416215783576,
+          "full_svd_energy_fraction": 0.2640046391418398,
+          "null_mean_energy_fraction": 0.018936592498466836,
+          "null_samples": [
+            0.018934105909602678,
+            0.01909902985381199,
+            0.018944907266935665,
+            0.018902479403054166,
+            0.019123875524577005,
+            0.01876695650736185,
+            0.01878479302392452
+          ],
+          "selected_scalar_cost_excluding_dictionary": 653.7274791958183,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.017366132714937463
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 2,
+              "scalar_cost": 69.09942893026766,
+              "energy_gain": 0.0007389100346878878
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 2,
+              "scalar_cost": 35.00542627591564,
+              "energy_gain": 0.0003812020655488275
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 21.005426275915635,
+              "energy_gain": 0.00021718810031095615
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.00018042152112336007
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00014655591725412436
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 16000.0,
+          "restricted_block_energy_fraction": 0.019030410353862617,
+          "projected_dense_low_rank_energy_fraction": 0.03143995554255018,
+          "unstructured_sparse_energy_fraction": 0.03143995554255018,
+          "full_svd_energy_fraction": 0.4336807840290195,
+          "null_mean_energy_fraction": 0.018936592498466836,
+          "null_samples": [
+            0.018934105909602678,
+            0.01909902985381199,
+            0.018944907266935665,
+            0.018902479403054166,
+            0.019123875524577005,
+            0.01876695650736185,
+            0.01878479302392452
+          ],
+          "selected_scalar_cost_excluding_dictionary": 653.7274791958183,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.017366132714937463
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 2,
+              "scalar_cost": 69.09942893026766,
+              "energy_gain": 0.0007389100346878878
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 2,
+              "scalar_cost": 35.00542627591564,
+              "energy_gain": 0.0003812020655488275
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 21.005426275915635,
+              "energy_gain": 0.00021718810031095615
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.00018042152112336007
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00014655591725412436
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 32000.0,
+          "restricted_block_energy_fraction": 0.019030410353862617,
+          "projected_dense_low_rank_energy_fraction": 0.03143995554255018,
+          "unstructured_sparse_energy_fraction": 0.03143995554255018,
+          "full_svd_energy_fraction": 0.711466934150472,
+          "null_mean_energy_fraction": 0.018936592498466836,
+          "null_samples": [
+            0.018934105909602678,
+            0.01909902985381199,
+            0.018944907266935665,
+            0.018902479403054166,
+            0.019123875524577005,
+            0.01876695650736185,
+            0.01878479302392452
+          ],
+          "selected_scalar_cost_excluding_dictionary": 653.7274791958183,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.017366132714937463
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 2,
+              "scalar_cost": 69.09942893026766,
+              "energy_gain": 0.0007389100346878878
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 2,
+              "scalar_cost": 35.00542627591564,
+              "energy_gain": 0.0003812020655488275
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 21.005426275915635,
+              "energy_gain": 0.00021718810031095615
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.00018042152112336007
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00014655591725412436
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": 0,
+      "head": 7,
+      "budgets": [
+        {
+          "total_scalar_budget": 4000.0,
+          "restricted_block_energy_fraction": 0.024735277274410286,
+          "projected_dense_low_rank_energy_fraction": 0.02798509110763085,
+          "unstructured_sparse_energy_fraction": 0.026103886351893167,
+          "full_svd_energy_fraction": 0.16237468389977508,
+          "null_mean_energy_fraction": 0.02476408853834635,
+          "null_samples": [
+            0.025036314363892295,
+            0.024710443974272054,
+            0.02452470345127907,
+            0.024828010181071034,
+            0.02465530121828636,
+            0.024880143933701578,
+            0.02471370264592206
+          ],
+          "selected_scalar_cost_excluding_dictionary": 990.0054262759156,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.02452470345127907
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 21.005426275915635,
+              "energy_gain": 0.0002105738231312154
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 8000.0,
+          "restricted_block_energy_fraction": 0.024735277274410286,
+          "projected_dense_low_rank_energy_fraction": 0.03553264991622506,
+          "unstructured_sparse_energy_fraction": 0.035349234970059325,
+          "full_svd_energy_fraction": 0.2677324035478716,
+          "null_mean_energy_fraction": 0.02476408853834635,
+          "null_samples": [
+            0.025036314363892295,
+            0.024710443974272054,
+            0.02452470345127907,
+            0.024828010181071034,
+            0.02465530121828636,
+            0.024880143933701578,
+            0.02471370264592206
+          ],
+          "selected_scalar_cost_excluding_dictionary": 990.0054262759156,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.02452470345127907
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 21.005426275915635,
+              "energy_gain": 0.0002105738231312154
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 16000.0,
+          "restricted_block_energy_fraction": 0.024735277274410286,
+          "projected_dense_low_rank_energy_fraction": 0.03553264991622506,
+          "unstructured_sparse_energy_fraction": 0.03553264991622507,
+          "full_svd_energy_fraction": 0.4426866945736321,
+          "null_mean_energy_fraction": 0.02476408853834635,
+          "null_samples": [
+            0.025036314363892295,
+            0.024710443974272054,
+            0.02452470345127907,
+            0.024828010181071034,
+            0.02465530121828636,
+            0.024880143933701578,
+            0.02471370264592206
+          ],
+          "selected_scalar_cost_excluding_dictionary": 990.0054262759156,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.02452470345127907
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 21.005426275915635,
+              "energy_gain": 0.0002105738231312154
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 32000.0,
+          "restricted_block_energy_fraction": 0.024735277274410286,
+          "projected_dense_low_rank_energy_fraction": 0.03553264991622506,
+          "unstructured_sparse_energy_fraction": 0.03553264991622507,
+          "full_svd_energy_fraction": 0.7267124270492649,
+          "null_mean_energy_fraction": 0.02476408853834635,
+          "null_samples": [
+            0.025036314363892295,
+            0.024710443974272054,
+            0.02452470345127907,
+            0.024828010181071034,
+            0.02465530121828636,
+            0.024880143933701578,
+            0.02471370264592206
+          ],
+          "selected_scalar_cost_excluding_dictionary": 990.0054262759156,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.02452470345127907
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 21.005426275915635,
+              "energy_gain": 0.0002105738231312154
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": 1,
+      "head": 1,
+      "budgets": [
+        {
+          "total_scalar_budget": 4000.0,
+          "restricted_block_energy_fraction": 0.006976864824216199,
+          "projected_dense_low_rank_energy_fraction": 0.012801125979861216,
+          "unstructured_sparse_energy_fraction": 0.012082831682457688,
+          "full_svd_energy_fraction": 0.1136660897293363,
+          "null_mean_energy_fraction": 0.006956137896914153,
+          "null_samples": [
+            0.0066555504753591675,
+            0.00701286270936486,
+            0.006776085871987665,
+            0.00701657302328029,
+            0.006829153756438858,
+            0.006773539998586825,
+            0.0076291994433814
+          ],
+          "selected_scalar_cost_excluding_dictionary": 547.4150826597566,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.0064345523803463825
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00017116154783372754
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 2,
+              "scalar_cost": 35.00542627591564,
+              "energy_gain": 0.00037115089603608896
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 8000.0,
+          "restricted_block_energy_fraction": 0.006976864824216199,
+          "projected_dense_low_rank_energy_fraction": 0.018121852698708852,
+          "unstructured_sparse_energy_fraction": 0.017992950084687553,
+          "full_svd_energy_fraction": 0.24238173592021497,
+          "null_mean_energy_fraction": 0.006956137896914153,
+          "null_samples": [
+            0.0066555504753591675,
+            0.00701286270936486,
+            0.006776085871987665,
+            0.00701657302328029,
+            0.006829153756438858,
+            0.006773539998586825,
+            0.0076291994433814
+          ],
+          "selected_scalar_cost_excluding_dictionary": 547.4150826597566,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.0064345523803463825
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00017116154783372754
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 2,
+              "scalar_cost": 35.00542627591564,
+              "energy_gain": 0.00037115089603608896
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 16000.0,
+          "restricted_block_energy_fraction": 0.006976864824216199,
+          "projected_dense_low_rank_energy_fraction": 0.018121852698708852,
+          "unstructured_sparse_energy_fraction": 0.01812185269870886,
+          "full_svd_energy_fraction": 0.44298086089736405,
+          "null_mean_energy_fraction": 0.006956137896914153,
+          "null_samples": [
+            0.0066555504753591675,
+            0.00701286270936486,
+            0.006776085871987665,
+            0.00701657302328029,
+            0.006829153756438858,
+            0.006773539998586825,
+            0.0076291994433814
+          ],
+          "selected_scalar_cost_excluding_dictionary": 547.4150826597566,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.0064345523803463825
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00017116154783372754
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 2,
+              "scalar_cost": 35.00542627591564,
+              "energy_gain": 0.00037115089603608896
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 32000.0,
+          "restricted_block_energy_fraction": 0.006976864824216199,
+          "projected_dense_low_rank_energy_fraction": 0.018121852698708852,
+          "unstructured_sparse_energy_fraction": 0.01812185269870886,
+          "full_svd_energy_fraction": 0.72451302201842,
+          "null_mean_energy_fraction": 0.006956137896914153,
+          "null_samples": [
+            0.0066555504753591675,
+            0.00701286270936486,
+            0.006776085871987665,
+            0.00701657302328029,
+            0.006829153756438858,
+            0.006773539998586825,
+            0.0076291994433814
+          ],
+          "selected_scalar_cost_excluding_dictionary": 547.4150826597566,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.0064345523803463825
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00017116154783372754
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 2,
+              "scalar_cost": 35.00542627591564,
+              "energy_gain": 0.00037115089603608896
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": 1,
+      "head": 3,
+      "budgets": [
+        {
+          "total_scalar_budget": 4000.0,
+          "restricted_block_energy_fraction": 0.020970517963117725,
+          "projected_dense_low_rank_energy_fraction": 0.0358131785668045,
+          "unstructured_sparse_energy_fraction": 0.031169482998227974,
+          "full_svd_energy_fraction": 0.18921337220007622,
+          "null_mean_energy_fraction": 0.02584130421592914,
+          "null_samples": [
+            0.014518660819570739,
+            0.03467626403634445,
+            0.033670622069364754,
+            0.02119451340510729,
+            0.02139575434818413,
+            0.02047561294927157,
+            0.034957701883661055
+          ],
+          "selected_scalar_cost_excluding_dictionary": 531.0524276030917,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.019919925682836077
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 30.052427603091648,
+              "energy_gain": 0.0010505922802816476
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 8000.0,
+          "restricted_block_energy_fraction": 0.03621339306087604,
+          "projected_dense_low_rank_energy_fraction": 0.04508668282513828,
+          "unstructured_sparse_energy_fraction": 0.04479361493219944,
+          "full_svd_energy_fraction": 0.3603346205511773,
+          "null_mean_energy_fraction": 0.035588203381442716,
+          "null_samples": [
+            0.03692721118689349,
+            0.03467626403634445,
+            0.033670622069364754,
+            0.03609700278399035,
+            0.03632103379132323,
+            0.0364675879185217,
+            0.034957701883661055
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1500.0524276030917,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.03008214341387991
+            },
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.0057310351529246
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 16,
+              "core_rank": 1,
+              "scalar_cost": 30.052427603091648,
+              "energy_gain": 0.000400214494071521
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 16000.0,
+          "restricted_block_energy_fraction": 0.03621339306087604,
+          "projected_dense_low_rank_energy_fraction": 0.04508668282513828,
+          "unstructured_sparse_energy_fraction": 0.045086682825138294,
+          "full_svd_energy_fraction": 0.5926418584473631,
+          "null_mean_energy_fraction": 0.035588203381442716,
+          "null_samples": [
+            0.03692721118689349,
+            0.03467626403634445,
+            0.033670622069364754,
+            0.03609700278399035,
+            0.03632103379132323,
+            0.0364675879185217,
+            0.034957701883661055
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1500.0524276030917,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.03008214341387991
+            },
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.0057310351529246
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 16,
+              "core_rank": 1,
+              "scalar_cost": 30.052427603091648,
+              "energy_gain": 0.000400214494071521
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 32000.0,
+          "restricted_block_energy_fraction": 0.03621339306087604,
+          "projected_dense_low_rank_energy_fraction": 0.04508668282513828,
+          "unstructured_sparse_energy_fraction": 0.045086682825138294,
+          "full_svd_energy_fraction": 0.832867723522163,
+          "null_mean_energy_fraction": 0.035588203381442716,
+          "null_samples": [
+            0.03692721118689349,
+            0.03467626403634445,
+            0.033670622069364754,
+            0.03609700278399035,
+            0.03632103379132323,
+            0.0364675879185217,
+            0.034957701883661055
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1500.0524276030917,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.03008214341387991
+            },
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.0057310351529246
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 16,
+              "core_rank": 1,
+              "scalar_cost": 30.052427603091648,
+              "energy_gain": 0.000400214494071521
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": 1,
+      "head": 5,
+      "budgets": [
+        {
+          "total_scalar_budget": 4000.0,
+          "restricted_block_energy_fraction": 0.03993464508610811,
+          "projected_dense_low_rank_energy_fraction": 0.042371488706357825,
+          "unstructured_sparse_energy_fraction": 0.0351049644520932,
+          "full_svd_energy_fraction": 0.3471729836894825,
+          "null_mean_energy_fraction": 0.03981595391310792,
+          "null_samples": [
+            0.03998488362628441,
+            0.04059391123227252,
+            0.03944061283257259,
+            0.039452918906900065,
+            0.03948732081396659,
+            0.039776371228737575,
+            0.03997565875102168
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1158.8905473397713,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.037730851755534936
+            },
+            {
+              "read_dimension": 32,
+              "write_dimension": 32,
+              "core_rank": 2,
+              "scalar_cost": 134.58357707962543,
+              "energy_gain": 0.001601764775362753
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.0001903442798800606
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 1,
+              "scalar_cost": 39.099428930267656,
+              "energy_gain": 0.0004116842753303638
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 8000.0,
+          "restricted_block_energy_fraction": 0.03993464508610811,
+          "projected_dense_low_rank_energy_fraction": 0.04944436467561171,
+          "unstructured_sparse_energy_fraction": 0.0491755113650911,
+          "full_svd_energy_fraction": 0.5088357769129016,
+          "null_mean_energy_fraction": 0.03981595391310792,
+          "null_samples": [
+            0.03998488362628441,
+            0.04059391123227252,
+            0.03944061283257259,
+            0.039452918906900065,
+            0.03948732081396659,
+            0.039776371228737575,
+            0.03997565875102168
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1158.8905473397713,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.037730851755534936
+            },
+            {
+              "read_dimension": 32,
+              "write_dimension": 32,
+              "core_rank": 2,
+              "scalar_cost": 134.58357707962543,
+              "energy_gain": 0.001601764775362753
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.0001903442798800606
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 1,
+              "scalar_cost": 39.099428930267656,
+              "energy_gain": 0.0004116842753303638
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 16000.0,
+          "restricted_block_energy_fraction": 0.03993464508610811,
+          "projected_dense_low_rank_energy_fraction": 0.04944436467561171,
+          "unstructured_sparse_energy_fraction": 0.049444364675611696,
+          "full_svd_energy_fraction": 0.6698380635437745,
+          "null_mean_energy_fraction": 0.03981595391310792,
+          "null_samples": [
+            0.03998488362628441,
+            0.04059391123227252,
+            0.03944061283257259,
+            0.039452918906900065,
+            0.03948732081396659,
+            0.039776371228737575,
+            0.03997565875102168
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1158.8905473397713,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.037730851755534936
+            },
+            {
+              "read_dimension": 32,
+              "write_dimension": 32,
+              "core_rank": 2,
+              "scalar_cost": 134.58357707962543,
+              "energy_gain": 0.001601764775362753
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.0001903442798800606
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 1,
+              "scalar_cost": 39.099428930267656,
+              "energy_gain": 0.0004116842753303638
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 32000.0,
+          "restricted_block_energy_fraction": 0.03993464508610811,
+          "projected_dense_low_rank_energy_fraction": 0.04944436467561171,
+          "unstructured_sparse_energy_fraction": 0.049444364675611696,
+          "full_svd_energy_fraction": 0.8450183589115042,
+          "null_mean_energy_fraction": 0.03981595391310792,
+          "null_samples": [
+            0.03998488362628441,
+            0.04059391123227252,
+            0.03944061283257259,
+            0.039452918906900065,
+            0.03948732081396659,
+            0.039776371228737575,
+            0.03997565875102168
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1158.8905473397713,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.037730851755534936
+            },
+            {
+              "read_dimension": 32,
+              "write_dimension": 32,
+              "core_rank": 2,
+              "scalar_cost": 134.58357707962543,
+              "energy_gain": 0.001601764775362753
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.0001903442798800606
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 1,
+              "scalar_cost": 39.099428930267656,
+              "energy_gain": 0.0004116842753303638
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": 1,
+      "head": 7,
+      "budgets": [
+        {
+          "total_scalar_budget": 4000.0,
+          "restricted_block_energy_fraction": 0.010992491825441842,
+          "projected_dense_low_rank_energy_fraction": 0.01667531892817698,
+          "unstructured_sparse_energy_fraction": 0.015655811851334467,
+          "full_svd_energy_fraction": 0.11993936831574753,
+          "null_mean_energy_fraction": 0.010551227665888733,
+          "null_samples": [
+            0.010463915810311957,
+            0.010511062921836407,
+            0.010852440231979074,
+            0.00944975170769877,
+            0.010756152947408434,
+            0.010593369107883964,
+            0.011231900934102538
+          ],
+          "selected_scalar_cost_excluding_dictionary": 658.1484732650925,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.009010141775677128
+            },
+            {
+              "read_dimension": 32,
+              "write_dimension": 16,
+              "core_rank": 2,
+              "scalar_cost": 101.84150300494655,
+              "energy_gain": 0.0013384222548556062
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 1,
+              "scalar_cost": 39.099428930267656,
+              "energy_gain": 0.0004510621998596343
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.00019286559504947445
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 8000.0,
+          "restricted_block_energy_fraction": 0.010992491825441842,
+          "projected_dense_low_rank_energy_fraction": 0.023531242826569126,
+          "unstructured_sparse_energy_fraction": 0.023373996688595643,
+          "full_svd_energy_fraction": 0.24378619066095397,
+          "null_mean_energy_fraction": 0.010551227665888733,
+          "null_samples": [
+            0.010463915810311957,
+            0.010511062921836407,
+            0.010852440231979074,
+            0.00944975170769877,
+            0.010756152947408434,
+            0.010593369107883964,
+            0.011231900934102538
+          ],
+          "selected_scalar_cost_excluding_dictionary": 658.1484732650925,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.009010141775677128
+            },
+            {
+              "read_dimension": 32,
+              "write_dimension": 16,
+              "core_rank": 2,
+              "scalar_cost": 101.84150300494655,
+              "energy_gain": 0.0013384222548556062
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 1,
+              "scalar_cost": 39.099428930267656,
+              "energy_gain": 0.0004510621998596343
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.00019286559504947445
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 16000.0,
+          "restricted_block_energy_fraction": 0.010992491825441842,
+          "projected_dense_low_rank_energy_fraction": 0.023531242826569126,
+          "unstructured_sparse_energy_fraction": 0.023531242826569126,
+          "full_svd_energy_fraction": 0.4328969261523636,
+          "null_mean_energy_fraction": 0.010551227665888733,
+          "null_samples": [
+            0.010463915810311957,
+            0.010511062921836407,
+            0.010852440231979074,
+            0.00944975170769877,
+            0.010756152947408434,
+            0.010593369107883964,
+            0.011231900934102538
+          ],
+          "selected_scalar_cost_excluding_dictionary": 658.1484732650925,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.009010141775677128
+            },
+            {
+              "read_dimension": 32,
+              "write_dimension": 16,
+              "core_rank": 2,
+              "scalar_cost": 101.84150300494655,
+              "energy_gain": 0.0013384222548556062
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 1,
+              "scalar_cost": 39.099428930267656,
+              "energy_gain": 0.0004510621998596343
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.00019286559504947445
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 32000.0,
+          "restricted_block_energy_fraction": 0.010992491825441842,
+          "projected_dense_low_rank_energy_fraction": 0.023531242826569126,
+          "unstructured_sparse_energy_fraction": 0.023531242826569126,
+          "full_svd_energy_fraction": 0.7064352790329766,
+          "null_mean_energy_fraction": 0.010551227665888733,
+          "null_samples": [
+            0.010463915810311957,
+            0.010511062921836407,
+            0.010852440231979074,
+            0.00944975170769877,
+            0.010756152947408434,
+            0.010593369107883964,
+            0.011231900934102538
+          ],
+          "selected_scalar_cost_excluding_dictionary": 658.1484732650925,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.009010141775677128
+            },
+            {
+              "read_dimension": 32,
+              "write_dimension": 16,
+              "core_rank": 2,
+              "scalar_cost": 101.84150300494655,
+              "energy_gain": 0.0013384222548556062
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 1,
+              "scalar_cost": 39.099428930267656,
+              "energy_gain": 0.0004510621998596343
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.00019286559504947445
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": 2,
+      "head": 1,
+      "budgets": [
+        {
+          "total_scalar_budget": 4000.0,
+          "restricted_block_energy_fraction": 0.020871489325546343,
+          "projected_dense_low_rank_energy_fraction": 0.041780591541979356,
+          "unstructured_sparse_energy_fraction": 0.037764286757118015,
+          "full_svd_energy_fraction": 0.16233374413058874,
+          "null_mean_energy_fraction": 0.02549534338895096,
+          "null_samples": [
+            0.025387988219512197,
+            0.02655186646044301,
+            0.024098010490558285,
+            0.02495039757686272,
+            0.024433014876686244,
+            0.02760337581017841,
+            0.02544275028841583
+          ],
+          "selected_scalar_cost_excluding_dictionary": 420.78435187297026,
+          "selected_blocks": [
+            {
+              "read_dimension": 32,
+              "write_dimension": 32,
+              "core_rank": 4,
+              "scalar_cost": 252.58357707962543,
+              "energy_gain": 0.015276028519245846
+            },
+            {
+              "read_dimension": 32,
+              "write_dimension": 32,
+              "core_rank": 2,
+              "scalar_cost": 134.58357707962543,
+              "energy_gain": 0.004434043015235748
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.0006032975876598332
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 2,
+              "scalar_cost": 17.409656383841064,
+              "energy_gain": 0.0005581202034049179
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 8000.0,
+          "restricted_block_energy_fraction": 0.04662565597552438,
+          "projected_dense_low_rank_energy_fraction": 0.053832501102803486,
+          "unstructured_sparse_energy_fraction": 0.05349636418751862,
+          "full_svd_energy_fraction": 0.35877385665081546,
+          "null_mean_energy_fraction": 0.046623677109558524,
+          "null_samples": [
+            0.04680171717029882,
+            0.04678265519532848,
+            0.04649224946293932,
+            0.046492249462939325,
+            0.04667290032218708,
+            0.046492249462939325,
+            0.046631718690277324
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1949.4096563838411,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.03420637454225238
+            },
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.012285874920686916
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00013340651258508378
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 16000.0,
+          "restricted_block_energy_fraction": 0.04662565597552438,
+          "projected_dense_low_rank_energy_fraction": 0.053832501102803486,
+          "unstructured_sparse_energy_fraction": 0.05383250110280347,
+          "full_svd_energy_fraction": 0.6740576459210336,
+          "null_mean_energy_fraction": 0.046623677109558524,
+          "null_samples": [
+            0.04680171717029882,
+            0.04678265519532848,
+            0.04649224946293932,
+            0.046492249462939325,
+            0.04667290032218708,
+            0.046492249462939325,
+            0.046631718690277324
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1949.4096563838411,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.03420637454225238
+            },
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.012285874920686916
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00013340651258508378
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 32000.0,
+          "restricted_block_energy_fraction": 0.04662565597552438,
+          "projected_dense_low_rank_energy_fraction": 0.053832501102803486,
+          "unstructured_sparse_energy_fraction": 0.05383250110280347,
+          "full_svd_energy_fraction": 0.924852184190927,
+          "null_mean_energy_fraction": 0.046623677109558524,
+          "null_samples": [
+            0.04680171717029882,
+            0.04678265519532848,
+            0.04649224946293932,
+            0.046492249462939325,
+            0.04667290032218708,
+            0.046492249462939325,
+            0.046631718690277324
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1949.4096563838411,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.03420637454225238
+            },
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.012285874920686916
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00013340651258508378
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": 2,
+      "head": 3,
+      "budgets": [
+        {
+          "total_scalar_budget": 4000.0,
+          "restricted_block_energy_fraction": 0.031946253032663935,
+          "projected_dense_low_rank_energy_fraction": 0.03363535636521459,
+          "unstructured_sparse_energy_fraction": 0.029661124717113237,
+          "full_svd_energy_fraction": 0.1586812334124006,
+          "null_mean_energy_fraction": 0.032665769350773984,
+          "null_samples": [
+            0.03242265974412681,
+            0.03244054141313125,
+            0.03259447938392937,
+            0.03309022982096254,
+            0.03315407872720052,
+            0.03352548792946298,
+            0.03143290843660441
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1267.8435460125954,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.02803491586124223
+            },
+            {
+              "read_dimension": 32,
+              "write_dimension": 32,
+              "core_rank": 4,
+              "scalar_cost": 252.58357707962543,
+              "energy_gain": 0.003331728089620094
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 30.052427603091648,
+              "energy_gain": 0.00040184878118679776
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.00017776030061481137
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 8000.0,
+          "restricted_block_energy_fraction": 0.031946253032663935,
+          "projected_dense_low_rank_energy_fraction": 0.04315598170778257,
+          "unstructured_sparse_energy_fraction": 0.04285678090206477,
+          "full_svd_energy_fraction": 0.3096359183661833,
+          "null_mean_energy_fraction": 0.032665769350773984,
+          "null_samples": [
+            0.03242265974412681,
+            0.03244054141313125,
+            0.03259447938392937,
+            0.03309022982096254,
+            0.03315407872720052,
+            0.03352548792946298,
+            0.03143290843660441
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1267.8435460125954,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.02803491586124223
+            },
+            {
+              "read_dimension": 32,
+              "write_dimension": 32,
+              "core_rank": 4,
+              "scalar_cost": 252.58357707962543,
+              "energy_gain": 0.003331728089620094
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 30.052427603091648,
+              "energy_gain": 0.00040184878118679776
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.00017776030061481137
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 16000.0,
+          "restricted_block_energy_fraction": 0.031946253032663935,
+          "projected_dense_low_rank_energy_fraction": 0.04315598170778257,
+          "unstructured_sparse_energy_fraction": 0.04315598170778258,
+          "full_svd_energy_fraction": 0.4978026699525351,
+          "null_mean_energy_fraction": 0.032665769350773984,
+          "null_samples": [
+            0.03242265974412681,
+            0.03244054141313125,
+            0.03259447938392937,
+            0.03309022982096254,
+            0.03315407872720052,
+            0.03352548792946298,
+            0.03143290843660441
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1267.8435460125954,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.02803491586124223
+            },
+            {
+              "read_dimension": 32,
+              "write_dimension": 32,
+              "core_rank": 4,
+              "scalar_cost": 252.58357707962543,
+              "energy_gain": 0.003331728089620094
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 30.052427603091648,
+              "energy_gain": 0.00040184878118679776
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.00017776030061481137
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 32000.0,
+          "restricted_block_energy_fraction": 0.031946253032663935,
+          "projected_dense_low_rank_energy_fraction": 0.04315598170778257,
+          "unstructured_sparse_energy_fraction": 0.04315598170778258,
+          "full_svd_energy_fraction": 0.746141871884237,
+          "null_mean_energy_fraction": 0.032665769350773984,
+          "null_samples": [
+            0.03242265974412681,
+            0.03244054141313125,
+            0.03259447938392937,
+            0.03309022982096254,
+            0.03315407872720052,
+            0.03352548792946298,
+            0.03143290843660441
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1267.8435460125954,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.02803491586124223
+            },
+            {
+              "read_dimension": 32,
+              "write_dimension": 32,
+              "core_rank": 4,
+              "scalar_cost": 252.58357707962543,
+              "energy_gain": 0.003331728089620094
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 30.052427603091648,
+              "energy_gain": 0.00040184878118679776
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.00017776030061481137
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": 2,
+      "head": 5,
+      "budgets": [
+        {
+          "total_scalar_budget": 4000.0,
+          "restricted_block_energy_fraction": 0.07996473855307393,
+          "projected_dense_low_rank_energy_fraction": 0.082655301146045,
+          "unstructured_sparse_energy_fraction": 0.07574690639927131,
+          "full_svd_energy_fraction": 0.3062459441354669,
+          "null_mean_energy_fraction": 0.07975269468380072,
+          "null_samples": [
+            0.07943545873586978,
+            0.0800220790774775,
+            0.07975776870191068,
+            0.07975874536218396,
+            0.07935730376284232,
+            0.07999836670181741,
+            0.07993914044450334
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1103.5835770796255,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.07850892245600427
+            },
+            {
+              "read_dimension": 32,
+              "write_dimension": 32,
+              "core_rank": 2,
+              "scalar_cost": 134.58357707962543,
+              "energy_gain": 0.001455816097069662
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 8000.0,
+          "restricted_block_energy_fraction": 0.07996473855307393,
+          "projected_dense_low_rank_energy_fraction": 0.09010327430848974,
+          "unstructured_sparse_energy_fraction": 0.08982375764703532,
+          "full_svd_energy_fraction": 0.4256430443511225,
+          "null_mean_energy_fraction": 0.07975269468380072,
+          "null_samples": [
+            0.07943545873586978,
+            0.0800220790774775,
+            0.07975776870191068,
+            0.07975874536218396,
+            0.07935730376284232,
+            0.07999836670181741,
+            0.07993914044450334
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1103.5835770796255,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.07850892245600427
+            },
+            {
+              "read_dimension": 32,
+              "write_dimension": 32,
+              "core_rank": 2,
+              "scalar_cost": 134.58357707962543,
+              "energy_gain": 0.001455816097069662
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 16000.0,
+          "restricted_block_energy_fraction": 0.07996473855307393,
+          "projected_dense_low_rank_energy_fraction": 0.09010327430848974,
+          "unstructured_sparse_energy_fraction": 0.09010327430848976,
+          "full_svd_energy_fraction": 0.5895209596049078,
+          "null_mean_energy_fraction": 0.07975269468380072,
+          "null_samples": [
+            0.07943545873586978,
+            0.0800220790774775,
+            0.07975776870191068,
+            0.07975874536218396,
+            0.07935730376284232,
+            0.07999836670181741,
+            0.07993914044450334
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1103.5835770796255,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.07850892245600427
+            },
+            {
+              "read_dimension": 32,
+              "write_dimension": 32,
+              "core_rank": 2,
+              "scalar_cost": 134.58357707962543,
+              "energy_gain": 0.001455816097069662
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 32000.0,
+          "restricted_block_energy_fraction": 0.07996473855307393,
+          "projected_dense_low_rank_energy_fraction": 0.09010327430848974,
+          "unstructured_sparse_energy_fraction": 0.09010327430848976,
+          "full_svd_energy_fraction": 0.8021523365266391,
+          "null_mean_energy_fraction": 0.07975269468380072,
+          "null_samples": [
+            0.07943545873586978,
+            0.0800220790774775,
+            0.07975776870191068,
+            0.07975874536218396,
+            0.07935730376284232,
+            0.07999836670181741,
+            0.07993914044450334
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1103.5835770796255,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.07850892245600427
+            },
+            {
+              "read_dimension": 32,
+              "write_dimension": 32,
+              "core_rank": 2,
+              "scalar_cost": 134.58357707962543,
+              "energy_gain": 0.001455816097069662
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": 2,
+      "head": 7,
+      "budgets": [
+        {
+          "total_scalar_budget": 4000.0,
+          "restricted_block_energy_fraction": 0.004525377564810994,
+          "projected_dense_low_rank_energy_fraction": 0.011319270694188048,
+          "unstructured_sparse_energy_fraction": 0.010477638559011435,
+          "full_svd_energy_fraction": 0.1546652873420287,
+          "null_mean_energy_fraction": 0.004973461266536369,
+          "null_samples": [
+            0.005767810208883803,
+            0.004769860595794652,
+            0.004773734185879057,
+            0.005299717699446375,
+            0.004929726464219168,
+            0.004743984802847846,
+            0.004529394908683683
+          ],
+          "selected_scalar_cost_excluding_dictionary": 268.7911184095038,
+          "selected_blocks": [
+            {
+              "read_dimension": 32,
+              "write_dimension": 32,
+              "core_rank": 4,
+              "scalar_cost": 252.58357707962543,
+              "energy_gain": 0.004313830076643283
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.0002115474881677101
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 8000.0,
+          "restricted_block_energy_fraction": 0.004525377564810994,
+          "projected_dense_low_rank_energy_fraction": 0.015219432585137868,
+          "unstructured_sparse_energy_fraction": 0.015110653115522378,
+          "full_svd_energy_fraction": 0.3381461079758283,
+          "null_mean_energy_fraction": 0.004973461266536369,
+          "null_samples": [
+            0.005767810208883803,
+            0.004769860595794652,
+            0.004773734185879057,
+            0.005299717699446375,
+            0.004929726464219168,
+            0.004743984802847846,
+            0.004529394908683683
+          ],
+          "selected_scalar_cost_excluding_dictionary": 268.7911184095038,
+          "selected_blocks": [
+            {
+              "read_dimension": 32,
+              "write_dimension": 32,
+              "core_rank": 4,
+              "scalar_cost": 252.58357707962543,
+              "energy_gain": 0.004313830076643283
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.0002115474881677101
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 16000.0,
+          "restricted_block_energy_fraction": 0.004525377564810994,
+          "projected_dense_low_rank_energy_fraction": 0.015219432585137868,
+          "unstructured_sparse_energy_fraction": 0.015219432585137863,
+          "full_svd_energy_fraction": 0.6592425269685597,
+          "null_mean_energy_fraction": 0.004973461266536369,
+          "null_samples": [
+            0.005767810208883803,
+            0.004769860595794652,
+            0.004773734185879057,
+            0.005299717699446375,
+            0.004929726464219168,
+            0.004743984802847846,
+            0.004529394908683683
+          ],
+          "selected_scalar_cost_excluding_dictionary": 268.7911184095038,
+          "selected_blocks": [
+            {
+              "read_dimension": 32,
+              "write_dimension": 32,
+              "core_rank": 4,
+              "scalar_cost": 252.58357707962543,
+              "energy_gain": 0.004313830076643283
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.0002115474881677101
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 32000.0,
+          "restricted_block_energy_fraction": 0.004525377564810994,
+          "projected_dense_low_rank_energy_fraction": 0.015219432585137868,
+          "unstructured_sparse_energy_fraction": 0.015219432585137863,
+          "full_svd_energy_fraction": 0.9249683319065101,
+          "null_mean_energy_fraction": 0.004973461266536369,
+          "null_samples": [
+            0.005767810208883803,
+            0.004769860595794652,
+            0.004773734185879057,
+            0.005299717699446375,
+            0.004929726464219168,
+            0.004743984802847846,
+            0.004529394908683683
+          ],
+          "selected_scalar_cost_excluding_dictionary": 268.7911184095038,
+          "selected_blocks": [
+            {
+              "read_dimension": 32,
+              "write_dimension": 32,
+              "core_rank": 4,
+              "scalar_cost": 252.58357707962543,
+              "energy_gain": 0.004313830076643283
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.0002115474881677101
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": 3,
+      "head": 1,
+      "budgets": [
+        {
+          "total_scalar_budget": 4000.0,
+          "restricted_block_energy_fraction": 0.10282682670882598,
+          "projected_dense_low_rank_energy_fraction": 0.10751022405165811,
+          "unstructured_sparse_energy_fraction": 0.10582818546379959,
+          "full_svd_energy_fraction": 0.2401159160241985,
+          "null_mean_energy_fraction": 0.10449051316828975,
+          "null_samples": [
+            0.1045360533355563,
+            0.10426130397092293,
+            0.10458272271462168,
+            0.10409700948330226,
+            0.10459729053132229,
+            0.10457082837213304,
+            0.10478838377016975
+          ],
+          "selected_scalar_cost_excluding_dictionary": 797.3008738539214,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 32,
+              "core_rank": 8,
+              "scalar_cost": 716.7917885398127,
+              "energy_gain": 0.10167787203233125
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 2,
+              "scalar_cost": 69.09942893026766,
+              "energy_gain": 0.0010018422994269474
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.0001471123770677862
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 8000.0,
+          "restricted_block_energy_fraction": 0.10282682670882598,
+          "projected_dense_low_rank_energy_fraction": 0.11396813120345119,
+          "unstructured_sparse_energy_fraction": 0.1137939153145651,
+          "full_svd_energy_fraction": 0.37037815477725655,
+          "null_mean_energy_fraction": 0.10449051316828975,
+          "null_samples": [
+            0.1045360533355563,
+            0.10426130397092293,
+            0.10458272271462168,
+            0.10409700948330226,
+            0.10459729053132229,
+            0.10457082837213304,
+            0.10478838377016975
+          ],
+          "selected_scalar_cost_excluding_dictionary": 797.3008738539214,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 32,
+              "core_rank": 8,
+              "scalar_cost": 716.7917885398127,
+              "energy_gain": 0.10167787203233125
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 2,
+              "scalar_cost": 69.09942893026766,
+              "energy_gain": 0.0010018422994269474
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.0001471123770677862
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 16000.0,
+          "restricted_block_energy_fraction": 0.10282682670882598,
+          "projected_dense_low_rank_energy_fraction": 0.11396813120345119,
+          "unstructured_sparse_energy_fraction": 0.11396813120345119,
+          "full_svd_energy_fraction": 0.5175260499748667,
+          "null_mean_energy_fraction": 0.10449051316828975,
+          "null_samples": [
+            0.1045360533355563,
+            0.10426130397092293,
+            0.10458272271462168,
+            0.10409700948330226,
+            0.10459729053132229,
+            0.10457082837213304,
+            0.10478838377016975
+          ],
+          "selected_scalar_cost_excluding_dictionary": 797.3008738539214,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 32,
+              "core_rank": 8,
+              "scalar_cost": 716.7917885398127,
+              "energy_gain": 0.10167787203233125
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 2,
+              "scalar_cost": 69.09942893026766,
+              "energy_gain": 0.0010018422994269474
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.0001471123770677862
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 32000.0,
+          "restricted_block_energy_fraction": 0.10282682670882598,
+          "projected_dense_low_rank_energy_fraction": 0.11396813120345119,
+          "unstructured_sparse_energy_fraction": 0.11396813120345119,
+          "full_svd_energy_fraction": 0.7505026210880065,
+          "null_mean_energy_fraction": 0.10449051316828975,
+          "null_samples": [
+            0.1045360533355563,
+            0.10426130397092293,
+            0.10458272271462168,
+            0.10409700948330226,
+            0.10459729053132229,
+            0.10457082837213304,
+            0.10478838377016975
+          ],
+          "selected_scalar_cost_excluding_dictionary": 797.3008738539214,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 32,
+              "core_rank": 8,
+              "scalar_cost": 716.7917885398127,
+              "energy_gain": 0.10167787203233125
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 2,
+              "scalar_cost": 69.09942893026766,
+              "energy_gain": 0.0010018422994269474
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.0001471123770677862
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": 3,
+      "head": 3,
+      "budgets": [
+        {
+          "total_scalar_budget": 4000.0,
+          "restricted_block_energy_fraction": 0.017336506763655533,
+          "projected_dense_low_rank_energy_fraction": 0.020079587179074005,
+          "unstructured_sparse_energy_fraction": 0.018838629784253987,
+          "full_svd_energy_fraction": 0.09429192722163343,
+          "null_mean_energy_fraction": 0.016961740517799577,
+          "null_samples": [
+            0.016981524712331494,
+            0.0169567304559373,
+            0.017006305295127238,
+            0.01696258577485451,
+            0.016976623359072553,
+            0.01690052907262426,
+            0.016947884954649682
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1015.4150826597566,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.016784746843932677
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 2,
+              "scalar_cost": 35.00542627591564,
+              "energy_gain": 0.0004189012245847078
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.0001328586951381483
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 8000.0,
+          "restricted_block_energy_fraction": 0.017336506763655533,
+          "projected_dense_low_rank_energy_fraction": 0.026338194694690887,
+          "unstructured_sparse_energy_fraction": 0.02619697166037014,
+          "full_svd_energy_fraction": 0.1983258948622195,
+          "null_mean_energy_fraction": 0.016961740517799577,
+          "null_samples": [
+            0.016981524712331494,
+            0.0169567304559373,
+            0.017006305295127238,
+            0.01696258577485451,
+            0.016976623359072553,
+            0.01690052907262426,
+            0.016947884954649682
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1015.4150826597566,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.016784746843932677
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 2,
+              "scalar_cost": 35.00542627591564,
+              "energy_gain": 0.0004189012245847078
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.0001328586951381483
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 16000.0,
+          "restricted_block_energy_fraction": 0.017336506763655533,
+          "projected_dense_low_rank_energy_fraction": 0.026338194694690887,
+          "unstructured_sparse_energy_fraction": 0.02633819469469089,
+          "full_svd_energy_fraction": 0.37919467332708534,
+          "null_mean_energy_fraction": 0.016961740517799577,
+          "null_samples": [
+            0.016981524712331494,
+            0.0169567304559373,
+            0.017006305295127238,
+            0.01696258577485451,
+            0.016976623359072553,
+            0.01690052907262426,
+            0.016947884954649682
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1015.4150826597566,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.016784746843932677
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 2,
+              "scalar_cost": 35.00542627591564,
+              "energy_gain": 0.0004189012245847078
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.0001328586951381483
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 32000.0,
+          "restricted_block_energy_fraction": 0.017336506763655533,
+          "projected_dense_low_rank_energy_fraction": 0.026338194694690887,
+          "unstructured_sparse_energy_fraction": 0.02633819469469089,
+          "full_svd_energy_fraction": 0.6805731705471709,
+          "null_mean_energy_fraction": 0.016961740517799577,
+          "null_samples": [
+            0.016981524712331494,
+            0.0169567304559373,
+            0.017006305295127238,
+            0.01696258577485451,
+            0.016976623359072553,
+            0.01690052907262426,
+            0.016947884954649682
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1015.4150826597566,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.016784746843932677
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 2,
+              "scalar_cost": 35.00542627591564,
+              "energy_gain": 0.0004189012245847078
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.0001328586951381483
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": 3,
+      "head": 5,
+      "budgets": [
+        {
+          "total_scalar_budget": 4000.0,
+          "restricted_block_energy_fraction": 0.045573161486040535,
+          "projected_dense_low_rank_energy_fraction": 0.05312172698472878,
+          "unstructured_sparse_energy_fraction": 0.05213005651735987,
+          "full_svd_energy_fraction": 0.09035430017806587,
+          "null_mean_energy_fraction": 0.04353510029026496,
+          "null_samples": [
+            0.04528999955336151,
+            0.04358818977824268,
+            0.0433123670791831,
+            0.044163596362127765,
+            0.04257107520958027,
+            0.04394624393622442,
+            0.041874230113134965
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1069.2007747933449,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.04187423011313497
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.0008511866174140883
+            },
+            {
+              "read_dimension": 32,
+              "write_dimension": 32,
+              "core_rank": 1,
+              "scalar_cost": 72.58357707962544,
+              "energy_gain": 0.002336784324134425
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.000510960431357055
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 8000.0,
+          "restricted_block_energy_fraction": 0.06157597849991886,
+          "projected_dense_low_rank_energy_fraction": 0.07006504168092657,
+          "unstructured_sparse_energy_fraction": 0.06979364293611177,
+          "full_svd_energy_fraction": 0.19465152962261104,
+          "null_mean_energy_fraction": 0.06093105197021708,
+          "null_samples": [
+            0.06098889210834698,
+            0.060539951705058256,
+            0.061182621385515445,
+            0.06121311216568269,
+            0.06114421785218501,
+            0.060773169813031484,
+            0.060675398761699695
+          ],
+          "selected_scalar_cost_excluding_dictionary": 2039.8771666466896,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.04187423011313497
+            },
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.018346579492342925
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 8,
+              "core_rank": 2,
+              "scalar_cost": 52.052427603091644,
+              "energy_gain": 0.0007479789120163773
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 21.005426275915635,
+              "energy_gain": 0.0002573572385761464
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 2,
+              "scalar_cost": 17.409656383841064,
+              "energy_gain": 0.00022036428483723254
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00012946845901121179
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 16000.0,
+          "restricted_block_energy_fraction": 0.06157597849991886,
+          "projected_dense_low_rank_energy_fraction": 0.07006504168092657,
+          "unstructured_sparse_energy_fraction": 0.07006504168092657,
+          "full_svd_energy_fraction": 0.37304424525502416,
+          "null_mean_energy_fraction": 0.06093105197021708,
+          "null_samples": [
+            0.06098889210834698,
+            0.060539951705058256,
+            0.061182621385515445,
+            0.06121311216568269,
+            0.06114421785218501,
+            0.060773169813031484,
+            0.060675398761699695
+          ],
+          "selected_scalar_cost_excluding_dictionary": 2039.8771666466896,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.04187423011313497
+            },
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.018346579492342925
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 8,
+              "core_rank": 2,
+              "scalar_cost": 52.052427603091644,
+              "energy_gain": 0.0007479789120163773
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 21.005426275915635,
+              "energy_gain": 0.0002573572385761464
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 2,
+              "scalar_cost": 17.409656383841064,
+              "energy_gain": 0.00022036428483723254
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00012946845901121179
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 32000.0,
+          "restricted_block_energy_fraction": 0.06157597849991886,
+          "projected_dense_low_rank_energy_fraction": 0.07006504168092657,
+          "unstructured_sparse_energy_fraction": 0.07006504168092657,
+          "full_svd_energy_fraction": 0.6716839194146944,
+          "null_mean_energy_fraction": 0.06093105197021708,
+          "null_samples": [
+            0.06098889210834698,
+            0.060539951705058256,
+            0.061182621385515445,
+            0.06121311216568269,
+            0.06114421785218501,
+            0.060773169813031484,
+            0.060675398761699695
+          ],
+          "selected_scalar_cost_excluding_dictionary": 2039.8771666466896,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.04187423011313497
+            },
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.018346579492342925
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 8,
+              "core_rank": 2,
+              "scalar_cost": 52.052427603091644,
+              "energy_gain": 0.0007479789120163773
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 21.005426275915635,
+              "energy_gain": 0.0002573572385761464
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 2,
+              "scalar_cost": 17.409656383841064,
+              "energy_gain": 0.00022036428483723254
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00012946845901121179
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": 3,
+      "head": 7,
+      "budgets": [
+        {
+          "total_scalar_budget": 4000.0,
+          "restricted_block_energy_fraction": 0.03215798784324883,
+          "projected_dense_low_rank_energy_fraction": 0.04643563933515163,
+          "unstructured_sparse_energy_fraction": 0.0409192092050894,
+          "full_svd_energy_fraction": 0.13005523816244324,
+          "null_mean_energy_fraction": 0.030937985772693934,
+          "null_samples": [
+            0.03085122242139612,
+            0.030800838736403425,
+            0.03142761158455929,
+            0.030746786538660083,
+            0.030610017662602285,
+            0.030553092779324647,
+            0.03157633068591169
+          ],
+          "selected_scalar_cost_excluding_dictionary": 607.2007747933449,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.028138905521793527
+            },
+            {
+              "read_dimension": 32,
+              "write_dimension": 32,
+              "core_rank": 1,
+              "scalar_cost": 72.58357707962544,
+              "energy_gain": 0.002879623150353614
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.0006070606951797534
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 2,
+              "scalar_cost": 17.409656383841064,
+              "energy_gain": 0.0005323984759219365
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 8000.0,
+          "restricted_block_energy_fraction": 0.04683435790381719,
+          "projected_dense_low_rank_energy_fraction": 0.05508049387756298,
+          "unstructured_sparse_energy_fraction": 0.054801568496532685,
+          "full_svd_energy_fraction": 0.26897137126499154,
+          "null_mean_energy_fraction": 0.04654452949375024,
+          "null_samples": [
+            0.04655793304870172,
+            0.046602985389792496,
+            0.046435639335151636,
+            0.046908230677150886,
+            0.04643563933515162,
+            0.046435639335151636,
+            0.04643563933515163
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1509.0994289302675,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.03973008486056855
+            },
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.006705554474583065
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 1,
+              "scalar_cost": 39.099428930267656,
+              "energy_gain": 0.0003987185686655725
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 16000.0,
+          "restricted_block_energy_fraction": 0.04683435790381719,
+          "projected_dense_low_rank_energy_fraction": 0.05508049387756298,
+          "unstructured_sparse_energy_fraction": 0.055080493877562975,
+          "full_svd_energy_fraction": 0.4810260188606811,
+          "null_mean_energy_fraction": 0.04654452949375024,
+          "null_samples": [
+            0.04655793304870172,
+            0.046602985389792496,
+            0.046435639335151636,
+            0.046908230677150886,
+            0.04643563933515162,
+            0.046435639335151636,
+            0.04643563933515163
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1509.0994289302675,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.03973008486056855
+            },
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.006705554474583065
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 1,
+              "scalar_cost": 39.099428930267656,
+              "energy_gain": 0.0003987185686655725
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 32000.0,
+          "restricted_block_energy_fraction": 0.04683435790381719,
+          "projected_dense_low_rank_energy_fraction": 0.05508049387756298,
+          "unstructured_sparse_energy_fraction": 0.055080493877562975,
+          "full_svd_energy_fraction": 0.7653068957888064,
+          "null_mean_energy_fraction": 0.04654452949375024,
+          "null_samples": [
+            0.04655793304870172,
+            0.046602985389792496,
+            0.046435639335151636,
+            0.046908230677150886,
+            0.04643563933515162,
+            0.046435639335151636,
+            0.04643563933515163
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1509.0994289302675,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.03973008486056855
+            },
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.006705554474583065
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 1,
+              "scalar_cost": 39.099428930267656,
+              "energy_gain": 0.0003987185686655725
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": 4,
+      "head": 1,
+      "budgets": [
+        {
+          "total_scalar_budget": 4000.0,
+          "restricted_block_energy_fraction": 0.01339086026355308,
+          "projected_dense_low_rank_energy_fraction": 0.016492730991236524,
+          "unstructured_sparse_energy_fraction": 0.01656954243812827,
+          "full_svd_energy_fraction": 0.09321991112419906,
+          "null_mean_energy_fraction": 0.013357525568882025,
+          "null_samples": [
+            0.013434630962815991,
+            0.01347301562540376,
+            0.01350296110413815,
+            0.013206486906550404,
+            0.01321641194033384,
+            0.01326477908158984,
+            0.0134043933613422
+          ],
+          "selected_scalar_cost_excluding_dictionary": 999.0524276030917,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.013052717983810424
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 16,
+              "core_rank": 1,
+              "scalar_cost": 30.052427603091648,
+              "energy_gain": 0.0003381422797426562
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 8000.0,
+          "restricted_block_energy_fraction": 0.01339086026355308,
+          "projected_dense_low_rank_energy_fraction": 0.024367440316103654,
+          "unstructured_sparse_energy_fraction": 0.02421066735417174,
+          "full_svd_energy_fraction": 0.20237642443615525,
+          "null_mean_energy_fraction": 0.013357525568882025,
+          "null_samples": [
+            0.013434630962815991,
+            0.01347301562540376,
+            0.01350296110413815,
+            0.013206486906550404,
+            0.01321641194033384,
+            0.01326477908158984,
+            0.0134043933613422
+          ],
+          "selected_scalar_cost_excluding_dictionary": 999.0524276030917,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.013052717983810424
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 16,
+              "core_rank": 1,
+              "scalar_cost": 30.052427603091648,
+              "energy_gain": 0.0003381422797426562
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 16000.0,
+          "restricted_block_energy_fraction": 0.01339086026355308,
+          "projected_dense_low_rank_energy_fraction": 0.024367440316103654,
+          "unstructured_sparse_energy_fraction": 0.02436744031610366,
+          "full_svd_energy_fraction": 0.38799452320869926,
+          "null_mean_energy_fraction": 0.013357525568882025,
+          "null_samples": [
+            0.013434630962815991,
+            0.01347301562540376,
+            0.01350296110413815,
+            0.013206486906550404,
+            0.01321641194033384,
+            0.01326477908158984,
+            0.0134043933613422
+          ],
+          "selected_scalar_cost_excluding_dictionary": 999.0524276030917,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.013052717983810424
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 16,
+              "core_rank": 1,
+              "scalar_cost": 30.052427603091648,
+              "energy_gain": 0.0003381422797426562
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 32000.0,
+          "restricted_block_energy_fraction": 0.01339086026355308,
+          "projected_dense_low_rank_energy_fraction": 0.024367440316103654,
+          "unstructured_sparse_energy_fraction": 0.02436744031610366,
+          "full_svd_energy_fraction": 0.6929014943230598,
+          "null_mean_energy_fraction": 0.013357525568882025,
+          "null_samples": [
+            0.013434630962815991,
+            0.01347301562540376,
+            0.01350296110413815,
+            0.013206486906550404,
+            0.01321641194033384,
+            0.01326477908158984,
+            0.0134043933613422
+          ],
+          "selected_scalar_cost_excluding_dictionary": 999.0524276030917,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.013052717983810424
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 16,
+              "core_rank": 1,
+              "scalar_cost": 30.052427603091648,
+              "energy_gain": 0.0003381422797426562
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": 4,
+      "head": 3,
+      "budgets": [
+        {
+          "total_scalar_budget": 4000.0,
+          "restricted_block_energy_fraction": 0.051298538993614334,
+          "projected_dense_low_rank_energy_fraction": 0.05928645825525659,
+          "unstructured_sparse_energy_fraction": 0.05020002126162616,
+          "full_svd_energy_fraction": 0.19541367262084758,
+          "null_mean_energy_fraction": 0.05136819291264969,
+          "null_samples": [
+            0.05129853899361432,
+            0.05129853899361432,
+            0.051298538993614334,
+            0.051298538993614334,
+            0.05129853899361431,
+            0.0512985389936143,
+            0.05178611642686193
+          ],
+          "selected_scalar_cost_excluding_dictionary": 969.0,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.051298538993614334
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 8000.0,
+          "restricted_block_energy_fraction": 0.06076243790132591,
+          "projected_dense_low_rank_energy_fraction": 0.07142625610706836,
+          "unstructured_sparse_energy_fraction": 0.07105177301002924,
+          "full_svd_energy_fraction": 0.3675191068295023,
+          "null_mean_energy_fraction": 0.06092790060717456,
+          "null_samples": [
+            0.060572898505894646,
+            0.060966717850856174,
+            0.060860144391622115,
+            0.06133711096451527,
+            0.06042179267884542,
+            0.06139705706128934,
+            0.060939582797198966
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1593.0994289302675,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.051298538993614334
+            },
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.007987919261642263
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 4,
+              "scalar_cost": 123.09942893026766,
+              "energy_gain": 0.0014759796460693205
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 16000.0,
+          "restricted_block_energy_fraction": 0.06076243790132591,
+          "projected_dense_low_rank_energy_fraction": 0.07142625610706836,
+          "unstructured_sparse_energy_fraction": 0.07142625610706838,
+          "full_svd_energy_fraction": 0.5657048399500204,
+          "null_mean_energy_fraction": 0.06092790060717456,
+          "null_samples": [
+            0.060572898505894646,
+            0.060966717850856174,
+            0.060860144391622115,
+            0.06133711096451527,
+            0.06042179267884542,
+            0.06139705706128934,
+            0.060939582797198966
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1593.0994289302675,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.051298538993614334
+            },
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.007987919261642263
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 4,
+              "scalar_cost": 123.09942893026766,
+              "energy_gain": 0.0014759796460693205
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 32000.0,
+          "restricted_block_energy_fraction": 0.06076243790132591,
+          "projected_dense_low_rank_energy_fraction": 0.07142625610706836,
+          "unstructured_sparse_energy_fraction": 0.07142625610706838,
+          "full_svd_energy_fraction": 0.8055749166271077,
+          "null_mean_energy_fraction": 0.06092790060717456,
+          "null_samples": [
+            0.060572898505894646,
+            0.060966717850856174,
+            0.060860144391622115,
+            0.06133711096451527,
+            0.06042179267884542,
+            0.06139705706128934,
+            0.060939582797198966
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1593.0994289302675,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.051298538993614334
+            },
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.007987919261642263
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 4,
+              "scalar_cost": 123.09942893026766,
+              "energy_gain": 0.0014759796460693205
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": 4,
+      "head": 5,
+      "budgets": [
+        {
+          "total_scalar_budget": 4000.0,
+          "restricted_block_energy_fraction": 0.05097763003892466,
+          "projected_dense_low_rank_energy_fraction": 0.05176281331089259,
+          "unstructured_sparse_energy_fraction": 0.04524861921052813,
+          "full_svd_energy_fraction": 0.20356461053173125,
+          "null_mean_energy_fraction": 0.05069367736900497,
+          "null_samples": [
+            0.05055177124183742,
+            0.050076569279723815,
+            0.050541320801976444,
+            0.050795933136356976,
+            0.05092258847286861,
+            0.05030419480537526,
+            0.05166336384489622
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1359.8160555742545,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.04577626649191208
+            },
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 2,
+              "scalar_cost": 255.0,
+              "energy_gain": 0.003614366659755736
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 2,
+              "scalar_cost": 69.09942893026766,
+              "energy_gain": 0.0008625635565699336
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.0001949380728299142
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00011931500482225072
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 1,
+              "scalar_cost": 39.099428930267656,
+              "energy_gain": 0.00041018025303474247
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 8000.0,
+          "restricted_block_energy_fraction": 0.05097763003892466,
+          "projected_dense_low_rank_energy_fraction": 0.06107669750600126,
+          "unstructured_sparse_energy_fraction": 0.06075495293359537,
+          "full_svd_energy_fraction": 0.3477653469869796,
+          "null_mean_energy_fraction": 0.05069367736900497,
+          "null_samples": [
+            0.05055177124183742,
+            0.050076569279723815,
+            0.050541320801976444,
+            0.050795933136356976,
+            0.05092258847286861,
+            0.05030419480537526,
+            0.05166336384489622
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1359.8160555742545,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.04577626649191208
+            },
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 2,
+              "scalar_cost": 255.0,
+              "energy_gain": 0.003614366659755736
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 2,
+              "scalar_cost": 69.09942893026766,
+              "energy_gain": 0.0008625635565699336
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.0001949380728299142
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00011931500482225072
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 1,
+              "scalar_cost": 39.099428930267656,
+              "energy_gain": 0.00041018025303474247
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 16000.0,
+          "restricted_block_energy_fraction": 0.05097763003892466,
+          "projected_dense_low_rank_energy_fraction": 0.06107669750600126,
+          "unstructured_sparse_energy_fraction": 0.061076697506001275,
+          "full_svd_energy_fraction": 0.524931546198241,
+          "null_mean_energy_fraction": 0.05069367736900497,
+          "null_samples": [
+            0.05055177124183742,
+            0.050076569279723815,
+            0.050541320801976444,
+            0.050795933136356976,
+            0.05092258847286861,
+            0.05030419480537526,
+            0.05166336384489622
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1359.8160555742545,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.04577626649191208
+            },
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 2,
+              "scalar_cost": 255.0,
+              "energy_gain": 0.003614366659755736
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 2,
+              "scalar_cost": 69.09942893026766,
+              "energy_gain": 0.0008625635565699336
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.0001949380728299142
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00011931500482225072
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 1,
+              "scalar_cost": 39.099428930267656,
+              "energy_gain": 0.00041018025303474247
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 32000.0,
+          "restricted_block_energy_fraction": 0.05097763003892466,
+          "projected_dense_low_rank_energy_fraction": 0.06107669750600126,
+          "unstructured_sparse_energy_fraction": 0.061076697506001275,
+          "full_svd_energy_fraction": 0.7722318928757271,
+          "null_mean_energy_fraction": 0.05069367736900497,
+          "null_samples": [
+            0.05055177124183742,
+            0.050076569279723815,
+            0.050541320801976444,
+            0.050795933136356976,
+            0.05092258847286861,
+            0.05030419480537526,
+            0.05166336384489622
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1359.8160555742545,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.04577626649191208
+            },
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 2,
+              "scalar_cost": 255.0,
+              "energy_gain": 0.003614366659755736
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 2,
+              "scalar_cost": 69.09942893026766,
+              "energy_gain": 0.0008625635565699336
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.0001949380728299142
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00011931500482225072
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 16,
+              "core_rank": 1,
+              "scalar_cost": 39.099428930267656,
+              "energy_gain": 0.00041018025303474247
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": 4,
+      "head": 7,
+      "budgets": [
+        {
+          "total_scalar_budget": 4000.0,
+          "restricted_block_energy_fraction": 0.02149384755924204,
+          "projected_dense_low_rank_energy_fraction": 0.04063314804173436,
+          "unstructured_sparse_energy_fraction": 0.038130422120682496,
+          "full_svd_energy_fraction": 0.08089063500148205,
+          "null_mean_energy_fraction": 0.022851065465348135,
+          "null_samples": [
+            0.021078109294483744,
+            0.022897161616368268,
+            0.023967958095646263,
+            0.02569080321311448,
+            0.02169887781917631,
+            0.021241067715214078,
+            0.0233834805034338
+          ],
+          "selected_scalar_cost_excluding_dictionary": 501.7965446854194,
+          "selected_blocks": [
+            {
+              "read_dimension": 32,
+              "write_dimension": 32,
+              "core_rank": 8,
+              "scalar_cost": 464.58357707962546,
+              "energy_gain": 0.02004930678728406
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.0007118966126974319
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 21.005426275915635,
+              "energy_gain": 0.00073264415926055
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 8000.0,
+          "restricted_block_energy_fraction": 0.04564919544777371,
+          "projected_dense_low_rank_energy_fraction": 0.053404925451574374,
+          "unstructured_sparse_energy_fraction": 0.05313854609584199,
+          "full_svd_energy_fraction": 0.1784785762740633,
+          "null_mean_energy_fraction": 0.045692544483261106,
+          "null_samples": [
+            0.0456491954477737,
+            0.0456491954477737,
+            0.045782464681969066,
+            0.0456491954477737,
+            0.0458193694619902,
+            0.04564919544777369,
+            0.04564919544777369
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1938.0,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.03271437690923311
+            },
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.012934818538540603
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 16000.0,
+          "restricted_block_energy_fraction": 0.04564919544777371,
+          "projected_dense_low_rank_energy_fraction": 0.053404925451574374,
+          "unstructured_sparse_energy_fraction": 0.05340492545157438,
+          "full_svd_energy_fraction": 0.3495620860761389,
+          "null_mean_energy_fraction": 0.045692544483261106,
+          "null_samples": [
+            0.0456491954477737,
+            0.0456491954477737,
+            0.045782464681969066,
+            0.0456491954477737,
+            0.0458193694619902,
+            0.04564919544777369,
+            0.04564919544777369
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1938.0,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.03271437690923311
+            },
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.012934818538540603
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 32000.0,
+          "restricted_block_energy_fraction": 0.04564919544777371,
+          "projected_dense_low_rank_energy_fraction": 0.053404925451574374,
+          "unstructured_sparse_energy_fraction": 0.05340492545157438,
+          "full_svd_energy_fraction": 0.6468001916611135,
+          "null_mean_energy_fraction": 0.045692544483261106,
+          "null_samples": [
+            0.0456491954477737,
+            0.0456491954477737,
+            0.045782464681969066,
+            0.0456491954477737,
+            0.0458193694619902,
+            0.04564919544777369,
+            0.04564919544777369
+          ],
+          "selected_scalar_cost_excluding_dictionary": 1938.0,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.03271437690923311
+            },
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 8,
+              "scalar_cost": 969.0,
+              "energy_gain": 0.012934818538540603
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": 5,
+      "head": 1,
+      "budgets": [
+        {
+          "total_scalar_budget": 4000.0,
+          "restricted_block_energy_fraction": 0.11746522027805792,
+          "projected_dense_low_rank_energy_fraction": 0.12289136116939375,
+          "unstructured_sparse_energy_fraction": 0.11796852070175444,
+          "full_svd_energy_fraction": 0.3901597221959879,
+          "null_mean_energy_fraction": 0.11705131864935787,
+          "null_samples": [
+            0.11722570110389818,
+            0.11711009006218244,
+            0.1169457415859384,
+            0.11680434111974246,
+            0.11730723337485101,
+            0.11694111317995869,
+            0.11702501011893379
+          ],
+          "selected_scalar_cost_excluding_dictionary": 557.0108525518312,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.11680434111974267
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 2,
+              "scalar_cost": 35.00542627591564,
+              "energy_gain": 0.00042307821026683077
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 21.005426275915635,
+              "energy_gain": 0.00023780094804842645
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 8000.0,
+          "restricted_block_energy_fraction": 0.11746522027805792,
+          "projected_dense_low_rank_energy_fraction": 0.12829957593955002,
+          "unstructured_sparse_energy_fraction": 0.12810025957713517,
+          "full_svd_energy_fraction": 0.4583412714318954,
+          "null_mean_energy_fraction": 0.11705131864935787,
+          "null_samples": [
+            0.11722570110389818,
+            0.11711009006218244,
+            0.1169457415859384,
+            0.11680434111974246,
+            0.11730723337485101,
+            0.11694111317995869,
+            0.11702501011893379
+          ],
+          "selected_scalar_cost_excluding_dictionary": 557.0108525518312,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.11680434111974267
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 2,
+              "scalar_cost": 35.00542627591564,
+              "energy_gain": 0.00042307821026683077
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 21.005426275915635,
+              "energy_gain": 0.00023780094804842645
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 16000.0,
+          "restricted_block_energy_fraction": 0.11746522027805792,
+          "projected_dense_low_rank_energy_fraction": 0.12829957593955002,
+          "unstructured_sparse_energy_fraction": 0.1282995759395501,
+          "full_svd_energy_fraction": 0.5734600344431359,
+          "null_mean_energy_fraction": 0.11705131864935787,
+          "null_samples": [
+            0.11722570110389818,
+            0.11711009006218244,
+            0.1169457415859384,
+            0.11680434111974246,
+            0.11730723337485101,
+            0.11694111317995869,
+            0.11702501011893379
+          ],
+          "selected_scalar_cost_excluding_dictionary": 557.0108525518312,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.11680434111974267
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 2,
+              "scalar_cost": 35.00542627591564,
+              "energy_gain": 0.00042307821026683077
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 21.005426275915635,
+              "energy_gain": 0.00023780094804842645
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 32000.0,
+          "restricted_block_energy_fraction": 0.11746522027805792,
+          "projected_dense_low_rank_energy_fraction": 0.12829957593955002,
+          "unstructured_sparse_energy_fraction": 0.1282995759395501,
+          "full_svd_energy_fraction": 0.7697342376203881,
+          "null_mean_energy_fraction": 0.11705131864935787,
+          "null_samples": [
+            0.11722570110389818,
+            0.11711009006218244,
+            0.1169457415859384,
+            0.11680434111974246,
+            0.11730723337485101,
+            0.11694111317995869,
+            0.11702501011893379
+          ],
+          "selected_scalar_cost_excluding_dictionary": 557.0108525518312,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.11680434111974267
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 2,
+              "scalar_cost": 35.00542627591564,
+              "energy_gain": 0.00042307821026683077
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 21.005426275915635,
+              "energy_gain": 0.00023780094804842645
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": 5,
+      "head": 3,
+      "budgets": [
+        {
+          "total_scalar_budget": 4000.0,
+          "restricted_block_energy_fraction": 0.0987584479904555,
+          "projected_dense_low_rank_energy_fraction": 0.10512073968011601,
+          "unstructured_sparse_energy_fraction": 0.10050387955789637,
+          "full_svd_energy_fraction": 0.4500571489808111,
+          "null_mean_energy_fraction": 0.09846157851658963,
+          "null_samples": [
+            0.0986980315100871,
+            0.09895723598186483,
+            0.09801563568366252,
+            0.09917990347291768,
+            0.09785133747114425,
+            0.09812038685371618,
+            0.09840851864273481
+          ],
+          "selected_scalar_cost_excluding_dictionary": 344.2653952088856,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 2,
+              "scalar_cost": 255.0,
+              "energy_gain": 0.09768133492682574
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 8,
+              "core_rank": 2,
+              "scalar_cost": 52.052427603091644,
+              "energy_gain": 0.0006211604196943196
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.000227318492148452
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 21.005426275915635,
+              "energy_gain": 0.00022863415178698749
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 8000.0,
+          "restricted_block_energy_fraction": 0.0987584479904555,
+          "projected_dense_low_rank_energy_fraction": 0.10878739555016104,
+          "unstructured_sparse_energy_fraction": 0.10861675742448654,
+          "full_svd_energy_fraction": 0.533797784154622,
+          "null_mean_energy_fraction": 0.09846157851658963,
+          "null_samples": [
+            0.0986980315100871,
+            0.09895723598186483,
+            0.09801563568366252,
+            0.09917990347291768,
+            0.09785133747114425,
+            0.09812038685371618,
+            0.09840851864273481
+          ],
+          "selected_scalar_cost_excluding_dictionary": 344.2653952088856,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 2,
+              "scalar_cost": 255.0,
+              "energy_gain": 0.09768133492682574
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 8,
+              "core_rank": 2,
+              "scalar_cost": 52.052427603091644,
+              "energy_gain": 0.0006211604196943196
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.000227318492148452
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 21.005426275915635,
+              "energy_gain": 0.00022863415178698749
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 16000.0,
+          "restricted_block_energy_fraction": 0.0987584479904555,
+          "projected_dense_low_rank_energy_fraction": 0.10878739555016104,
+          "unstructured_sparse_energy_fraction": 0.10878739555016102,
+          "full_svd_energy_fraction": 0.6516989805561454,
+          "null_mean_energy_fraction": 0.09846157851658963,
+          "null_samples": [
+            0.0986980315100871,
+            0.09895723598186483,
+            0.09801563568366252,
+            0.09917990347291768,
+            0.09785133747114425,
+            0.09812038685371618,
+            0.09840851864273481
+          ],
+          "selected_scalar_cost_excluding_dictionary": 344.2653952088856,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 2,
+              "scalar_cost": 255.0,
+              "energy_gain": 0.09768133492682574
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 8,
+              "core_rank": 2,
+              "scalar_cost": 52.052427603091644,
+              "energy_gain": 0.0006211604196943196
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.000227318492148452
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 21.005426275915635,
+              "energy_gain": 0.00022863415178698749
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 32000.0,
+          "restricted_block_energy_fraction": 0.0987584479904555,
+          "projected_dense_low_rank_energy_fraction": 0.10878739555016104,
+          "unstructured_sparse_energy_fraction": 0.10878739555016102,
+          "full_svd_energy_fraction": 0.819427462811838,
+          "null_mean_energy_fraction": 0.09846157851658963,
+          "null_samples": [
+            0.0986980315100871,
+            0.09895723598186483,
+            0.09801563568366252,
+            0.09917990347291768,
+            0.09785133747114425,
+            0.09812038685371618,
+            0.09840851864273481
+          ],
+          "selected_scalar_cost_excluding_dictionary": 344.2653952088856,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 2,
+              "scalar_cost": 255.0,
+              "energy_gain": 0.09768133492682574
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 8,
+              "core_rank": 2,
+              "scalar_cost": 52.052427603091644,
+              "energy_gain": 0.0006211604196943196
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 16.20754132987835,
+              "energy_gain": 0.000227318492148452
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 21.005426275915635,
+              "energy_gain": 0.00022863415178698749
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": 5,
+      "head": 5,
+      "budgets": [
+        {
+          "total_scalar_budget": 4000.0,
+          "restricted_block_energy_fraction": 0.030212038900502183,
+          "projected_dense_low_rank_energy_fraction": 0.03628955001965132,
+          "unstructured_sparse_energy_fraction": 0.03387817441505477,
+          "full_svd_energy_fraction": 0.1793123307479814,
+          "null_mean_energy_fraction": 0.030155976316512217,
+          "null_samples": [
+            0.03048820407965279,
+            0.030204085859562836,
+            0.030351890863829122,
+            0.02989682551920091,
+            0.030088829038597692,
+            0.029843214644156377,
+            0.0302187842105858
+          ],
+          "selected_scalar_cost_excluding_dictionary": 564.4620839869327,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.02936739759215789
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 8,
+              "core_rank": 2,
+              "scalar_cost": 52.052427603091644,
+              "energy_gain": 0.0006313051589353693
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00021333614940892399
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 8000.0,
+          "restricted_block_energy_fraction": 0.030212038900502183,
+          "projected_dense_low_rank_energy_fraction": 0.04172471757523166,
+          "unstructured_sparse_energy_fraction": 0.04156290080597869,
+          "full_svd_energy_fraction": 0.3036086125846738,
+          "null_mean_energy_fraction": 0.030155976316512217,
+          "null_samples": [
+            0.03048820407965279,
+            0.030204085859562836,
+            0.030351890863829122,
+            0.02989682551920091,
+            0.030088829038597692,
+            0.029843214644156377,
+            0.0302187842105858
+          ],
+          "selected_scalar_cost_excluding_dictionary": 564.4620839869327,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.02936739759215789
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 8,
+              "core_rank": 2,
+              "scalar_cost": 52.052427603091644,
+              "energy_gain": 0.0006313051589353693
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00021333614940892399
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 16000.0,
+          "restricted_block_energy_fraction": 0.030212038900502183,
+          "projected_dense_low_rank_energy_fraction": 0.04172471757523166,
+          "unstructured_sparse_energy_fraction": 0.04172471757523166,
+          "full_svd_energy_fraction": 0.4844965990427914,
+          "null_mean_energy_fraction": 0.030155976316512217,
+          "null_samples": [
+            0.03048820407965279,
+            0.030204085859562836,
+            0.030351890863829122,
+            0.02989682551920091,
+            0.030088829038597692,
+            0.029843214644156377,
+            0.0302187842105858
+          ],
+          "selected_scalar_cost_excluding_dictionary": 564.4620839869327,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.02936739759215789
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 8,
+              "core_rank": 2,
+              "scalar_cost": 52.052427603091644,
+              "energy_gain": 0.0006313051589353693
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00021333614940892399
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 32000.0,
+          "restricted_block_energy_fraction": 0.030212038900502183,
+          "projected_dense_low_rank_energy_fraction": 0.04172471757523166,
+          "unstructured_sparse_energy_fraction": 0.04172471757523166,
+          "full_svd_energy_fraction": 0.7485488274332993,
+          "null_mean_energy_fraction": 0.030155976316512217,
+          "null_samples": [
+            0.03048820407965279,
+            0.030204085859562836,
+            0.030351890863829122,
+            0.02989682551920091,
+            0.030088829038597692,
+            0.029843214644156377,
+            0.0302187842105858
+          ],
+          "selected_scalar_cost_excluding_dictionary": 564.4620839869327,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 4,
+              "scalar_cost": 501.0,
+              "energy_gain": 0.02936739759215789
+            },
+            {
+              "read_dimension": 16,
+              "write_dimension": 8,
+              "core_rank": 2,
+              "scalar_cost": 52.052427603091644,
+              "energy_gain": 0.0006313051589353693
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00021333614940892399
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layer": 5,
+      "head": 7,
+      "budgets": [
+        {
+          "total_scalar_budget": 4000.0,
+          "restricted_block_energy_fraction": 0.05982854621231658,
+          "projected_dense_low_rank_energy_fraction": 0.06536105328891867,
+          "unstructured_sparse_energy_fraction": 0.062322247318548483,
+          "full_svd_energy_fraction": 0.3341302682890813,
+          "null_mean_energy_fraction": 0.05919184111339855,
+          "null_samples": [
+            0.058969579497017956,
+            0.05930764622284791,
+            0.05931302337438481,
+            0.05875205625864322,
+            0.05945171947311127,
+            0.05891478537744901,
+            0.05963407759033568
+          ],
+          "selected_scalar_cost_excluding_dictionary": 359.99865973938216,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 2,
+              "scalar_cost": 255.0,
+              "energy_gain": 0.05862133853438712
+            },
+            {
+              "read_dimension": 32,
+              "write_dimension": 32,
+              "core_rank": 1,
+              "scalar_cost": 72.58357707962544,
+              "energy_gain": 0.0008491844165749312
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00014356625533122643
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 21.005426275915635,
+              "energy_gain": 0.0002144570060233015
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 8000.0,
+          "restricted_block_energy_fraction": 0.05982854621231658,
+          "projected_dense_low_rank_energy_fraction": 0.06914550707908766,
+          "unstructured_sparse_energy_fraction": 0.06901135886677108,
+          "full_svd_energy_fraction": 0.4265148708055039,
+          "null_mean_energy_fraction": 0.05919184111339855,
+          "null_samples": [
+            0.058969579497017956,
+            0.05930764622284791,
+            0.05931302337438481,
+            0.05875205625864322,
+            0.05945171947311127,
+            0.05891478537744901,
+            0.05963407759033568
+          ],
+          "selected_scalar_cost_excluding_dictionary": 359.99865973938216,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 2,
+              "scalar_cost": 255.0,
+              "energy_gain": 0.05862133853438712
+            },
+            {
+              "read_dimension": 32,
+              "write_dimension": 32,
+              "core_rank": 1,
+              "scalar_cost": 72.58357707962544,
+              "energy_gain": 0.0008491844165749312
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00014356625533122643
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 21.005426275915635,
+              "energy_gain": 0.0002144570060233015
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 16000.0,
+          "restricted_block_energy_fraction": 0.05982854621231658,
+          "projected_dense_low_rank_energy_fraction": 0.06914550707908766,
+          "unstructured_sparse_energy_fraction": 0.06914550707908769,
+          "full_svd_energy_fraction": 0.550194175187016,
+          "null_mean_energy_fraction": 0.05919184111339855,
+          "null_samples": [
+            0.058969579497017956,
+            0.05930764622284791,
+            0.05931302337438481,
+            0.05875205625864322,
+            0.05945171947311127,
+            0.05891478537744901,
+            0.05963407759033568
+          ],
+          "selected_scalar_cost_excluding_dictionary": 359.99865973938216,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 2,
+              "scalar_cost": 255.0,
+              "energy_gain": 0.05862133853438712
+            },
+            {
+              "read_dimension": 32,
+              "write_dimension": 32,
+              "core_rank": 1,
+              "scalar_cost": 72.58357707962544,
+              "energy_gain": 0.0008491844165749312
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00014356625533122643
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 21.005426275915635,
+              "energy_gain": 0.0002144570060233015
+            }
+          ]
+        },
+        {
+          "total_scalar_budget": 32000.0,
+          "restricted_block_energy_fraction": 0.05982854621231658,
+          "projected_dense_low_rank_energy_fraction": 0.06914550707908766,
+          "unstructured_sparse_energy_fraction": 0.06914550707908769,
+          "full_svd_energy_fraction": 0.7559699116552123,
+          "null_mean_energy_fraction": 0.05919184111339855,
+          "null_samples": [
+            0.058969579497017956,
+            0.05930764622284791,
+            0.05931302337438481,
+            0.05875205625864322,
+            0.05945171947311127,
+            0.05891478537744901,
+            0.05963407759033568
+          ],
+          "selected_scalar_cost_excluding_dictionary": 359.99865973938216,
+          "selected_blocks": [
+            {
+              "read_dimension": 64,
+              "write_dimension": 64,
+              "core_rank": 2,
+              "scalar_cost": 255.0,
+              "energy_gain": 0.05862133853438712
+            },
+            {
+              "read_dimension": 32,
+              "write_dimension": 32,
+              "core_rank": 1,
+              "scalar_cost": 72.58357707962544,
+              "energy_gain": 0.0008491844165749312
+            },
+            {
+              "read_dimension": 4,
+              "write_dimension": 4,
+              "core_rank": 1,
+              "scalar_cost": 11.409656383841064,
+              "energy_gain": 0.00014356625533122643
+            },
+            {
+              "read_dimension": 8,
+              "write_dimension": 8,
+              "core_rank": 1,
+              "scalar_cost": 21.005426275915635,
+              "energy_gain": 0.0002144570060233015
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "null_repetitions_per_head": 7,
+  "penalties": [
+    1e-05,
+    3e-05,
+    0.0001,
+    0.0003,
+    0.001,
+    0.003
+  ],
+  "maximum_blocks": 6,
+  "seed": 14142
+}

@@ -2,10 +2,27 @@ import unittest
 
 import numpy as np
 
-from head_atlas.nulls import rank_norm_matched_gaussian, spectrum_matched_rotation
+from head_atlas.nulls import (
+    haar_orthonormal_frame,
+    rank_norm_matched_gaussian,
+    sample_norm_matched_isotropic,
+    spectrum_matched_rotation,
+)
 
 
 class NullTests(unittest.TestCase):
+    def test_isotropic_vector_null_preserves_each_norm(self):
+        vectors = np.asarray([[3.0, 4.0, 0.0], [0.0, 0.0, 2.0]])
+        null = sample_norm_matched_isotropic(vectors, np.random.default_rng(7))
+
+        np.testing.assert_allclose(
+            np.linalg.norm(null, axis=1), np.linalg.norm(vectors, axis=1), atol=1e-12
+        )
+
+    def test_haar_frame_is_orthonormal(self):
+        frame = haar_orthonormal_frame(7, 3, np.random.default_rng(9))
+        np.testing.assert_allclose(frame.T @ frame, np.eye(3), atol=1e-12)
+
     def test_spectrum_matched_rotation_preserves_singular_values(self):
         rng = np.random.default_rng(4)
         matrix = rng.standard_normal((6, 6))

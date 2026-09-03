@@ -1,0 +1,2243 @@
+{
+  "status": "singular-spectrum confound audit for architectural OV compartments",
+  "model": "EleutherAI/pythia-70m-deduped",
+  "revision": "step143000",
+  "variant_definitions": {
+    "full": "architectural overlaps plus normalized singular gain",
+    "architecture_only": "architectural overlaps without singular gain",
+    "gain_only": "normalized singular gain only",
+    "rank_only": "singular-value order only"
+  },
+  "splits": [
+    {
+      "discovery_parity": 0,
+      "population": {
+        "full": {
+          "mean_confirmation_r2": 0.09164952801246884,
+          "mean_component_count": 1.7708333333333333,
+          "multicomponent_heads": 32,
+          "label_null_mean": 0.012276252853775238,
+          "label_null_upper_tail_p": 0.01
+        },
+        "architecture_only": {
+          "mean_confirmation_r2": 0.09161853219443646,
+          "mean_component_count": 1.6875,
+          "multicomponent_heads": 29,
+          "label_null_mean": 0.010838237079843294,
+          "label_null_upper_tail_p": 0.01
+        },
+        "gain_only": {
+          "mean_confirmation_r2": 0.08027231650724591,
+          "mean_component_count": 1.6041666666666667,
+          "multicomponent_heads": 27,
+          "label_null_mean": 0.009763990804779844,
+          "label_null_upper_tail_p": 0.01
+        },
+        "rank_only": {
+          "mean_confirmation_r2": 0.0,
+          "mean_component_count": 1.0,
+          "multicomponent_heads": 0,
+          "label_null_mean": 0.0,
+          "label_null_upper_tail_p": 1.0
+        }
+      },
+      "architecture_gain_relationship": {
+        "heads_multicomponent_in_both": 18,
+        "mean_adjusted_rand_among_those_heads": 0.27983897077805725,
+        "median_adjusted_rand_among_those_heads": 0.25422462939082247,
+        "mean_gain_r2_from_architecture_only_labels": 0.20040885665279595
+      },
+      "heads": [
+        {
+          "layer": 0,
+          "head": 0,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.11954563092630013
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.08839921102557988
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 0,
+          "head": 1,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.02291328453807197
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.02291328453807197
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.15904734061742704
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": -0.002318840579710145
+        },
+        {
+          "layer": 0,
+          "head": 2,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.06468940657359984
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.08422027047403384
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 0,
+          "head": 3,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.07671463116770724
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.07671463116770724
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.09627310847603053
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.3786407766990291
+        },
+        {
+          "layer": 0,
+          "head": 4,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.044541899522338155
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.044541899522338155
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 0,
+          "head": 5,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.047920497021522235
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 0,
+          "head": 6,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.050353770444207725
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.050353770444207725
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.06861302389179123
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.37572254335260113
+        },
+        {
+          "layer": 0,
+          "head": 7,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.03837255906168194
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.024228352091783152
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.0512995862210052
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.08562553643683328
+        },
+        {
+          "layer": 1,
+          "head": 0,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.01646819504908232
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 1,
+          "head": 1,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 1,
+          "head": 2,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.03363754805866414
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 1,
+          "head": 3,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.1420490408593894
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 1,
+          "head": 4,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.08838181195168887
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.10369920906159491
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.09427930572415444
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.0307536979759291
+        },
+        {
+          "layer": 1,
+          "head": 5,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.09721034824383998
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.09721034824383998
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.13966444578186815
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.2646819457622543
+        },
+        {
+          "layer": 1,
+          "head": 6,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.03463992107963308
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.033415303214178245
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 1,
+          "head": 7,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.04696805232196591
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 2,
+          "head": 0,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.11138841083115204
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.12195377220111467
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.14488452431322382
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.5549524138970934
+        },
+        {
+          "layer": 2,
+          "head": 1,
+          "variants": {
+            "full": {
+              "component_count": 4,
+              "confirmation_r2": 0.32873954230664837
+            },
+            "architecture_only": {
+              "component_count": 4,
+              "confirmation_r2": 0.35870765916254427
+            },
+            "gain_only": {
+              "component_count": 3,
+              "confirmation_r2": 0.26828200093910654
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.473969529862604
+        },
+        {
+          "layer": 2,
+          "head": 2,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.07052334288336927
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.07052334288336927
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 2,
+          "head": 3,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.1193433289122578
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 2,
+          "head": 4,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.13200190805843606
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 2,
+          "head": 5,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.10174568550816213
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.11034280108729579
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.12623653942539945
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.24376731301939059
+        },
+        {
+          "layer": 2,
+          "head": 6,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.1053229676983578
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.10274851917619209
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.09810856727847274
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.4845019777058612
+        },
+        {
+          "layer": 2,
+          "head": 7,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.16506310015513168
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.16506310015513168
+            },
+            "gain_only": {
+              "component_count": 3,
+              "confirmation_r2": 0.27267085024668164
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.4799799343305363
+        },
+        {
+          "layer": 3,
+          "head": 0,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.2465712219618362
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.2465712219618362
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.2514489308518573
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.8066528066528067
+        },
+        {
+          "layer": 3,
+          "head": 1,
+          "variants": {
+            "full": {
+              "component_count": 3,
+              "confirmation_r2": 0.3701407707595911
+            },
+            "architecture_only": {
+              "component_count": 3,
+              "confirmation_r2": 0.37601028639637746
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.21705530520778926
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.20873246679873533
+        },
+        {
+          "layer": 3,
+          "head": 2,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.10732163065361494
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 3,
+          "head": 3,
+          "variants": {
+            "full": {
+              "component_count": 3,
+              "confirmation_r2": 0.27162020583668534
+            },
+            "architecture_only": {
+              "component_count": 3,
+              "confirmation_r2": 0.2598728403961866
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 3,
+          "head": 4,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.13729024153540179
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 3,
+          "head": 5,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.1119015929263891
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.20460552377937027
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 3,
+          "head": 6,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.25022997284656173
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.25022997284656173
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.20503421650551257
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.0549852341442835
+        },
+        {
+          "layer": 3,
+          "head": 7,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.08635336030147742
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.08635336030147742
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 4,
+          "head": 0,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 4,
+          "head": 1,
+          "variants": {
+            "full": {
+              "component_count": 3,
+              "confirmation_r2": 0.16254561824576266
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.093926436652141
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 4,
+          "head": 2,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.36356555627366133
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.36356555627366133
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.3534006666799242
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.4220706421043936
+        },
+        {
+          "layer": 4,
+          "head": 3,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.17988669951430417
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.19313079286383084
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.22729573264450934
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.21013981076119193
+        },
+        {
+          "layer": 4,
+          "head": 4,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.3184412859600582
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.3184412859600582
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 4,
+          "head": 5,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.07926893269005057
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.09466892251120755
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.09185177040769472
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": -0.06693128256015878
+        },
+        {
+          "layer": 4,
+          "head": 6,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 4,
+          "head": 7,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.20110402710487424
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.2017435262619113
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 5,
+          "head": 0,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.1997110727037495
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 5,
+          "head": 1,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 5,
+          "head": 2,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.10346869805349637
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.07947470115324576
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.030557982498784213
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.03117496764135555
+        },
+        {
+          "layer": 5,
+          "head": 3,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 5,
+          "head": 4,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 5,
+          "head": 5,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.09852116609633516
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 5,
+          "head": 6,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 5,
+          "head": 7,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.08382734612411921
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "discovery_parity": 1,
+      "population": {
+        "full": {
+          "mean_confirmation_r2": 0.09076863021993505,
+          "mean_component_count": 1.7083333333333333,
+          "multicomponent_heads": 28,
+          "label_null_mean": 0.011249519968485168,
+          "label_null_upper_tail_p": 0.01
+        },
+        "architecture_only": {
+          "mean_confirmation_r2": 0.09234098389752621,
+          "mean_component_count": 1.7083333333333333,
+          "multicomponent_heads": 28,
+          "label_null_mean": 0.01127577714920121,
+          "label_null_upper_tail_p": 0.01
+        },
+        "gain_only": {
+          "mean_confirmation_r2": 0.08545736789892637,
+          "mean_component_count": 1.6041666666666667,
+          "multicomponent_heads": 27,
+          "label_null_mean": 0.009598242760478104,
+          "label_null_upper_tail_p": 0.01
+        },
+        "rank_only": {
+          "mean_confirmation_r2": 0.0,
+          "mean_component_count": 1.0,
+          "multicomponent_heads": 0,
+          "label_null_mean": 0.0,
+          "label_null_upper_tail_p": 1.0
+        }
+      },
+      "architecture_gain_relationship": {
+        "heads_multicomponent_in_both": 18,
+        "mean_adjusted_rand_among_those_heads": 0.33581032202671246,
+        "median_adjusted_rand_among_those_heads": 0.2646296107460229,
+        "mean_gain_r2_from_architecture_only_labels": 0.20541802230179348
+      },
+      "heads": [
+        {
+          "layer": 0,
+          "head": 0,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.11133616497943084
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.11133616497943084
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.09710935562780669
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.5893250992501102
+        },
+        {
+          "layer": 0,
+          "head": 1,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.04205260067452946
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.04205260067452946
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.1438252978229304
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.145610278372591
+        },
+        {
+          "layer": 0,
+          "head": 2,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.09162605659334319
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 0,
+          "head": 3,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.06119822748261317
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.04006329396375536
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.09393303240447613
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.008928571428571428
+        },
+        {
+          "layer": 0,
+          "head": 4,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.0546187043245101
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.04981666031131701
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 0,
+          "head": 5,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.05690169179049158
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 0,
+          "head": 6,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.07088694385096238
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.075269185793209
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.07112956525874949
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.259579060982191
+        },
+        {
+          "layer": 0,
+          "head": 7,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.02824970261693745
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.027507232994261662
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.061511191950116305
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.17356599220345276
+        },
+        {
+          "layer": 1,
+          "head": 0,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.03618793614362034
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 1,
+          "head": 1,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 1,
+          "head": 2,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.04919673304645488
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.054751710304976574
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 1,
+          "head": 3,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.15346463295981558
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 1,
+          "head": 4,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.07677824290328755
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 1,
+          "head": 5,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.1225835355095498
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.13829870412597514
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.13699413967342353
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.7312116474952752
+        },
+        {
+          "layer": 1,
+          "head": 6,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.029762654767329363
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.029762654767329363
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 1,
+          "head": 7,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 2,
+          "head": 0,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.06926973761109566
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.06926973761109566
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.16371555391059484
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.22585522585522586
+        },
+        {
+          "layer": 2,
+          "head": 1,
+          "variants": {
+            "full": {
+              "component_count": 4,
+              "confirmation_r2": 0.3694596881789334
+            },
+            "architecture_only": {
+              "component_count": 4,
+              "confirmation_r2": 0.3694596881789334
+            },
+            "gain_only": {
+              "component_count": 3,
+              "confirmation_r2": 0.3077835101686141
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.4582217708429508
+        },
+        {
+          "layer": 2,
+          "head": 2,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 2,
+          "head": 3,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.11154004736049149
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.11154004736049149
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.11207130943940945
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.7972486381682209
+        },
+        {
+          "layer": 2,
+          "head": 4,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.14555561318253993
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 2,
+          "head": 5,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.06746740769954133
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.06746740769954133
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.15066320242537137
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.17105263157894737
+        },
+        {
+          "layer": 2,
+          "head": 6,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.10209386814054501
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.09948645326945206
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.11952354673148516
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.4412191582002903
+        },
+        {
+          "layer": 2,
+          "head": 7,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.18814210100137838
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.18814210100137838
+            },
+            "gain_only": {
+              "component_count": 3,
+              "confirmation_r2": 0.29643440758548667
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.48580314461786556
+        },
+        {
+          "layer": 3,
+          "head": 0,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.1624729839662634
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.1421897613630444
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.2725474904518285
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.2696801605098548
+        },
+        {
+          "layer": 3,
+          "head": 1,
+          "variants": {
+            "full": {
+              "component_count": 4,
+              "confirmation_r2": 0.48559645474101143
+            },
+            "architecture_only": {
+              "component_count": 4,
+              "confirmation_r2": 0.448080053184148
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.27376818721335827
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.1632869889815631
+        },
+        {
+          "layer": 3,
+          "head": 2,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.09163888529570768
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.09163888529570768
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.11876534586966608
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.4233647859705771
+        },
+        {
+          "layer": 3,
+          "head": 3,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.2132565665891682
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.22482659143385408
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 3,
+          "head": 4,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.16724207102108815
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 3,
+          "head": 5,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.1804686826800525
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.1804686826800525
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 3,
+          "head": 6,
+          "variants": {
+            "full": {
+              "component_count": 3,
+              "confirmation_r2": 0.4351624941792715
+            },
+            "architecture_only": {
+              "component_count": 3,
+              "confirmation_r2": 0.4351624941792715
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.2101649402471842
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.24190126349789418
+        },
+        {
+          "layer": 3,
+          "head": 7,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.08485644345570288
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.07490713084980188
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 4,
+          "head": 0,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.11557055641719265
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.11931707804328937
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 4,
+          "head": 1,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.11062575713617992
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.11062575713617992
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 4,
+          "head": 2,
+          "variants": {
+            "full": {
+              "component_count": 3,
+              "confirmation_r2": 0.3821258744890182
+            },
+            "architecture_only": {
+              "component_count": 3,
+              "confirmation_r2": 0.377910657276352
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.331839012481948
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.44107557082001714
+        },
+        {
+          "layer": 4,
+          "head": 3,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.18808992963539253
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.18499961185514519
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.22335233025228884
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          },
+          "architecture_gain_adjusted_rand": 0.017655807705224777
+        },
+        {
+          "layer": 4,
+          "head": 4,
+          "variants": {
+            "full": {
+              "component_count": 2,
+              "confirmation_r2": 0.39298356858399863
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.39298356858399863
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 4,
+          "head": 5,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.11518277026297885
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 4,
+          "head": 6,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 4,
+          "head": 7,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.17503331216473564
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 5,
+          "head": 0,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 5,
+          "head": 1,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 5,
+          "head": 2,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.029900272460681537
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 5,
+          "head": 3,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 5,
+          "head": 4,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 5,
+          "head": 5,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 2,
+              "confirmation_r2": 0.0801708884595009
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 5,
+          "head": 6,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        },
+        {
+          "layer": 5,
+          "head": 7,
+          "variants": {
+            "full": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "architecture_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "gain_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            },
+            "rank_only": {
+              "component_count": 1,
+              "confirmation_r2": 0.0
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

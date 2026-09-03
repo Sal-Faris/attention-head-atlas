@@ -1,0 +1,534 @@
+{
+  "status": "recipient-query, donor-key-side transfer with orthogonal gauge alignment",
+  "selection": "rank-four recurrent QK key-side edges from the static family audit",
+  "control": "other donor heads from the same donor layer",
+  "ranks": {
+    "1": {
+      "edges": [
+        {
+          "donor": "L3H2",
+          "recipient": "L4H5",
+          "key_side_transfer_r2": 0.0015921599788789598,
+          "alternative_donor_mean_r2": 0.01079797102533794,
+          "alternative_donor_rank": 5,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L3H2",
+          "recipient": "L5H1",
+          "key_side_transfer_r2": 0.0008235571535654129,
+          "alternative_donor_mean_r2": 0.013514790475525047,
+          "alternative_donor_rank": 6,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L1H3",
+          "recipient": "L2H7",
+          "key_side_transfer_r2": -0.0022914103143272246,
+          "alternative_donor_mean_r2": -0.0010016334797610263,
+          "alternative_donor_rank": 7,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L4H4",
+          "recipient": "L5H2",
+          "key_side_transfer_r2": 0.04222802539004333,
+          "alternative_donor_mean_r2": 0.04388780356593388,
+          "alternative_donor_rank": 4,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L3H5",
+          "recipient": "L4H7",
+          "key_side_transfer_r2": 0.02449710628001167,
+          "alternative_donor_mean_r2": 0.08587241233912406,
+          "alternative_donor_rank": 6,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L4H4",
+          "recipient": "L5H0",
+          "key_side_transfer_r2": 0.005488390857398495,
+          "alternative_donor_mean_r2": 0.007737990453163083,
+          "alternative_donor_rank": 6,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L3H0",
+          "recipient": "L4H1",
+          "key_side_transfer_r2": 0.13025373405226526,
+          "alternative_donor_mean_r2": 0.03812579419335601,
+          "alternative_donor_rank": 1,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L4H5",
+          "recipient": "L5H3",
+          "key_side_transfer_r2": -0.003561776299239261,
+          "alternative_donor_mean_r2": 0.0029943379026959554,
+          "alternative_donor_rank": 7,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L4H4",
+          "recipient": "L5H4",
+          "key_side_transfer_r2": 0.04438543320059685,
+          "alternative_donor_mean_r2": 0.05067109498032533,
+          "alternative_donor_rank": 6,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L2H0",
+          "recipient": "L3H4",
+          "key_side_transfer_r2": 0.005485685087714631,
+          "alternative_donor_mean_r2": 0.002279891970493148,
+          "alternative_donor_rank": 3,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L2H0",
+          "recipient": "L3H7",
+          "key_side_transfer_r2": -0.01957214939069618,
+          "alternative_donor_mean_r2": -0.015526200749837507,
+          "alternative_donor_rank": 8,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L3H4",
+          "recipient": "L5H0",
+          "key_side_transfer_r2": 0.002879176413483897,
+          "alternative_donor_mean_r2": 0.00853602324983622,
+          "alternative_donor_rank": 5,
+          "alternative_donor_count": 7
+        }
+      ],
+      "mean_key_side_transfer_r2": 0.01935066103414132,
+      "mean_alternative_donor_r2": 0.020657522993849344,
+      "source_layer_control_null_mean": 0.020746113608084146,
+      "source_layer_control_null_standard_deviation": 0.005902646931106476,
+      "source_layer_control_upper_tail_p_value": 0.6196
+    },
+    "2": {
+      "edges": [
+        {
+          "donor": "L3H2",
+          "recipient": "L4H5",
+          "key_side_transfer_r2": 0.0032211259735372977,
+          "alternative_donor_mean_r2": 0.008313378374750642,
+          "alternative_donor_rank": 4,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L3H2",
+          "recipient": "L5H1",
+          "key_side_transfer_r2": 0.002433513162668266,
+          "alternative_donor_mean_r2": 0.017515972425517296,
+          "alternative_donor_rank": 6,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L1H3",
+          "recipient": "L2H7",
+          "key_side_transfer_r2": 0.006397607090448454,
+          "alternative_donor_mean_r2": 0.011983158321100766,
+          "alternative_donor_rank": 4,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L4H4",
+          "recipient": "L5H2",
+          "key_side_transfer_r2": 0.045998965670714376,
+          "alternative_donor_mean_r2": 0.04443828192161809,
+          "alternative_donor_rank": 4,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L3H5",
+          "recipient": "L4H7",
+          "key_side_transfer_r2": 0.021720532908653944,
+          "alternative_donor_mean_r2": 0.08293486367853163,
+          "alternative_donor_rank": 6,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L4H4",
+          "recipient": "L5H0",
+          "key_side_transfer_r2": -0.001355894197696994,
+          "alternative_donor_mean_r2": 0.0050673110045650815,
+          "alternative_donor_rank": 8,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L3H0",
+          "recipient": "L4H1",
+          "key_side_transfer_r2": 0.06273666289104451,
+          "alternative_donor_mean_r2": 0.021752738912335663,
+          "alternative_donor_rank": 1,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L4H5",
+          "recipient": "L5H3",
+          "key_side_transfer_r2": 0.02870671608894093,
+          "alternative_donor_mean_r2": 0.02212520417609603,
+          "alternative_donor_rank": 4,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L4H4",
+          "recipient": "L5H4",
+          "key_side_transfer_r2": 0.05935127602839274,
+          "alternative_donor_mean_r2": 0.058700915711422726,
+          "alternative_donor_rank": 6,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L2H0",
+          "recipient": "L3H4",
+          "key_side_transfer_r2": 0.08207830345481537,
+          "alternative_donor_mean_r2": 0.038089836407921775,
+          "alternative_donor_rank": 2,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L2H0",
+          "recipient": "L3H7",
+          "key_side_transfer_r2": 0.00790572535706291,
+          "alternative_donor_mean_r2": -0.014582458745352498,
+          "alternative_donor_rank": 1,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L3H4",
+          "recipient": "L5H0",
+          "key_side_transfer_r2": 0.002947439470838087,
+          "alternative_donor_mean_r2": 0.008921400084682911,
+          "alternative_donor_rank": 6,
+          "alternative_donor_count": 7
+        }
+      ],
+      "mean_key_side_transfer_r2": 0.026845164491618324,
+      "mean_alternative_donor_r2": 0.025438383522765843,
+      "source_layer_control_null_mean": 0.025467611852357366,
+      "source_layer_control_null_standard_deviation": 0.006878093022316783,
+      "source_layer_control_upper_tail_p_value": 0.4421
+    },
+    "4": {
+      "edges": [
+        {
+          "donor": "L3H2",
+          "recipient": "L4H5",
+          "key_side_transfer_r2": 0.0014113375981716914,
+          "alternative_donor_mean_r2": 0.0027988994615372187,
+          "alternative_donor_rank": 4,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L3H2",
+          "recipient": "L5H1",
+          "key_side_transfer_r2": 0.00043700485014164236,
+          "alternative_donor_mean_r2": 0.019760379829397982,
+          "alternative_donor_rank": 6,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L1H3",
+          "recipient": "L2H7",
+          "key_side_transfer_r2": 0.035108963424918094,
+          "alternative_donor_mean_r2": 0.24427374606689556,
+          "alternative_donor_rank": 6,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L4H4",
+          "recipient": "L5H2",
+          "key_side_transfer_r2": 0.0592910651102021,
+          "alternative_donor_mean_r2": 0.04413888981820201,
+          "alternative_donor_rank": 2,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L3H5",
+          "recipient": "L4H7",
+          "key_side_transfer_r2": 0.026372950198326972,
+          "alternative_donor_mean_r2": 0.06978092784529775,
+          "alternative_donor_rank": 6,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L4H4",
+          "recipient": "L5H0",
+          "key_side_transfer_r2": -0.0012555439541439561,
+          "alternative_donor_mean_r2": 0.004392201756496921,
+          "alternative_donor_rank": 8,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L3H0",
+          "recipient": "L4H1",
+          "key_side_transfer_r2": 0.046291466776417045,
+          "alternative_donor_mean_r2": 0.01966540823178962,
+          "alternative_donor_rank": 1,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L4H5",
+          "recipient": "L5H3",
+          "key_side_transfer_r2": 0.014815145592533052,
+          "alternative_donor_mean_r2": 0.02402715076665935,
+          "alternative_donor_rank": 5,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L4H4",
+          "recipient": "L5H4",
+          "key_side_transfer_r2": 0.05473444309864817,
+          "alternative_donor_mean_r2": 0.05764832646077795,
+          "alternative_donor_rank": 6,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L2H0",
+          "recipient": "L3H4",
+          "key_side_transfer_r2": 0.12485105473483005,
+          "alternative_donor_mean_r2": 0.07723818820355542,
+          "alternative_donor_rank": 2,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L2H0",
+          "recipient": "L3H7",
+          "key_side_transfer_r2": -0.02244232963676418,
+          "alternative_donor_mean_r2": 0.015471991585262421,
+          "alternative_donor_rank": 7,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L3H4",
+          "recipient": "L5H0",
+          "key_side_transfer_r2": 0.002172465946317592,
+          "alternative_donor_mean_r2": 0.00870216779965132,
+          "alternative_donor_rank": 6,
+          "alternative_donor_count": 7
+        }
+      ],
+      "mean_key_side_transfer_r2": 0.02848233531163319,
+      "mean_alternative_donor_r2": 0.04899152315212696,
+      "source_layer_control_null_mean": 0.04906338332624903,
+      "source_layer_control_null_standard_deviation": 0.020437786546835465,
+      "source_layer_control_upper_tail_p_value": 0.8717
+    },
+    "8": {
+      "edges": [
+        {
+          "donor": "L3H2",
+          "recipient": "L4H5",
+          "key_side_transfer_r2": 0.0013854693014724306,
+          "alternative_donor_mean_r2": 0.001773224323335614,
+          "alternative_donor_rank": 3,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L3H2",
+          "recipient": "L5H1",
+          "key_side_transfer_r2": 3.850938565375106e-05,
+          "alternative_donor_mean_r2": 0.018647554218455115,
+          "alternative_donor_rank": 7,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L1H3",
+          "recipient": "L2H7",
+          "key_side_transfer_r2": 0.5730684250171767,
+          "alternative_donor_mean_r2": 0.42052715945444186,
+          "alternative_donor_rank": 2,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L4H4",
+          "recipient": "L5H2",
+          "key_side_transfer_r2": 0.0830819967676274,
+          "alternative_donor_mean_r2": 0.05315961631993538,
+          "alternative_donor_rank": 1,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L3H5",
+          "recipient": "L4H7",
+          "key_side_transfer_r2": -0.0029069606807479165,
+          "alternative_donor_mean_r2": 0.05553225740107887,
+          "alternative_donor_rank": 7,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L4H4",
+          "recipient": "L5H0",
+          "key_side_transfer_r2": 0.000595699838433994,
+          "alternative_donor_mean_r2": 0.005812661212504281,
+          "alternative_donor_rank": 8,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L3H0",
+          "recipient": "L4H1",
+          "key_side_transfer_r2": 0.010640053479301415,
+          "alternative_donor_mean_r2": 0.016472583882856773,
+          "alternative_donor_rank": 6,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L4H5",
+          "recipient": "L5H3",
+          "key_side_transfer_r2": 0.023493958283946403,
+          "alternative_donor_mean_r2": 0.03096212221853965,
+          "alternative_donor_rank": 4,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L4H4",
+          "recipient": "L5H4",
+          "key_side_transfer_r2": 0.07130831923270575,
+          "alternative_donor_mean_r2": 0.06382136590492082,
+          "alternative_donor_rank": 5,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L2H0",
+          "recipient": "L3H4",
+          "key_side_transfer_r2": 0.22917508353296412,
+          "alternative_donor_mean_r2": 0.15687820386125964,
+          "alternative_donor_rank": 3,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L2H0",
+          "recipient": "L3H7",
+          "key_side_transfer_r2": 0.023059239101368423,
+          "alternative_donor_mean_r2": 0.04753705321073206,
+          "alternative_donor_rank": 4,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L3H4",
+          "recipient": "L5H0",
+          "key_side_transfer_r2": 0.0019930196549690082,
+          "alternative_donor_mean_r2": 0.008675539453797796,
+          "alternative_donor_rank": 6,
+          "alternative_donor_count": 7
+        }
+      ],
+      "mean_key_side_transfer_r2": 0.08457773440957261,
+      "mean_alternative_donor_r2": 0.07331661178848815,
+      "source_layer_control_null_mean": 0.0734011540961967,
+      "source_layer_control_null_standard_deviation": 0.020671433259055513,
+      "source_layer_control_upper_tail_p_value": 0.2789
+    },
+    "16": {
+      "edges": [
+        {
+          "donor": "L3H2",
+          "recipient": "L4H5",
+          "key_side_transfer_r2": 0.0029455520816960012,
+          "alternative_donor_mean_r2": 0.0047336577464893404,
+          "alternative_donor_rank": 5,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L3H2",
+          "recipient": "L5H1",
+          "key_side_transfer_r2": -0.00015835818626586118,
+          "alternative_donor_mean_r2": 0.01931283241560127,
+          "alternative_donor_rank": 7,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L1H3",
+          "recipient": "L2H7",
+          "key_side_transfer_r2": 0.604748428443038,
+          "alternative_donor_mean_r2": 0.4106896151377108,
+          "alternative_donor_rank": 2,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L4H4",
+          "recipient": "L5H2",
+          "key_side_transfer_r2": 0.08106509005366025,
+          "alternative_donor_mean_r2": 0.05643471703622671,
+          "alternative_donor_rank": 2,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L3H5",
+          "recipient": "L4H7",
+          "key_side_transfer_r2": 0.011859269946896234,
+          "alternative_donor_mean_r2": 0.04705034952157134,
+          "alternative_donor_rank": 6,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L4H4",
+          "recipient": "L5H0",
+          "key_side_transfer_r2": 0.0009212279281477498,
+          "alternative_donor_mean_r2": 0.005246609925064919,
+          "alternative_donor_rank": 6,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L3H0",
+          "recipient": "L4H1",
+          "key_side_transfer_r2": 0.026332482463039097,
+          "alternative_donor_mean_r2": 0.015847477308480715,
+          "alternative_donor_rank": 2,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L4H5",
+          "recipient": "L5H3",
+          "key_side_transfer_r2": 0.015090458136593488,
+          "alternative_donor_mean_r2": 0.0325058025858832,
+          "alternative_donor_rank": 5,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L4H4",
+          "recipient": "L5H4",
+          "key_side_transfer_r2": 0.06426647824959808,
+          "alternative_donor_mean_r2": 0.059989372484226276,
+          "alternative_donor_rank": 5,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L2H0",
+          "recipient": "L3H4",
+          "key_side_transfer_r2": 0.26120795547745035,
+          "alternative_donor_mean_r2": 0.1894970069186983,
+          "alternative_donor_rank": 2,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L2H0",
+          "recipient": "L3H7",
+          "key_side_transfer_r2": 0.0651194427311369,
+          "alternative_donor_mean_r2": 0.13925780362829282,
+          "alternative_donor_rank": 8,
+          "alternative_donor_count": 7
+        },
+        {
+          "donor": "L3H4",
+          "recipient": "L5H0",
+          "key_side_transfer_r2": 0.001958430173889747,
+          "alternative_donor_mean_r2": 0.007832510961285328,
+          "alternative_donor_rank": 6,
+          "alternative_donor_count": 7
+        }
+      ],
+      "mean_key_side_transfer_r2": 0.09461303812490668,
+      "mean_alternative_donor_r2": 0.08236647963912759,
+      "source_layer_control_null_mean": 0.0824571179151844,
+      "source_layer_control_null_standard_deviation": 0.022066260297875673,
+      "source_layer_control_upper_tail_p_value": 0.2669
+    }
+  },
+  "seed": 0,
+  "resamples": 9999
+}
