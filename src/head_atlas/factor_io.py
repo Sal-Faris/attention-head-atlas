@@ -260,7 +260,6 @@ def load_factor_bundle(
             kinds,
             left_factors,
             right_factors,
-            strict=True,
         )
     ]
     if metadata.get("format") != "factorized-head-operator-v1":

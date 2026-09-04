@@ -1,5 +1,7 @@
 """Compact exact representations of low-rank attention-head operators."""
 
+from __future__ import annotations
+
 from collections.abc import Sequence
 from dataclasses import dataclass
 from pathlib import Path
